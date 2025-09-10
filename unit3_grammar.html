@@ -1,0 +1,1852 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="x-poe-datastore-behavior" content="local_only"><meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' data: blob: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://code.jquery.com https://unpkg.com https://d3js.org https://threejs.org https://cdn.plot.ly https://stackpath.bootstrapcdn.com https://maps.googleapis.com https://cdn.tailwindcss.com https://ajax.googleapis.com https://kit.fontawesome.com https://cdn.datatables.net https://maxcdn.bootstrapcdn.com https://code.highcharts.com https://tako-static-assets-production.s3.amazonaws.com https://www.youtube.com https://fonts.googleapis.com https://fonts.gstatic.com https://pfst.cf2.poecdn.net https://puc.poecdn.net https://i.imgur.com https://wikimedia.org https://*.icons8.com https://*.giphy.com https://picsum.photos https://images.unsplash.com; frame-src 'self' https://www.youtube.com https://trytako.com; child-src 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests; block-all-mixed-content;">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eva老师👩‍🏫伴步英语-江苏校内-译林英语-五上-Unit3必学语法点</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            background: linear-gradient(135deg, #6d8bc3 0%, #c0db82 100%);
+            padding: 15px;
+            min-height: 100vh;
+            line-height: 1.6;
+            position: relative;
+        }
+
+        /* 水印样式 */
+        .watermark {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            user-select: none;
+            z-index: 999;
+            overflow: hidden;
+        }
+
+        .watermark::before {
+            content: "Eva老师👩‍🏫伴步英语";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-45deg);
+            font-size: 32px;
+            color: rgba(109, 139, 195, 0.12);
+            font-weight: bold;
+            white-space: nowrap;
+            letter-spacing: 6px;
+            text-shadow: 0 0 1px rgba(109, 139, 195, 0.08);
+        }
+
+        .watermark::after {
+            content: "Eva老师👩‍🏫伴步英语";
+            position: absolute;
+            top: 25%;
+            left: 25%;
+            transform: translate(-50%, -50%) rotate(-45deg);
+            font-size: 24px;
+            color: rgba(192, 219, 130, 0.08);
+            font-weight: bold;
+            white-space: nowrap;
+            letter-spacing: 4px;
+        }
+
+        .card-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(236, 236, 236, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            overflow: hidden;
+            min-height: 95vh;
+            position: relative;
+            z-index: 10;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #6d8bc3, #5a7ab8);
+            color: white;
+            text-align: center;
+            padding: 25px 20px;
+            position: relative;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .header .subtitle {
+            font-size: 16px;
+            opacity: 0.9;
+            margin-bottom: 5px;
+        }
+
+        .highlight-unit {
+            background: #FFE266;
+            color: #333;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        .header .teacher-info {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        .decorative-star {
+            position: absolute;
+            font-size: 20px;
+            animation: twinkle 2s infinite;
+        }
+
+        .star1 { top: 10px; left: 20px; }
+        .star2 { top: 15px; right: 30px; animation-delay: 0.5s; }
+        .star3 { bottom: 10px; left: 40px; animation-delay: 1s; }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.5; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.2); }
+        }
+
+        /* 目录导航样式 */
+        .table-of-contents {
+            background: rgba(255, 255, 255, 0.98);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 20px 0 20px;
+            border-left: 5px solid #6d8bc3;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .toc-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .toc-icon {
+            background: #6d8bc3;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            margin-right: 12px;
+        }
+
+        .toc-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .toc-item {
+            margin: 8px 0;
+            padding: 12px 15px;
+            background: #f8f9ff;
+            border-radius: 8px;
+            border-left: 3px solid #FFE266;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .toc-item:hover {
+            background: #e8f2ff;
+            border-left-color: #6d8bc3;
+            transform: translateX(5px);
+        }
+
+        .toc-item:nth-child(2n) {
+            border-left-color: #c0db82;
+        }
+
+        .toc-item:nth-child(3n) {
+            border-left-color: #6d8bc3;
+        }
+
+        .toc-link {
+            text-decoration: none;
+            color: #333;
+            font-size: 14px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .toc-number {
+            background: #FFE266;
+            color: #333;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .toc-title {
+            flex: 1;
+        }
+
+        .toc-emoji {
+            font-size: 16px;
+        }
+
+        .content {
+            padding: 20px;
+            max-height: calc(100vh - 200px);
+            overflow-y: auto;
+        }
+
+        .grammar-point {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 5px solid #FFE266;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+            position: relative;
+            scroll-margin-top: 20px;
+        }
+
+        .grammar-point:hover {
+            transform: translateY(-2px);
+        }
+
+        .grammar-point:nth-child(2n) {
+            border-left-color: #c0db82;
+        }
+
+        .grammar-point:nth-child(3n) {
+            border-left-color: #6d8bc3;
+        }
+
+        .point-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .point-number {
+            background: #FFE266;
+            color: #333;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 12px;
+            font-size: 14px;
+        }
+
+        .point-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            flex: 1;
+        }
+
+        .emoji {
+            font-size: 20px;
+            margin-left: 8px;
+        }
+
+        .point-content {
+            color: #555;
+            line-height: 1.6;
+            font-size: 14px;
+        }
+
+        .core-concept {
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+
+        .key-points {
+            background: #f8f9ff;
+            border-radius: 10px;
+            padding: 12px;
+            margin: 12px 0;
+            border: 2px dashed #6d8bc3;
+        }
+
+        .key-points h4 {
+            color: #6d8bc3;
+            font-size: 14px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .key-points ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .key-points li {
+            padding: 8px 0;
+            position: relative;
+            padding-left: 18px;
+            border-bottom: 1px dotted #e0e0e0;
+        }
+
+        .key-points li:last-child {
+            border-bottom: none;
+        }
+
+        .key-points li:before {
+            content: "✨";
+            position: absolute;
+            left: 0;
+            font-size: 12px;
+        }
+
+        .key-point-examples {
+            font-size: 12px;
+            color: #777;
+            margin-top: 4px;
+            font-style: italic;
+            padding-left: 10px;
+            border-left: 2px solid #FFE266;
+        }
+
+        .structure-box {
+            background: linear-gradient(135deg, #c0db82, #d4e89a);
+            border-radius: 10px;
+            padding: 12px;
+            margin: 12px 0;
+            border: 1px solid #a8c26a;
+        }
+
+        .structure-box h4 {
+            color: #5a7a2d;
+            font-size: 14px;
+            margin-bottom: 8px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .structure-item {
+            background: white;
+            border-radius: 6px;
+            padding: 8px;
+            margin: 6px 0;
+            border-left: 3px solid #6d8bc3;
+            font-size: 13px;
+            color: #333;
+        }
+
+        .structure-examples {
+            font-size: 12px;
+            color: #666;
+            margin-top: 4px;
+            font-style: italic;
+        }
+
+        .detail-box {
+            background: #f0f8ff;
+            border: 2px solid #6d8bc3;
+            border-radius: 8px;
+            padding: 12px;
+            margin: 10px 0;
+        }
+
+        .detail-box h5 {
+            color: #6d8bc3;
+            font-size: 13px;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        .detail-item {
+            margin: 6px 0;
+            padding: 6px;
+            background: white;
+            border-radius: 4px;
+            border-left: 2px solid #6d8bc3;
+            font-size: 12px;
+        }
+
+        .detail-item strong {
+            color: #6d8bc3;
+        }
+
+        .example-box {
+            background: linear-gradient(135deg, #FFE266, #fff5a0);
+            border-radius: 10px;
+            padding: 12px;
+            margin: 12px 0;
+            border: 1px solid #e6d000;
+        }
+
+        .example-box h4 {
+            color: #b8860b;
+            font-size: 13px;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .example {
+            font-style: italic;
+            color: #666;
+            margin: 5px 0;
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .example-emoji {
+            font-size: 16px;
+        }
+
+        .highlight {
+            background: #e8f4f8;
+            padding: 1px 6px;
+            border-radius: 3px;
+            color: #2c6b8a;
+            font-weight: bold;
+            border: 1px solid #a8d5e5;
+        }
+
+        .highlight-positive {
+            background: #e8f5e8;
+            padding: 1px 4px;
+            border-radius: 3px;
+            color: #2d5a2d;
+            font-weight: bold;
+            border: 1px solid #b8d4b8;
+        }
+
+        .highlight-negative {
+            background: #f8e8e8;
+            padding: 1px 4px;
+            border-radius: 3px;
+            color: #8a2c2c;
+            font-weight: bold;
+            border: 1px solid #e5a8a8;
+        }
+
+        .highlight-question {
+            background: #f4e8c1;
+            padding: 1px 4px;
+            border-radius: 3px;
+            color: #8b5a3c;
+            font-weight: bold;
+            border: 1px solid #d4c19c;
+        }
+
+        .connection-box {
+            background: linear-gradient(135deg, #c0db82, #d4e89a);
+            border-radius: 8px;
+            padding: 10px;
+            margin-top: 12px;
+            border: 1px solid #a8c26a;
+        }
+
+        .connection-box h4 {
+            color: #5a7a2d;
+            font-size: 12px;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        .connection-text {
+            font-size: 12px;
+            color: #4a6024;
+            line-height: 1.4;
+        }
+
+        .comparison-table {
+            background: white;
+            border-radius: 10px;
+            padding: 12px;
+            margin: 12px 0;
+            border: 2px solid #6d8bc3;
+        }
+
+        .comparison-table h5 {
+            color: #6d8bc3;
+            font-size: 14px;
+            margin-bottom: 10px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 6px;
+            margin-bottom: 10px;
+        }
+
+        .comparison-header {
+            background: #6d8bc3;
+            color: white;
+            padding: 6px;
+            border-radius: 4px;
+            text-align: center;
+            font-size: 11px;
+            font-weight: bold;
+        }
+
+        .comparison-cell {
+            background: #f5f5f5;
+            padding: 6px;
+            border-radius: 4px;
+            text-align: center;
+            font-size: 10px;
+            border: 1px solid #e0e0e0;
+            line-height: 1.3;
+        }
+
+        .positive-cell {
+            background: #e8f5e8;
+            border-color: #b8d4b8;
+        }
+
+        .negative-cell {
+            background: #f8e8e8;
+            border-color: #e5a8a8;
+        }
+
+        .question-cell {
+            background: #f4e8c1;
+            border-color: #d4c19c;
+        }
+
+        .eva-tip {
+            background: linear-gradient(135deg, #d8b3e0, #e4c7e7);
+            border-radius: 10px;
+            padding: 12px;
+            margin: 12px 0;
+            border: 2px solid #c8a2c8;
+        }
+
+        .eva-tip h5 {
+            color: #8e44ad;
+            font-size: 13px;
+            margin-bottom: 6px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .eva-tip p {
+            color: #6a4c7a;
+            font-size: 12px;
+            line-height: 1.5;
+            font-style: italic;
+        }
+
+        .footer {
+            background: linear-gradient(135deg, #6d8bc3, #5a7ab8);
+            color: white;
+            text-align: center;
+            padding: 12px 20px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .usage-note {
+            background: #fff3cd;
+            border: 2px solid #FFE266;
+            border-radius: 6px;
+            padding: 8px;
+            margin: 8px 0;
+        }
+
+        .usage-note h6 {
+            color: #856404;
+            font-size: 11px;
+            margin-bottom: 3px;
+            font-weight: bold;
+        }
+
+        .usage-note p {
+            font-size: 10px;
+            color: #856404;
+            line-height: 1.3;
+        }
+
+        .distinction-box {
+            background: #fff0f5;
+            border: 2px solid #ff69b4;
+            border-radius: 8px;
+            padding: 12px;
+            margin: 10px 0;
+        }
+
+        .distinction-box h5 {
+            color: #d63384;
+            font-size: 13px;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        .distinction-item {
+            margin: 6px 0;
+            padding: 6px;
+            background: white;
+            border-radius: 4px;
+            border-left: 2px solid #ff69b4;
+            font-size: 12px;
+        }
+
+        .distinction-item strong {
+            color: #d63384;
+        }
+
+        /* 代词表格样式 */
+        .pronoun-table {
+            background: #f0f8ff;
+            border: 2px solid #6d8bc3;
+            border-radius: 12px;
+            padding: 15px;
+            margin: 15px 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .pronoun-table h5 {
+            color: #6d8bc3;
+            font-size: 15px;
+            margin-bottom: 12px;
+            font-weight: bold;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .pronoun-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 6px;
+            margin-bottom: 12px;
+        }
+
+        .pronoun-header {
+            background: #6d8bc3;
+            color: white;
+            padding: 8px 6px;
+            border-radius: 6px;
+            text-align: center;
+            font-size: 11px;
+            font-weight: bold;
+        }
+
+        .pronoun-cell {
+            background: #f5f5f5;
+            padding: 8px 6px;
+            border-radius: 6px;
+            text-align: center;
+            font-size: 12px;
+            border: 1px solid #e0e0e0;
+            min-height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            word-break: break-word;
+            font-weight: bold;
+        }
+
+        .pronoun-cell-person {
+            background: #e8f4f8;
+            border-color: #a8d5e5;
+            font-weight: bold;
+        }
+
+        .pronoun-cell-subject {
+            background: #e8f5e8;
+            border-color: #b8d4b8;
+        }
+
+        .pronoun-cell-possessive {
+            background: #fff3cd;
+            border-color: #FFE266;
+        }
+
+        .pronoun-cell-possessive-noun {
+            background: #f8e8e8;
+            border-color: #e5a8a8;
+        }
+
+        .pronoun-cell-object {
+            background: #f0f8ff;
+            border-color: #a8d5e5;
+        }
+
+        .highlight-special {
+            background: #FFE266;
+            font-weight: bold;
+            color: #856404;
+            padding: 1px 3px;
+            border-radius: 2px;
+        }
+
+        .highlight-subject {
+            background: #e8f5e8;
+            color: #2d5a2d;
+            padding: 1px 3px;
+            border-radius: 2px;
+            font-weight: bold;
+        }
+
+        .highlight-possessive {
+            background: #fff3cd;
+            color: #856404;
+            padding: 1px 3px;
+            border-radius: 2px;
+            font-weight: bold;
+        }
+
+        .highlight-possessive-noun {
+            background: #f8e8e8;
+            color: #8a2c2c;
+            padding: 1px 3px;
+            border-radius: 2px;
+            font-weight: bold;
+        }
+
+        .highlight-object {
+            background: #f0f8ff;
+            color: #2c6b8a;
+            padding: 1px 3px;
+            border-radius: 2px;
+            font-weight: bold;
+        }
+
+        .tips-box {
+            background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+            border: 2px solid #2196f3;
+            border-radius: 8px;
+            padding: 12px;
+            margin: 12px 0;
+        }
+
+        .tips-box h5 {
+            color: #1976d2;
+            font-size: 13px;
+            margin-bottom: 8px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .tip-item {
+            background: white;
+            border-radius: 6px;
+            padding: 8px;
+            margin: 6px 0;
+            border-left: 3px solid #2196f3;
+            font-size: 12px;
+        }
+
+        .chant-box {
+            background: linear-gradient(135deg, #e8f5e8, #c8e6c8);
+            border: 2px solid #4caf50;
+            border-radius: 8px;
+            padding: 12px;
+            margin: 12px 0;
+            text-align: center;
+        }
+
+        .chant-box h5 {
+            color: #2e7d32;
+            font-size: 13px;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .chant-lines {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #2e7d32;
+            font-weight: bold;
+        }
+
+        .chant-note {
+            background: white;
+            border-radius: 6px;
+            padding: 8px;
+            margin-top: 8px;
+            font-size: 11px;
+            color: #666;
+            font-style: italic;
+        }
+
+        .simple-note {
+            background: #f0f8ff;
+            border: 2px solid #6d8bc3;
+            border-radius: 6px;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 12px;
+            color: #333;
+        }
+
+        /* 考察重点样式 */
+        .exam-focus {
+            background: linear-gradient(135deg, #e8f4f8, #b3d9ed);
+            border: 2px dashed #2196f3;
+            border-radius: 8px;
+            padding: 12px;
+            margin: 12px 0;
+        }
+
+        .exam-focus h5 {
+            color: #1976d2;
+            font-size: 13px;
+            margin-bottom: 10px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .focus-item {
+            margin: 8px 0;
+            padding: 6px 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 6px;
+        }
+
+        .focus-icon {
+            color: #ffa726;
+            font-size: 14px;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        .focus-content {
+            flex: 1;
+        }
+
+        .focus-title {
+            color: #1976d2;
+            font-weight: bold;
+            font-size: 12px;
+            margin-bottom: 3px;
+        }
+
+        .focus-text {
+            color: #555;
+            font-size: 11px;
+            line-height: 1.4;
+        }
+
+        .focus-example {
+            color: #666;
+            font-style: italic;
+            margin-top: 3px;
+            padding-left: 6px;
+            border-left: 2px solid #2196f3;
+            font-size: 10px;
+        }
+
+        /* 紧凑型人称分类 */
+        .single-line-person {
+            background: #f8f9fa;
+            border: 2px solid #6c757d;
+            border-radius: 6px;
+            padding: 8px;
+            margin: 8px 0;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .person-segment {
+            font-size: 12px;
+            color: #495057;
+        }
+
+        .person-segment strong {
+            color: #495057;
+            font-weight: bold;
+        }
+
+        .compact-table {
+            background: white;
+            border-radius: 10px;
+            padding: 12px;
+            margin: 12px 0;
+            border: 2px solid #6d8bc3;
+        }
+
+        .compact-table h5 {
+            color: #6d8bc3;
+            font-size: 14px;
+            margin-bottom: 10px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .sentence-groups {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 12px;
+        }
+
+        .sentence-group {
+            background: #f8f9ff;
+            border-radius: 6px;
+            padding: 10px;
+            border-left: 3px solid #6d8bc3;
+        }
+
+        .sentence-group h6 {
+            color: #6d8bc3;
+            font-size: 12px;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        .sentence-group .sentence {
+            background: white;
+            padding: 5px 8px;
+            border-radius: 3px;
+            margin: 3px 0;
+            font-size: 11px;
+            border: 1px solid #e0e0e0;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            .watermark::before {
+                font-size: 24px;
+                letter-spacing: 3px;
+            }
+
+            .watermark::after {
+                font-size: 18px;
+                letter-spacing: 2px;
+            }
+
+            .card-container {
+                border-radius: 15px;
+                min-height: 100vh;
+            }
+
+            .header {
+                padding: 20px 15px;
+            }
+
+            .header h1 {
+                font-size: 20px;
+            }
+
+            .header .subtitle {
+                font-size: 14px;
+            }
+
+            .table-of-contents {
+                margin: 15px;
+                padding: 15px;
+            }
+
+            .content {
+                padding: 15px;
+                max-height: none;
+            }
+
+            .grammar-point {
+                padding: 15px;
+                margin-bottom: 15px;
+            }
+
+            .point-title {
+                font-size: 16px;
+            }
+
+            .point-content {
+                font-size: 13px;
+            }
+
+            .pronoun-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .comparison-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 4px;
+            }
+
+            .sentence-groups {
+                grid-template-columns: 1fr;
+            }
+
+            .single-line-person {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .decorative-star {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .watermark::before {
+                font-size: 18px;
+                letter-spacing: 2px;
+            }
+
+            .watermark::after {
+                font-size: 14px;
+                letter-spacing: 1px;
+            }
+
+            .header h1 {
+                font-size: 18px;
+            }
+
+            .header .subtitle {
+                font-size: 12px;
+            }
+
+            .point-title {
+                font-size: 14px;
+            }
+
+            .point-content {
+                font-size: 12px;
+            }
+
+            .pronoun-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .comparison-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+<script src="https://puc.poecdn.net/authenticated_preview_page/syncedState.bd4eeeb8e8e02052ee92.js"></script></head>
+<body>
+    <!-- 水印元素 -->
+    <div class="watermark"></div>
+    
+    <div class="card-container">
+        <div class="header">
+            <div class="decorative-star star1">⭐</div>
+            <div class="decorative-star star2">✨</div>
+            <div class="decorative-star star3">🌟</div>
+            <h1>江苏校内-译林英语</h1>
+            <div class="subtitle"><span class="highlight-unit">五上</span>-<span class="highlight-unit">Unit3</span>-<span class="highlight-unit">必学语法点</span></div>
+            <div class="teacher-info">Eva老师👩‍🏫伴步英语</div>
+        </div>
+
+        <!-- 目录导航 -->
+        <div class="table-of-contents">
+            <div class="toc-header">
+                <div class="toc-icon">📚</div>
+                <span>知识点目录导航</span>
+            </div>
+            <ul class="toc-list">
+                <li class="toc-item">
+                    <a href="#point1" class="toc-link">
+                        <div class="toc-number">1</div>
+                        <div class="toc-title">have/has的用法</div>
+                        <div class="toc-emoji">✋</div>
+                    </a>
+                </li>
+                <li class="toc-item">
+                    <a href="#point2" class="toc-link">
+                        <div class="toc-number">2</div>
+                        <div class="toc-title">no...or...句型</div>
+                        <div class="toc-emoji">🚫</div>
+                    </a>
+                </li>
+                <li class="toc-item">
+                    <a href="#point3" class="toc-link">
+                        <div class="toc-number">3</div>
+                        <div class="toc-title">one...the other...句型</div>
+                        <div class="toc-emoji">⚖️</div>
+                    </a>
+                </li>
+                <li class="toc-item">
+                    <a href="#point4" class="toc-link">
+                        <div class="toc-number">4</div>
+                        <div class="toc-title">情态动词can的用法</div>
+                        <div class="toc-emoji">💪</div>
+                    </a>
+                </li>
+                <li class="toc-item">
+                    <a href="#point5" class="toc-link">
+                        <div class="toc-number">5</div>
+                        <div class="toc-title">代词系统复习</div>
+                        <div class="toc-emoji">🔧</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="content">
+            <div id="point1" class="grammar-point">
+                <div class="point-header">
+                    <div class="point-number">1</div>
+                    <div class="point-title">have/has的用法</div>
+                    <div class="emoji">✋</div>
+                </div>
+                <div class="point-content">
+                    <p class="core-concept"><strong>核心概念：</strong>have和has表示"有"，用来描述某人拥有某物或某种特征</p>
+                    
+                    <div class="structure-box">
+                        <h4>👥 have的使用</h4>
+                        <div class="structure-item">
+                            主语为<span class="highlight">第一人称、第二人称及第三人称复数</span>时用have
+                        </div>
+                        <div class="single-line-person">
+                            <div class="person-segment"><strong>第一人称：</strong>I (我), we (我们) 👫</div>
+                            <div class="person-segment"><strong>第二人称：</strong>you (你/你们) 👤</div>
+                            <div class="person-segment"><strong>第三人称复数：</strong>they (他们), the boys (男孩们), my friends (我的朋友们) 👥</div>
+                        </div>
+                    </div>
+
+                    <div class="structure-box">
+                        <h4>👤 has的使用</h4>
+                        <div class="structure-item">
+                            主语为<span class="highlight">第三人称单数</span>时用has
+                        </div>
+                        <div class="single-line-person">
+                            <div class="person-segment"><strong>第三人称单数：</strong>he (他), she (她), it (它), Tom (汤姆), my mother (我妈妈), the cat (猫) 🐱</div>
+                        </div>
+                    </div>
+
+                    <div class="compact-table">
+                        <h5>📊 have/has句型对照表</h5>
+                        <div class="sentence-groups">
+                            <div class="sentence-group">
+                                <h6>肯定句</h6>
+                                <div class="sentence">I <span class="highlight-positive">have</span> a dog. 🐕</div>
+                                <div class="sentence">She <span class="highlight-positive">has</span> a dog. 🐕</div>
+                            </div>
+                            <div class="sentence-group">
+                                <h6>否定句</h6>
+                                <div class="sentence">I <span class="highlight-negative">don't have</span> a dog. ❌</div>
+                                <div class="sentence">She <span class="highlight-negative">doesn't have</span> a dog. ❌</div>
+                            </div>
+                            <div class="sentence-group">
+                                <h6>疑问句</h6>
+                                <div class="sentence"><span class="highlight-question">Do</span> you have a dog? ❓</div>
+                                <div class="sentence"><span class="highlight-question">Does</span> she have a dog? ❓</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chant-box">
+                        <h5>🎵 语法Chant</h5>
+                        <div class="chant-lines">
+                            Do问do答，Does问does答！
+                        </div>
+                        <div class="chant-note">
+                            💡 这是语法考察的重点！但在日常交流中，回答可以更丰富。比如：Do you like apples? 可以回答：Yes, I love them! / Of course! / Not really. 等等。
+                        </div>
+                    </div>
+
+                    <div class="tips-box">
+                        <h5>💡 拓展知识</h5>
+                        <div class="tip-item">
+                            <strong>have还可以表示"显示出，带有（性质、特征）"</strong><br>
+                            主语通常为无生命的物体，用来表示物体的组成部分：
+                            <div style="margin-top: 6px; font-style: italic; color: #666;">
+                                • The house <span class="highlight">has</span> three rooms. 这房子有三个房间。🏠<br>
+                                • The table <span class="highlight">has</span> four legs. 桌子有四条腿。🪑<br>
+                                • The book <span class="highlight">has</span> many pictures. 这本书有很多图片。📚
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tips-box">
+                        <h5>🔍 判断小技巧</h5>
+                        <div class="tip-item">
+                            <strong>"does就像是一面照妖镜，后面动词通通现原形"</strong><br>
+                            • 当主语是第三人称单数时，疑问句用<span class="highlight-question">Does</span>，后面的has要变回<span class="highlight">have</span><br>
+                            • 否定句中，doesn't后面也要用<span class="highlight">have</span>，不能用has<br>
+                            <div style="margin-top: 6px; font-style: italic; color: #666;">
+                                例：He <span class="highlight-positive">has</span> → <span class="highlight-question">Does</span> he <span class="highlight">have</span>? / He <span class="highlight-negative">doesn't have</span> 🔄
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="exam-focus">
+                        <h5>🎯 考察重点</h5>
+                        <div class="focus-item">
+                            <div class="focus-icon">✨</div>
+                            <div class="focus-content">
+                                <div class="focus-title">主语与have/has的正确搭配</div>
+                                <div class="focus-text">第三人称单数用has，其他人称用have</div>
+                                <div class="focus-example">👤 He has / 👥 They have</div>
+                            </div>
+                        </div>
+                        <div class="focus-item">
+                            <div class="focus-icon">✨</div>
+                            <div class="focus-content">
+                                <div class="focus-title">否定句的变化规律</div>
+                                <div class="focus-text">has变否定时要用doesn't have，不能用doesn't has</div>
+                                <div class="focus-example">❌ She has → She doesn't have</div>
+                            </div>
+                        </div>
+                        <div class="focus-item">
+                            <div class="focus-icon">✨</div>
+                            <div class="focus-content">
+                                <div class="focus-title">疑问句的助动词选择</div>
+                                <div class="focus-text">根据主语选择Do还是Does，后面动词用原形have</div>
+                                <div class="focus-example">❓ Do you have? / Does he have?</div>
+                            </div>
+                        </div>
+                        <div class="focus-item">
+                            <div class="focus-icon">✨</div>
+                            <div class="focus-content">
+                                <div class="focus-title">简略回答的形式</div>
+                                <div class="focus-text">用do/does回答，保持一致性</div>
+                                <div class="focus-example">✅ Yes, I do. / No, she doesn't.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>📝 经典例句</h4>
+                        <div class="example">
+                            <span class="example-emoji">🐱</span>
+                            <span>I <span class="highlight-positive">have</span> a lovely cat. 我有一只可爱的猫。</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">🚲</span>
+                            <span>He <span class="highlight-positive">has</span> a new bicycle. 他有一辆新自行车。</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">❌</span>
+                            <span>We <span class="highlight-negative">don't have</span> any homework today. 我们今天没有作业。</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">🚫</span>
+                            <span>Tom <span class="highlight-negative">doesn't have</span> a computer. 汤姆没有电脑。</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">❓</span>
+                            <span><span class="highlight-question">Do you have</span> any brothers or sisters? 你有兄弟姐妹吗？</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">🙅‍♀️</span>
+                            <span><span class="highlight-question">Does she have</span> a pet? 她有宠物吗？</span>
+                        </div>
+                    </div>
+
+                    <div class="connection-box">
+                        <h4>🔗 温故知新</h4>
+                        <div class="connection-text">
+                            这是have/has的基础用法，为学习There be句型和一般疑问句打下基础。注意区分have/has"有"和There be"存在"的不同。<br><br>
+                            <strong>💡 拓展：have在很多短语中有超越"拥有"的意思：</strong><br>
+                            • <span class="highlight">have breakfast</span> 吃早餐 🍳<br>
+                            • <span class="highlight">have a shower</span> 洗澡 🚿<br>
+                            • <span class="highlight">have a rest</span> 休息 😴<br>
+                            • <span class="highlight">have fun</span> 玩得开心 🎉<br>
+                            • <span class="highlight">have a look</span> 看一看 👀
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="point2" class="grammar-point">
+                <div class="point-header">
+                    <div class="point-number">2</div>
+                    <div class="point-title">no...or...句型</div>
+                    <div class="emoji">🚫</div>
+                </div>
+                <div class="point-content">
+                    <p class="core-concept"><strong>核心概念：</strong>no...or...表示"既没有...也没有..."，用来否定两个或多个并列的事物</p>
+
+                    <div class="structure-box">
+                        <h4>🔗 基本结构</h4>
+                        <div class="structure-item">
+                            主语 + have/has + no + 名词1 + or + 名词2
+                            <div class="structure-examples">They have <span class="highlight">no legs or arms</span>. = They don't have legs or arms. 🐟</div>
+                        </div>
+                    </div>
+
+                    <div class="simple-note">
+                        <strong>📝 no...or...句型后的名词形式：</strong><br><br>
+                        • <strong>可数名词复数：</strong>通常用复数形式，表示这类东西都没有 📚<br>
+                        &nbsp;&nbsp;例：I <span class="highlight">have no books or pens</span>. 我既没有书也没有笔。(学习用品都没有)<br><br>
+                        • <strong>不可数名词：</strong>保持原形 🥛<br>
+                        &nbsp;&nbsp;例：He <span class="highlight">has no milk or juice</span>. 他既没有牛奶也没有果汁。(饮品都没有)<br><br>
+                        • <strong>可数名词单数：</strong>在特定情况下也可使用，表示连一个都没有 👶<br>
+                        &nbsp;&nbsp;例：He <span class="highlight-possessive-noun">has no brother or sister</span>. 他既没有兄弟也没有姐妹。(他是独生子女)<br><br>
+                        <strong>🔍 复数vs单数的区别：</strong>复数强调"这类东西都没有"，单数强调"连一个都没有"。在家庭关系等固定搭配中，单数更常见，因为通常指具体的一个。<br><br>
+                        <strong>💡 句型转换：</strong><br>
+                        • <span class="highlight">I have no books</span> = <span class="highlight">I don't have any books</span> 📖<br>
+                        • <span class="highlight">They have no pens or pencils</span> = <span class="highlight">They don't have any pens or pencils</span> ✏️<br>
+                        • <span class="highlight">There is no milk</span> = <span class="highlight">There isn't any milk</span> 🥛
+                    </div>
+
+                    <div class="detail-box">
+                        <h5>📋 使用场景</h5>
+                        <div class="detail-item">
+                            <strong>描述缺失：</strong>表示完全没有某些东西
+                            <div style="margin-top: 4px; font-style: italic; color: #666;">
+                                例：My toy box has no cars or planes. 我的玩具箱里既没有小汽车也没有飞机。🚗✈️
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <strong>并列否定：</strong>同时否定两个或多个事物
+                            <div style="margin-top: 4px; font-style: italic; color: #666;">
+                                例：He has no homework or tests today. 他今天既没有作业也没有考试。📝📋
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <strong>强调完全性：</strong>比单纯的否定更加强调
+                            <div style="margin-top: 4px; font-style: italic; color: #666;">
+                                例：The playground has no swings or slides. 操场上既没有秋千也没有滑梯。🎢🛝
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="exam-focus">
+                        <h5>🎯 考察重点</h5>
+                        <div class="focus-item">
+                            <div class="focus-icon">✨</div>
+                            <div class="focus-content">
+                                <div class="focus-title">no与not的区别</div>
+                                <div class="focus-text">no后接名词，not后接动词或形容词</div>
+                                <div class="focus-example">📚 no books (名词前) / not have (动词前)</div>
+                            </div>
+                        </div>
+                        <div class="focus-item">
+                            <div class="focus-icon">✨</div>
+                            <div class="focus-content">
+                                <div class="focus-title">and与or的转换</div>
+                                <div class="focus-text">肯定句用and，否定句用or</div>
+                                <div class="focus-example">🔄 肯定句用and，否定句用or</div>
+                            </div>
+                        </div>
+                        <div class="focus-item">
+                            <div class="focus-icon">✨</div>
+                            <div class="focus-content">
+                                <div class="focus-title">句型的正确运用</div>
+                                <div class="focus-text">掌握no...or...的完整表达</div>
+                                <div class="focus-example">🚫 They have no arms or legs.</div>
+                            </div>
+                        </div>
+                        <div class="focus-item">
+                            <div class="focus-icon">✨</div>
+                            <div class="focus-content">
+                                <div class="focus-title">语境中的恰当使用</div>
+                                <div class="focus-text">根据语境选择表达完全没有的合适句型</div>
+                                <div class="focus-example">💬 表达完全没有的选择合适的句型</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>📝 经典例句</h4>
+                        <div class="example">
+                            <span class="example-emoji">🐟</span>
+                            <span>Fish have <span class="highlight">no legs or arms</span>. 鱼既没有腿也没有胳膊。</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">🐛</span>
+                            <span>The snake has <span class="highlight">no legs or wings</span>. 蛇既没有腿也没有翅膀。</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">🎒</span>
+                            <span>I have <span class="highlight">no pencils or erasers</span> in my pencil case. 我的铅笔盒里既没有铅笔也没有橡皮。</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">🥛</span>
+                            <span>There is <span class="highlight">no milk or water</span> in the glass. 玻璃杯里既没有牛奶也没有水。</span>
+                        </div>
+                    </div>
+
+                    <div class="connection-box">
+                        <h4>🔗 温故知新</h4>
+                        <div class="connection-text">
+                            结合have/has的否定用法，学会用no...or...更自然地表达"两样都没有"的概念。同时，学习新知的时候，也要想起我们的老朋友There be句型，它也可以用no...or...表达"既没有...也没有..."，比如：There are no cats or dogs in the park. 公园里既没有猫也没有狗。🐱🐶
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="point3" class="grammar-point">
+                <div class="point-header">
+                    <div class="point-number">3</div>
+                    <div class="point-title">one...the other...句型</div>
+                    <div class="emoji">⚖️</div>
+                </div>
+                <div class="point-content">
+                    <p class="core-concept"><strong>核心概念：</strong>one...the other...用来描述两个事物，表示"一个...另一个..."</p>
+
+                    <div class="structure-box">
+                        <h4>👫 描述两个人/物</h4>
+                        <div class="structure-item">
+                            One + 形容词/特征, the other + 形容词/特征
+                            <div class="structure-examples">I have two balls. <span class="highlight">One is yellow</span> and <span class="highlight">the other is green</span>. 我有两个球，一个是黄色的，另一个是绿色的。⚽🟡🟢</div>
+                        </div>
+                    </div>
+
+                    <div class="comparison-table">
+                        <h5>📊 the other vs another 对比</h5>
+                        <div class="comparison-grid">
+                            <div class="comparison-header">词汇</div>
+                            <div class="comparison-header">使用场景</div>
+                            <div class="comparison-header">例句</div>
+                            <div class="comparison-header">说明</div>
+                            
+                            <div class="comparison-cell">the other</div>
+                            <div class="comparison-cell">两个中的另一个(特指)</div>
+                            <div class="comparison-cell">One is red, the other is blue. 🔴🔵</div>
+                            <div class="comparison-cell">范围明确，总数为2</div>
+                            
+                            <div class="comparison-cell">another</div>
+                            <div class="comparison-cell">许多中的另一个(泛指)</div>
+                            <div class="comparison-cell">I want another apple. 🍎</div>
+                            <div class="comparison-cell">范围不明确，总数≥3</div>
+                        </div>
+                    </div>
+
+                    <div class="usage-note">
+                        <h6>🔍 注意区分</h6>
+                        <p>• <span class="highlight">other</span>前面不要漏掉<span class="highlight">the</span><br>
+                        • <span class="highlight">the other</span>不能用<span class="highlight">another</span>代替<br>
+                        • 这个句型只用于两个事物，三个或以上要用<span class="highlight">others</span></p>
+                        <div style="margin-top: 6px; font-style: italic; color: #666;">
+                            拓展例句：Some students in my class like math, <span class="highlight">others</span> like English. 我们班一些学生喜欢数学，其他的喜欢英语。📐📝
+                        </div>
+                    </div>
+
+                    <div class="exam-focus">
+                        <h5>🎯 考察重点</h5>
+                        <div class="focus-item">
+                            <div class="focus-icon">✨</div>
+                            <div class="focus-content">
+                                <div class="focus-title">定冠词the的使用</div>
+                                <div class="focus-text">the other中的the不能省略，表示特指</div>
+                                <div class="focus-example">⭐ the other (特指另一个)</div>
+                            </div>
+                        </div>
+                        <div class="focus-item">
+                            <div class="focus-icon">✨</div>
+                            <div class="focus-content">
+                                <div class="focus-title">数量限制的理解</div>
+                                <div class="focus-text">这个句型只能用于两个事物的对比</div>
+                                <div class="focus-example">🔢 只能用于两个事物</div>
+                            </div>
+                        </div>
+                        <div class="focus-item">
+                            <div class="focus-icon">✨</div>
+                            <div class="focus-content">
+                                <div class="focus-title">句型的完整表达</div>
+                                <div class="focus-text">掌握完整的对比句型结构</div>
+                                <div class="focus-example">📝 One is..., the other is...</div>
+                            </div>
+                        </div>
+                        <div class="focus-item">
+                            <div class="focus-icon">✨</div>
+                            <div class="focus-content">
+                                <div class="focus-title">与another的区别</div>
+                                <div class="focus-text">理解特指与泛指的不同用法</div>
+                                <div class="focus-example">🔍 the other (两个中) vs another (多个中)</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>📝 经典例句</h4>
+                        <div class="example">
+                            <span class="example-emoji">⚽</span>
+                            <span>I have two balls. <span class="highlight">One is yellow</span> and <span class="highlight">the other is green</span>. 我有两个球，一个是黄色的，另一个是绿色的。</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">👯</span>
+                            <span>I have two sisters. <span class="highlight">One sister</span> is tall, <span class="highlight">the other</span> is short. 我有两个姐妹，一个高，另一个矮。</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">👁️</span>
+                            <span>I have two eyes. <span class="highlight">One eye</span> is big, <span class="highlight">the other</span> is small. 我有两只眼睛，一只大，另一只小。</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">✋</span>
+                            <span>I have two hands. <span class="highlight">One hand</span> is clean, <span class="highlight">the other</span> is dirty. 我有两只手，一只干净，另一只脏。</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">🍎</span>
+                            <span>I have many apples. I want <span class="highlight">another</span> one. 我有很多苹果，我想要另一个。(泛指，不特指)</span>
+                        </div>
+                    </div>
+
+                    <div class="connection-box">
+                        <h4>🔗 温故知新</h4>
+                        <div class="connection-text">
+                            这个句型常与have/has结合使用，用来描述所拥有的两样东西的不同特征。同时，我们的老朋友There be句型也可以用这个句型哦！比如：There are two cats in the garden. One is black, the other is white. 花园里有两只猫，一只是黑色的，另一只是白色的。🐱⚫⚪
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="point4" class="grammar-point">
+                <div class="point-header">
+                    <div class="point-number">4</div>
+                    <div class="point-title">情态动词can的用法</div>
+                    <div class="emoji">💪</div>
+                </div>
+                <div class="point-content">
+                    <p class="core-concept"><strong>核心概念：</strong>can表示"能够、会"，用来描述某人的能力或被许可做某事</p>
+
+                    <div class="tips-box">
+                        <h5>🎯 can的两种主要用法</h5>
+                        <div class="tip-item">
+                            <strong>1. 表示能力：</strong>描述某人会做某事的能力或技能 🏊‍♂️<br>
+                            <div style="margin-top: 4px; font-style: italic; color: #666;">
+                                例：I <span class="highlight-positive">can swim</span>. 我会游泳。/ She <span class="highlight-positive">can speak</span> English. 她会说英语。🗣️
+                            </div>
+                        </div>
+                        <div class="tip-item">
+                            <strong>2. 表示许可：</strong>询问或表示被允许做某事 🚪<br>
+                            <div style="margin-top: 4px; font-style: italic; color: #666;">
+                                例：<span class="highlight-question">Can I go</span> to the toilet? 我可以去洗手间吗？/ You <span class="highlight-positive">can play</span> outside. 你可以在外面玩。🌳
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="compact-table">
+                        <h5>📊 can句型变化表</h5>
+                        <div class="sentence-groups">
+                            <div class="sentence-group">
+                                <h6>肯定句</h6>
+                                <div class="sentence">I <span class="highlight-positive">can</span> dance. 💃</div>
+                                <div class="sentence">She <span class="highlight-positive">can</span> sing. 🎵</div>
+                            </div>
+                            <div class="sentence-group">
+                                <h6>否定句</h6>
+                                <div class="sentence">I <span class="highlight-negative">can't</span> dance. ❌</div>
+                                <div class="sentence">She <span class="highlight-negative">can't</span> sing. ❌</div>
+                            </div>
+                            <div class="sentence-group">
+                                <h6>疑问句</h6>
+                                <div class="sentence"><span class="highlight-question">Can</span> you dance? ❓</div>
+                                <div class="sentence"><span class="highlight-question">Can</span> she sing? ❓</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="detail-box">
+                        <h5>🎯 can的特点</h5>
+                        <div class="detail-item">
+                            <strong>无人称变化：</strong>所有人称都用<span class="highlight">can</span>，没有第三人称单数变化
+                            <div style="margin-top: 3px; font-style: italic; color: #666;">
+                                例：I can / You can / He can / They can 👥
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <strong>后接动词原形：</strong><span class="highlight">can</span>后面的动词不需要任何变化
+                            <div style="margin-top: 3px; font-style: italic; color: #666;">
+                                例：can sing (不是can sings) 🎵
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <strong>双重含义：</strong>既可表示能力，也可表示许可
+                            <div style="margin-top: 3px; font-style: italic; color: #666;">
+                                能力：I can swim. 许可：Can I come in? 🏊‍♂️🚪
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="exam-focus">
+                        <h5>🎯 考察重点</h5>
+                        <div class="focus-item">
+                            <div class="focus-icon">✨</div>
+                            <div class="focus-content">
+                                <div class="focus-title">can后接动词原形</div>
+                                <div class="focus-text">can后面的动词必须用原形，不能加s</div>
+                                <div class="focus-example">🎵 can sing (不是can sings)</div>
+                            </div>
+                        </div>
+                        <div class="focus-item">
+                            <div class="focus-icon">✨</div>
+                            <div class="focus-content">
+                                <div class="focus-title">否定形式的拼写</div>
+                                <div class="focus-text">can't是缩写形式，完整形式是cannot</div>
+                                <div class="focus-example">❌ can't 或 cannot</div>
+                            </div>
+                        </div>
+                        <div class="focus-item">
+                            <div class="focus-icon">✨</div>
+                            <div class="focus-content">
+                                <div class="focus-title">疑问句的语序</div>
+                                <div class="focus-text">疑问句把can提前，主语和动词原形跟在后面</div>
+                                <div class="focus-example">❓ Can you...? (不是You can...?)</div>
+                            </div>
+                        </div>
+                        <div class="focus-item">
+                            <div class="focus-icon">✨</div>
+                            <div class="focus-content">
+                                <div class="focus-title">简略回答的正确形式</div>
+                                <div class="focus-text">用can/can't回答，保持简洁</div>
+                                <div class="focus-example">✅ Yes, I can. / No, I can't.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>📝 经典例句</h4>
+                        <div class="example">
+                            <span class="example-emoji">🎵</span>
+                            <span>I <span class="highlight-positive">can sing</span> English songs. 我会唱英语歌。(能力)</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">🏊</span>
+                            <span>He <span class="highlight-negative">can't swim</span>. 他不会游泳。(能力)</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">🦘</span>
+                            <span><span class="highlight-question">Can you jump</span>? 你能跳吗？(能力)</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">🚪</span>
+                            <span><span class="highlight-question">Can I come in</span>? 我可以进来吗？(许可)</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">🎮</span>
+                            <span>You <span class="highlight-positive">can play</span> games now. 你现在可以玩游戏了。(许可)</span>
+                        </div>
+                    </div>
+
+                    <div class="connection-box">
+                        <h4>🔗 温故知新</h4>
+                        <div class="connection-text">
+                            can是第一个学习的情态动词，为以后学习may, must, should等情态动词打下基础。记住情态动词的共同特点：后接动词原形，疑问句将情态动词提前。
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="point5" class="grammar-point">
+                <div class="point-header">
+                    <div class="point-number">5</div>
+                    <div class="point-title">代词系统复习</div>
+                    <div class="emoji">🔧</div>
+                </div>
+                <div class="point-content">
+                    <p class="core-concept"><strong>核心概念：</strong>代词是代替名词的词，包括主格、形容词性物主代词、名词性物主代词和宾格四种形式</p>
+
+                    <div class="pronoun-table">
+                        <h5>📚 代词系统复习表</h5>
+                        <div class="pronoun-grid">
+                            <div class="pronoun-header">人称</div>
+                            <div class="pronoun-header">主格</div>
+                            <div class="pronoun-header">形容词性物主代词</div>
+                            <div class="pronoun-header">名词性物主代词</div>
+                            <div class="pronoun-header">宾格</div>
+                            
+                            <div class="pronoun-cell pronoun-cell-person">第一人称单数 👤</div>
+                            <div class="pronoun-cell pronoun-cell-subject">I</div>
+                            <div class="pronoun-cell pronoun-cell-possessive">my</div>
+                            <div class="pronoun-cell pronoun-cell-possessive-noun">mine</div>
+                            <div class="pronoun-cell pronoun-cell-object">me</div>
+                            
+                            <div class="pronoun-cell pronoun-cell-person">第一人称复数 👥</div>
+                            <div class="pronoun-cell pronoun-cell-subject">we</div>
+                            <div class="pronoun-cell pronoun-cell-possessive">our</div>
+                            <div class="pronoun-cell pronoun-cell-possessive-noun">ours</div>
+                            <div class="pronoun-cell pronoun-cell-object">us</div>
+                            
+                            <div class="pronoun-cell pronoun-cell-person">第二人称单数/复数 👤</div>
+                            <div class="pronoun-cell pronoun-cell-subject">you</div>
+                            <div class="pronoun-cell pronoun-cell-possessive">your</div>
+                            <div class="pronoun-cell pronoun-cell-possessive-noun">yours</div>
+                            <div class="pronoun-cell pronoun-cell-object">you</div>
+                            
+                            <div class="pronoun-cell pronoun-cell-person">第三人称单数(男) 👨</div>
+                            <div class="pronoun-cell pronoun-cell-subject">he</div>
+                            <div class="pronoun-cell pronoun-cell-possessive">his</div>
+                            <div class="pronoun-cell pronoun-cell-possessive-noun">his</div>
+                            <div class="pronoun-cell pronoun-cell-object">him</div>
+                            
+                            <div class="pronoun-cell pronoun-cell-person">第三人称单数(女) 👩</div>
+                            <div class="pronoun-cell pronoun-cell-subject">she</div>
+                            <div class="pronoun-cell pronoun-cell-possessive">her</div>
+                            <div class="pronoun-cell pronoun-cell-possessive-noun">hers</div>
+                            <div class="pronoun-cell pronoun-cell-object">her</div>
+                            
+                            <div class="pronoun-cell pronoun-cell-person">第三人称单数(物) 🐱</div>
+                            <div class="pronoun-cell pronoun-cell-subject">it</div>
+                            <div class="pronoun-cell pronoun-cell-possessive">its</div>
+                            <div class="pronoun-cell pronoun-cell-possessive-noun">its</div>
+                            <div class="pronoun-cell pronoun-cell-object">it</div>
+                            
+                            <div class="pronoun-cell pronoun-cell-person">第三人称复数 👥</div>
+                            <div class="pronoun-cell pronoun-cell-subject">they</div>
+                            <div class="pronoun-cell pronoun-cell-possessive">their</div>
+                            <div class="pronoun-cell pronoun-cell-possessive-noun">theirs</div>
+                            <div class="pronoun-cell pronoun-cell-object">them</div>
+                        </div>
+                    </div>
+
+                    <div class="detail-box">
+                        <h5>🔍 各类代词的用法</h5>
+                        <div class="detail-item">
+                            <strong><span class="highlight-subject">主格</span>：</strong>作主语，放在句首或动词前，如<span class="highlight-subject">I, you, he, she, it, we, they</span> 👤
+                            <div style="margin-top: 3px; font-style: italic; color: #666;">
+                                例：I am happy. / She likes cats. 😊🐱
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <strong><span class="highlight-possessive">形容词性物主代词</span>：</strong>修饰名词，放在名词前，如<span class="highlight-possessive">my book, your pen, his bag</span> 📚
+                            <div style="margin-top: 3px; font-style: italic; color: #666;">
+                                例：This is my book. / That's your pen. ✏️
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <strong><span class="highlight-possessive-noun">名词性物主代词</span>：</strong>代替"形容词性物主代词+名词"，如This book is <span class="highlight-possessive-noun">mine</span>.(=my book) 📖
+                            <div style="margin-top: 3px; font-style: italic; color: #666;">
+                                例：This is mine. / That's yours. ✨
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <strong><span class="highlight-object">宾格</span>：</strong>作宾语，放在动词或介词后，如I know <span class="highlight-object">him</span>, look at <span class="highlight-object">me</span> 👀
+                            <div style="margin-top: 3px; font-style: italic; color: #666;">
+                                例：I like him. / Look at me. 👁️
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="usage-note">
+                        <h6>⚠️ 特别注意</h6>
+                        <p>• <span class="highlight-special">its</span>既是形容词性物主代词也可作名词性物主代词使用 🐾<br>
+                        • it's是it is的缩写，表示"它是"，有撇号 ✨<br>
+                        • his既是形容词性物主代词也是名词性物主代词 👨<br>
+                        • 名词性物主代词后面不能再接名词 📝</p>
+                    </div>
+
+                    <div class="exam-focus">
+                        <h5>🎯 考察重点</h5>
+                        <div class="focus-item">
+                            <div class="focus-icon">✨</div>
+                            <div class="focus-content">
+                                <div class="focus-title">代词的正确位置</div>
+                                <div class="focus-text">主格作主语，宾格作宾语，物主代词修饰名词</div>
+                                <div class="focus-example">📍 主格在句首，宾格在动词后</div>
+                            </div>
+                        </div>
+                        <div class="focus-item">
+                            <div class="focus-icon">✨</div>
+                            <div class="focus-content">
+                                <div class="focus-title">形容词性与名词性物主代词区别</div>
+                                <div class="focus-text">形容词性后接名词，名词性单独使用</div>
+                                <div class="focus-example">📝 my book vs mine</div>
+                            </div>
+                        </div>
+                        <div class="focus-item">
+                            <div class="focus-icon">✨</div>
+                            <div class="focus-content">
+                                <div class="focus-title">特殊代词的掌握</div>
+                                <div class="focus-text">its与it's、his的双重用法要牢记</div>
+                                <div class="focus-example">⭐ its (物主) vs it's (it is)</div>
+                            </div>
+                        </div>
+                        <div class="focus-item">
+                            <div class="focus-icon">✨</div>
+                            <div class="focus-content">
+                                <div class="focus-title">人称代词的一致性</div>
+                                <div class="focus-text">同一句中代词要保持人称一致</div>
+                                <div class="focus-example">🔗 He loves his cat. (都是第三人称)</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>📝 经典例句</h4>
+                        <div class="example">
+                            <span class="example-emoji">📚</span>
+                            <span>This is <span class="highlight-possessive">my</span> book. This book is <span class="highlight-possessive-noun">mine</span>.</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">🧸</span>
+                            <span>That is <span class="highlight-possessive">his</span> toy. That toy is <span class="highlight-possessive-noun">his</span>. I know <span class="highlight-object">him</span>.</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">🐢</span>
+                            <span><span class="highlight-possessive">Its</span> body is hard. <span class="highlight-subject">It</span> lives in water.</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">🐴</span>
+                            <span><span class="highlight-subject">She</span> loves <span class="highlight-possessive">her</span> horse. This horse is <span class="highlight-possessive-noun">hers</span>. It helps <span class="highlight-object">her</span>.</span>
+                        </div>
+                    </div>
+
+                    <div class="connection-box">
+                        <h4>🔗 温故知新</h4>
+                        <div class="connection-text">
+                            代词系统是英语语法的重要基础，掌握各类代词的用法有助于更准确地表达和理解英语句子。这些代词将在今后的学习中频繁出现，是构建复杂句子的基石。
+                        </div>
+                    </div>
+
+                    <div class="eva-tip">
+                        <h5>🔍 Eva老师👩‍🏫小贴士</h5>
+                        <p>亲爱的同学们，Unit3的语法内容非常实用！从have/has的基本用法，到no...or...的否定表达，从one...the other...的对比句型，到can的能力和许可表达，最后是代词系统的全面复习。这些都是英语表达的基础工具。记住：语法就像搭积木一样，每一个语法点都是一块积木，当我们把它们组合在一起时，就能建造出美丽的英语句子。多练习，多思考，在实际运用中掌握这些知识点。语法不是死记硬背的规则，而是帮助我们更好表达的工具。愿你们在英语学习的道路上越走越自信！💪✨</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            Eva老师👩‍🏫伴步英语
+        </div>
+    </div>
+
+    <script>
+        // 平滑滚动到指定位置
+        document.querySelectorAll('.toc-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+
+
+</body></html>
