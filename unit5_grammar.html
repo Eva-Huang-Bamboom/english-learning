@@ -1,0 +1,2288 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="x-poe-datastore-behavior" content="local_only"><meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' data: blob: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://code.jquery.com https://unpkg.com https://d3js.org https://threejs.org https://cdn.plot.ly https://stackpath.bootstrapcdn.com https://maps.googleapis.com https://cdn.tailwindcss.com https://ajax.googleapis.com https://kit.fontawesome.com https://cdn.datatables.net https://maxcdn.bootstrapcdn.com https://code.highcharts.com https://tako-static-assets-production.s3.amazonaws.com https://www.youtube.com https://fonts.googleapis.com https://fonts.gstatic.com https://pfst.cf2.poecdn.net https://puc.poecdn.net https://i.imgur.com https://wikimedia.org https://*.icons8.com https://*.giphy.com https://picsum.photos https://images.unsplash.com; frame-src 'self' https://www.youtube.com https://trytako.com; child-src 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests; block-all-mixed-content;">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eva老师👩‍🏫伴步英语-江苏校内-译林英语-五上-Unit5必学语法点</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            background: linear-gradient(135deg, #6d8bc3 0%, #c0db82 100%);
+            padding: 15px;
+            min-height: 100vh;
+            line-height: 1.6;
+            position: relative;
+        }
+
+        /* 水印样式 */
+        .watermark {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            user-select: none;
+            z-index: 999;
+            overflow: hidden;
+        }
+
+        .watermark::before {
+            content: "Eva老师👩‍🏫伴步英语";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-45deg);
+            font-size: 32px;
+            color: rgba(109, 139, 195, 0.12);
+            font-weight: bold;
+            white-space: nowrap;
+            letter-spacing: 6px;
+            text-shadow: 0 0 1px rgba(109, 139, 195, 0.08);
+        }
+
+        .watermark::after {
+            content: "Eva老师👩‍🏫伴步英语";
+            position: absolute;
+            top: 25%;
+            left: 25%;
+            transform: translate(-50%, -50%) rotate(-45deg);
+            font-size: 24px;
+            color: rgba(192, 219, 130, 0.08);
+            font-weight: bold;
+            white-space: nowrap;
+            letter-spacing: 4px;
+        }
+
+        .card-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(236, 236, 236, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            overflow: hidden;
+            min-height: 95vh;
+            position: relative;
+            z-index: 10;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #6d8bc3, #5a7ab8);
+            color: white;
+            text-align: center;
+            padding: 25px 20px;
+            position: relative;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .header .subtitle {
+            font-size: 16px;
+            opacity: 0.9;
+            margin-bottom: 5px;
+        }
+
+        .highlight-unit {
+            background: #FFE266;
+            color: #333;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        .header .teacher-info {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        .decorative-star {
+            position: absolute;
+            font-size: 20px;
+            animation: twinkle 2s infinite;
+        }
+
+        .star1 { top: 10px; left: 20px; }
+        .star2 { top: 15px; right: 30px; animation-delay: 0.5s; }
+        .star3 { bottom: 10px; left: 40px; animation-delay: 1s; }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.5; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.2); }
+        }
+
+        /* 目录导航样式 */
+        .table-of-contents {
+            background: rgba(255, 255, 255, 0.98);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 20px 0 20px;
+            border-left: 5px solid #6d8bc3;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .toc-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .toc-icon {
+            background: #6d8bc3;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            margin-right: 12px;
+        }
+
+        .toc-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .toc-item {
+            margin: 8px 0;
+            padding: 12px 15px;
+            background: #f8f9ff;
+            border-radius: 8px;
+            border-left: 3px solid #FFE266;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .toc-item:hover {
+            background: #e8f2ff;
+            border-left-color: #6d8bc3;
+            transform: translateX(5px);
+        }
+
+        .toc-item:nth-child(2n) {
+            border-left-color: #c0db82;
+        }
+
+        .toc-item:nth-child(3n) {
+            border-left-color: #6d8bc3;
+        }
+
+        .toc-link {
+            text-decoration: none;
+            color: #333;
+            font-size: 14px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .toc-number {
+            background: #FFE266;
+            color: #333;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .toc-title {
+            flex: 1;
+        }
+
+        .toc-emoji {
+            font-size: 16px;
+        }
+
+        .content {
+            padding: 20px;
+            max-height: calc(100vh - 200px);
+            overflow-y: auto;
+        }
+
+        .grammar-point {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 5px solid #FFE266;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+            position: relative;
+            scroll-margin-top: 20px;
+        }
+
+        .grammar-point:hover {
+            transform: translateY(-2px);
+        }
+
+        .grammar-point:nth-child(2n) {
+            border-left-color: #c0db82;
+        }
+
+        .grammar-point:nth-child(3n) {
+            border-left-color: #6d8bc3;
+        }
+
+        .point-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .point-number {
+            background: #FFE266;
+            color: #333;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 12px;
+            font-size: 14px;
+        }
+
+        .point-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            flex: 1;
+        }
+
+        .emoji {
+            font-size: 20px;
+            margin-left: 8px;
+        }
+
+        .point-content {
+            color: #555;
+            line-height: 1.6;
+            font-size: 14px;
+        }
+
+        .core-concept {
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+
+        .key-points {
+            background: #f8f9ff;
+            border-radius: 10px;
+            padding: 12px;
+            margin: 12px 0;
+            border: 2px dashed #6d8bc3;
+        }
+
+        .key-points h4 {
+            color: #6d8bc3;
+            font-size: 14px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .key-points ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .key-points li {
+            padding: 8px 0;
+            position: relative;
+            padding-left: 18px;
+            border-bottom: 1px dotted #e0e0e0;
+        }
+
+        .key-points li:last-child {
+            border-bottom: none;
+        }
+
+        .key-points li:before {
+            content: "✨";
+            position: absolute;
+            left: 0;
+            font-size: 12px;
+        }
+
+        .key-point-examples {
+            font-size: 12px;
+            color: #777;
+            margin-top: 4px;
+            font-style: italic;
+            padding-left: 10px;
+            border-left: 2px solid #FFE266;
+        }
+
+        .structure-box {
+            background: linear-gradient(135deg, #c0db82, #d4e89a);
+            border-radius: 10px;
+            padding: 12px;
+            margin: 12px 0;
+            border: 1px solid #a8c26a;
+        }
+
+        .structure-box h4 {
+            color: #5a7a2d;
+            font-size: 14px;
+            margin-bottom: 8px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .structure-item {
+            background: white;
+            border-radius: 6px;
+            padding: 8px;
+            margin: 6px 0;
+            border-left: 3px solid #6d8bc3;
+            font-size: 13px;
+            color: #333;
+        }
+
+        .structure-examples {
+            font-size: 12px;
+            color: #666;
+            margin-top: 4px;
+            font-style: italic;
+        }
+
+        .detail-box {
+            background: #f0f8ff;
+            border: 2px solid #6d8bc3;
+            border-radius: 8px;
+            padding: 12px;
+            margin: 10px 0;
+        }
+
+        .detail-box h5 {
+            color: #6d8bc3;
+            font-size: 13px;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        .detail-item {
+            margin: 6px 0;
+            padding: 6px;
+            background: white;
+            border-radius: 4px;
+            border-left: 2px solid #6d8bc3;
+            font-size: 12px;
+        }
+
+        .detail-item strong {
+            color: #6d8bc3;
+        }
+
+        .example-box {
+            background: linear-gradient(135deg, #FFE266, #fff5a0);
+            border-radius: 10px;
+            padding: 12px;
+            margin: 12px 0;
+            border: 1px solid #e6d000;
+        }
+
+        .example-box h4 {
+            color: #b8860b;
+            font-size: 13px;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .example {
+            font-style: italic;
+            color: #666;
+            margin: 5px 0;
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .example-emoji {
+            font-size: 16px;
+        }
+
+        .highlight {
+            background: #e8f4f8;
+            padding: 1px 6px;
+            border-radius: 3px;
+            color: #2c6b8a;
+            font-weight: bold;
+            border: 1px solid #a8d5e5;
+        }
+
+        .highlight-positive {
+            background: #e8f5e8;
+            padding: 1px 4px;
+            border-radius: 3px;
+            color: #2d5a2d;
+            font-weight: bold;
+            border: 1px solid #b8d4b8;
+        }
+
+        .highlight-negative {
+            background: #f8e8e8;
+            padding: 1px 4px;
+            border-radius: 3px;
+            color: #8a2c2c;
+            font-weight: bold;
+            border: 1px solid #e5a8a8;
+        }
+
+        .highlight-question {
+            background: #f4e8c1;
+            padding: 1px 4px;
+            border-radius: 3px;
+            color: #8b5a3c;
+            font-weight: bold;
+            border: 1px solid #d4c19c;
+        }
+
+        .connection-box {
+            background: linear-gradient(135deg, #c0db82, #d4e89a);
+            border-radius: 8px;
+            padding: 10px;
+            margin-top: 12px;
+            border: 1px solid #a8c26a;
+        }
+
+        .connection-box h4 {
+            color: #5a7a2d;
+            font-size: 12px;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        .connection-text {
+            font-size: 12px;
+            color: #4a6024;
+            line-height: 1.4;
+        }
+
+        .comparison-table {
+            background: white;
+            border-radius: 10px;
+            padding: 12px;
+            margin: 12px 0;
+            border: 2px solid #6d8bc3;
+        }
+
+        .comparison-table h5 {
+            color: #6d8bc3;
+            font-size: 14px;
+            margin-bottom: 10px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 6px;
+            margin-bottom: 10px;
+        }
+
+        .comparison-header {
+            background: #6d8bc3;
+            color: white;
+            padding: 6px;
+            border-radius: 4px;
+            text-align: center;
+            font-size: 11px;
+            font-weight: bold;
+        }
+
+        .comparison-cell {
+            background: #f5f5f5;
+            padding: 6px;
+            border-radius: 4px;
+            text-align: center;
+            font-size: 10px;
+            border: 1px solid #e0e0e0;
+            line-height: 1.3;
+        }
+
+        .positive-cell {
+            background: #e8f5e8;
+            border-color: #b8d4b8;
+        }
+
+        .negative-cell {
+            background: #f8e8e8;
+            border-color: #e5a8a8;
+        }
+
+        .question-cell {
+            background: #f4e8c1;
+            border-color: #d4c19c;
+        }
+
+        .eva-tip {
+            background: linear-gradient(135deg, #d8b3e0, #e4c7e7);
+            border-radius: 10px;
+            padding: 12px;
+            margin: 12px 0;
+            border: 2px solid #c8a2c8;
+        }
+
+        .eva-tip h5 {
+            color: #8e44ad;
+            font-size: 13px;
+            margin-bottom: 6px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .eva-tip p {
+            color: #6a4c7a;
+            font-size: 12px;
+            line-height: 1.5;
+            font-style: italic;
+        }
+
+        .footer {
+            background: linear-gradient(135deg, #6d8bc3, #5a7ab8);
+            color: white;
+            text-align: center;
+            padding: 12px 20px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .usage-note {
+            background: #fff3cd;
+            border: 2px solid #FFE266;
+            border-radius: 6px;
+            padding: 8px;
+            margin: 8px 0;
+        }
+
+        .usage-note h6 {
+            color: #856404;
+            font-size: 11px;
+            margin-bottom: 3px;
+            font-weight: bold;
+        }
+
+        .usage-note p {
+            font-size: 10px;
+            color: #856404;
+            line-height: 1.3;
+        }
+
+        .distinction-box {
+            background: #fff0f5;
+            border: 2px solid #ff69b4;
+            border-radius: 8px;
+            padding: 12px;
+            margin: 10px 0;
+        }
+
+        .distinction-box h5 {
+            color: #d63384;
+            font-size: 13px;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        .distinction-item {
+            margin: 6px 0;
+            padding: 6px;
+            background: white;
+            border-radius: 4px;
+            border-left: 2px solid #ff69b4;
+            font-size: 12px;
+        }
+
+        .distinction-item strong {
+            color: #d63384;
+        }
+
+        .verb-table {
+            background: #f0f8ff;
+            border: 2px solid #6d8bc3;
+            border-radius: 12px;
+            padding: 15px;
+            margin: 15px 0;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .verb-table h5 {
+            color: #6d8bc3;
+            font-size: 16px;
+            margin-bottom: 12px;
+            font-weight: bold;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .verb-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 6px;
+            margin-bottom: 12px;
+        }
+
+        .verb-header {
+            background: #6d8bc3;
+            color: white;
+            padding: 8px 6px;
+            border-radius: 6px;
+            text-align: center;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .verb-cell {
+            background: #f5f5f5;
+            padding: 8px 6px;
+            border-radius: 6px;
+            text-align: center;
+            font-size: 11px;
+            border: 1px solid #e0e0e0;
+            min-height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .verb-cell-base {
+            background: #e8f5e8;
+            border-color: #b8d4b8;
+        }
+
+        .verb-cell-third {
+            background: #fff3cd;
+            border-color: #FFE266;
+        }
+
+        .verb-cell-category {
+            background: #f8e8e8;
+            border-color: #e5a8a8;
+        }
+
+        .verb-cell-example {
+            background: white;
+            border-color: #6d8bc3;
+            text-align: left;
+            padding: 6px;
+            font-size: 10px;
+            line-height: 1.3;
+        }
+
+        .highlight-special {
+            background: #FFE266;
+            font-weight: bold;
+            color: #856404;
+            padding: 1px 3px;
+            border-radius: 2px;
+        }
+
+        .highlight-third {
+            background: #fff3cd;
+            color: #856404;
+            padding: 1px 3px;
+            border-radius: 2px;
+            font-weight: bold;
+        }
+
+        .highlight-job {
+            background: #e8f5e8;
+            color: #2d5a2d;
+            padding: 1px 3px;
+            border-radius: 2px;
+            font-weight: bold;
+        }
+
+        .rule-box, .job-box, .help-box, .suggestion-box, .tense-box {
+            border-radius: 10px;
+            padding: 12px;
+            margin: 12px 0;
+        }
+
+        .rule-box {
+            background: #ffe6f0;
+            border: 2px solid #ff69b4;
+        }
+
+        .job-box {
+            background: #e6f7ff;
+            border: 2px solid #1890ff;
+        }
+
+        .help-box {
+            background: #f6ffed;
+            border: 2px solid #52c41a;
+        }
+
+        .suggestion-box {
+            background: #fff7e6;
+            border: 2px solid #ffa940;
+        }
+
+        .tense-box {
+            background: #f0f8ff;
+            border: 2px solid #4169e1;
+        }
+
+        .rule-box h5, .job-box h5, .help-box h5, .suggestion-box h5, .tense-box h5 {
+            font-size: 14px;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .rule-box h5 { color: #d63384; }
+        .job-box h5 { color: #0050b3; }
+        .help-box h5 { color: #237804; }
+        .suggestion-box h5 { color: #d46b08; }
+        .tense-box h5 { color: #0f3cc9; }
+
+        .rule-item, .job-item, .help-item, .suggestion-item, .tense-item {
+            margin: 6px 0;
+            padding: 6px;
+            background: white;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+
+        .rule-item { border-left: 2px solid #ff69b4; }
+        .job-item { border-left: 2px solid #1890ff; }
+        .help-item { border-left: 2px solid #52c41a; }
+        .suggestion-item { border-left: 2px solid #ffa940; }
+        .tense-item { border-left: 2px solid #4169e1; }
+
+        .rule-item strong { color: #d63384; }
+        .job-item strong { color: #0050b3; }
+        .help-item strong { color: #237804; }
+        .suggestion-item strong { color: #d46b08; }
+        .tense-item strong { color: #0f3cc9; }
+
+        .highlight-worker {
+            background: #e6f7ff;
+            color: #0050b3;
+            padding: 1px 3px;
+            border-radius: 2px;
+            font-weight: bold;
+        }
+
+        .highlight-help {
+            background: #f6ffed;
+            color: #237804;
+            padding: 1px 3px;
+            border-radius: 2px;
+            font-weight: bold;
+        }
+
+        .highlight-suggestion {
+            background: #fff7e6;
+            color: #d46b08;
+            padding: 1px 3px;
+            border-radius: 2px;
+            font-weight: bold;
+        }
+
+        .highlight-casual {
+            background: #ffe7ba;
+            color: #8b4513;
+            padding: 1px 3px;
+            border-radius: 2px;
+            font-weight: bold;
+        }
+
+        .highlight-tense {
+            background: #f0f8ff;
+            color: #0f3cc9;
+            padding: 1px 3px;
+            border-radius: 2px;
+            font-weight: bold;
+        }
+
+        .double-object-explanation {
+            background: #f0f8ff;
+            border: 2px solid #4169e1;
+            border-radius: 8px;
+            padding: 12px;
+            margin: 10px 0;
+        }
+
+        .double-object-explanation h6 {
+            color: #0f3cc9;
+            font-size: 12px;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        .double-object-explanation p {
+            font-size: 11px;
+            color: #555;
+            line-height: 1.4;
+        }
+
+        .double-object-example {
+            background: white;
+            padding: 6px;
+            border-radius: 4px;
+            margin: 4px 0;
+            border-left: 3px solid #4169e1;
+            font-size: 11px;
+        }
+
+        .highlight-indirect {
+            background: #f6ffed;
+            color: #237804;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+
+        .highlight-direct {
+            background: #fff7e6;
+            color: #d46b08;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+
+        .gender-extension {
+            background: #f8f0ff;
+            border: 2px solid #9c27b0;
+            border-radius: 10px;
+            padding: 12px;
+            margin: 12px 0;
+        }
+
+        .gender-extension h5 {
+            color: #7b1fa2;
+            font-size: 14px;
+            margin-bottom: 8px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .gender-item {
+            margin: 6px 0;
+            padding: 6px;
+            background: white;
+            border-radius: 4px;
+            border-left: 2px solid #9c27b0;
+            font-size: 12px;
+        }
+
+        .gender-item strong {
+            color: #7b1fa2;
+        }
+
+        .highlight-gender {
+            background: #f3e5f5;
+            color: #7b1fa2;
+            padding: 1px 3px;
+            border-radius: 2px;
+            font-weight: bold;
+        }
+
+        /* 职业词汇体系拓展样式 */
+        .career-extension {
+            background: linear-gradient(135deg, #e8f4fd, #d6ecf0);
+            border: 2px solid #1890ff;
+            border-radius: 12px;
+            padding: 15px;
+            margin: 15px 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .career-extension h5 {
+            color: #0050b3;
+            font-size: 15px;
+            margin-bottom: 12px;
+            font-weight: bold;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .career-category {
+            margin: 10px 0;
+            padding: 10px;
+            background: white;
+            border-radius: 8px;
+            border-left: 4px solid #1890ff;
+        }
+
+        .career-category h6 {
+            color: #0050b3;
+            font-size: 13px;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .career-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 6px;
+            margin-top: 8px;
+        }
+
+        .career-item {
+            background: #f8fbff;
+            padding: 6px 8px;
+            border-radius: 6px;
+            text-align: center;
+            font-size: 11px;
+            border: 1px solid #d9ecff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2px;
+        }
+
+        .career-word {
+            font-weight: bold;
+            color: #0050b3;
+        }
+
+        .career-chinese {
+            color: #666;
+            font-size: 10px;
+        }
+
+        .method-different {
+            background: #e6f7ff;
+            border-left-color: #52c41a;
+        }
+
+        .method-different h6 {
+            color: #237804;
+        }
+
+        .method-different .career-item {
+            background: #f6ffed;
+            border-color: #d9f7be;
+        }
+
+        .method-different .career-word {
+            color: #237804;
+        }
+
+        .method-compound {
+            background: #fff7e6;
+            border-left-color: #ffa940;
+        }
+
+        .method-compound h6 {
+            color: #d46b08;
+        }
+
+        .method-compound .career-item {
+            background: #fffbe6;
+            border-color: #ffe7ba;
+        }
+
+        .method-compound .career-word {
+            color: #d46b08;
+        }
+
+        .method-direct {
+            background: #f0f5ff;
+            border-left-color: #722ed1;
+        }
+
+        .method-direct h6 {
+            color: #722ed1;
+        }
+
+        .method-direct .career-item {
+            background: #f9f0ff;
+            border-color: #efdbff;
+        }
+
+        .method-direct .career-word {
+            color: #722ed1;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            .watermark::before {
+                font-size: 24px;
+                letter-spacing: 3px;
+            }
+
+            .watermark::after {
+                font-size: 18px;
+                letter-spacing: 2px;
+            }
+
+            .card-container {
+                border-radius: 15px;
+                min-height: 100vh;
+            }
+
+            .header {
+                padding: 20px 15px;
+            }
+
+            .header h1 {
+                font-size: 20px;
+            }
+
+            .header .subtitle {
+                font-size: 14px;
+            }
+
+            .table-of-contents {
+                margin: 15px;
+                padding: 15px;
+            }
+
+            .content {
+                padding: 15px;
+                max-height: none;
+            }
+
+            .grammar-point {
+                padding: 15px;
+                margin-bottom: 15px;
+            }
+
+            .point-title {
+                font-size: 16px;
+            }
+
+            .point-content {
+                font-size: 13px;
+            }
+
+            .comparison-grid {
+                grid-template-columns: 1fr;
+                gap: 4px;
+            }
+
+            .verb-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 4px;
+            }
+
+            .verb-header, .verb-cell {
+                font-size: 10px;
+                padding: 6px 4px;
+            }
+
+            .career-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 4px;
+            }
+
+            .decorative-star {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .watermark::before {
+                font-size: 18px;
+                letter-spacing: 2px;
+            }
+
+            .watermark::after {
+                font-size: 14px;
+                letter-spacing: 1px;
+            }
+
+            .header h1 {
+                font-size: 18px;
+            }
+
+            .header .subtitle {
+                font-size: 12px;
+            }
+
+            .point-title {
+                font-size: 14px;
+            }
+
+            .point-content {
+                font-size: 12px;
+            }
+
+            .verb-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .career-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+<script src="https://puc.poecdn.net/authenticated_preview_page/syncedState.bd4eeeb8e8e02052ee92.js"></script></head>
+<body>
+    <!-- 水印元素 -->
+    <div class="watermark"></div>
+    
+    <div class="card-container">
+        <div class="header">
+            <div class="decorative-star star1">⭐</div>
+            <div class="decorative-star star2">✨</div>
+            <div class="decorative-star star3">🌟</div>
+            <h1>江苏校内-译林英语</h1>
+            <div class="subtitle"><span class="highlight-unit">五上</span>-<span class="highlight-unit">Unit5</span>-<span class="highlight-unit">必学语法点</span></div>
+            <div class="teacher-info">Eva老师👩‍🏫伴步英语</div>
+        </div>
+
+        <!-- 目录导航 -->
+        <div class="table-of-contents">
+            <div class="toc-header">
+                <div class="toc-icon">📚</div>
+                <span>知识点目录导航</span>
+            </div>
+            <ul class="toc-list">
+                <li class="toc-item">
+                    <a href="#point1" class="toc-link">
+                        <div class="toc-number">1</div>
+                        <div class="toc-title">询问职业的句型</div>
+                        <div class="toc-emoji">👨‍💼</div>
+                    </a>
+                </li>
+                <li class="toc-item">
+                    <a href="#point2" class="toc-link">
+                        <div class="toc-number">2</div>
+                        <div class="toc-title">动词第三人称单数形式</div>
+                        <div class="toc-emoji">📝</div>
+                    </a>
+                </li>
+                <li class="toc-item">
+                    <a href="#point3" class="toc-link">
+                        <div class="toc-number">3</div>
+                        <div class="toc-title">常见动词表示职业的方法</div>
+                        <div class="toc-emoji">🔧</div>
+                    </a>
+                </li>
+                <li class="toc-item">
+                    <a href="#point4" class="toc-link">
+                        <div class="toc-number">4</div>
+                        <div class="toc-title">help的用法</div>
+                        <div class="toc-emoji">🤝</div>
+                    </a>
+                </li>
+                <li class="toc-item">
+                    <a href="#point5" class="toc-link">
+                        <div class="toc-number">5</div>
+                        <div class="toc-title">动词teach的用法</div>
+                        <div class="toc-emoji">👨‍🏫</div>
+                    </a>
+                </li>
+                <li class="toc-item">
+                    <a href="#point6" class="toc-link">
+                        <div class="toc-number">6</div>
+                        <div class="toc-title">"What about...?" 句型</div>
+                        <div class="toc-emoji">💭</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="content">
+            <div id="point1" class="grammar-point">
+                <div class="point-header">
+                    <div class="point-number">1</div>
+                    <div class="point-title">询问职业的句型</div>
+                    <div class="emoji">👨‍💼</div>
+                </div>
+                <div class="point-content">
+                    <p class="core-concept"><strong>核心概念：</strong>用来询问某人的职业，是日常交流中的重要句型</p>
+                    
+                    <div class="structure-box">
+                        <h4>🔍 基本疑问句结构</h4>
+                        <div class="structure-item">
+                            What + do/does + 主语 + do?
+                            <div class="structure-examples"><span class="highlight-question">What do you do?</span> 你是做什么工作的？</div>
+                        </div>
+                    </div>
+
+                    <div class="structure-box">
+                        <h4>💼 回答句结构</h4>
+                        <div class="structure-item">
+                            主语 + am/is/are + (a/an) + 职业名词
+                            <div class="structure-examples">I <span class="highlight-job">am a teacher</span>. 我是一名老师。</div>
+                        </div>
+                    </div>
+
+                    <div class="detail-box">
+                        <h5>📋 助动词选择规则</h5>
+                        <div class="detail-item">
+                            <strong>第三人称单数：</strong>用does，如What <span class="highlight-question">does</span> he do?
+                        </div>
+                        <div class="detail-item">
+                            <strong>其他人称：</strong>用do，如What <span class="highlight-question">do</span> you do?
+                        </div>
+                        <div class="detail-item">
+                            <strong>回答时：</strong>be动词要根据主语变化，用am/is/are
+                        </div>
+                    </div>
+
+                    <div class="distinction-box">
+                        <h5>🔄 其他表达方式</h5>
+                        <div class="distinction-item">
+                            <strong>What is/are + 主语?</strong> 更直接的询问方式
+                            <div style="margin-top: 5px; font-size: 13px; color: #666;">
+                                例：<span class="highlight-question">What is your job?</span> / <span class="highlight-question">What are their jobs?</span>
+                            </div>
+                        </div>
+                        <div class="distinction-item">
+                            <strong>What is/are + 所有格 + job/jobs?</strong> 询问某人的工作
+                            <div style="margin-top: 5px; font-size: 13px; color: #666;">
+                                例：<span class="highlight-question">What is his job?</span> = <span class="highlight-question">What does he do?</span>
+                            </div>
+                        </div>
+                        <div class="distinction-item">
+                            <strong>What is + 人名?</strong> 比较随意的表达方式
+                            <div style="margin-top: 5px; font-size: 13px; color: #666;">
+                                例：<span class="highlight-casual">What is Jack?</span> (口语化，不够正式)
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="comparison-table">
+                        <h5>📊 询问职业句型对照表</h5>
+                        <div class="comparison-grid">
+                            <div class="comparison-header">疑问句</div>
+                            <div class="comparison-header">助动词/be动词</div>
+                            <div class="comparison-header">回答例句</div>
+                            
+                            <div class="comparison-cell question-cell">What do you do?</div>
+                            <div class="comparison-cell">do</div>
+                            <div class="comparison-cell">I am a doctor.</div>
+                            
+                            <div class="comparison-cell question-cell">What does Jack do?</div>
+                            <div class="comparison-cell">does</div>
+                            <div class="comparison-cell">He is a worker.</div>
+                            
+                            <div class="comparison-cell question-cell">What is your job?</div>
+                            <div class="comparison-cell">is</div>
+                            <div class="comparison-cell">I am a teacher.</div>
+                            
+                            <div class="comparison-cell question-cell">What is Jack's job?</div>
+                            <div class="comparison-cell">is</div>
+                            <div class="comparison-cell">He is a driver.</div>
+                        </div>
+                    </div>
+
+                    <div class="usage-note">
+                        <h6>⚠️ 特别注意</h6>
+                        <p>• 疑问句中What does Jack do? = What is Jack's job? = What is Jack?<br>
+                        • <span class="highlight-casual">What is Jack?</span> 是比较随意的口语表达方式，不够正式<br>
+                        • 回答时注意冠词a/an的使用<br>
+                        • 当主语是第三人称单数时，疑问句中助动词用does，答句中be动词用is</p>
+                    </div>
+
+                    <div class="key-points">
+                        <h4>🎯 考察重点</h4>
+                        <ul>
+                            <li>助动词的正确选择
+                                <div class="key-point-examples">❓ What <span class="highlight-question">do</span> you... / What <span class="highlight-question">does</span> he...</div>
+                            </li>
+                            <li>be动词的正确形式
+                                <div class="key-point-examples">✅ I <span class="highlight-job">am</span> / He <span class="highlight-job">is</span> / They <span class="highlight-job">are</span></div>
+                            </li>
+                            <li>冠词a/an的使用
+                                <div class="key-point-examples">📝 <span class="highlight-job">a teacher</span> / <span class="highlight-job">an engineer</span></div>
+                            </li>
+                            <li>多种表达方式的转换
+                                <div class="key-point-examples">🔄 What do you do? = What's your job?</div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>📝 对话示例</h4>
+                        <div class="example">
+                            <span class="example-emoji">💬</span>
+                            <span><span class="highlight-question">What do you do?</span><br>--I <span class="highlight-job">am a teacher</span>. 👩‍🏫</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">💬</span>
+                            <span><span class="highlight-question">What does Jack do?</span><br>--He <span class="highlight-job">is a worker</span>. 👨‍🏭</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">💬</span>
+                            <span><span class="highlight-question">What is your job?</span><br>--I <span class="highlight-job">am a doctor</span>. 👨‍⚕️</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">💬</span>
+                            <span><span class="highlight-question">What is Jack's job?</span><br>--He <span class="highlight-job">is a driver</span>. 🚗</span>
+                        </div>
+                    </div>
+
+                    <div class="connection-box">
+                        <h4>🔗 温故知新</h4>
+                        <div class="connection-text">
+                            这个句型结合了疑问句的基本结构和be动词的用法，是了解他人、介绍职业的重要表达方式。
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="point2" class="grammar-point">
+                <div class="point-header">
+                    <div class="point-number">2</div>
+                    <div class="point-title">动词第三人称单数形式</div>
+                    <div class="emoji">📝</div>
+                </div>
+                <div class="point-content">
+                    <p class="core-concept"><strong>核心概念：</strong>在一般现在时中，当主语是第三人称单数时，动词要加-s或-es，这是英语语法的重要规则</p>
+
+                    <div class="tense-box">
+                        <h5>⏰ 时态限定说明</h5>
+                        <div class="tense-item">
+                            <strong>适用时态：</strong>只在<span class="highlight-tense">一般现在时</span>中需要考虑动词的第三人称单数变化
+                        </div>
+                        <div class="tense-item">
+                            <strong>其他时态：</strong>过去时、将来时、现在进行时等都不需要考虑这个变化
+                        </div>
+                        <div class="tense-item">
+                            <strong>记忆要点：</strong>一般现在时 + 第三人称单数主语 = 动词加-s/-es
+                        </div>
+                    </div>
+
+                    <div class="rule-box">
+                        <h5>📚 第三人称单数变化规则</h5>
+                        <div class="rule-item">
+                            <strong>(1) 一般情况：</strong>直接在动词词尾加-s
+                            <div style="margin-top: 5px; font-size: 13px; color: #666;">
+                                如：<span class="highlight-third">run→runs, look→looks, see→sees</span>
+                            </div>
+                        </div>
+                        <div class="rule-item">
+                            <strong>(2) 以s, sh, ch, x, o结尾：</strong>一般在词尾加-es
+                            <div style="margin-top: 5px; font-size: 13px; color: #666;">
+                                如：<span class="highlight-third">go→goes, teach→teaches</span>
+                            </div>
+                        </div>
+                        <div class="rule-item">
+                            <strong>(3) 以辅音字母+y结尾：</strong>先变y为i，再加-es
+                            <div style="margin-top: 5px; font-size: 13px; color: #666;">
+                                如：<span class="highlight-third">study→studies, try→tries</span>
+                            </div>
+                        </div>
+                        <div class="rule-item">
+                            <strong>注意：</strong>以元音字母+y结尾的动词，直接加-s
+                            <div style="margin-top: 5px; font-size: 13px; color: #666;">
+                                如：<span class="highlight-third">play→plays, stay→stays</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="verb-table">
+                        <h5>📊 常见动词第三人称单数变化表</h5>
+                        <div class="verb-grid">
+                            <div class="verb-header">原形</div>
+                            <div class="verb-header">第三人称单数</div>
+                            <div class="verb-header">变化规律</div>
+                            <div class="verb-header">例句</div>
+                            
+                            <div class="verb-cell verb-cell-base">work</div>
+                            <div class="verb-cell verb-cell-third">works</div>
+                            <div class="verb-cell verb-cell-category">直接加-s</div>
+                            <div class="verb-cell verb-cell-example">He works in a factory. 🏭</div>
+                            
+                            <div class="verb-cell verb-cell-base">teach</div>
+                            <div class="verb-cell verb-cell-third">teaches</div>
+                            <div class="verb-cell verb-cell-category">ch结尾加-es</div>
+                            <div class="verb-cell verb-cell-example">She teaches English. 📚</div>
+                            
+                            <div class="verb-cell verb-cell-base">study</div>
+                            <div class="verb-cell verb-cell-third">studies</div>
+                            <div class="verb-cell verb-cell-category">辅音+y变ies</div>
+                            <div class="verb-cell verb-cell-example">He studies hard. 📖</div>
+                            
+                            <div class="verb-cell verb-cell-base">play</div>
+                            <div class="verb-cell verb-cell-third">plays</div>
+                            <div class="verb-cell verb-cell-category">元音+y加-s</div>
+                            <div class="verb-cell verb-cell-example">She plays piano. 🎹</div>
+                            
+                            <div class="verb-cell verb-cell-base">go</div>
+                            <div class="verb-cell verb-cell-third">goes</div>
+                            <div class="verb-cell verb-cell-category">o结尾加-es</div>
+                            <div class="verb-cell verb-cell-example">He goes to school. 🏫</div>
+                            
+                            <div class="verb-cell verb-cell-base">have</div>
+                            <div class="verb-cell verb-cell-third">has</div>
+                            <div class="verb-cell verb-cell-category">不规则变化</div>
+                            <div class="verb-cell verb-cell-example">She has a cat. 🐱</div>
+                        </div>
+                    </div>
+
+                    <div class="detail-box">
+                        <h5>🎯 什么是第三人称单数？</h5>
+                        <div class="detail-item">
+                            <strong>人称代词：</strong>he, she, it
+                        </div>
+                        <div class="detail-item">
+                            <strong>单数名词：</strong>Tom, the boy, my father, the cat等
+                        </div>
+                        <div class="detail-item">
+                            <strong>不可数名词：</strong>water, milk, bread等作主语时
+                        </div>
+                    </div>
+
+                    <div class="usage-note">
+                        <h6>⚠️ 特别注意</h6>
+                        <p>• 只有在<span class="highlight-tense">一般现在时</span>中，主语是第三人称单数时动词才变化<br>
+                        • 疑问句和否定句中，有了does后，动词要用原形<br>
+                        • have的第三人称单数是has，属于不规则变化</p>
+                    </div>
+
+                    <div class="key-points">
+                        <h4>🎯 考察重点</h4>
+                        <ul>
+                            <li>变化规则的正确应用
+                                <div class="key-point-examples">📝 <span class="highlight-third">teaches</span> (ch+es), <span class="highlight-third">studies</span> (y→ies)</div>
+                            </li>
+                            <li>第三人称单数的识别
+                                <div class="key-point-examples">👤 he/she/it + 动词-s/es</div>
+                            </li>
+                            <li>不规则变化的记忆
+                                <div class="key-point-examples">⭐ have→has, do→does</div>
+                            </li>
+                            <li>在句型中的正确运用
+                                <div class="key-point-examples">🔄 肯定句、否定句、疑问句</div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>📝 经典例句</h4>
+                        <div class="example">
+                            <span class="example-emoji">👨‍🏫</span>
+                            <span>He <span class="highlight-third">teaches</span> English in a school. 他在学校教英语。</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">📚</span>
+                            <span>She <span class="highlight-third">studies</span> very hard. 她学习很努力。</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">🏃</span>
+                            <span>Tom <span class="highlight-third">runs</span> every morning. 汤姆每天早上跑步。</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">🏠</span>
+                            <span>My father <span class="highlight-third">works</span> at home. 我爸爸在家工作。</span>
+                        </div>
+                    </div>
+
+                    <div class="connection-box">
+                        <h4>🔗 温故知新</h4>
+                        <div class="connection-text">
+                            第三人称单数是英语语法的基础，与之前学习的have/has、like/likes等变化规律一致。
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="point3" class="grammar-point">
+                <div class="point-header">
+                    <div class="point-number">3</div>
+                    <div class="point-title">常见动词表示职业的方法</div>
+                    <div class="emoji">🔧</div>
+                </div>
+                <div class="point-content">
+                    <p class="core-concept"><strong>核心概念：</strong>许多职业名词是由动词加后缀构成的，掌握构词规律有助于记忆和理解</p>
+
+                    <div class="job-box">
+                        <h5>🏭 后缀构成职业名词</h5>
+                        <div class="job-item">
+                            <strong>基本规律：</strong>在动词词尾加<span class="highlight-worker">-er</span>或者<span class="highlight-worker">-or</span>或者直接加<span class="highlight-worker">-r</span>构成表示职业的名词
+                        </div>
+                        <div class="job-item">
+                            <strong>加-er例子：</strong><span class="highlight-worker">work→worker</span>(工人), <span class="highlight-worker">sing→singer</span>(歌手)
+                        </div>
+                        <div class="job-item">
+                            <strong>直接加-r例子：</strong><span class="highlight-worker">write→writer</span>(作家), <span class="highlight-worker">drive→driver</span>(司机)
+                        </div>
+                        <div class="job-item">
+                            <strong>加-or例子：</strong><span class="highlight-worker">act→actor</span>(演员), <span class="highlight-worker">visit→visitor</span>(访客)
+                        </div>
+                    </div>
+
+                    <div class="distinction-box">
+                        <h5>⚠️ 特殊变化规律</h5>
+                        <div class="distinction-item">
+                            <strong>以不发音e结尾：</strong>直接加-r
+                            <div style="margin-top: 5px; font-size: 13px; color: #666;">
+                                如：<span class="highlight-worker">write→writer, drive→driver</span>
+                            </div>
+                        </div>
+                        <div class="distinction-item">
+                            <strong>双写规律：</strong>重读闭音节，双写末尾辅音字母再加-er
+                            <div style="margin-top: 5px; font-size: 13px; color: #666;">
+                                如：<span class="highlight-worker">swim→swimmer</span>(游泳者)
+                            </div>
+                        </div>
+                        <div class="distinction-item">
+                            <strong>-or后缀：</strong>有些职业名词用-or而不是-er
+                            <div style="margin-top: 5px; font-size: 13px; color: #666;">
+                                如：<span class="highlight-worker">act→actor</span>(男演员), <span class="highlight-worker">visit→visitor</span>(访客)
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gender-extension">
+                        <h5>👫 职业中的性别差异表达</h5>
+                        <div class="gender-item">
+                            <strong>传统区分：</strong>有些职业名词会区分男女性别
+                        </div>
+                        <div class="gender-item">
+                            <strong>演员：</strong><span class="highlight-gender">actor</span>(男演员) vs <span class="highlight-gender">actress</span>(女演员)
+                        </div>
+                        <div class="gender-item">
+                            <strong>服务员：</strong><span class="highlight-gender">waiter</span>(男服务员) vs <span class="highlight-gender">waitress</span>(女服务员)
+                        </div>
+                        <div class="gender-item">
+                            <strong>空乘人员：</strong><span class="highlight-gender">steward</span>(男乘务员) vs <span class="highlight-gender">stewardess</span>(女乘务员)
+                        </div>
+                        <div class="gender-item">
+                            <strong>现代趋势：</strong>现在更多使用中性词，如<span class="highlight-gender">flight attendant</span>(空乘人员)，<span class="highlight-gender">server</span>(服务员)
+                        </div>
+                    </div>
+
+                    <div class="usage-note">
+                        <h6>🔍 特殊情况说明</h6>
+                        <p>• cook既可作动词(烹饪)，也可作名词(厨师)<br>
+                        • cooker是"炊具、炉灶"的意思，不是"厨师"<br>
+                        • 注意：cook作职业名词时无需添加后缀</p>
+                    </div>
+
+                    <div class="verb-table">
+                        <h5>📊 动词变职业名词对照表</h5>
+                        <div class="verb-grid">
+                            <div class="verb-header">动词</div>
+                            <div class="verb-header">职业名词</div>
+                            <div class="verb-header">中文意思</div>
+                            <div class="verb-header">例句</div>
+                            
+                            <div class="verb-cell verb-cell-base">work</div>
+                            <div class="verb-cell verb-cell-third">worker</div>
+                            <div class="verb-cell verb-cell-category">工人</div>
+                            <div class="verb-cell verb-cell-example">He is a factory worker. 👨‍🏭</div>
+                            
+                            <div class="verb-cell verb-cell-base">teach</div>
+                            <div class="verb-cell verb-cell-third">teacher</div>
+                            <div class="verb-cell verb-cell-category">老师</div>
+                            <div class="verb-cell verb-cell-example">She is a music teacher. 👩‍🏫</div>
+                            
+                            <div class="verb-cell verb-cell-base">drive</div>
+                            <div class="verb-cell verb-cell-third">driver</div>
+                            <div class="verb-cell verb-cell-category">司机</div>
+                            <div class="verb-cell verb-cell-example">My father is a bus driver. 🚌</div>
+                            
+                            <div class="verb-cell verb-cell-base">write</div>
+                            <div class="verb-cell verb-cell-third">writer</div>
+                            <div class="verb-cell verb-cell-category">作家</div>
+                            <div class="verb-cell verb-cell-example">He is a famous writer. ✍️</div>
+                            
+                            <div class="verb-cell verb-cell-base">sing</div>
+                            <div class="verb-cell verb-cell-third">singer</div>
+                            <div class="verb-cell verb-cell-category">歌手</div>
+                            <div class="verb-cell verb-cell-example">She is a popular singer. 🎤</div>
+                            
+                            <div class="verb-cell verb-cell-base">cook</div>
+                            <div class="verb-cell verb-cell-third">cook</div>
+                            <div class="verb-cell verb-cell-category">厨师</div>
+                            <div class="verb-cell verb-cell-example">He works as a cook. 👨‍🍳</div>
+                        </div>
+                    </div>
+
+                    <div class="career-extension">
+                        <h5>🌟 职业词汇体系拓展</h5>
+                        
+                        <div class="career-category">
+                            <h6>🔧 动词+后缀构成的职业</h6>
+                            <div class="career-grid">
+                                <div class="career-item">
+                                    <div class="career-word">worker</div>
+                                    <div class="career-chinese">工人</div>
+                                </div>
+                                <div class="career-item">
+                                    <div class="career-word">teacher</div>
+                                    <div class="career-chinese">教师</div>
+                                </div>
+                                <div class="career-item">
+                                    <div class="career-word">driver</div>
+                                    <div class="career-chinese">司机</div>
+                                </div>
+                                <div class="career-item">
+                                    <div class="career-word">writer</div>
+                                    <div class="career-chinese">作家</div>
+                                </div>
+                                <div class="career-item">
+                                    <div class="career-word">singer</div>
+                                    <div class="career-chinese">歌手</div>
+                                </div>
+                                <div class="career-item">
+                                    <div class="career-word">player</div>
+                                    <div class="career-chinese">运动员</div>
+                                </div>
+                                <div class="career-item">
+                                    <div class="career-word">farmer</div>
+                                    <div class="career-chinese">农民</div>
+                                </div>
+                                <div class="career-item">
+                                    <div class="career-word">dancer</div>
+                                    <div class="career-chinese">舞者</div>
+                                </div>
+                                <div class="career-item">
+                                    <div class="career-word">builder</div>
+                                    <div class="career-chinese">建筑工人</div>
+                                </div>
+                                <div class="career-item">
+                                    <div class="career-word">painter</div>
+                                    <div class="career-chinese">画家</div>
+                                </div>
+                                <div class="career-item">
+                                    <div class="career-word">actor</div>
+                                    <div class="career-chinese">演员</div>
+                                </div>
+                                <div class="career-item">
+                                    <div class="career-word">visitor</div>
+                                    <div class="career-chinese">访客</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="career-category method-different">
+                            <h6>🏢 特殊词汇构成的职业</h6>
+                            <div class="career-grid">
+                                <div class="career-item">
+                                    <div class="career-word">doctor</div>
+                                    <div class="career-chinese">医生</div>
+                                </div>
+                                <div class="career-item">
+                                    <div class="career-word">nurse</div>
+                                    <div class="career-chinese">护士</div>
+                                </div>
+                                <div class="career-item">
+                                    <div class="career-word">student</div>
+                                    <div class="career-chinese">学生</div>
+                                </div>
+                                <div class="career-item">
+                                    <div class="career-word">cook</div>
+                                    <div class="career-chinese">厨师</div>
+                                </div>
+                                <div class="career-item">
+                                    <div class="career-word">pilot</div>
+                                    <div class="career-chinese">飞行员</div>
+                                </div>
+                                <div class="career-item">
+                                    <div class="career-word">scientist</div>
+                                    <div class="career-chinese">科学家</div>
+                                </div>
+                                <div class="career-item">
+                                    <div class="career-word">artist</div>
+                                    <div class="career-chinese">艺术家</div>
+                                </div>
+                                <div class="career-item">
+                                    <div class="career-word">dentist</div>
+                                    <div class="career-chinese">牙医</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="career-category method-compound">
+                            <h6>👮‍♂️ 复合词构成的职业</h6>
+                            <div class="career-grid">
+                                <div class="career-item">
+                                    <div class="career-word">policeman</div>
+                                    <div class="career-chinese">男警察</div>
+                                </div>
+                                <div class="career-item">
+                                    <div class="career-word">policewoman</div>
+                                    <div class="career-chinese">女警察</div>
+                                </div>
+                                <div class="career-item">
+                                    <div class="career-word">fireman</div>
+                                    <div class="career-chinese">消防员</div>
+                                </div>
+                                <div class="career-item">
+                                    <div class="career-word">postman</div>
+                                    <div class="career-chinese">邮递员</div>
+                                </div>
+                                <div class="career-item">
+                                    <div class="career-word">businessman</div>
+                                    <div class="career-chinese">商人</div>
+                                </div>
+                                <div class="career-item">
+                                    <div class="career-word">milkman</div>
+                                    <div class="career-chinese">送奶工</div>
+                                </div>
+                                <div class="career-item">
+                                    <div class="career-word">fisherman</div>
+                                    <div class="career-chinese">渔夫</div>
+                                </div>
+                                <div class="career-item">
+                                    <div class="career-word">salesman</div>
+                                    <div class="career-chinese">销售员</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="career-category method-direct">
+                            <h6>🎭 其他常见职业</h6>
+                            <div class="career-grid">
+                                <div class="career-item">
+                                    <div class="career-word">manager</div>
+                                    <div class="career-chinese">经理</div>
+                                </div>
+                                <div class="career-item">
+                                    <div class="career-word">engineer</div>
+                                    <div class="career-chinese">工程师</div>
+                                </div>
+                                <div class="career-item">
+                                    <div class="career-word">lawyer</div>
+                                    <div class="career-chinese">律师</div>
+                                </div>
+                                <div class="career-item">
+                                    <div class="career-word">reporter</div>
+                                    <div class="career-chinese">记者</div>
+                                </div>
+                                <div class="career-item">
+                                    <div class="career-word">waiter</div>
+                                    <div class="career-chinese">服务员</div>
+                                </div>
+                                <div class="career-item">
+                                    <div class="career-word">soldier</div>
+                                    <div class="career-chinese">士兵</div>
+                                </div>
+                                <div class="career-item">
+                                    <div class="career-word">librarian</div>
+                                    <div class="career-chinese">图书管理员</div>
+                                </div>
+                                <div class="career-item">
+                                    <div class="career-word">musician</div>
+                                    <div class="career-chinese">音乐家</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="key-points">
+                        <h4>🎯 考察重点</h4>
+                        <ul>
+                            <li>后缀的正确选择
+                                <div class="key-point-examples">🔧 <span class="highlight-worker">work + er = worker</span>, <span class="highlight-worker">act + or = actor</span></div>
+                            </li>
+                            <li>特殊变化规律的掌握
+                                <div class="key-point-examples">✏️ <span class="highlight-worker">write→writer</span> (直接加r)</div>
+                            </li>
+                            <li>复合词职业的理解
+                                <div class="key-point-examples">👮‍♂️ <span class="highlight-worker">policeman</span> = police + man</div>
+                            </li>
+                            <li>cook的特殊用法
+                                <div class="key-point-examples">👨‍🍳 cook (厨师) vs cooker (炊具)</div>
+                            </li>
+                            <li>职业名词在句子中的运用
+                                <div class="key-point-examples">💼 He is a teacher. / She works as a writer.</div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>📝 职业表达例句</h4>
+                        <div class="example">
+                            <span class="example-emoji">👨‍🏭</span>
+                            <span>My father is a <span class="highlight-worker">worker</span>. He <span class="highlight-third">works</span> in a factory.</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">✍️</span>
+                            <span>She is a <span class="highlight-worker">writer</span>. She <span class="highlight-third">writes</span> stories.</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">🚗</span>
+                            <span>He is a <span class="highlight-worker">driver</span>. He <span class="highlight-third">drives</span> a taxi.</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">👮‍♂️</span>
+                            <span>The <span class="highlight-worker">policeman</span> helps people every day.</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">👨‍🍳</span>
+                            <span>My uncle is a <span class="highlight-worker">cook</span>. He <span class="highlight-third">cooks</span> delicious food.</span>
+                        </div>
+                    </div>
+
+                    <div class="connection-box">
+                        <h4>🔗 温故知新</h4>
+                        <div class="connection-text">
+                            掌握构词规律有助于扩大词汇量，同时也体现了动词第三人称单数和职业表达的结合运用。职业词汇按照不同的构词方法进行分类记忆，能够帮助同学们建立完整的职业词汇体系。
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="point4" class="grammar-point">
+                <div class="point-header">
+                    <div class="point-number">4</div>
+                    <div class="point-title">help的用法</div>
+                    <div class="emoji">🤝</div>
+                </div>
+                <div class="point-content">
+                    <p class="core-concept"><strong>核心概念：</strong>help是常用动词，表示"帮助"，有多种搭配方式</p>
+
+                    <div class="help-box">
+                        <h5>🤝 help的基本用法</h5>
+                        <div class="help-item">
+                            <strong>作动词：</strong>help意为"帮助"，是及物动词，可以直接加宾语
+                        </div>
+                        <div class="help-item">
+                            <strong>常见用法：</strong>常见用法如下
+                        </div>
+                    </div>
+
+                    <div class="structure-box">
+                        <h4>👥 help + 人名或人称代词宾格</h4>
+                        <div class="structure-item">
+                            直接帮助某人
+                            <div class="structure-examples"><span class="highlight-help">help Mike</span>, <span class="highlight-help">help me</span> 帮助迈克，帮助我</div>
+                        </div>
+                    </div>
+
+                    <div class="structure-box">
+                        <h4>🎯 help sb. (to) do sth.</h4>
+                        <div class="structure-item">
+                            帮助某人做某事
+                            <div class="structure-examples"><span class="highlight-help">help him (to) clean</span> the room 帮他打扫房间</div>
+                        </div>
+                    </div>
+
+                    <div class="structure-box">
+                        <h4>📚 help sb. with sth.</h4>
+                        <div class="structure-item">
+                            在某事上帮助某人
+                            <div class="structure-examples"><span class="highlight-help">help her with her lessons</span> 在功课上帮助她</div>
+                        </div>
+                    </div>
+
+                    <div class="detail-box">
+                        <h5>🎯 help用法要点</h5>
+                        <div class="detail-item">
+                            <strong>to的省略：</strong>help sb. (to) do sth.中的to可以省略
+                        </div>
+                        <div class="detail-item">
+                            <strong>宾格形式：</strong>help后面接人称代词时要用宾格
+                        </div>
+                        <div class="detail-item">
+                            <strong>with的搭配：</strong>help sb. with sth.表示在某方面帮助某人
+                        </div>
+                    </div>
+
+                    <div class="comparison-table">
+                        <h5>📊 help用法对照表</h5>
+                        <div class="comparison-grid">
+                            <div class="comparison-header">结构</div>
+                            <div class="comparison-header">含义</div>
+                            <div class="comparison-header">例句</div>
+                            
+                            <div class="comparison-cell">help + 人</div>
+                            <div class="comparison-cell">帮助某人</div>
+                            <div class="comparison-cell">I help Mike.</div>
+                            
+                            <div class="comparison-cell">help sb. (to) do sth.</div>
+                            <div class="comparison-cell">帮助某人做某事</div>
+                            <div class="comparison-cell">Help him clean the room.</div>
+                            
+                            <div class="comparison-cell">help sb. with sth.</div>
+                            <div class="comparison-cell">在某方面帮助某人</div>
+                            <div class="comparison-cell">Help her with her lessons.</div>
+                        </div>
+                    </div>
+
+                    <div class="usage-note">
+                        <h6>⚠️ 特别注意</h6>
+                        <p>• help后面接人称代词时用宾格：help me/him/her/them<br>
+                        • help sb. (to) do sth.中的to可加可不加<br>
+                        • help sb. with sth.中with不能省略</p>
+                    </div>
+
+                    <div class="key-points">
+                        <h4>🎯 考察重点</h4>
+                        <ul>
+                            <li>人称代词宾格的使用
+                                <div class="key-point-examples">👥 <span class="highlight-help">help me/him/her/them</span></div>
+                            </li>
+                            <li>to的可省略性
+                                <div class="key-point-examples">🎯 help sb. (to) do = help sb. do</div>
+                            </li>
+                            <li>with的正确搭配
+                                <div class="key-point-examples">📚 help sb. <span class="highlight-help">with</span> sth.</div>
+                            </li>
+                            <li>不同结构的灵活运用
+                                <div class="key-point-examples">🔄 根据语境选择合适的结构</div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>📝 help用法例句</h4>
+                        <div class="example">
+                            <span class="example-emoji">👫</span>
+                            <span>I <span class="highlight-help">help Mike</span>. 我帮助迈克。</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">🧹</span>
+                            <span>Please <span class="highlight-help">help him (to) clean</span> the room. 请帮他打扫房间。</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">📖</span>
+                            <span>I <span class="highlight-help">help her with her lessons</span>. 我在功课上帮助她。</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">🍳</span>
+                            <span>She <span class="highlight-help">helps me (to) cook</span> dinner. 她帮我做晚饭。</span>
+                        </div>
+                    </div>
+
+                    <div class="connection-box">
+                        <h4>🔗 温故知新</h4>
+                        <div class="connection-text">
+                            help的用法体现了英语中动词的多种搭配形式，与之前学习的like doing、be good at等结构形成对比。
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="point5" class="grammar-point">
+                <div class="point-header">
+                    <div class="point-number">5</div>
+                    <div class="point-title">动词teach的用法</div>
+                    <div class="emoji">👨‍🏫</div>
+                </div>
+                <div class="point-content">
+                    <p class="core-concept"><strong>核心概念：</strong>teach表示"教"，是及物动词，可以直接加宾语，也可以接双宾语</p>
+
+                    <div class="structure-box">
+                        <h4>📚 teach + 学科</h4>
+                        <div class="structure-item">
+                            直接接学科名词
+                            <div class="structure-examples">Mr Lee <span class="highlight-help">teaches English</span>. 李老师教英语。</div>
+                        </div>
+                    </div>
+
+                    <div class="structure-box">
+                        <h4>👥 teach + sb. + 学科</h4>
+                        <div class="structure-item">
+                            教某人某学科 (双宾语结构)
+                            <div class="structure-examples">Mr Lee <span class="highlight-help">teaches <span class="highlight-indirect">us</span> <span class="highlight-direct">English</span></span>. 李老师教我们英语。</div>
+                        </div>
+                    </div>
+
+                    <div class="structure-box">
+                        <h4>🎯 teach + sb. + to do sth.</h4>
+                        <div class="structure-item">
+                            教某人做某事
+                            <div class="structure-examples">My mother <span class="highlight-help">teaches me to sing</span>. 我妈妈教我唱歌。</div>
+                        </div>
+                    </div>
+
+                    <div class="structure-box">
+                        <h4>🏫 teach + 地点状语</h4>
+                        <div class="structure-item">
+                            在某地教书
+                            <div class="structure-examples">Mr Lee <span class="highlight-help">teaches English in a primary school</span>. 李老师在一所小学教英语。</div>
+                        </div>
+                    </div>
+
+                    <div class="detail-box">
+                        <h5>🎯 teach的特点</h5>
+                        <div class="detail-item">
+                            <strong>双宾语结构：</strong>teach sb. sth. = teach sth. to sb.
+                        </div>
+                        <div class="detail-item">
+                            <strong>技能教学：</strong>teach sb. to do sth. 教某人做某事
+                        </div>
+                        <div class="detail-item">
+                            <strong>第三人称单数：</strong>teaches (ch结尾加-es)
+                        </div>
+                        <div class="detail-item">
+                            <strong>职业相关：</strong>teach → teacher (教师)</div>
+                    </div>
+
+                    <div class="double-object-explanation">
+                        <h6>📝 双宾语结构详解</h6>
+                        <p><strong>双宾语结构包含：</strong></p>
+                        <div class="double-object-example">
+                            <strong>间接宾语：</strong>指人，表示"教给谁"，如 <span class="highlight-indirect">us</span>(我们)
+                        </div>
+                        <div class="double-object-example">
+                            <strong>直接宾语：</strong>指物，表示"教什么"，如 <span class="highlight-direct">English</span>(英语)
+                        </div>
+                        <div class="double-object-example">
+                            <strong>例句：</strong>teach <span class="highlight-indirect">us</span>(间接宾语) <span class="highlight-direct">English</span>(直接宾语)
+                        </div>
+                    </div>
+
+                    <div class="comparison-table">
+                        <h5>📊 teach用法对照表</h5>
+                        <div class="comparison-grid">
+                            <div class="comparison-header">结构</div>
+                            <div class="comparison-header">含义</div>
+                            <div class="comparison-header">例句</div>
+                            
+                            <div class="comparison-cell">teach + 学科</div>
+                            <div class="comparison-cell">教某学科</div>
+                            <div class="comparison-cell">She teaches Math.</div>
+                            
+                            <div class="comparison-cell">teach sb. sth.</div>
+                            <div class="comparison-cell">教某人某学科</div>
+                            <div class="comparison-cell">He teaches us English.</div>
+                            
+                            <div class="comparison-cell">teach sb. to do sth.</div>
+                            <div class="comparison-cell">教某人做某事</div>
+                            <div class="comparison-cell">She teaches me to swim.</div>
+                            
+                            <div class="comparison-cell">teach + 地点</div>
+                            <div class="comparison-cell">在某地教书</div>
+                            <div class="comparison-cell">I teach in a school.</div>
+                        </div>
+                    </div>
+
+                    <div class="usage-note">
+                        <h6>⚠️ 特别注意</h6>
+                        <p>• teach的第三人称单数是teaches<br>
+                        • teach sb. sth.中sb.用宾格形式<br>
+                        • teach sb. to do sth.用于教授技能和能力<br>
+                        • 可以说teach English，也可以说teach us English</p>
+                    </div>
+
+                    <div class="key-points">
+                        <h4>🎯 考察重点</h4>
+                        <ul>
+                            <li>第三人称单数变化
+                                <div class="key-point-examples">👨‍🏫 He <span class="highlight-third">teaches</span> (不是teach)</div>
+                            </li>
+                            <li>双宾语结构的运用
+                                <div class="key-point-examples">📚 teach <span class="highlight-indirect">us</span> <span class="highlight-direct">English</span></div>
+                            </li>
+                            <li>技能教学的表达
+                                <div class="key-point-examples">🎯 teach sb. to do sth.</div>
+                            </li>
+                            <li>与teacher的词汇联系
+                                <div class="key-point-examples">🔗 teach → teacher</div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>📝 teach用法例句</h4>
+                        <div class="example">
+                            <span class="example-emoji">📚</span>
+                            <span>Mr Lee <span class="highlight-help">teaches English</span> in a primary school. 李老师在一所小学教英语。</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">👥</span>
+                            <span>Mr Lee <span class="highlight-help">teaches <span class="highlight-indirect">us</span> <span class="highlight-direct">English</span></span>. 李老师教我们英语。</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">🎵</span>
+                            <span>My mother <span class="highlight-help">teaches me to sing</span>. 我妈妈教我唱歌。</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">🏫</span>
+                            <span>She <span class="highlight-third">teaches</span> Math in our school. 她在我们学校教数学。</span>
+                        </div>
+                    </div>
+
+                    <div class="connection-box">
+                        <h4>🔗 温故知新</h4>
+                        <div class="connection-text">
+                            teach的用法与职业表达、第三人称单数变化等语法点密切相关，是描述教育工作的重要动词。
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="point6" class="grammar-point">
+                <div class="point-header">
+                    <div class="point-number">6</div>
+                    <div class="point-title">"What about...?" 句型</div>
+                    <div class="emoji">💭</div>
+                </div>
+                <div class="point-content">
+                    <p class="core-concept"><strong>核心概念：</strong>"What about...?"用来谈论已经提及的话题，等同于"How about...?"</p>
+
+                    <div class="suggestion-box">
+                        <h5>💡 基本用法</h5>
+                        <div class="suggestion-item">
+                            <strong>"What about...?"：</strong>一般用来谈论已经提及的话题
+                        </div>
+                        <div class="suggestion-item">
+                            <strong>等同于：</strong>"How about...?"，后面接名词、代词或动名词-ing形式
+                        </div>
+                    </div>
+
+                    <div class="structure-box">
+                        <h4>🔍 基本结构</h4>
+                        <div class="structure-item">
+                            What about + 名词/代词/动名词(-ing)?
+                            <div class="structure-examples"><span class="highlight-suggestion">What about playing football?</span> 踢足球怎么样？</div>
+                        </div>
+                    </div>
+
+                    <div class="structure-box">
+                        <h4>🎯 使用场景</h4>
+                        <div class="structure-item">
+                            用于提出建议、征求意见或转换话题
+                            <div class="structure-examples"><span class="highlight-suggestion">What about you?</span> 你呢？(询问对方的情况)</div>
+                        </div>
+                    </div>
+
+                    <div class="detail-box">
+                        <h5>📋 后接内容</h5>
+                        <div class="detail-item">
+                            <strong>接名词：</strong>What about dinner? 晚饭怎么样？
+                        </div>
+                        <div class="detail-item">
+                            <strong>接代词：</strong>What about you? 你呢？
+                        </div>
+                        <div class="detail-item">
+                            <strong>接动名词：</strong>What about playing football? 踢足球怎么样？
+                        </div>
+                    </div>
+
+                    <div class="comparison-table">
+                        <h5>📊 What about用法示例</h5>
+                        <div class="comparison-grid">
+                            <div class="comparison-header">后接内容</div>
+                            <div class="comparison-header">例句</div>
+                            <div class="comparison-header">中文含义</div>
+                            
+                            <div class="comparison-cell">名词</div>
+                            <div class="comparison-cell">What about lunch?</div>
+                            <div class="comparison-cell">午饭怎么样？</div>
+                            
+                            <div class="comparison-cell">代词</div>
+                            <div class="comparison-cell">What about him?</div>
+                            <div class="comparison-cell">他怎么样？</div>
+                            
+                            <div class="comparison-cell">动名词</div>
+                            <div class="comparison-cell">What about swimming?</div>
+                            <div class="comparison-cell">游泳怎么样？</div>
+                        </div>
+                    </div>
+
+                    <div class="usage-note">
+                        <h6>💡 使用要点</h6>
+                        <p>• What about = How about，可以互换使用<br>
+                        • 后面接动词时必须用动名词(-ing)形式<br>
+                        • 常用于日常对话中提出建议或询问意见</p>
+                    </div>
+
+                    <div class="key-points">
+                        <h4>🎯 考察重点</h4>
+                        <ul>
+                            <li>动名词的正确使用
+                                <div class="key-point-examples">🏊 What about <span class="highlight-suggestion">swimming</span>?</div>
+                            </li>
+                            <li>与How about的等同性
+                                <div class="key-point-examples">🔄 What about = How about</div>
+                            </li>
+                            <li>在对话中的恰当运用
+                                <div class="key-point-examples">💬 提建议、询问意见</div>
+                            </li>
+                            <li>后接不同词性的灵活性
+                                <div class="key-point-examples">📝 名词/代词/动名词</div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>📝 对话示例</h4>
+                        <div class="example">
+                            <span class="example-emoji">⚽</span>
+                            <span><span class="highlight-suggestion">What about playing football?</span> 踢足球怎么样？</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">🍕</span>
+                            <span><span class="highlight-suggestion">What about pizza</span> for dinner? 晚饭吃披萨怎么样？</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">👥</span>
+                            <span>I like reading. <span class="highlight-suggestion">What about you?</span> 我喜欢阅读。你呢？</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">🏊</span>
+                            <span><span class="highlight-suggestion">What about going swimming?</span> 去游泳怎么样？</span>
+                        </div>
+                    </div>
+
+                    <div class="connection-box">
+                        <h4>🔗 温故知新</h4>
+                        <div class="connection-text">
+                            "What about...?"句型与动名词的用法相结合，是日常交流中提出建议和询问意见的常用表达方式。
+                        </div>
+                    </div>
+
+                    <div class="eva-tip">
+                        <h5>🔍 Eva老师👩‍🏫小贴士</h5>
+                        <p>亲爱的同学们，Unit5的语法让我们学会了谈论职业和工作！从询问职业的句型，到动词第三人称单数变化，从职业名词的构成规律到help和teach的用法，最后学习What about的表达。这些知识点紧密相连，帮助我们更好地描述工作和职业。特别是职业词汇的体系化归纳，让我们了解了不同的构词方法：动词+后缀、复合词、特殊词汇等。记住：语法是为交流服务的，多练习在实际对话中运用这些句型！加油！👨‍💼👩‍🏫</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            Eva老师👩‍🏫伴步英语
+        </div>
+    </div>
+
+    <script>
+        // 平滑滚动到指定位置
+        document.querySelectorAll('.toc-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+
+
+</body></html>

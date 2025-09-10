@@ -1,0 +1,2080 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="x-poe-datastore-behavior" content="local_only"><meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' data: blob: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://code.jquery.com https://unpkg.com https://d3js.org https://threejs.org https://cdn.plot.ly https://stackpath.bootstrapcdn.com https://maps.googleapis.com https://cdn.tailwindcss.com https://ajax.googleapis.com https://kit.fontawesome.com https://cdn.datatables.net https://maxcdn.bootstrapcdn.com https://code.highcharts.com https://tako-static-assets-production.s3.amazonaws.com https://www.youtube.com https://fonts.googleapis.com https://fonts.gstatic.com https://pfst.cf2.poecdn.net https://puc.poecdn.net https://i.imgur.com https://wikimedia.org https://*.icons8.com https://*.giphy.com https://picsum.photos https://images.unsplash.com; frame-src 'self' https://www.youtube.com https://trytako.com; child-src 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests; block-all-mixed-content;">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eva老师👩‍🏫伴步英语-江苏校内-译林英语-五上-Unit6必学语法点</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            background: linear-gradient(135deg, #6d8bc3 0%, #c0db82 100%);
+            padding: 15px;
+            min-height: 100vh;
+            line-height: 1.6;
+            position: relative;
+        }
+
+        /* 水印样式 */
+        .watermark {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            user-select: none;
+            z-index: 999;
+            overflow: hidden;
+        }
+
+        .watermark::before {
+            content: "Eva老师👩‍🏫伴步英语";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-45deg);
+            font-size: 32px;
+            color: rgba(109, 139, 195, 0.12);
+            font-weight: bold;
+            white-space: nowrap;
+            letter-spacing: 6px;
+            text-shadow: 0 0 1px rgba(109, 139, 195, 0.08);
+        }
+
+        .watermark::after {
+            content: "Eva老师👩‍🏫伴步英语";
+            position: absolute;
+            top: 25%;
+            left: 25%;
+            transform: translate(-50%, -50%) rotate(-45deg);
+            font-size: 24px;
+            color: rgba(192, 219, 130, 0.08);
+            font-weight: bold;
+            white-space: nowrap;
+            letter-spacing: 4px;
+        }
+
+        .card-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(236, 236, 236, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            overflow: hidden;
+            min-height: 95vh;
+            position: relative;
+            z-index: 10;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #6d8bc3, #5a7ab8);
+            color: white;
+            text-align: center;
+            padding: 25px 20px;
+            position: relative;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .header .subtitle {
+            font-size: 16px;
+            opacity: 0.9;
+            margin-bottom: 5px;
+        }
+
+        .highlight-unit {
+            background: #FFE266;
+            color: #333;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        .header .teacher-info {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        .decorative-star {
+            position: absolute;
+            font-size: 20px;
+            animation: twinkle 2s infinite;
+        }
+
+        .star1 { top: 10px; left: 20px; }
+        .star2 { top: 15px; right: 30px; animation-delay: 0.5s; }
+        .star3 { bottom: 10px; left: 40px; animation-delay: 1s; }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.5; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.2); }
+        }
+
+        /* 目录导航样式 */
+        .table-of-contents {
+            background: rgba(255, 255, 255, 0.98);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 20px 0 20px;
+            border-left: 5px solid #6d8bc3;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .toc-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .toc-icon {
+            background: #6d8bc3;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            margin-right: 12px;
+        }
+
+        .toc-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .toc-item {
+            margin: 8px 0;
+            padding: 12px 15px;
+            background: #f8f9ff;
+            border-radius: 8px;
+            border-left: 3px solid #FFE266;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .toc-item:hover {
+            background: #e8f2ff;
+            border-left-color: #6d8bc3;
+            transform: translateX(5px);
+        }
+
+        .toc-item:nth-child(2n) {
+            border-left-color: #c0db82;
+        }
+
+        .toc-item:nth-child(3n) {
+            border-left-color: #6d8bc3;
+        }
+
+        .toc-link {
+            text-decoration: none;
+            color: #333;
+            font-size: 14px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .toc-number {
+            background: #FFE266;
+            color: #333;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .toc-title {
+            flex: 1;
+        }
+
+        .toc-emoji {
+            font-size: 16px;
+        }
+
+        .content {
+            padding: 20px;
+            max-height: calc(100vh - 200px);
+            overflow-y: auto;
+        }
+
+        .grammar-point {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 5px solid #FFE266;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+            position: relative;
+            scroll-margin-top: 20px;
+        }
+
+        .grammar-point:hover {
+            transform: translateY(-2px);
+        }
+
+        .grammar-point:nth-child(2n) {
+            border-left-color: #c0db82;
+        }
+
+        .grammar-point:nth-child(3n) {
+            border-left-color: #6d8bc3;
+        }
+
+        .point-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .point-number {
+            background: #FFE266;
+            color: #333;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 12px;
+            font-size: 14px;
+        }
+
+        .point-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            flex: 1;
+        }
+
+        .emoji {
+            font-size: 20px;
+            margin-left: 8px;
+        }
+
+        .point-content {
+            color: #555;
+            line-height: 1.6;
+            font-size: 14px;
+        }
+
+        .core-concept {
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+
+        .key-points {
+            background: #f8f9ff;
+            border-radius: 10px;
+            padding: 12px;
+            margin: 12px 0;
+            border: 2px dashed #6d8bc3;
+        }
+
+        .key-points h4 {
+            color: #6d8bc3;
+            font-size: 14px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .key-points ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .key-points li {
+            padding: 8px 0;
+            position: relative;
+            padding-left: 18px;
+            border-bottom: 1px dotted #e0e0e0;
+        }
+
+        .key-points li:last-child {
+            border-bottom: none;
+        }
+
+        .key-points li:before {
+            content: "✨";
+            position: absolute;
+            left: 0;
+            font-size: 12px;
+        }
+
+        .key-point-examples {
+            font-size: 12px;
+            color: #777;
+            margin-top: 4px;
+            font-style: italic;
+            padding-left: 10px;
+            border-left: 2px solid #FFE266;
+        }
+
+        .structure-box {
+            background: linear-gradient(135deg, #c0db82, #d4e89a);
+            border-radius: 10px;
+            padding: 12px;
+            margin: 12px 0;
+            border: 1px solid #a8c26a;
+        }
+
+        .structure-box h4 {
+            color: #5a7a2d;
+            font-size: 14px;
+            margin-bottom: 8px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .structure-item {
+            background: white;
+            border-radius: 6px;
+            padding: 8px;
+            margin: 6px 0;
+            border-left: 3px solid #6d8bc3;
+            font-size: 13px;
+            color: #333;
+        }
+
+        .structure-examples {
+            font-size: 12px;
+            color: #666;
+            margin-top: 4px;
+            font-style: italic;
+        }
+
+        .detail-box {
+            background: #f0f8ff;
+            border: 2px solid #6d8bc3;
+            border-radius: 8px;
+            padding: 12px;
+            margin: 10px 0;
+        }
+
+        .detail-box h5 {
+            color: #6d8bc3;
+            font-size: 13px;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        .detail-item {
+            margin: 6px 0;
+            padding: 6px;
+            background: white;
+            border-radius: 4px;
+            border-left: 2px solid #6d8bc3;
+            font-size: 12px;
+        }
+
+        .detail-item strong {
+            color: #6d8bc3;
+        }
+
+        .example-box {
+            background: linear-gradient(135deg, #FFE266, #fff5a0);
+            border-radius: 10px;
+            padding: 12px;
+            margin: 12px 0;
+            border: 1px solid #e6d000;
+        }
+
+        .example-box h4 {
+            color: #b8860b;
+            font-size: 13px;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .example {
+            font-style: italic;
+            color: #666;
+            margin: 5px 0;
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .example-emoji {
+            font-size: 16px;
+        }
+
+        .highlight {
+            background: #e8f4f8;
+            padding: 1px 6px;
+            border-radius: 3px;
+            color: #2c6b8a;
+            font-weight: bold;
+            border: 1px solid #a8d5e5;
+        }
+
+        .highlight-positive {
+            background: #e8f5e8;
+            padding: 1px 4px;
+            border-radius: 3px;
+            color: #2d5a2d;
+            font-weight: bold;
+            border: 1px solid #b8d4b8;
+        }
+
+        .highlight-negative {
+            background: #f8e8e8;
+            padding: 1px 4px;
+            border-radius: 3px;
+            color: #8a2c2c;
+            font-weight: bold;
+            border: 1px solid #e5a8a8;
+        }
+
+        .highlight-question {
+            background: #f4e8c1;
+            padding: 1px 4px;
+            border-radius: 3px;
+            color: #8b5a3c;
+            font-weight: bold;
+            border: 1px solid #d4c19c;
+        }
+
+        .connection-box {
+            background: linear-gradient(135deg, #c0db82, #d4e89a);
+            border-radius: 8px;
+            padding: 10px;
+            margin-top: 12px;
+            border: 1px solid #a8c26a;
+        }
+
+        .connection-box h4 {
+            color: #5a7a2d;
+            font-size: 12px;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        .connection-text {
+            font-size: 12px;
+            color: #4a6024;
+            line-height: 1.4;
+        }
+
+        .comparison-table {
+            background: white;
+            border-radius: 10px;
+            padding: 12px;
+            margin: 12px 0;
+            border: 2px solid #6d8bc3;
+        }
+
+        .comparison-table h5 {
+            color: #6d8bc3;
+            font-size: 14px;
+            margin-bottom: 10px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 6px;
+            margin-bottom: 10px;
+        }
+
+        .comparison-header {
+            background: #6d8bc3;
+            color: white;
+            padding: 6px;
+            border-radius: 4px;
+            text-align: center;
+            font-size: 11px;
+            font-weight: bold;
+        }
+
+        .comparison-cell {
+            background: #f5f5f5;
+            padding: 6px;
+            border-radius: 4px;
+            text-align: center;
+            font-size: 10px;
+            border: 1px solid #e0e0e0;
+            line-height: 1.3;
+        }
+
+        .positive-cell {
+            background: #e8f5e8;
+            border-color: #b8d4b8;
+        }
+
+        .negative-cell {
+            background: #f8e8e8;
+            border-color: #e5a8a8;
+        }
+
+        .question-cell {
+            background: #f4e8c1;
+            border-color: #d4c19c;
+        }
+
+        .eva-tip {
+            background: linear-gradient(135deg, #d8b3e0, #e4c7e7);
+            border-radius: 10px;
+            padding: 12px;
+            margin: 12px 0;
+            border: 2px solid #c8a2c8;
+        }
+
+        .eva-tip h5 {
+            color: #8e44ad;
+            font-size: 13px;
+            margin-bottom: 6px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .eva-tip p {
+            color: #6a4c7a;
+            font-size: 12px;
+            line-height: 1.5;
+            font-style: italic;
+        }
+
+        .footer {
+            background: linear-gradient(135deg, #6d8bc3, #5a7ab8);
+            color: white;
+            text-align: center;
+            padding: 12px 20px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .usage-note {
+            background: #fff3cd;
+            border: 2px solid #FFE266;
+            border-radius: 6px;
+            padding: 8px;
+            margin: 8px 0;
+        }
+
+        .usage-note h6 {
+            color: #856404;
+            font-size: 11px;
+            margin-bottom: 3px;
+            font-weight: bold;
+        }
+
+        .usage-note p {
+            font-size: 10px;
+            color: #856404;
+            line-height: 1.3;
+        }
+
+        .distinction-box {
+            background: #fff0f5;
+            border: 2px solid #ff69b4;
+            border-radius: 8px;
+            padding: 12px;
+            margin: 10px 0;
+        }
+
+        .distinction-box h5 {
+            color: #d63384;
+            font-size: 13px;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        .distinction-item {
+            margin: 6px 0;
+            padding: 6px;
+            background: white;
+            border-radius: 4px;
+            border-left: 2px solid #ff69b4;
+            font-size: 12px;
+        }
+
+        .distinction-item strong {
+            color: #d63384;
+        }
+
+        .transform-box {
+            background: #f0f8ff;
+            border: 2px solid #4169e1;
+            border-radius: 8px;
+            padding: 12px;
+            margin: 10px 0;
+        }
+
+        .transform-box h5 {
+            color: #0f3cc9;
+            font-size: 13px;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        .transform-item {
+            margin: 6px 0;
+            padding: 6px;
+            background: white;
+            border-radius: 4px;
+            border-left: 2px solid #4169e1;
+            font-size: 12px;
+        }
+
+        .transform-item strong {
+            color: #0f3cc9;
+        }
+
+        .special-box {
+            background: #e6f7ff;
+            border: 2px solid #1890ff;
+            border-radius: 8px;
+            padding: 12px;
+            margin: 10px 0;
+        }
+
+        .special-box h5 {
+            color: #0050b3;
+            font-size: 13px;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        .special-item {
+            margin: 6px 0;
+            padding: 6px;
+            background: white;
+            border-radius: 4px;
+            border-left: 2px solid #1890ff;
+            font-size: 12px;
+        }
+
+        .special-item strong {
+            color: #0050b3;
+        }
+
+        .age-box {
+            background: #f6ffed;
+            border: 2px solid #52c41a;
+            border-radius: 8px;
+            padding: 12px;
+            margin: 10px 0;
+        }
+
+        .age-box h5 {
+            color: #237804;
+            font-size: 13px;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        .age-item {
+            margin: 6px 0;
+            padding: 6px;
+            background: white;
+            border-radius: 4px;
+            border-left: 2px solid #52c41a;
+            font-size: 12px;
+        }
+
+        .age-item strong {
+            color: #237804;
+        }
+
+        .fish-box {
+            background: #e6f9ff;
+            border: 2px solid #13c2c2;
+            border-radius: 8px;
+            padding: 12px;
+            margin: 10px 0;
+        }
+
+        .fish-box h5 {
+            color: #006d75;
+            font-size: 13px;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        .fish-item {
+            margin: 6px 0;
+            padding: 6px;
+            background: white;
+            border-radius: 4px;
+            border-left: 2px solid #13c2c2;
+            font-size: 12px;
+        }
+
+        .fish-item strong {
+            color: #006d75;
+        }
+
+        .extension-box {
+            background: #f0f2f5;
+            border: 2px solid #8c8c8c;
+            border-radius: 8px;
+            padding: 12px;
+            margin: 10px 0;
+        }
+
+        .extension-box h5 {
+            color: #434343;
+            font-size: 13px;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        .extension-item {
+            margin: 6px 0;
+            padding: 6px;
+            background: white;
+            border-radius: 4px;
+            border-left: 2px solid #8c8c8c;
+            font-size: 12px;
+        }
+
+        .extension-item strong {
+            color: #434343;
+        }
+
+        .hyphen-box {
+            background: #fff0f6;
+            border: 2px solid #eb2f96;
+            border-radius: 8px;
+            padding: 12px;
+            margin: 10px 0;
+        }
+
+        .hyphen-box h5 {
+            color: #c41d7f;
+            font-size: 13px;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        .hyphen-item {
+            margin: 6px 0;
+            padding: 6px;
+            background: white;
+            border-radius: 4px;
+            border-left: 2px solid #eb2f96;
+            font-size: 12px;
+        }
+
+        .hyphen-item strong {
+            color: #c41d7f;
+        }
+
+        .qw-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 6px;
+            margin-bottom: 10px;
+        }
+
+        .qw-header {
+            background: #6d8bc3;
+            color: white;
+            padding: 6px;
+            border-radius: 4px;
+            text-align: center;
+            font-size: 11px;
+            font-weight: bold;
+        }
+
+        .qw-cell {
+            background: #f5f5f5;
+            padding: 6px;
+            border-radius: 4px;
+            text-align: center;
+            font-size: 10px;
+            border: 1px solid #e0e0e0;
+            min-height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 1.2;
+        }
+
+        .qw-cell-what {
+            background: #e8f5e8;
+            border-color: #b8d4b8;
+        }
+
+        .qw-cell-how {
+            background: #fff3cd;
+            border-color: #FFE266;
+        }
+
+        .qw-cell-other {
+            background: #f0f8ff;
+            border-color: #a8d5e5;
+        }
+
+        .compare-box {
+            background: #fef7e0;
+            border: 2px solid #fadb14;
+            border-radius: 8px;
+            padding: 12px;
+            margin: 10px 0;
+        }
+
+        .compare-box h5 {
+            color: #d48806;
+            font-size: 13px;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        .compare-item {
+            margin: 6px 0;
+            padding: 6px;
+            background: white;
+            border-radius: 4px;
+            border-left: 2px solid #fadb14;
+            font-size: 12px;
+        }
+
+        .compare-item strong {
+            color: #d48806;
+        }
+
+        .intro-box {
+            background: #fff9f0;
+            border: 2px solid #ff8c00;
+            border-radius: 8px;
+            padding: 12px;
+            margin: 10px 0;
+        }
+
+        .intro-box h5 {
+            color: #cc6600;
+            font-size: 13px;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        .intro-item {
+            margin: 6px 0;
+            padding: 6px;
+            background: white;
+            border-radius: 4px;
+            border-left: 2px solid #ff8c00;
+            font-size: 12px;
+        }
+
+        .intro-item strong {
+            color: #cc6600;
+        }
+
+        .speak-box {
+            background: #f0fff0;
+            border: 2px solid #228b22;
+            border-radius: 8px;
+            padding: 12px;
+            margin: 10px 0;
+        }
+
+        .speak-box h5 {
+            color: #006400;
+            font-size: 13px;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        .speak-item {
+            margin: 6px 0;
+            padding: 6px;
+            background: white;
+            border-radius: 4px;
+            border-left: 2px solid #228b22;
+            font-size: 12px;
+        }
+
+        .speak-item strong {
+            color: #006400;
+        }
+
+        .highlight-special {
+            background: #FFE266;
+            font-weight: bold;
+            color: #856404;
+            padding: 1px 3px;
+            border-radius: 2px;
+        }
+
+        .highlight-transform {
+            background: #f0f8ff;
+            color: #0f3cc9;
+            padding: 1px 3px;
+            border-radius: 2px;
+            font-weight: bold;
+        }
+
+        .highlight-special-q {
+            background: #e6f7ff;
+            color: #0050b3;
+            padding: 1px 3px;
+            border-radius: 2px;
+            font-weight: bold;
+        }
+
+        .highlight-general-q {
+            background: #f8e8e8;
+            color: #8a2c2c;
+            padding: 1px 3px;
+            border-radius: 2px;
+            font-weight: bold;
+        }
+
+        .highlight-age {
+            background: #f6ffed;
+            color: #237804;
+            padding: 1px 3px;
+            border-radius: 2px;
+            font-weight: bold;
+        }
+
+        .highlight-fish {
+            background: #e6f9ff;
+            color: #006d75;
+            padding: 1px 3px;
+            border-radius: 2px;
+            font-weight: bold;
+        }
+
+        .highlight-extension {
+            background: #f0f2f5;
+            color: #434343;
+            padding: 1px 3px;
+            border-radius: 2px;
+            font-weight: bold;
+        }
+
+        .highlight-hyphen {
+            background: #fff0f6;
+            color: #c41d7f;
+            padding: 1px 3px;
+            border-radius: 2px;
+            font-weight: bold;
+        }
+
+        .highlight-compare {
+            background: #fef7e0;
+            color: #d48806;
+            padding: 1px 3px;
+            border-radius: 2px;
+            font-weight: bold;
+        }
+
+        .highlight-uncountable {
+            background: #f0f5ff;
+            color: #597ef7;
+            padding: 1px 3px;
+            border-radius: 2px;
+            font-weight: bold;
+        }
+
+        .highlight-verb {
+            background: #f9f0ff;
+            color: #9254de;
+            padding: 1px 3px;
+            border-radius: 2px;
+            font-weight: bold;
+        }
+
+        .highlight-verb-change {
+            background: #ff6b35;
+            color: white;
+            padding: 1px 3px;
+            border-radius: 2px;
+            font-weight: bold;
+        }
+
+        .highlight-intro {
+            background: #fff9f0;
+            color: #cc6600;
+            padding: 1px 3px;
+            border-radius: 2px;
+            font-weight: bold;
+        }
+
+        .highlight-speak {
+            background: #f0fff0;
+            color: #006400;
+            padding: 1px 3px;
+            border-radius: 2px;
+            font-weight: bold;
+        }
+
+        .underline {
+            text-decoration: underline;
+            text-decoration-color: #ff6b35;
+            text-decoration-thickness: 2px;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            .watermark::before {
+                font-size: 24px;
+                letter-spacing: 3px;
+            }
+
+            .watermark::after {
+                font-size: 18px;
+                letter-spacing: 2px;
+            }
+
+            .card-container {
+                border-radius: 15px;
+                min-height: 100vh;
+            }
+
+            .header {
+                padding: 20px 15px;
+            }
+
+            .header h1 {
+                font-size: 20px;
+            }
+
+            .header .subtitle {
+                font-size: 14px;
+            }
+
+            .table-of-contents {
+                margin: 15px;
+                padding: 15px;
+            }
+
+            .content {
+                padding: 15px;
+                max-height: none;
+            }
+
+            .grammar-point {
+                padding: 15px;
+                margin-bottom: 15px;
+            }
+
+            .point-title {
+                font-size: 16px;
+            }
+
+            .point-content {
+                font-size: 13px;
+            }
+
+            .comparison-grid {
+                grid-template-columns: 1fr;
+                gap: 4px;
+            }
+
+            .qw-grid {
+                grid-template-columns: 1fr;
+                gap: 4px;
+            }
+
+            .decorative-star {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .watermark::before {
+                font-size: 18px;
+                letter-spacing: 2px;
+            }
+
+            .watermark::after {
+                font-size: 14px;
+                letter-spacing: 1px;
+            }
+
+            .header h1 {
+                font-size: 18px;
+            }
+
+            .header .subtitle {
+                font-size: 12px;
+            }
+
+            .point-title {
+                font-size: 14px;
+            }
+
+            .point-content {
+                font-size: 12px;
+            }
+        }
+    </style>
+<script src="https://puc.poecdn.net/authenticated_preview_page/syncedState.bd4eeeb8e8e02052ee92.js"></script></head>
+<body>
+    <!-- 水印元素 -->
+    <div class="watermark"></div>
+    
+    <div class="card-container">
+        <div class="header">
+            <div class="decorative-star star1">⭐</div>
+            <div class="decorative-star star2">✨</div>
+            <div class="decorative-star star3">🌟</div>
+            <h1>江苏校内-译林英语</h1>
+            <div class="subtitle"><span class="highlight-unit">五上</span>-<span class="highlight-unit">Unit6</span>-<span class="highlight-unit">必学语法点</span></div>
+            <div class="teacher-info">Eva老师👩‍🏫伴步英语</div>
+        </div>
+
+        <!-- 目录导航 -->
+        <div class="table-of-contents">
+            <div class="toc-header">
+                <div class="toc-icon">📚</div>
+                <span>知识点目录导航</span>
+            </div>
+            <ul class="toc-list">
+                <li class="toc-item">
+                    <a href="#point1" class="toc-link">
+                        <div class="toc-number">1</div>
+                        <div class="toc-title">含有实义动词的陈述句改为一般疑问句</div>
+                        <div class="toc-emoji">❓</div>
+                    </a>
+                </li>
+                <li class="toc-item">
+                    <a href="#point2" class="toc-link">
+                        <div class="toc-number">2</div>
+                        <div class="toc-title">含有实义动词的特殊疑问句</div>
+                        <div class="toc-emoji">🔍</div>
+                    </a>
+                </li>
+                <li class="toc-item">
+                    <a href="#point3" class="toc-link">
+                        <div class="toc-number">3</div>
+                        <div class="toc-title">询问及回答年龄的表达</div>
+                        <div class="toc-emoji">🎂</div>
+                    </a>
+                </li>
+                <li class="toc-item">
+                    <a href="#point4" class="toc-link">
+                        <div class="toc-number">4</div>
+                        <div class="toc-title">关于"说"的单词辨析</div>
+                        <div class="toc-emoji">💬</div>
+                    </a>
+                </li>
+                <li class="toc-item">
+                    <a href="#point5" class="toc-link">
+                        <div class="toc-number">5</div>
+                        <div class="toc-title">fish的用法与单复数同形名词拓展</div>
+                        <div class="toc-emoji">🐟</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="content">
+            <div id="point1" class="grammar-point">
+                <div class="point-header">
+                    <div class="point-number">1</div>
+                    <div class="point-title">含有实义动词的陈述句改为一般疑问句</div>
+                    <div class="emoji">❓</div>
+                </div>
+                <div class="point-content">
+                    <p class="core-concept"><strong>核心概念：</strong>含有实义动词的陈述句改为一般疑问句，方法是"一加、二改、三注意、四升调"</p>
+
+                    <div class="intro-box">
+                        <h5>📚 什么是实义动词？</h5>
+                        <div class="intro-item">
+                            <strong>定义：</strong>实义动词是有具体含义的动词，表示动作或状态
+                        </div>
+                        <div class="intro-item">
+                            <strong>常见实义动词：</strong><span class="highlight-intro">like</span>(喜欢)、<span class="highlight-intro">have</span>(有)、<span class="highlight-intro">work</span>(工作)、<span class="highlight-intro">live</span>(居住)等
+                        </div>
+                        <div class="intro-item">
+                            <strong>区别于：</strong>be动词(am/is/are)和助动词(do/does)
+                        </div>
+                    </div>
+
+                    <div class="transform-box">
+                        <h5>🔄 四步变换法</h5>
+                        <div class="transform-item">
+                            <strong>一加：</strong>在句首加助动词do/does (第三人称单数作主语时加does)
+                            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                                例：They like swimming. → <span class="highlight-transform">Do</span> they like swimming?
+                            </div>
+                        </div>
+                        <div class="transform-item">
+                            <strong>二改：</strong>句号改为问号；实义动词变回原形
+                            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                                例：She <span class="highlight-intro">likes</span> red<span class="highlight-transform">.</span> → Does she <span class="highlight-verb-change">like</span> red<span class="highlight-transform">?</span>
+                            </div>
+                        </div>
+                        <div class="transform-item">
+                            <strong>三注意：</strong>do/does首字母要大写；陈述句中的主语为第一人称，疑问句时改为第二人称
+                            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                                例：<span class="highlight-intro">I</span> have a book. → Do <span class="highlight-transform">you</span> have a book?
+                            </div>
+                        </div>
+                        <div class="transform-item">
+                            <strong>四升调：</strong>变为一般疑问句后，句尾用升调
+                            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                                例：Do they like swimming↗? (读音上扬)
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="structure-box">
+                        <h4>📝 基本变换规律</h4>
+                        <div class="structure-item">
+                            陈述句：They like swimming. 他们喜欢游泳。
+                            <div class="structure-examples">疑问句：<span class="highlight-question">Do they <span class="highlight-verb-change">like</span> swimming?</span> 他们喜欢游泳吗？</div>
+                        </div>
+                    </div>
+
+                    <div class="structure-box">
+                        <h4>👤 第三人称单数的变化</h4>
+                        <div class="structure-item">
+                            陈述句：My sister likes red. 我的姐姐/妹妹喜欢红色。
+                            <div class="structure-examples">疑问句：<span class="highlight-question">Does your sister <span class="highlight-verb-change">like</span> red?</span> 你的姐姐/妹妹喜欢红色吗？</div>
+                        </div>
+                    </div>
+
+                    <div class="detail-box">
+                        <h5>🎯 变换要点详解</h5>
+                        <div class="detail-item">
+                            <strong>助动词选择：</strong>第三人称单数用does，其他用do
+                            <div style="margin-top: 3px; font-size: 11px; color: #666;">
+                                例：He/She/It/Tom → <span class="highlight-transform">does</span> ； I/You/We/They → <span class="highlight-transform">do</span>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <strong>动词形式：</strong>疑问句中动词必须变回原形
+                            <div style="margin-top: 3px; font-size: 11px; color: #666;">
+                                例：likes → <span class="highlight-verb-change">like</span> ; goes → <span class="highlight-verb-change">go</span> ; has → <span class="highlight-verb-change">have</span>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <strong>人称变化：</strong>陈述句中的主语为第一人称，疑问句时要改为第二人称
+                            <div style="margin-top: 3px; font-size: 11px; color: #666;">
+                                例：<span class="highlight-intro">I</span> → <span class="highlight-transform">you</span> ; <span class="highlight-intro">my</span> → <span class="highlight-transform">your</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="comparison-table">
+                        <h5>📊 陈述句转疑问句对照表</h5>
+                        <div class="comparison-grid">
+                            <div class="comparison-header">陈述句</div>
+                            <div class="comparison-header">疑问句</div>
+                            <div class="comparison-header">变化要点</div>
+                            
+                            <div class="comparison-cell">They like swimming.</div>
+                            <div class="comparison-cell">Do they like swimming?</div>
+                            <div class="comparison-cell">加do，改问号</div>
+                            
+                            <div class="comparison-cell">My sister likes red.</div>
+                            <div class="comparison-cell">Does your sister like red?</div>
+                            <div class="comparison-cell">加does，likes→like，my→your</div>
+                            
+                            <div class="comparison-cell">I have a book.</div>
+                            <div class="comparison-cell">Do you have a book?</div>
+                            <div class="comparison-cell">加do，I→you</div>
+
+                            <div class="comparison-cell">He works at home.</div>
+                            <div class="comparison-cell">Does he work at home?</div>
+                            <div class="comparison-cell">加does，works→work</div>
+                        </div>
+                    </div>
+
+                    <div class="usage-note">
+                        <h6>⚠️ 特别注意</h6>
+                        <p>• 有了助动词does后，动词必须变回原形<br>
+                        • 第一人称与第二人称的转换：I→you, my→your<br>
+                        • 疑问句语调要用升调<br>
+                        • 助动词do/does的首字母要大写</p>
+                    </div>
+
+                    <div class="key-points">
+                        <h4>🎯 考察重点</h4>
+                        <ul>
+                            <li>助动词的正确选择
+                                <div class="key-point-examples">❓ <span class="highlight-question">Do</span> they... / <span class="highlight-question">Does</span> she...</div>
+                            </li>
+                            <li>动词原形的还原
+                                <div class="key-point-examples">🔄 <span class="highlight-verb-change">likes → like</span> (有does后用原形)</div>
+                            </li>
+                            <li>人称代词的转换
+                                <div class="key-point-examples">👥 I/my → you/your</div>
+                            </li>
+                            <li>标点符号的改变
+                                <div class="key-point-examples">📝 句号(.) → 问号(?)</div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>📝 变换示例</h4>
+                        <div class="example">
+                            <span class="example-emoji">🏊</span>
+                            <span>They like swimming. → <span class="highlight-question">Do they <span class="highlight-verb-change">like</span> swimming?</span></span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">❤️</span>
+                            <span>My sister likes red. → <span class="highlight-question">Does your sister <span class="highlight-verb-change">like</span> red?</span></span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">📚</span>
+                            <span>I have a book. → <span class="highlight-question">Do you <span class="highlight-verb-change">have</span> a book?</span></span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">🏫</span>
+                            <span>He works in a school. → <span class="highlight-question">Does he <span class="highlight-verb-change">work</span> in a school?</span></span>
+                        </div>
+                    </div>
+
+                    <div class="connection-box">
+                        <h4>🔗 温故知新</h4>
+                        <div class="connection-text">
+                            这个变换规律是英语疑问句的基础，与之前学习的第三人称单数变化规律相呼应，体现了英语语法的系统性。
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="point2" class="grammar-point">
+                <div class="point-header">
+                    <div class="point-number">2</div>
+                    <div class="point-title">含有实义动词的特殊疑问句</div>
+                    <div class="emoji">🔍</div>
+                </div>
+                <div class="point-content">
+                    <p class="core-concept"><strong>核心概念：</strong>特殊疑问句用来询问具体信息，由<span class="highlight-special-q">特殊疑问词</span> + <span class="highlight-general-q">一般疑问句语序</span>构成</p>
+
+                    <div class="special-box">
+                        <h5>🎯 特殊疑问句的构成公式</h5>
+                        <div class="special-item">
+                            <strong>基本公式：</strong><span class="highlight-special-q">特殊疑问词</span> + <span class="highlight-general-q">一般疑问句语序</span>
+                            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                                结构：<span class="highlight-special-q">What/Where/Who...</span> + <span class="highlight-general-q">do/does + 主语 + 动词原形</span> + 其他?
+                            </div>
+                        </div>
+                        <div class="special-item">
+                            <strong>实例演示：</strong>My friend likes <span class="underline">Chinese and PE</span>. (对画线部分提问)
+                            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                                第一步：确定疑问词 → <span class="highlight-special-q">What subjects</span> (问学科)<br>
+                                第二步：变一般疑问句 → <span class="highlight-general-q">does your friend like</span><br>
+                                第三步：组合完整句 → <span class="highlight-special-q">What subjects</span> <span class="highlight-general-q">does your friend <span class="highlight-verb-change">like</span>?</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="structure-box">
+                        <h4>📍 特殊疑问句的回答规律</h4>
+                        <div class="structure-item">
+                            问什么答什么，如果主语是第三人称单数，问句中助动词用does，答句中动词用第三人称单数形式
+                            <div class="structure-examples">
+                                问：<span class="highlight-question">Where does Mike live?</span> 迈克住在哪里？<br>
+                                答：He <span class="highlight-verb-change">lives</span> in Beijing. 他住在北京。<br>
+                                <small style="color: #999;">解析：问句用does，答句中live变成lives</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="comparison-table">
+                        <h5>📊 常见特殊疑问词完整分类表</h5>
+                        <div class="qw-grid">
+                            <div class="qw-header">基础疑问词</div>
+                            <div class="qw-header">What搭配词组</div>
+                            <div class="qw-header">How搭配词组</div>
+                            
+                            <div class="qw-cell qw-cell-other">What (什么)</div>
+                            <div class="qw-cell qw-cell-what">What color (什么颜色)</div>
+                            <div class="qw-cell qw-cell-how">How old (多大年龄)</div>
+                            
+                            <div class="qw-cell qw-cell-other">Where (哪里)</div>
+                            <div class="qw-cell qw-cell-what">What subjects (什么学科)</div>
+                            <div class="qw-cell qw-cell-how">How many (多少-可数)</div>
+                            
+                            <div class="qw-cell qw-cell-other">Who (谁)</div>
+                            <div class="qw-cell qw-cell-what">What time (几点)</div>
+                            <div class="qw-cell qw-cell-how">How much (多少-不可数)</div>
+                            
+                            <div class="qw-cell qw-cell-other">When (什么时候)</div>
+                            <div class="qw-cell qw-cell-what">What day (星期几)</div>
+                            <div class="qw-cell qw-cell-how">How often (多久一次)</div>
+                            
+                            <div class="qw-cell qw-cell-other">Which (哪一个)</div>
+                            <div class="qw-cell qw-cell-what">What size (什么尺寸)</div>
+                            <div class="qw-cell qw-cell-how">How long (多长时间)</div>
+                            
+                            <div class="qw-cell qw-cell-other">How (怎样)</div>
+                            <div class="qw-cell qw-cell-what">What's your name (你叫什么名字)</div>
+                            <div class="qw-cell qw-cell-how">How far (多远)</div>
+                        </div>
+                    </div>
+
+                    <div class="compare-box">
+                        <h5>🆚 特殊疑问句 vs 一般疑问句对比</h5>
+                        <div class="compare-item">
+                            <strong>一般疑问句：</strong>只能用Yes/No回答，是对整个句子内容的猜测确认
+                            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                                例：<span class="highlight-compare">Do you like apples?</span> --Yes, I do. / No, I don't.
+                            </div>
+                        </div>
+                        <div class="compare-item">
+                            <strong>特殊疑问句：</strong>不能用Yes/No回答，直接获取具体信息
+                            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                                例：<span class="highlight-compare">What do you like?</span> --I like apples.
+                            </div>
+                        </div>
+                        <div class="compare-item">
+                            <strong>使用场景：</strong>一般疑问句用于确认，特殊疑问句用于了解详情
+                        </div>
+                    </div>
+
+                    <div class="detail-box">
+                        <h5>🎯 构成要点详解</h5>
+                        <div class="detail-item">
+                            <strong>疑问词选择：</strong>根据要询问的内容选择合适的疑问词
+                            <div style="margin-top: 3px; font-size: 11px; color: #666;">
+                                例：问地点用Where，问人物用Who，问时间用When
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <strong>语序保持：</strong>疑问词后面跟一般疑问句语序
+                            <div style="margin-top: 3px; font-size: 11px; color: #666;">
+                                例：Where + does + he + live? (疑问词+助动词+主语+动词原形)
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <strong>回答要求：</strong>问什么答什么，注意动词形式的变化
+                            <div style="margin-top: 3px; font-size: 11px; color: #666;">
+                                例：问句用does，答句中第三人称单数动词要加s/es
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="usage-note">
+                        <h6>⚠️ 特别注意</h6>
+                        <p>• 特殊疑问句不能用Yes/No回答<br>
+                        • 问句中用does，答句中动词要变第三人称单数形式<br>
+                        • 疑问词要放在句首，后面紧跟一般疑问句语序<br>
+                        • 特殊疑问词 + 一般疑问句语序 = 特殊疑问句</p>
+                    </div>
+
+                    <div class="key-points">
+                        <h4>🎯 考察重点</h4>
+                        <ul>
+                            <li>疑问词的正确选择
+                                <div class="key-point-examples">🔍 What/Where/Who/When/Which/How等</div>
+                            </li>
+                            <li>语序的正确排列
+                                <div class="key-point-examples">📝 疑问词 + do/does + 主语 + 动词原形</div>
+                            </li>
+                            <li>回答时动词形式的变化
+                                <div class="key-point-examples">⚖️ 问句用does，答句动词加s/es</div>
+                            </li>
+                            <li>对画线部分提问的技巧
+                                <div class="key-point-examples">🎯 根据画线内容选择疑问词</div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>📝 问答示例</h4>
+                        <div class="example">
+                            <span class="example-emoji">🏠</span>
+                            <span><span class="highlight-question">Where does Mike live?</span><br>--He <span class="highlight-verb-change">lives</span> in Beijing.</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">📚</span>
+                            <span><span class="highlight-question">What subjects does he like?</span><br>--He <span class="highlight-verb-change">likes</span> Science.</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">👨‍🏫</span>
+                            <span><span class="highlight-question">Who teaches you English?</span><br>--Mr. Li <span class="highlight-verb-change">teaches</span> us English.</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">🍎</span>
+                            <span><span class="highlight-question">What do you like?</span><br>--I like apples.</span>
+                        </div>
+                    </div>
+
+                    <div class="connection-box">
+                        <h4>🔗 温故知新</h4>
+                        <div class="connection-text">
+                            特殊疑问句在一般疑问句的基础上增加了疑问词，是获取具体信息的重要句型，与前面学习的疑问句变换规律一脉相承。
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="point3" class="grammar-point">
+                <div class="point-header">
+                    <div class="point-number">3</div>
+                    <div class="point-title">询问及回答年龄的表达</div>
+                    <div class="emoji">🎂</div>
+                </div>
+                <div class="point-content">
+                    <p class="core-concept"><strong>核心概念：</strong>"How old...?"引导提问年龄的疑问句，答句用"...year(s) old"是固定句型，前面加基数词</p>
+
+                    <div class="age-box">
+                        <h5>🎯 询问年龄的句型</h5>
+                        <div class="age-item">
+                            <strong>疑问句：</strong>How old + be动词 + 主语？
+                            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                                例：<span class="highlight-age">How old is he?</span> 他多大了？👦
+                            </div>
+                        </div>
+                        <div class="age-item">
+                            <strong>回答句：</strong>主语 + be动词 + 基数词 + year(s) old.
+                            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                                例：<span class="highlight-age">He is twelve years old.</span> 他十二岁了。🎂
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="structure-box">
+                        <h4>📝 year的单复数形式规律</h4>
+                        <div class="structure-item">
+                            year根据前面的数字决定用单数或复数形式
+                            <div class="structure-examples">
+                                一岁：<span class="highlight-age">one year old</span> 👶<br>
+                                多岁：<span class="highlight-age">twelve years old</span> 🧒<br>
+                                记忆口诀：一岁year，二岁起years
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hyphen-box">
+                        <h5>🔗 连字符形式的年龄表达</h5>
+                        <div class="hyphen-item">
+                            <strong>特殊形式：</strong>当年龄作定语修饰名词时，用连字符连接，此时year不加s
+                            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                                例：<span class="highlight-hyphen">a twelve-year-old boy</span> 一个十二岁的男孩 👦
+                            </div>
+                        </div>
+                        <div class="hyphen-item">
+                            <strong>对比记忆：</strong>
+                            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                                作表语：He is <span class="highlight-age">twelve years old</span>. (动词后面，年龄是表语)<br>
+                                作定语：He is a <span class="highlight-hyphen">twelve-year-old</span> boy. (名词前面，年龄修饰名词)
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="detail-box">
+                        <h5>🎯 使用要点详解</h5>
+                        <div class="detail-item">
+                            <strong>疑问词：</strong>How old 是固定搭配，不能分开
+                            <div style="margin-top: 3px; font-size: 11px; color: #666;">
+                                正确：How old... 错误：How are old...
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <strong>be动词：</strong>根据主语选择am/is/are
+                            <div style="margin-top: 3px; font-size: 11px; color: #666;">
+                                例：I am... / He is... / You are... / They are...
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <strong>数词变化：</strong>1用year，2及以上用years
+                            <div style="margin-top: 3px; font-size: 11px; color: #666;">
+                                例：one year / two years / ten years
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <strong>连字符规则：</strong>作定语时用连字符，year不加s
+                            <div style="margin-top: 3px; font-size: 11px; color: #666;">
+                                例：five-year-old (不是five-years-old)
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="comparison-table">
+                        <h5>📊 年龄问答对照表</h5>
+                        <div class="comparison-grid">
+                            <div class="comparison-header">疑问句</div>
+                            <div class="comparison-header">回答句</div>
+                            <div class="comparison-header">年龄特点</div>
+                            
+                            <div class="comparison-cell question-cell">How old is the baby? 👶</div>
+                            <div class="comparison-cell">He is one year old.</div>
+                            <div class="comparison-cell">1岁用year</div>
+                            
+                            <div class="comparison-cell question-cell">How old are you? 🧒</div>
+                            <div class="comparison-cell">I am twelve years old.</div>
+                            <div class="comparison-cell">12岁用years</div>
+                            
+                            <div class="comparison-cell question-cell">How old is she? 👩</div>
+                            <div class="comparison-cell">She is twenty-five years old.</div>
+                            <div class="comparison-cell">25岁用years</div>
+                        </div>
+                    </div>
+
+                    <div class="usage-note">
+                        <h6>⚠️ 特别注意</h6>
+                        <p>• How old是固定搭配，意为"多大年龄" 🎂<br>
+                        • 1岁用year，2岁及以上用years<br>
+                        • 连字符形式中year不加s：twelve-year-old<br>
+                        • 回答可以简化为：I'm twelve. 或 Twelve years old.</p>
+                    </div>
+
+                    <div class="key-points">
+                        <h4>🎯 考察重点</h4>
+                        <ul>
+                            <li>How old的固定搭配
+                                <div class="key-point-examples">❓ <span class="highlight-age">How old</span> is/are...?</div>
+                            </li>
+                            <li>year的单复数变化
+                                <div class="key-point-examples">📝 one <span class="highlight-age">year</span> / twelve <span class="highlight-age">years</span></div>
+                            </li>
+                            <li>连字符形式的掌握
+                                <div class="key-point-examples">🔗 <span class="highlight-hyphen">twelve-year-old</span> boy</div>
+                            </li>
+                            <li>be动词的正确选择
+                                <div class="key-point-examples">👤 He <span class="highlight-age">is</span> / You <span class="highlight-age">are</span></div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>📝 年龄表达示例</h4>
+                        <div class="example">
+                            <span class="example-emoji">👦</span>
+                            <span><span class="highlight-question">How old is he?</span><br>--<span class="highlight-age">He is twelve years old.</span></span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">🎓</span>
+                            <span>He is a <span class="highlight-hyphen">twelve-year-old</span> student. 他是一个十二岁的学生。</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">👶</span>
+                            <span><span class="highlight-question">How old is the baby?</span><br>--<span class="highlight-age">He is one year old.</span></span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">👩‍🏫</span>
+                            <span>She is a <span class="highlight-hyphen">twenty-five-year-old</span> teacher. 她是一个二十五岁的老师。</span>
+                        </div>
+                    </div>
+
+                    <div class="connection-box">
+                        <h4>🔗 温故知新</h4>
+                        <div class="connection-text">
+                            年龄表达是日常交流的基础内容，涉及基数词、be动词和名词单复数等多个语法点的综合运用。
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="point4" class="grammar-point">
+                <div class="point-header">
+                    <div class="point-number">4</div>
+                    <div class="point-title">关于"说"的单词辨析</div>
+                    <div class="emoji">💬</div>
+                </div>
+                <div class="point-content">
+                    <p class="core-concept"><strong>核心概念：</strong>英语中表示"说"的单词有多个，每个词的用法和含义略有不同，需要根据具体语境选择合适的词汇</p>
+
+                    <div class="speak-box">
+                        <h5>🗣️ speak - 表示说某种语言</h5>
+                        <div class="speak-item">
+                            <strong>用法：</strong>speak + 语言名称，表示"说某种语言"
+                            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                                例：<span class="highlight-speak">speak English</span> 说英语 🇬🇧<br>
+                                例：<span class="highlight-speak">speak Chinese</span> 说中文 🇨🇳
+                            </div>
+                        </div>
+                        <div class="speak-item">
+                            <strong>特点：</strong>强调语言能力和语言种类
+                            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                                Can you <span class="highlight-speak">speak French</span>? 你会说法语吗？🇫🇷
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="speak-box">
+                        <h5>💭 talk - 表示交谈、谈论</h5>
+                        <div class="speak-item">
+                            <strong>用法：</strong>talk + about/with/to，表示"交谈、谈论"
+                            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                                例：<span class="highlight-speak">talk about your hobbies with your friends</span> 和朋友谈论你的爱好 👥<br>
+                                例：<span class="highlight-speak">talk to the teacher</span> 和老师交谈 👨‍🏫
+                            </div>
+                        </div>
+                        <div class="speak-item">
+                            <strong>特点：</strong>强调双向交流，互相讨论
+                            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                                They are <span class="highlight-speak">talking about</span> the weekend plan. 他们在讨论周末计划。📅
+                            </div>
+                        </div>
+                        <div class="speak-item">
+                            <strong>talk with 和 talk to 的区别：</strong>
+                            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                                • <span class="highlight-speak">talk with</span> 强调平等的双向交流 👫<br>
+                                • <span class="highlight-speak">talk to</span> 更多指单向说话或指导 👨‍🏫→👦
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="speak-box">
+                        <h5>📖 tell - 表示讲给某人听、告诉</h5>
+                        <div class="speak-item">
+                            <strong>用法：</strong>tell + sb. + sth.，表示"告诉某人某事"
+                            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                                例：<span class="highlight-speak">tell a story</span> 讲一个故事 📚<br>
+                                例：<span class="highlight-speak">tell me the truth</span> 告诉我真相 💡
+                            </div>
+                        </div>
+                        <div class="speak-item">
+                            <strong>特点：</strong>强调单向传达信息，有明确的接收者
+                            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                                My grandma <span class="highlight-speak">tells</span> me interesting stories. 我奶奶给我讲有趣的故事。👵
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="speak-box">
+                        <h5>💬 say - 表示说的具体内容</h5>
+                        <div class="speak-item">
+                            <strong>用法：</strong>say + 具体内容，表示"说出具体的话"
+                            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                                例：<span class="highlight-speak">Lily says, "I like cats."</span> 莉莉说："我喜欢猫。" 🐱<br>
+                                例：<span class="highlight-speak">What did you say?</span> 你说什么？ ❓
+                            </div>
+                        </div>
+                        <div class="speak-item">
+                            <strong>特点：</strong>强调说话的具体内容，常用于引述他人的话
+                            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                                He <span class="highlight-speak">says</span> hello to everyone. 他向每个人打招呼。👋
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="comparison-table">
+                        <h5>📊 "说"的单词对比表</h5>
+                        <div class="comparison-grid">
+                            <div class="comparison-header">单词</div>
+                            <div class="comparison-header">主要用法</div>
+                            <div class="comparison-header">例句</div>
+                            
+                            <div class="comparison-cell">speak</div>
+                            <div class="comparison-cell">说某种语言</div>
+                            <div class="comparison-cell">speak English 🇬🇧</div>
+                            
+                            <div class="comparison-cell">talk</div>
+                            <div class="comparison-cell">交谈、讨论</div>
+                            <div class="comparison-cell">talk about hobbies 💭</div>
+                            
+                            <div class="comparison-cell">tell</div>
+                            <div class="comparison-cell">告诉、讲述</div>
+                            <div class="comparison-cell">tell a story 📖</div>
+
+                            <div class="comparison-cell">say</div>
+                            <div class="comparison-cell">说具体内容</div>
+                            <div class="comparison-cell">say "Hello" 💬</div>
+                        </div>
+                    </div>
+
+                    <div class="detail-box">
+                        <h5>🎯 使用要点详解</h5>
+                        <div class="detail-item">
+                            <strong>speak：</strong>后面直接接语言名称，不需要介词
+                            <div style="margin-top: 3px; font-size: 11px; color: #666;">
+                                正确：speak English ； 错误：speak in English
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <strong>talk：</strong>需要搭配介词about/with/to使用
+                            <div style="margin-top: 3px; font-size: 11px; color: #666;">
+                                talk about(谈论) / talk with/to(与...交谈)
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <strong>tell：</strong>后面接双宾语结构，tell sb. sth.
+                            <div style="margin-top: 3px; font-size: 11px; color: #666;">
+                                tell me a joke (告诉我一个笑话)
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <strong>say：</strong>后面接说话的具体内容，常用引号
+                            <div style="margin-top: 3px; font-size: 11px; color: #666;">
+                                say "Good morning" (说"早上好")
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="usage-note">
+                        <h6>⚠️ 特别注意</h6>
+                        <p>• speak强调语言能力：speak + 语言 🗣️<br>
+                        • talk强调交流过程：talk about/with/to 💭<br>
+                        • tell强调传达信息：tell sb. sth. 📢<br>
+                        • say强调说话内容：say + 具体话语 💬<br>
+                        • 选词时要考虑语境和强调重点</p>
+                    </div>
+
+                    <div class="key-points">
+                        <h4>🎯 考察重点</h4>
+                        <ul>
+                            <li>speak的语言搭配
+                                <div class="key-point-examples">🌍 <span class="highlight-speak">speak English/Chinese</span></div>
+                            </li>
+                            <li>talk的介词搭配
+                                <div class="key-point-examples">💭 <span class="highlight-speak">talk about/with/to</span></div>
+                            </li>
+                            <li>tell的双宾语结构
+                                <div class="key-point-examples">📖 <span class="highlight-speak">tell sb. sth.</span></div>
+                            </li>
+                            <li>say的内容表达
+                                <div class="key-point-examples">💬 <span class="highlight-speak">say "Hello"</span></div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>📝 综合运用示例</h4>
+                        <div class="example">
+                            <span class="example-emoji">🗣️</span>
+                            <span>She can <span class="highlight-speak">speak</span> three languages. 她会说三种语言。</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">🎬</span>
+                            <span>We <span class="highlight-speak">talk about</span> our favorite movies. 我们谈论我们最喜欢的电影。</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">📚</span>
+                            <span>My teacher <span class="highlight-speak">tells</span> us interesting stories. 我的老师给我们讲有趣的故事。</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">👋</span>
+                            <span>Tom <span class="highlight-speak">says</span> "Good morning" to everyone. 汤姆对每个人说"早上好"。</span>
+                        </div>
+                    </div>
+
+                    <div class="connection-box">
+                        <h4>🔗 温故知新</h4>
+                        <div class="connection-text">
+                            掌握这些"说"的单词辨析，有助于在交流中准确表达意思，体现了英语词汇的精确性和丰富性。
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="point5" class="grammar-point">
+                <div class="point-header">
+                    <div class="point-number">5</div>
+                    <div class="point-title">fish的用法与单复数同形名词拓展</div>
+                    <div class="emoji">🐟</div>
+                </div>
+                <div class="point-content">
+                    <p class="core-concept"><strong>核心概念：</strong>fish一词多义，可作可数名词、不可数名词和动词，使用时要注意语境。此外，英语中还有很多类似的特殊名词</p>
+
+                    <div class="fish-box">
+                        <h5>🐠 fish作可数名词</h5>
+                        <div class="fish-item">
+                            <strong>(1) 指几条鱼：</strong>通常用fish(单复数同形)，例如：<span class="highlight-fish">three fish</span>(三条鱼) 🐟🐟🐟，<span class="highlight-fish">many fish</span>(许多鱼) 🐠
+                        </div>
+                        <div class="fish-item">
+                            <strong>(2) 指不同种类的鱼：</strong>用fishes，例如：<span class="highlight-fish">three fishes</span>(三种鱼) 🐟🐠🐡，<span class="highlight-fish">many fishes</span>(许多种鱼)
+                        </div>
+                    </div>
+
+                    <div class="fish-box">
+                        <h5>🍽️ fish作不可数名词</h5>
+                        <div class="fish-item">
+                            <strong>指鱼肉时：</strong>例如：<span class="highlight-uncountable">I'd like some fish.</span> 我想吃些鱼肉。🍽️
+                            <div style="margin-top: 3px; font-size: 11px; color: #666;">
+                                注意：这时fish是食物，不可数，前面用some/much等
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="fish-box">
+                        <h5>🎣 fish作动词</h5>
+                        <div class="fish-item">
+                            <strong>表示"钓鱼、捕鱼"：</strong>例如：<span class="highlight-verb">Let's go fishing tomorrow.</span> 让我们明天去钓鱼吧。🎣
+                            <div style="margin-top: 3px; font-size: 11px; color: #666;">
+                                注意：go fishing是固定搭配，fishing是动名词形式
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="extension-box">
+                        <h5>📚 单复数同形名词拓展</h5>
+                        <div class="extension-item">
+                            <strong>动物类：</strong><span class="highlight-extension">sheep</span>(绵羊) 🐑, <span class="highlight-extension">deer</span>(鹿) 🦌, <span class="highlight-extension">fish</span>(鱼) 🐟
+                        </div>
+                        <div class="extension-item">
+                            <strong>国籍类：</strong><span class="highlight-extension">Chinese</span>(中国人) 🇨🇳, <span class="highlight-extension">Japanese</span>(日本人) 🇯🇵
+                        </div>
+                        <div class="extension-item">
+                            <strong>例句对比：</strong>
+                            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                                one <span class="highlight-extension">sheep</span> → ten <span class="highlight-extension">sheep</span> 🐑🐑🐑<br>
+                                one <span class="highlight-extension">Chinese</span> → many <span class="highlight-extension">Chinese</span> 👥
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="extension-box">
+                        <h5>🔄 既可数又不可数的名词拓展</h5>
+                        <div class="extension-item">
+                            <strong><span class="highlight-extension">chicken</span>：</strong>可数时指"小鸡" 🐔，不可数时指"鸡肉" 🍗
+                            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                                例：three <span class="highlight-extension">chickens</span>(三只鸡) 🐔🐔🐔 / some <span class="highlight-extension">chicken</span>(一些鸡肉) 🍗
+                            </div>
+                        </div>
+                        <div class="extension-item">
+                            <strong><span class="highlight-extension">glass</span>：</strong>可数时指"玻璃杯" 🥛，不可数时指"玻璃" ✨
+                            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                                例：two <span class="highlight-extension">glasses</span>(两个杯子) 🥛🥛 / some <span class="highlight-extension">glass</span>(一些玻璃)
+                            </div>
+                        </div>
+                        <div class="extension-item">
+                            <strong><span class="highlight-extension">paper</span>：</strong>可数时指"报纸、试卷" 📰，不可数时指"纸" 📄
+                            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                                例：two <span class="highlight-extension">papers</span>(两份报纸) 📰📰 / some <span class="highlight-extension">paper</span>(一些纸) 📄
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="detail-box">
+                        <h5>🎯 使用要点总结</h5>
+                        <div class="detail-item">
+                            <strong>可数名词fish：</strong>单复数同形，指鱼的条数
+                            <div style="margin-top: 3px; font-size: 11px; color: #666;">
+                                例：one fish, five fish (数量相同的鱼)
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <strong>可数名词fishes：</strong>指不同种类的鱼
+                            <div style="margin-top: 3px; font-size: 11px; color: #666;">
+                                例：several fishes (几种不同的鱼)
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <strong>不可数名词fish：</strong>指鱼肉，食物
+                            <div style="margin-top: 3px; font-size: 11px; color: #666;">
+                                例：eat some fish (吃鱼肉)
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <strong>动词fish：</strong>钓鱼、捕鱼的动作
+                            <div style="margin-top: 3px; font-size: 11px; color: #666;">
+                                例：go fishing (去钓鱼)
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="usage-note">
+                        <h6>⚠️ 特别注意</h6>
+                        <p>• fish指鱼的条数时，单复数同形 🐟<br>
+                        • fishes指不同种类的鱼 🐟🐠🐡<br>
+                        • fish指鱼肉时，是不可数名词 🍽️<br>
+                        • go fishing是固定搭配，表示"去钓鱼" 🎣<br>
+                        • 学会区分既可数又不可数的名词在不同语境下的含义</p>
+                    </div>
+
+                    <div class="key-points">
+                        <h4>🎯 考察重点</h4>
+                        <ul>
+                            <li>fish的单复数形式
+                                <div class="key-point-examples">🐟 <span class="highlight-fish">three fish</span> (三条鱼)</div>
+                            </li>
+                            <li>单复数同形名词的掌握
+                                <div class="key-point-examples">🐑 <span class="highlight-extension">ten sheep</span> (十只羊)</div>
+                            </li>
+                            <li>既可数又不可数名词的区分
+                                <div class="key-point-examples">🐔 <span class="highlight-extension">chickens</span> vs <span class="highlight-extension">chicken</span></div>
+                            </li>
+                            <li>fish作动词的用法
+                                <div class="key-point-examples">🎣 <span class="highlight-verb">go fishing</span> (去钓鱼)</div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>📝 综合用法示例</h4>
+                        <div class="example">
+                            <span class="example-emoji">🐟</span>
+                            <span>There are <span class="highlight-fish">three fish</span> in the pond. 池塘里有三条鱼。</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">🐑</span>
+                            <span>I can see <span class="highlight-extension">ten sheep</span> on the hill. 我能看到山上有十只羊。</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">🐔</span>
+                            <span>There are three <span class="highlight-extension">chickens</span> in the yard, and we have some <span class="highlight-extension">chicken</span> for dinner. 院子里有三只鸡，我们晚餐吃鸡肉。</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">🎣</span>
+                            <span>Let's <span class="highlight-verb">go fishing</span> tomorrow. 让我们明天去钓鱼吧。</span>
+                        </div>
+                    </div>
+
+                    <div class="connection-box">
+                        <h4>🔗 温故知新</h4>
+                        <div class="connection-text">
+                            掌握这些特殊名词的用法体现了英语词汇的灵活性，需要根据具体语境来判断其词性和含义。
+                        </div>
+                    </div>
+
+                    <div class="eva-tip">
+                        <h5>🔍 Eva老师👩‍🏫小贴士</h5>
+                        <p>亲爱的同学们，Unit6的语法内容比较丰富，涉及句型转换、特殊疑问句、年龄表达、词汇辨析等多个方面。这些知识点看似独立，实际上都是英语表达的重要组成部分。掌握好句型转换的规律，能够帮助你更好地理解英语的语法体系。记住：平时要多阅读英语材料，在丰富的语境中多输入，就像我们学习母语汉语时一样，通过大量的接触来培养语感。在学习语法时要做有心人，思考总结，将语法知识相关联，组成自己的语法体系。练习必不可少，但练习的质量更重要。错没关系，但要分析思考明白每道题，错误往往能促进我们的成长。愿你在英语学习的路上越来越自信！📚✨</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            Eva老师👩‍🏫伴步英语
+        </div>
+    </div>
+
+    <script>
+        // 平滑滚动到指定位置
+        document.querySelectorAll('.toc-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+
+
+</body></html>
