@@ -1,0 +1,2480 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="x-poe-datastore-behavior" content="local_only"><meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' data: blob: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://code.jquery.com https://unpkg.com https://d3js.org https://threejs.org https://cdn.plot.ly https://stackpath.bootstrapcdn.com https://maps.googleapis.com https://cdn.tailwindcss.com https://ajax.googleapis.com https://kit.fontawesome.com https://cdn.datatables.net https://maxcdn.bootstrapcdn.com https://code.highcharts.com https://tako-static-assets-production.s3.amazonaws.com https://www.youtube.com https://fonts.googleapis.com https://fonts.gstatic.com https://pfst.cf2.poecdn.net https://puc.poecdn.net https://i.imgur.com https://wikimedia.org https://*.icons8.com https://*.giphy.com https://picsum.photos https://images.unsplash.com; frame-src 'self' https://www.youtube.com https://trytako.com; child-src 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests; block-all-mixed-content;">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eva老师👩‍🏫伴步英语-江苏校内-译林英语-五上-Unit8必学语法点</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            background: linear-gradient(135deg, #6d8bc3 0%, #c0db82 100%);
+            padding: 15px;
+            min-height: 100vh;
+            line-height: 1.6;
+            position: relative;
+        }
+
+        /* 水印样式 */
+        .watermark {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            user-select: none;
+            z-index: 999;
+            overflow: hidden;
+        }
+
+        .watermark::before {
+            content: "Eva老师👩‍🏫伴步英语";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-45deg);
+            font-size: 32px;
+            color: rgba(109, 139, 195, 0.12);
+            font-weight: bold;
+            white-space: nowrap;
+            letter-spacing: 6px;
+            text-shadow: 0 0 1px rgba(109, 139, 195, 0.08);
+        }
+
+        .watermark::after {
+            content: "Eva老师👩‍🏫伴步英语";
+            position: absolute;
+            top: 25%;
+            left: 25%;
+            transform: translate(-50%, -50%) rotate(-45deg);
+            font-size: 24px;
+            color: rgba(192, 219, 130, 0.08);
+            font-weight: bold;
+            white-space: nowrap;
+            letter-spacing: 4px;
+        }
+
+        .card-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(236, 236, 236, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            overflow: hidden;
+            min-height: 95vh;
+            position: relative;
+            z-index: 10;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #6d8bc3, #5a7ab8);
+            color: white;
+            text-align: center;
+            padding: 25px 20px;
+            position: relative;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .header .subtitle {
+            font-size: 16px;
+            opacity: 0.9;
+            margin-bottom: 5px;
+        }
+
+        .highlight-unit {
+            background: #FFE266;
+            color: #333;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        .header .teacher-info {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        .decorative-star {
+            position: absolute;
+            font-size: 20px;
+            animation: twinkle 2s infinite;
+        }
+
+        .star1 { top: 10px; left: 20px; }
+        .star2 { top: 15px; right: 30px; animation-delay: 0.5s; }
+        .star3 { bottom: 10px; left: 40px; animation-delay: 1s; }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.5; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.2); }
+        }
+
+        /* 目录导航样式 */
+        .table-of-contents {
+            background: rgba(255, 255, 255, 0.98);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 20px 0 20px;
+            border-left: 5px solid #6d8bc3;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .toc-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .toc-icon {
+            background: #6d8bc3;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            margin-right: 12px;
+        }
+
+        .toc-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .toc-item {
+            margin: 8px 0;
+            padding: 12px 15px;
+            background: #f8f9ff;
+            border-radius: 8px;
+            border-left: 3px solid #FFE266;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .toc-item:hover {
+            background: #e8f2ff;
+            border-left-color: #6d8bc3;
+            transform: translateX(5px);
+        }
+
+        .toc-item:nth-child(2n) {
+            border-left-color: #c0db82;
+        }
+
+        .toc-item:nth-child(3n) {
+            border-left-color: #6d8bc3;
+        }
+
+        .toc-link {
+            text-decoration: none;
+            color: #333;
+            font-size: 14px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .toc-number {
+            background: #FFE266;
+            color: #333;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .toc-title {
+            flex: 1;
+        }
+
+        .toc-emoji {
+            font-size: 16px;
+        }
+
+        .content {
+            padding: 20px;
+            max-height: calc(100vh - 200px);
+            overflow-y: auto;
+        }
+
+        .grammar-point {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 5px solid #FFE266;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+            position: relative;
+            scroll-margin-top: 20px;
+        }
+
+        .grammar-point:hover {
+            transform: translateY(-2px);
+        }
+
+        .grammar-point:nth-child(2n) {
+            border-left-color: #c0db82;
+        }
+
+        .grammar-point:nth-child(3n) {
+            border-left-color: #6d8bc3;
+        }
+
+        .point-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .point-number {
+            background: #FFE266;
+            color: #333;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 12px;
+            font-size: 14px;
+        }
+
+        .point-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            flex: 1;
+        }
+
+        .emoji {
+            font-size: 20px;
+            margin-left: 8px;
+        }
+
+        .point-content {
+            color: #555;
+            line-height: 1.6;
+            font-size: 14px;
+        }
+
+        .core-concept {
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+
+        .key-points {
+            background: #f8f9ff;
+            border-radius: 10px;
+            padding: 12px;
+            margin: 12px 0;
+            border: 2px dashed #6d8bc3;
+        }
+
+        .key-points h4 {
+            color: #6d8bc3;
+            font-size: 14px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .key-points ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .key-points li {
+            padding: 8px 0;
+            position: relative;
+            padding-left: 18px;
+            border-bottom: 1px dotted #e0e0e0;
+        }
+
+        .key-points li:last-child {
+            border-bottom: none;
+        }
+
+        .key-points li:before {
+            content: "✨";
+            position: absolute;
+            left: 0;
+            font-size: 12px;
+        }
+
+        .key-point-examples {
+            font-size: 12px;
+            color: #777;
+            margin-top: 4px;
+            font-style: italic;
+            padding-left: 10px;
+            border-left: 2px solid #FFE266;
+        }
+
+        .structure-box {
+            background: linear-gradient(135deg, #c0db82, #d4e89a);
+            border-radius: 10px;
+            padding: 12px;
+            margin: 12px 0;
+            border: 1px solid #a8c26a;
+        }
+
+        .structure-box h4 {
+            color: #5a7a2d;
+            font-size: 14px;
+            margin-bottom: 8px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .structure-item {
+            background: white;
+            border-radius: 6px;
+            padding: 8px;
+            margin: 6px 0;
+            border-left: 3px solid #6d8bc3;
+            font-size: 13px;
+            color: #333;
+        }
+
+        .structure-examples {
+            font-size: 12px;
+            color: #666;
+            margin-top: 4px;
+            font-style: italic;
+        }
+
+        .detail-box {
+            background: #f0f8ff;
+            border: 2px solid #6d8bc3;
+            border-radius: 8px;
+            padding: 12px;
+            margin: 10px 0;
+        }
+
+        .detail-box h5 {
+            color: #6d8bc3;
+            font-size: 13px;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        .detail-item {
+            margin: 6px 0;
+            padding: 6px;
+            background: white;
+            border-radius: 4px;
+            border-left: 2px solid #6d8bc3;
+            font-size: 12px;
+        }
+
+        .detail-item strong {
+            color: #6d8bc3;
+        }
+
+        .example-box {
+            background: linear-gradient(135deg, #FFE266, #fff5a0);
+            border-radius: 10px;
+            padding: 12px;
+            margin: 12px 0;
+            border: 1px solid #e6d000;
+        }
+
+        .example-box h4 {
+            color: #b8860b;
+            font-size: 13px;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .example {
+            font-style: italic;
+            color: #666;
+            margin: 5px 0;
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .example-emoji {
+            font-size: 16px;
+        }
+
+        .connection-box {
+            background: linear-gradient(135deg, #c0db82, #d4e89a);
+            border-radius: 8px;
+            padding: 10px;
+            margin-top: 12px;
+            border: 1px solid #a8c26a;
+        }
+
+        .connection-box h4 {
+            color: #5a7a2d;
+            font-size: 12px;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        .connection-text {
+            font-size: 12px;
+            color: #4a6024;
+            line-height: 1.4;
+        }
+
+        .comparison-table {
+            background: white;
+            border-radius: 10px;
+            padding: 12px;
+            margin: 12px 0;
+            border: 2px solid #6d8bc3;
+        }
+
+        .comparison-table h5 {
+            color: #6d8bc3;
+            font-size: 14px;
+            margin-bottom: 10px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 6px;
+            margin-bottom: 10px;
+        }
+
+        .comparison-header {
+            background: #6d8bc3;
+            color: white;
+            padding: 6px;
+            border-radius: 4px;
+            text-align: center;
+            font-size: 11px;
+            font-weight: bold;
+        }
+
+        .comparison-cell {
+            background: #f5f5f5;
+            padding: 6px;
+            border-radius: 4px;
+            text-align: center;
+            font-size: 10px;
+            border: 1px solid #e0e0e0;
+            line-height: 1.3;
+        }
+
+        .eva-tip {
+            background: linear-gradient(135deg, #d8b3e0, #e4c7e7);
+            border-radius: 10px;
+            padding: 12px;
+            margin: 12px 0;
+            border: 2px solid #c8a2c8;
+        }
+
+        .eva-tip h5 {
+            color: #8e44ad;
+            font-size: 13px;
+            margin-bottom: 6px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .eva-tip p {
+            color: #6a4c7a;
+            font-size: 12px;
+            line-height: 1.5;
+            font-style: italic;
+        }
+
+        .footer {
+            background: linear-gradient(135deg, #6d8bc3, #5a7ab8);
+            color: white;
+            text-align: center;
+            padding: 12px 20px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .usage-note {
+            background: #fff3cd;
+            border: 2px solid #FFE266;
+            border-radius: 6px;
+            padding: 8px;
+            margin: 8px 0;
+        }
+
+        .usage-note h6 {
+            color: #856404;
+            font-size: 11px;
+            margin-bottom: 3px;
+            font-weight: bold;
+        }
+
+        .usage-note p {
+            font-size: 10px;
+            color: #856404;
+            line-height: 1.3;
+        }
+
+        /* 特殊主题色盒子 */
+        .order-box {
+            background: #e6f7ff;
+            border: 2px solid #1890ff;
+            border-radius: 8px;
+            padding: 12px;
+            margin: 10px 0;
+        }
+
+        .order-box h5 {
+            color: #0050b3;
+            font-size: 13px;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        .order-item {
+            margin: 6px 0;
+            padding: 6px;
+            background: white;
+            border-radius: 4px;
+            border-left: 2px solid #1890ff;
+            font-size: 12px;
+        }
+
+        .order-item strong {
+            color: #0050b3;
+        }
+
+        .look-box {
+            background: #f6ffed;
+            border: 2px solid #52c41a;
+            border-radius: 8px;
+            padding: 12px;
+            margin: 10px 0;
+        }
+
+        .look-box h5 {
+            color: #237804;
+            font-size: 13px;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        .look-item {
+            margin: 6px 0;
+            padding: 6px;
+            background: white;
+            border-radius: 4px;
+            border-left: 2px solid #52c41a;
+            font-size: 12px;
+        }
+
+        .look-item strong {
+            color: #237804;
+        }
+
+        .buy-box {
+            background: #fff7e6;
+            border: 2px solid #ffa940;
+            border-radius: 8px;
+            padding: 12px;
+            margin: 10px 0;
+        }
+
+        .buy-box h5 {
+            color: #d46b08;
+            font-size: 13px;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        .buy-item {
+            margin: 6px 0;
+            padding: 6px;
+            background: white;
+            border-radius: 4px;
+            border-left: 2px solid #ffa940;
+            font-size: 12px;
+        }
+
+        .buy-item strong {
+            color: #d46b08;
+        }
+
+        .put-box {
+            background: #fff0f6;
+            border: 2px solid #eb2f96;
+            border-radius: 8px;
+            padding: 12px;
+            margin: 10px 0;
+        }
+
+        .put-box h5 {
+            color: #c41d7f;
+            font-size: 13px;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        .put-item {
+            margin: 6px 0;
+            padding: 6px;
+            background: white;
+            border-radius: 4px;
+            border-left: 2px solid #eb2f96;
+            font-size: 12px;
+        }
+
+        .put-item strong {
+            color: #c41d7f;
+        }
+
+        .wrong-box {
+            background: #f0f2f5;
+            border: 2px solid #8c8c8c;
+            border-radius: 8px;
+            padding: 12px;
+            margin: 10px 0;
+        }
+
+        .wrong-box h5 {
+            color: #434343;
+            font-size: 13px;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        .wrong-item {
+            margin: 6px 0;
+            padding: 6px;
+            background: white;
+            border-radius: 4px;
+            border-left: 2px solid #8c8c8c;
+            font-size: 12px;
+        }
+
+        .wrong-item strong {
+            color: #434343;
+        }
+
+        /* 高亮样式 */
+        .highlight-key {
+            background: #52c41a;
+            color: white;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+
+        .highlight-order {
+            background: #e6f7ff;
+            color: #0050b3;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+
+        .highlight-look {
+            background: #f6ffed;
+            color: #237804;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+
+        .highlight-buy {
+            background: #fff7e6;
+            color: #d46b08;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+
+        .highlight-put {
+            background: #fff0f6;
+            color: #c41d7f;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+
+        .highlight-wrong {
+            background: #f0f2f5;
+            color: #434343;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+
+        .highlight-verb {
+            background: #722ed1;
+            color: white;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+
+        .highlight-position {
+            background: #ff4d4f;
+            color: white;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+
+        .highlight-grammar {
+            background: #1890ff;
+            color: white;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+
+        /* 系动词解释盒子 */
+        .linking-verb-box {
+            background: linear-gradient(135deg, #e6f7ff, #f0f8ff);
+            border: 2px solid #1890ff;
+            border-radius: 8px;
+            padding: 12px;
+            margin: 10px 0;
+        }
+
+        .linking-verb-box h5 {
+            color: #0050b3;
+            font-size: 13px;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        .linking-verb-item {
+            margin: 6px 0;
+            padding: 6px;
+            background: white;
+            border-radius: 4px;
+            border-left: 2px solid #1890ff;
+            font-size: 12px;
+        }
+
+        .linking-verb-item strong {
+            color: #0050b3;
+        }
+
+        /* 记忆技巧盒子 */
+        .memory-tip-box {
+            background: linear-gradient(135deg, #fff7e6, #fffbe6);
+            border: 2px solid #faad14;
+            border-radius: 8px;
+            padding: 12px;
+            margin: 10px 0;
+        }
+
+        .memory-tip-box h5 {
+            color: #d48806;
+            font-size: 13px;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        .memory-tip-item {
+            margin: 6px 0;
+            padding: 6px;
+            background: white;
+            border-radius: 4px;
+            border-left: 2px solid #faad14;
+            font-size: 12px;
+        }
+
+        .memory-tip-item strong {
+            color: #d48806;
+        }
+
+        /* 对象相关盒子 */
+        .object-box {
+            background: linear-gradient(135deg, #f6ffed, #fcffe6);
+            border: 2px solid #52c41a;
+            border-radius: 8px;
+            padding: 12px;
+            margin: 10px 0;
+        }
+
+        .object-box h5 {
+            color: #237804;
+            font-size: 13px;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        .object-item {
+            margin: 6px 0;
+            padding: 6px;
+            background: white;
+            border-radius: 4px;
+            border-left: 2px solid #52c41a;
+            font-size: 12px;
+        }
+
+        .object-item strong {
+            color: #237804;
+        }
+
+        /* 对比例句样式 */
+        .contrast-box {
+            background: #f9f9f9;
+            border-radius: 8px;
+            padding: 12px;
+            margin: 10px 0;
+            border: 2px solid #d9d9d9;
+        }
+
+        .contrast-box h5 {
+            color: #666;
+            font-size: 13px;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .contrast-item {
+            margin: 8px 0;
+            padding: 8px;
+            background: white;
+            border-radius: 4px;
+            border-left: 2px solid #666;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 12px;
+        }
+
+        .contrast-type {
+            background: #722ed1;
+            color: white;
+            padding: 2px 4px;
+            border-radius: 2px;
+            font-size: 10px;
+            font-weight: bold;
+            min-width: 50px;
+            text-align: center;
+        }
+
+        .contrast-type.linking {
+            background: #52c41a;
+        }
+
+        /* 小朋友理解框 */
+        .kids-understand {
+            background: linear-gradient(135deg, #fff0f6, #fff7fa);
+            border: 2px solid #ff85c0;
+            border-radius: 10px;
+            padding: 12px;
+            margin: 10px 0;
+        }
+
+        .kids-understand h5 {
+            color: #d6336c;
+            font-size: 13px;
+            margin-bottom: 6px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .kids-analogy {
+            margin: 6px 0;
+            padding: 8px;
+            background: white;
+            border-radius: 6px;
+            border-left: 3px solid #ff85c0;
+            font-size: 12px;
+            color: #8b2147;
+        }
+
+        .kids-analogy strong {
+            color: #d6336c;
+        }
+
+        /* 发现提示框 */
+        .discovery-tip {
+            background: linear-gradient(135deg, #f6ffed, #fcffe6);
+            border: 2px solid #52c41a;
+            border-radius: 10px;
+            padding: 12px;
+            margin: 10px 0;
+            border-left: 5px solid #237804;
+        }
+
+        .discovery-tip h5 {
+            color: #237804;
+            font-size: 13px;
+            margin-bottom: 6px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .discovery-tip p {
+            color: #4a6024;
+            font-size: 12px;
+            line-height: 1.5;
+            font-style: italic;
+        }
+
+        /* 顺序说明框 */
+        .order-explanation {
+            background: linear-gradient(135deg, #fff7e6, #fffbe6);
+            border: 2px solid #faad14;
+            border-radius: 10px;
+            padding: 12px;
+            margin: 10px 0;
+            border-left: 5px solid #d48806;
+        }
+
+        .order-explanation h5 {
+            color: #d48806;
+            font-size: 13px;
+            margin-bottom: 6px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .order-explanation p {
+            color: #8b5a00;
+            font-size: 12px;
+            line-height: 1.5;
+            margin-bottom: 6px;
+        }
+
+        .order-reason {
+            background: white;
+            border-radius: 6px;
+            padding: 8px;
+            margin: 6px 0;
+            border-left: 3px solid #faad14;
+            font-size: 11px;
+            color: #8b5a00;
+        }
+
+        /* 专业表格样式 */
+        .table-container {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+            overflow: hidden;
+            border: 2px solid #6d8bc3;
+            margin: 15px 0;
+        }
+
+        .table-title {
+            background: linear-gradient(135deg, #6d8bc3, #5a7ab8);
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 15px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .chart-icon {
+            font-size: 18px;
+        }
+
+        .verb-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 0;
+        }
+
+        .verb-header {
+            background: #6d8bc3;
+            color: white;
+            padding: 10px 8px;
+            text-align: center;
+            font-size: 11px;
+            font-weight: bold;
+            border-right: 1px solid #5a7ab8;
+        }
+
+        .verb-header:last-child {
+            border-right: none;
+        }
+
+        .verb-cell {
+            padding: 10px 8px;
+            text-align: center;
+            border-right: 1px solid #e0e6ed;
+            border-bottom: 1px solid #e0e6ed;
+            min-height: 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 11px;
+            line-height: 1.3;
+        }
+
+        .verb-cell:last-child {
+            border-right: none;
+        }
+
+        .verb-cell-word {
+            background: #e8f5e8;
+            font-weight: bold;
+            font-size: 13px;
+            color: #237804;
+        }
+
+        .verb-cell-meaning {
+            background: #f8e8e8;
+            color: #8a2c2c;
+            font-weight: 600;
+        }
+
+        .verb-cell-usage {
+            background: #fff3cd;
+            color: #d46b08;
+            font-weight: 600;
+            text-align: left;
+            padding: 8px;
+            line-height: 1.4;
+        }
+
+        .verb-cell-example {
+            background: #f0f8ff;
+            text-align: left;
+            padding: 8px;
+            line-height: 1.4;
+        }
+
+        .verb-cell-note {
+            background: #fff0f6;
+            color: #c41d7f;
+            font-size: 10px;
+            text-align: left;
+            padding: 8px;
+            line-height: 1.3;
+        }
+
+        .example-sentence {
+            margin: 2px 0;
+            font-style: italic;
+        }
+
+        .highlight-word {
+            color: #d46b08;
+            font-weight: bold;
+        }
+
+        .vs-highlight {
+            background: #722ed1;
+            color: white;
+            padding: 1px 4px;
+            border-radius: 2px;
+            font-weight: bold;
+        }
+
+        /* 等意性强调 */
+        .equivalent-box {
+            background: linear-gradient(135deg, #fff2e8, #ffeadb);
+            border: 2px solid #ff7a45;
+            border-radius: 10px;
+            padding: 12px;
+            margin: 10px 0;
+            border-left: 5px solid #ff7a45;
+        }
+
+        .equivalent-box h5 {
+            color: #d46b08;
+            font-size: 14px;
+            margin-bottom: 8px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .equivalent-item {
+            margin: 8px 0;
+            padding: 10px;
+            background: white;
+            border-radius: 6px;
+            border-left: 3px solid #ff7a45;
+            font-size: 12px;
+            color: #5c3317;
+        }
+
+        .equivalent-item strong {
+            color: #d46b08;
+        }
+
+        /* 拓展补充样式 */
+        .extension-note {
+            background: #f6ffed;
+            border: 2px dashed #52c41a;
+            border-radius: 8px;
+            padding: 10px;
+            margin: 8px 0;
+        }
+
+        .extension-note h6 {
+            color: #237804;
+            font-size: 11px;
+            margin-bottom: 4px;
+            font-weight: bold;
+        }
+
+        .extension-note p {
+            font-size: 10px;
+            color: #237804;
+            line-height: 1.4;
+            font-style: italic;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            .watermark::before {
+                font-size: 24px;
+                letter-spacing: 3px;
+            }
+
+            .watermark::after {
+                font-size: 18px;
+                letter-spacing: 2px;
+            }
+
+            .card-container {
+                border-radius: 15px;
+                min-height: 100vh;
+            }
+
+            .header {
+                padding: 20px 15px;
+            }
+
+            .header h1 {
+                font-size: 20px;
+            }
+
+            .header .subtitle {
+                font-size: 14px;
+            }
+
+            .table-of-contents {
+                margin: 15px;
+                padding: 15px;
+            }
+
+            .content {
+                padding: 15px;
+                max-height: none;
+            }
+
+            .grammar-point {
+                padding: 15px;
+                margin-bottom: 15px;
+            }
+
+            .point-title {
+                font-size: 16px;
+            }
+
+            .point-content {
+                font-size: 13px;
+            }
+
+            .verb-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .verb-cell {
+                padding: 8px 6px;
+                font-size: 10px;
+                min-height: 50px;
+            }
+            
+            .table-title {
+                font-size: 13px;
+                padding: 12px;
+            }
+
+            .comparison-grid {
+                grid-template-columns: 1fr;
+                gap: 4px;
+            }
+
+            .decorative-star {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .watermark::before {
+                font-size: 18px;
+                letter-spacing: 2px;
+            }
+
+            .watermark::after {
+                font-size: 14px;
+                letter-spacing: 1px;
+            }
+
+            .header h1 {
+                font-size: 18px;
+            }
+
+            .header .subtitle {
+                font-size: 12px;
+            }
+
+            .point-title {
+                font-size: 14px;
+            }
+
+            .point-content {
+                font-size: 12px;
+            }
+
+            .verb-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .verb-cell {
+                padding: 6px 4px;
+                font-size: 9px;
+                min-height: 40px;
+            }
+
+            .table-title {
+                font-size: 12px;
+                padding: 10px;
+            }
+        }
+    </style>
+<script src="https://puc.poecdn.net/authenticated_preview_page/syncedState.bd4eeeb8e8e02052ee92.js"></script></head>
+<body>
+    <!-- 水印元素 -->
+    <div class="watermark"></div>
+    
+    <div class="card-container">
+        <div class="header">
+            <div class="decorative-star star1">⭐</div>
+            <div class="decorative-star star2">✨</div>
+            <div class="decorative-star star3">🌟</div>
+            <h1>江苏校内-译林英语</h1>
+            <div class="subtitle"><span class="highlight-unit">五上</span>-<span class="highlight-unit">Unit8</span>-<span class="highlight-unit">必学语法点</span></div>
+            <div class="teacher-info">Eva老师👩‍🏫伴步英语</div>
+        </div>
+
+        <!-- 目录导航 -->
+        <div class="table-of-contents">
+            <div class="toc-header">
+                <div class="toc-icon">📚</div>
+                <span>知识点目录导航</span>
+            </div>
+            <ul class="toc-list">
+                <li class="toc-item">
+                    <a href="#point1" class="toc-link">
+                        <div class="toc-number">1</div>
+                        <div class="toc-title">表示时间顺序的副词</div>
+                        <div class="toc-emoji">⏰</div>
+                    </a>
+                </li>
+                <li class="toc-item">
+                    <a href="#point2" class="toc-link">
+                        <div class="toc-number">2</div>
+                        <div class="toc-title">系动词look的用法</div>
+                        <div class="toc-emoji">👀</div>
+                    </a>
+                </li>
+                <li class="toc-item">
+                    <a href="#point3" class="toc-link">
+                        <div class="toc-number">3</div>
+                        <div class="toc-title">动词buy的双宾语用法</div>
+                        <div class="toc-emoji">🛒</div>
+                    </a>
+                </li>
+                <li class="toc-item">
+                    <a href="#point4" class="toc-link">
+                        <div class="toc-number">4</div>
+                        <div class="toc-title">动词put的用法</div>
+                        <div class="toc-emoji">📦</div>
+                    </a>
+                </li>
+                <li class="toc-item">
+                    <a href="#point5" class="toc-link">
+                        <div class="toc-number">5</div>
+                        <div class="toc-title">What's wrong with...?句型</div>
+                        <div class="toc-emoji">❓</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="content">
+            <div id="point1" class="grammar-point">
+                <div class="point-header">
+                    <div class="point-number">1</div>
+                    <div class="point-title">表示时间顺序的副词</div>
+                    <div class="emoji">⏰</div>
+                </div>
+                <div class="point-content">
+                    <p class="core-concept"><strong>核心概念：</strong><span class="highlight-key">first/next/then/finally</span>用来描述事情发生的先后顺序，是叙述过程和步骤的重要连接词</p>
+
+                    <div class="order-box">
+                        <h5>📋 顺序副词详解</h5>
+                        <div class="order-item">
+                            <strong>first：</strong>表示"首先"，<span class="highlight-position">通常放在句首，后面一般要加逗号</span>
+                            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                                例：<span class="highlight-order">First</span>, we buy a Christmas tree. 首先，我们买一棵圣诞树。🎄
+                            </div>
+                        </div>
+                        <div class="order-item">
+                            <strong>next：</strong>表示"接下来"，<span class="highlight-position">通常放在句首，后面一般要加逗号</span>
+                            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                                例：<span class="highlight-order">Next</span>, we put some pretty things on the tree. 接下来，我们在树上放一些漂亮的东西。✨🎁
+                            </div>
+                        </div>
+                        <div class="order-item">
+                            <strong>then：</strong>表示"然后"，<span class="highlight-position">通常放在句首，后面一般要加逗号</span>
+                            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                                例：<span class="highlight-order">Then</span>, we put a stocking on our bed. 然后，我们在床上放一只长筒袜。🧦💤
+                            </div>
+                        </div>
+                        <div class="order-item">
+                            <strong>finally：</strong>表示"最后"，<span class="highlight-position">通常放在句首，后面一般要加逗号</span>
+                            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                                例：<span class="highlight-order">Finally</span>, Christmas comes! 最后，圣诞节到了！🎉🎅
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="structure-box">
+                        <h4>📝 基本使用规律</h4>
+                        <div class="structure-item">
+                            <strong>句首位置：</strong>这四个词<span class="highlight-key">通常</span>放在句首，后面<span class="highlight-key">一般</span>要加逗号
+                            <div class="structure-examples">First, we... / Next, we... / Then, we... / Finally, we... 📄</div>
+                        </div>
+                        <div class="structure-item">
+                            <strong>推荐顺序：</strong><span class="highlight-key">first → next → then → finally</span> (最自然流畅的表达)
+                            <div class="structure-examples">这是英语中最常用和最自然的顺序排列 🔢</div>
+                        </div>
+                        <div class="structure-item">
+                            <strong>标点符号：</strong>放在句首时，后面通常加逗号
+                            <div class="structure-examples">First, ... / Next, ... / Then, ... / Finally, ... ✅</div>
+                        </div>
+                    </div>
+
+                    <div class="order-explanation">
+                        <h5>🤔 为什么推荐这个顺序？</h5>
+                        <p>虽然在某些情况下next和then的位置可能会有变化，但我们推荐按照<span class="highlight-key">first → next → then → finally</span>的顺序使用，原因如下：</p>
+                        <div class="order-reason">
+                            <strong>语义逻辑：</strong>next强调"紧接着的下一步"，then强调"时间的推进"，这样的顺序更符合事情发展的自然逻辑 🧠
+                        </div>
+                        <div class="order-reason">
+                            <strong>语感自然：</strong>这个顺序听起来最流畅，符合英语母语者的表达习惯 🎵
+                        </div>
+                        <div class="order-reason">
+                            <strong>教学标准：</strong>五年级阶段按照这个标准顺序学习，有助于形成正确的语言习惯 📚
+                        </div>
+                        <div class="order-reason">
+                            <strong>考试安全：</strong>在考试中使用这个顺序是最安全和标准的选择 ✅
+                        </div>
+                    </div>
+
+                    <div class="extension-note">
+                        <h6>📖 拓展补充（了解即可）</h6>
+                        <p>在平时的英语阅读中，你们会发现这些顺序副词有时候也会出现在句子的其他位置，或者顺序略有变化。做个有心人，善于观察它们在不同文章中的用法，这样可以帮助你们更好地理解英语的表达习惯。</p>
+                    </div>
+
+                    <div class="detail-box">
+                        <h5>🎯 使用要点</h5>
+                        <div class="detail-item">
+                            <strong>位置规律：</strong>五年级阶段重点掌握<span class="highlight-key">句首位置+逗号</span>的基本用法
+                            <div style="margin-top: 3px; font-size: 11px; color: #666;">
+                                例：First, ... / Next, ... / Then, ... / Finally, ... 📍
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <strong>next和then的细微差别：</strong>next更强调紧接着的下一步，then更强调时间的推进
+                            <div style="margin-top: 3px; font-size: 11px; color: #666;">
+                                推荐顺序使用能让表达更自然流畅 🔄
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <strong>语法作用：</strong>帮助文章结构清晰，逻辑性强
+                            <div style="margin-top: 3px; font-size: 11px; color: #666;">
+                                特别适用于描述制作过程、操作步骤等 📋
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <strong>时态搭配：</strong>通常与一般现在时或一般过去时搭配使用
+                            <div style="margin-top: 3px; font-size: 11px; color: #666;">
+                                描述习惯性动作或过去发生的事情 ⏰
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="usage-note">
+                        <h6>⚠️ 特别注意</h6>
+                        <p>• 这四个词<span class="highlight-key">通常</span>放在句首，后面<span class="highlight-key">一般</span>要加逗号<br>
+                        • 推荐按<span class="highlight-key">first → next → then → finally</span>顺序使用最自然<br>
+                        • 在阅读中留心观察它们的其他用法和顺序变化<br>
+                        • 多用于描述步骤、过程和事情发展的顺序 🔄</p>
+                    </div>
+
+                    <div class="comparison-table">
+                        <h5>📊 顺序副词对比表</h5>
+                        <div class="comparison-grid">
+                            <div class="comparison-header">副词</div>
+                            <div class="comparison-header">含义</div>
+                            <div class="comparison-header">例句</div>
+                            
+                            <div class="comparison-cell">first</div>
+                            <div class="comparison-cell">首先</div>
+                            <div class="comparison-cell">First, we buy a tree. 🎄</div>
+                            
+                            <div class="comparison-cell">next</div>
+                            <div class="comparison-cell">接下来</div>
+                            <div class="comparison-cell">Next, we decorate it. ✨</div>
+                            
+                            <div class="comparison-cell">then</div>
+                            <div class="comparison-cell">然后</div>
+                            <div class="comparison-cell">Then, we put stockings. 🧦</div>
+                            
+                            <div class="comparison-cell">finally</div>
+                            <div class="comparison-cell">最后</div>
+                            <div class="comparison-cell">Finally, Christmas comes! 🎉</div>
+                        </div>
+                    </div>
+
+                    <div class="key-points">
+                        <h4>🎯 考察重点</h4>
+                        <ul>
+                            <li>顺序副词的推荐排列
+                                <div class="key-point-examples">📋 first → next → then → finally</div>
+                            </li>
+                            <li>句首位置和标点符号
+                                <div class="key-point-examples">📝 First, ... (句首+逗号)</div>
+                            </li>
+                            <li>在写作中的逻辑运用
+                                <div class="key-point-examples">✍️ 描述步骤和过程</div>
+                            </li>
+                            <li>与动词时态的搭配
+                                <div class="key-point-examples">⏰ 通常搭配一般现在时</div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>📝 节日准备步骤示例</h4>
+                        <div class="example">
+                            <span class="example-emoji">🎄</span>
+                            <span><span class="highlight-order">First</span>, we buy a Christmas tree. 首先，我们买一棵圣诞树。</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">✨</span>
+                            <span><span class="highlight-order">Next</span>, we put some pretty things on the tree. 接下来，我们在树上放一些漂亮的东西。</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">🧦</span>
+                            <span><span class="highlight-order">Then</span>, we put a stocking on our bed. 然后，我们在床上放一只长筒袜。</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">🎅</span>
+                            <span><span class="highlight-order">Finally</span>, Christmas comes! 最后，圣诞节到了！</span>
+                        </div>
+                    </div>
+
+                    <div class="connection-box">
+                        <h4>🔗 温故知新</h4>
+                        <div class="connection-text">
+                            顺序副词是写作中非常重要的逻辑连接词，就像为我们的表达加上连接的桥梁，让句子之间紧密相连，帮助我们清晰地表达事情的发展过程。掌握好这些词汇，会让我们的口语和写作表达更有条理性。
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="point2" class="grammar-point">
+                <div class="point-header">
+                    <div class="point-number">2</div>
+                    <div class="point-title">系动词look的用法</div>
+                    <div class="emoji">👀</div>
+                </div>
+                <div class="point-content">
+                    <p class="core-concept"><strong>核心概念：</strong><span class="highlight-key">look</span>作系动词，意思是"看上去"，后接形容词作表语，用来描述事物给人的外观印象</p>
+
+                    <div class="kids-understand">
+                        <h5>🧒 小朋友轻松理解</h5>
+                        <div class="kids-analogy">
+                            <strong>系动词就像胶水：</strong>想象一下，<span class="highlight-grammar">系动词</span>就像胶水🧴，它本身没有形状和内容，但能把两样东西粘在一起！
+                            <div style="margin-top: 5px; font-size: 11px; color: #8b2147;">
+                                例：He <span class="highlight-look">is</span> tall. → He(这边) --is胶水🧴-- tall(那边) 📏
+                            </div>
+                        </div>
+                        <div class="kids-analogy">
+                            <strong>实义动词像积木块：</strong><span class="highlight-grammar">实义动词</span>就像彩色积木块🧱，每个积木都有自己的形状和颜色，可以独立存在！
+                            <div style="margin-top: 5px; font-size: 11px; color: #8b2147;">
+                                例：He <span class="highlight-look">runs</span> fast. → runs就像红色积木🧱，有具体的"跑"的含义
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="linking-verb-box">
+                        <h5>🤔 什么是系动词？</h5>
+                        <div class="linking-verb-item">
+                            <strong>系动词定义：</strong><span class="highlight-grammar">系动词</span>是连接主语和表语的动词，本身没有完整的意思，需要表语来补充说明主语的状态
+                            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                                例：He <span class="highlight-look">is</span> tall. (is是<span class="highlight-grammar">系动词</span>，tall是<span class="highlight-grammar">表语</span>，说明he的状态) 📏👤
+                            </div>
+                        </div>
+                        <div class="linking-verb-item">
+                            <strong>与实义动词的区别：</strong><span class="highlight-grammar">实义动词</span>有具体的动作含义，可以单独作谓语
+                            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                                实义动词：He <span class="highlight-look">runs</span> fast. (runs有具体的"跑"的动作) 🏃‍♂️💨
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="look-box">
+                        <h5>👁️ look系动词用法</h5>
+                        <div class="look-item">
+                            <strong>基本结构：</strong>主语 + <span class="highlight-look">look/looks</span> + 形容词
+                            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                                例：Mr Turkey <span class="highlight-look">looks</span> sad. 火鸡先生看上去很难过。🦃😢
+                            </div>
+                        </div>
+                        <div class="look-item">
+                            <strong>词性功能：</strong><span class="highlight-look">look</span>在这里是<span class="highlight-grammar">系动词</span>，表示"看上去"，后接<span class="highlight-key">形容词</span>作表语
+                            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                                注意：这里的look不是实义动词"看"的意思 ⚠️👁️
+                            </div>
+                        </div>
+                        <div class="look-item">
+                            <strong>主谓一致：</strong><span class="highlight-look">look</span>要根据主语进行人称和数的变化
+                            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                                例：He <span class="highlight-look">looks</span> happy. 😊 / They <span class="highlight-look">look</span> tired. 😴 🔄
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contrast-box">
+                        <h5>🔍 look的两种用法对比</h5>
+                        <div class="contrast-item">
+                            <span class="contrast-type linking">系动词</span>
+                            <span>😢 He <span class="highlight-look">looks</span> sad. 他看上去很难过。(看上去的状态)</span>
+                        </div>
+                        <div class="contrast-item">
+                            <span class="contrast-type">实义动词</span>
+                            <span>👀 He <span class="highlight-look">looks at</span> the book. 他看着书。(具体的看的动作)</span>
+                        </div>
+                        <div class="contrast-item">
+                            <span class="contrast-type linking">系动词</span>
+                            <span>😊 She <span class="highlight-look">looks</span> happy. 她看起来很开心。(外表状态)</span>
+                        </div>
+                        <div class="contrast-item">
+                            <span class="contrast-type">实义动词</span>
+                            <span>🔍 She <span class="highlight-look">looks for</span> her keys. 她在找钥匙。(寻找的动作)</span>
+                        </div>
+                    </div>
+
+                    <div class="kids-understand">
+                        <h5>🎯 区分小窍门</h5>
+                        <div class="kids-analogy">
+                            <strong>看有没有小尾巴：</strong>如果look后面跟着<span class="highlight-key">at、for、after</span>等小尾巴(介词)，就是<span class="highlight-grammar">实义动词</span>；如果直接跟<span class="highlight-key">形容词</span>，就是<span class="highlight-grammar">系动词</span>！
+                            <div style="margin-top: 5px; font-size: 11px; color: #8b2147;">
+                                有尾巴：look <span class="highlight-position">at</span> 📖 (实义动词)<br>
+                                没尾巴：look <span class="highlight-position">happy</span> 😊 (系动词)
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="structure-box">
+                        <h4>🔗 其他感官系动词</h4>
+                        <div class="structure-item">
+                            <strong>taste (尝起来)：</strong>🍰 The cake <span class="highlight-look">tastes</span> sweet. 蛋糕尝起来很甜。
+                            <div class="structure-examples"><span class="highlight-grammar">系动词</span> + <span class="highlight-key">形容词</span> 👅</div>
+                        </div>
+                        <div class="structure-item">
+                            <strong>sound (听起来)：</strong>🎵 The music <span class="highlight-look">sounds</span> beautiful. 音乐听起来很美。
+                            <div class="structure-examples"><span class="highlight-grammar">系动词</span> + <span class="highlight-key">形容词</span> 👂</div>
+                        </div>
+                        <div class="structure-item">
+                            <strong>feel (摸起来/感觉)：</strong>🧸 The cloth <span class="highlight-look">feels</span> soft. 布料摸起来很软。
+                            <div class="structure-examples"><span class="highlight-grammar">系动词</span> + <span class="highlight-key">形容词</span> ✋</div>
+                        </div>
+                        <div class="structure-item">
+                            <strong>smell (闻起来)：</strong>🌸 The flowers <span class="highlight-look">smell</span> nice. 花闻起来很香。
+                            <div class="structure-examples"><span class="highlight-grammar">系动词</span> + <span class="highlight-key">形容词</span> 👃</div>
+                        </div>
+                    </div>
+
+                    <div class="detail-box">
+                        <h5>🎯 使用要点</h5>
+                        <div class="detail-item">
+                            <strong>词性理解：</strong><span class="highlight-look">look</span>作<span class="highlight-grammar">系动词</span>时，不能单独作谓语，需要表语
+                            <div style="margin-top: 3px; font-size: 11px; color: #666;">
+                                不能说：He looks. 必须说：He looks happy. ✅
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <strong>表语类型：</strong>后面只能接<span class="highlight-key">形容词</span>，不能接副词
+                            <div style="margin-top: 3px; font-size: 11px; color: #666;">
+                                ✅ He looks sad. ❌ He looks sadly.
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <strong>主谓一致：</strong><span class="highlight-look">look</span>要根据主语进行人称和数的变化
+                            <div style="margin-top: 3px; font-size: 11px; color: #666;">
+                                He/She/It <span class="highlight-look">looks</span>... / I/You/We/They <span class="highlight-look">look</span>... 👥
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <strong>语义区别：</strong>区分<span class="highlight-grammar">系动词</span>look(看上去)和<span class="highlight-grammar">实义动词</span>look(看/寻找)
+                            <div style="margin-top: 3px; font-size: 11px; color: #666;">
+                                看结构：有介词(at/for)是<span class="highlight-grammar">实义动词</span> 🔍
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="usage-note">
+                        <h6>⚠️ 特别注意</h6>
+                        <p>• <span class="highlight-key">look</span>作<span class="highlight-grammar">系动词</span>时意为"看上去"，后接<span class="highlight-key">形容词</span>作表语<br>
+                        • 其他常见的感官<span class="highlight-grammar">系动词</span>有：<span class="highlight-key">taste、sound、feel、smell</span>等<br>
+                        • 注意区分：He looks sad. (<span class="highlight-grammar">系动词</span>) vs He looks at me. (<span class="highlight-grammar">实义动词</span>)<br>
+                        • <span class="highlight-grammar">系动词</span>后面接<span class="highlight-key">形容词</span>，不能接副词 📝</p>
+                    </div>
+
+                    <div class="comparison-table">
+                        <h5>📊 系动词 <span class="vs-highlight">vs</span> 实义动词对比</h5>
+                        <div class="comparison-grid">
+                            <div class="comparison-header">动词类型</div>
+                            <div class="comparison-header">含义</div>
+                            <div class="comparison-header">例句</div>
+                            
+                            <div class="comparison-cell">系动词look</div>
+                            <div class="comparison-cell">看上去</div>
+                            <div class="comparison-cell">He looks happy. 😊</div>
+                            
+                            <div class="comparison-cell">实义动词look</div>
+                            <div class="comparison-cell">看，瞧</div>
+                            <div class="comparison-cell">He looks at the book. 📚</div>
+                            
+                            <div class="comparison-cell">实义动词look</div>
+                            <div class="comparison-cell">寻找</div>
+                            <div class="comparison-cell">He looks for his pen. 🔍</div>
+                        </div>
+                    </div>
+
+                    <div class="key-points">
+                        <h4>🎯 考察重点</h4>
+                        <ul>
+                            <li><span class="highlight-grammar">系动词</span>look的识别
+                                <div class="key-point-examples">👁️ He <span class="highlight-look">looks</span> tired. (<span class="highlight-grammar">系动词</span>)</div>
+                            </li>
+                            <li><span class="highlight-key">形容词</span>作表语
+                                <div class="key-point-examples">📝 look + <span class="highlight-key">形容词</span></div>
+                            </li>
+                            <li>感官<span class="highlight-grammar">系动词</span>的理解
+                                <div class="key-point-examples">👂 taste/sound/feel/smell</div>
+                            </li>
+                            <li>与<span class="highlight-grammar">实义动词</span>的区别
+                                <div class="key-point-examples">🔍 look sad vs look at</div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>📝 感官系动词示例</h4>
+                        <div class="example">
+                            <span class="example-emoji">🦃</span>
+                            <span>Mr Turkey <span class="highlight-look">looks</span> sad. 火鸡先生看上去很难过。</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">🍰</span>
+                            <span>The cake <span class="highlight-look">tastes</span> sweet. 蛋糕尝起来很甜。</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">🎵</span>
+                            <span>The music <span class="highlight-look">sounds</span> beautiful. 音乐听起来很美。</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">🌸</span>
+                            <span>The flowers <span class="highlight-look">smell</span> nice. 花闻起来很香。</span>
+                        </div>
+                    </div>
+
+                    <div class="connection-box">
+                        <h4>🔗 温故知新</h4>
+                        <div class="connection-text">
+                            系动词是连接主语和表语的桥梁，look作为感官系动词，帮助我们描述事物的外表状态，是英语表达中的重要组成部分。与之前学习的be动词类似，都起到连接作用。
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="point3" class="grammar-point">
+                <div class="point-header">
+                    <div class="point-number">3</div>
+                    <div class="point-title">动词buy的双宾语用法</div>
+                    <div class="emoji">🛒</div>
+                </div>
+                <div class="point-content">
+                    <p class="core-concept"><strong>核心概念：</strong><span class="highlight-key">buy</span>是及物动词，可以接两个宾语，表示"为某人买某物"，用介词<span class="highlight-buy">for</span>连接人物关系</p>
+
+                    <div class="object-box">
+                        <h5>📚 什么是宾语和双宾语？</h5>
+                        <div class="object-item">
+                            <strong>宾语：</strong>动词的动作对象，回答"谁"或"什么"的问题
+                            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                                例：I buy <span class="highlight-buy">a book</span>. (a book是<span class="highlight-grammar">宾语</span>，是买的对象) 📖💰
+                            </div>
+                        </div>
+                        <div class="object-item">
+                            <strong>双宾语：</strong>某些动词可以同时接两个宾语：<span class="highlight-key">间接宾语(人)</span>和<span class="highlight-key">直接宾语(物)</span>
+                            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                                例：I buy <span class="highlight-buy">him</span> <span class="highlight-buy">a book</span>. (him是<span class="highlight-key">间接宾语</span>，a book是<span class="highlight-key">直接宾语</span>) 👤📖
+                            </div>
+                        </div>
+                        <div class="object-item">
+                            <strong>for的作用：</strong>介词<span class="highlight-buy">for</span>引出受益者，表示"为了某人"
+                            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                                例：buy a gift <span class="highlight-buy">for</span> mom = buy mom a gift 💝👩‍💼
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="buy-box">
+                        <h5>🛍️ buy的双宾语结构</h5>
+                        <div class="buy-item">
+                            <strong>结构一：</strong><span class="highlight-buy">buy</span> + 物品 + <span class="highlight-buy">for</span> + 某人
+                            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                                例：We <span class="highlight-buy">buy presents for</span> our family. 我们为家人买礼物。🎁👨‍👩‍👧‍👦
+                            </div>
+                        </div>
+                        <div class="buy-item">
+                            <strong>结构二：</strong><span class="highlight-buy">buy</span> + 某人 + 物品 (双宾语结构)
+                            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                                例：<span class="highlight-buy">buy</span> a cap <span class="highlight-buy">for</span> me = <span class="highlight-buy">buy me</span> a cap 为我买一顶帽子 🧢👤
+                            </div>
+                        </div>
+                        <div class="buy-item">
+                            <strong>转换规律：</strong>两种结构意思相同，可以相互转换
+                            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                                <span class="highlight-buy">buy sb. sth.</span> ⇔ <span class="highlight-buy">buy sth. for sb.</span> 🔄💡
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="memory-tip-box">
+                        <h5>💡 for和to用法的记忆法</h5>
+                        <div class="memory-tip-item">
+                            <strong><span class="highlight-buy">for</span>型动词：</strong>表示"为了某人"，强调受益者
+                            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                                💝 想象：买礼物<span class="highlight-buy">为了(for)</span>朋友开心 → buy sth. <span class="highlight-buy">for</span> sb.
+                            </div>
+                        </div>
+                        <div class="memory-tip-item">
+                            <strong><span class="highlight-buy">to</span>型动词：</strong>表示"给某人"，强调方向性
+                            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                                📮 想象：把东西<span class="highlight-buy">递到(to)</span>某人手里 → give sth. <span class="highlight-buy">to</span> sb.
+                            </div>
+                        </div>
+                        <div class="memory-tip-item">
+                            <strong>记忆口诀：</strong>"<span class="highlight-key">买做煮</span>"用<span class="highlight-buy">for</span>，"<span class="highlight-key">给展告</span>"用<span class="highlight-buy">to</span>
+                            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                                <span class="highlight-buy">buy/make/cook</span>用<span class="highlight-buy">for</span>；<span class="highlight-buy">give/show/tell</span>用<span class="highlight-buy">to</span> 🧠📝
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="structure-box">
+                        <h4>🔄 双宾语动词转换规律</h4>
+                        <div class="structure-item">
+                            <strong><span class="highlight-buy">for</span>型动词：</strong>🛒 <span class="highlight-buy">buy</span>, 🍳 <span class="highlight-buy">make</span>, 🍽️ <span class="highlight-buy">cook</span>, 🎁 <span class="highlight-buy">get</span>等
+                            <div class="structure-examples"><span class="highlight-buy">buy sb. sth.</span> = <span class="highlight-buy">buy sth. for sb.</span><br><span class="highlight-buy">make sb. sth.</span> = <span class="highlight-buy">make sth. for sb.</span> 👩‍🍳</div>
+                        </div>
+                        <div class="structure-item">
+                            <strong><span class="highlight-buy">to</span>型动词：</strong>🎁 <span class="highlight-buy">give</span>, 📺 <span class="highlight-buy">show</span>, 📞 <span class="highlight-buy">tell</span>, 📧 <span class="highlight-buy">send</span>等
+                            <div class="structure-examples"><span class="highlight-buy">give sb. sth.</span> = <span class="highlight-buy">give sth. to sb.</span><br><span class="highlight-buy">show sb. sth.</span> = <span class="highlight-buy">show sth. to sb.</span> 👐</div>
+                        </div>
+                    </div>
+
+                    <div class="detail-box">
+                        <h5>🎯 使用要点</h5>
+                        <div class="detail-item">
+                            <strong>介词选择：</strong><span class="highlight-buy">buy</span>用<span class="highlight-buy">for</span>，表示"为某人"，强调为了谁
+                            <div style="margin-top: 3px; font-size: 11px; color: #666;">
+                                表示受益关系，强调动作的受益者 💝
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <strong>语序变化：</strong>可以转换为双宾语结构
+                            <div style="margin-top: 3px; font-size: 11px; color: #666;">
+                                物品+<span class="highlight-buy">for</span>+人 ⇔ 人+物品 🔄
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <strong>代词位置：</strong>人称代词作<span class="highlight-key">间接宾语</span>时，通常用双宾语结构
+                            <div style="margin-top: 3px; font-size: 11px; color: #666;">
+                                <span class="highlight-buy">buy me a book</span> (比<span class="highlight-buy">buy a book for me</span>更常用) 👤
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <strong>实际运用：</strong>表达为他人着想的行为，体现关爱
+                            <div style="margin-top: 3px; font-size: 11px; color: #666;">
+                                体现人与人之间的关怀和友爱 💕</div>
+                    </div>
+
+                    <div class="usage-note">
+                        <h6>⚠️ 特别注意</h6>
+                        <p>• <span class="highlight-key">buy presents for our family</span>中buy是及物动词<br>
+                        • "为某人买"用介词<span class="highlight-key">for</span>，强调为了谁<br>
+                        • 也可以说<span class="highlight-key">buy sb. sth.</span>，如buy me a cap<br>
+                        • <span class="highlight-key">to</span>用于强调动作的方向性，例如：give it to me 🎯</p>
+                    </div>
+
+                    <div class="comparison-table">
+                        <h5>📊 buy的两种句型对比</h5>
+                        <div class="comparison-grid">
+                            <div class="comparison-header">句型结构</div>
+                            <div class="comparison-header">语序特点</div>
+                            <div class="comparison-header">例句</div>
+                            
+                            <div class="comparison-cell">buy + 物品 + for + 人</div>
+                            <div class="comparison-cell">物品在前，人在后</div>
+                            <div class="comparison-cell">buy a gift for Tom 🎁</div>
+                            
+                            <div class="comparison-cell">buy + 人 + 物品</div>
+                            <div class="comparison-cell">人在前，物品在后</div>
+                            <div class="comparison-cell">buy Tom a gift 🎁</div>
+                            
+                            <div class="comparison-cell">buy + 代词 + 物品</div>
+                            <div class="comparison-cell">代词常用此结构</div>
+                            <div class="comparison-cell">buy me a book 📚</div>
+                        </div>
+                    </div>
+
+                    <div class="key-points">
+                        <h4>🎯 考察重点</h4>
+                        <ul>
+                            <li>介词<span class="highlight-buy">for</span>的正确使用
+                                <div class="key-point-examples">🛒 buy presents <span class="highlight-buy">for</span> our family</div>
+                            </li>
+                            <li>双宾语结构的转换
+                                <div class="key-point-examples">🔄 buy me a cap = buy a cap for me</div>
+                            </li>
+                            <li>与其他双宾语动词的类比
+                                <div class="key-point-examples">🎁 make/cook/get + sth. + for + sb.</div>
+                            </li>
+                            <li>代词作间宾时的结构选择
+                                <div class="key-point-examples">👤 buy him a book (更常用)</div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>📝 buy动词用法示例</h4>
+                        <div class="example">
+                            <span class="example-emoji">🎁</span>
+                            <span>We <span class="highlight-buy">buy presents for</span> our family. 我们为家人买礼物。</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">🧢</span>
+                            <span><span class="highlight-buy">Buy</span> a cap <span class="highlight-buy">for</span> me = <span class="highlight-buy">Buy me</span> a cap. 为我买一顶帽子。</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">🍰</span>
+                            <span>I'll <span class="highlight-buy">make</span> a cake <span class="highlight-buy">for</span> you. 我会为你做一个蛋糕。</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">📚</span>
+                            <span>Please <span class="highlight-buy">give</span> this book <span class="highlight-buy">to</span> him. 请把这本书给他。</span>
+                        </div>
+                    </div>
+
+                    <div class="connection-box">
+                        <h4>🔗 温故知新</h4>
+                        <div class="connection-text">
+                            buy的双宾语用法体现了英语中动词的灵活性，与give、show等动词类似，都可以用两种结构表达同一意思，是英语表达的重要语法现象。这种结构让我们的表达更加丰富多样。
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="point4" class="grammar-point">
+                <div class="point-header">
+                    <div class="point-number">4</div>
+                    <div class="point-title">动词put的用法</div>
+                    <div class="emoji">📦</div>
+                </div>
+                <div class="point-content">
+                    <p class="core-concept"><strong>核心概念：</strong><span class="highlight-key">put</span>意为"放，摆放"，常用短语"<span class="highlight-put">put+物品+介词短语/副词</span>"表示"把某物放在某处"，是表示位置和动作的常用动词</p>
+
+                    <div class="put-box">
+                        <h5>📍 put的位置表达</h5>
+                        <div class="put-item">
+                            <strong>基本结构：</strong><span class="highlight-put">put</span> + 物品 + 地点状语
+                            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                                例：We <span class="highlight-put">put</span> some pretty things <span class="highlight-put">on</span> the Christmas tree. 我们把一些漂亮的东西放在圣诞树上。🎄✨
+                            </div>
+                        </div>
+                        <div class="put-item">
+                            <strong><span class="highlight-put">put...on...</span>：</strong>意为"把...放到...上面"
+                            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                                例：📚 <span class="highlight-put">Put</span> the book <span class="highlight-put">on</span> the desk. 把书放在桌子上。
+                            </div>
+                        </div>
+                        <div class="put-item">
+                            <strong><span class="highlight-put">put on</span>：</strong>连用意为"穿上，戴上(衣服、帽子等)"
+                            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                                例：🧥 He <span class="highlight-put">puts on</span> his coat and goes out. 他穿上外套出去了。
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="detail-box">
+                        <h5>🤔 短语动词中宾语位置的规律</h5>
+                        <div class="detail-item">
+                            <strong>名词作宾语：</strong>可以放在<span class="highlight-put">put</span>和<span class="highlight-put">on</span>之间，也可以放在短语后面
+                            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                                ✅ Put <span class="highlight-put">your coat</span> on. 或 ✅ Put on <span class="highlight-put">your coat</span>. 都可以 👕💡
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <strong>代词作宾语：</strong>只能放在<span class="highlight-put">put</span>和<span class="highlight-put">on</span>之间
+                            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                                ✅ Put <span class="highlight-put">it</span> on. (正确) ❌ Put on it. (错误) ⚠️👤
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <strong>记忆规律：</strong><span class="highlight-key">代词夹中间，名词两边都可以</span>
+                            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                                这是英语短语动词的通用规律 📝🧠
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="structure-box">
+                        <h4>🔧 put的常用短语</h4>
+                        <div class="structure-item">
+                            <strong><span class="highlight-put">put...in...</span>：</strong>📦 把...放进...里面
+                            <div class="structure-examples">put the book in the bag 把书放进包里 📚🎒</div>
+                        </div>
+                        <div class="structure-item">
+                            <strong><span class="highlight-put">put...under...</span>：</strong>📦 把...放在...下面
+                            <div class="structure-examples">put the box under the table 把箱子放在桌子下面 📦⬇️</div>
+                        </div>
+                        <div class="structure-item">
+                            <strong><span class="highlight-put">put...away</span>：</strong>🧹 把...收起来，整理好
+                            <div class="structure-examples">put your toys away 把你的玩具收起来 🧸📦</div>
+                        </div>
+                        <div class="structure-item">
+                            <strong><span class="highlight-put">put...down</span>：</strong>⬇️ 把...放下
+                            <div class="structure-examples">put down your pen 放下你的笔 ✏️⬇️</div>
+                        </div>
+                        <div class="structure-item">
+                            <strong><span class="highlight-put">put...up</span>：</strong>⬆️ 把...举起来/张贴
+                            <div class="structure-examples">put up your hand 举起你的手 ✋⬆️</div>
+                        </div>
+                    </div>
+
+                    <div class="usage-note">
+                        <h6>⚠️ 特别注意</h6>
+                        <p>• <span class="highlight-key">put</span>意为"放，摆放"，表示位置的变化<br>
+                        • <span class="highlight-key">put...on...</span>意为"把...放到...上面"(分开使用)<br>
+                        • 注意<span class="highlight-key">put on</span>连用意为"穿上，戴上(衣服、帽子等)"<br>
+                        • 代词作宾语时只能放在动词和介词/副词之间：Put it on 📍</p>
+                    </div>
+
+                    <div class="comparison-table">
+                        <h5>📊 put用法对比</h5>
+                        <div class="comparison-grid">
+                            <div class="comparison-header">用法类型</div>
+                            <div class="comparison-header">含义</div>
+                            <div class="comparison-header">例句</div>
+                            
+                            <div class="comparison-cell">put...on...(分开)</div>
+                            <div class="comparison-cell">把...放在...上</div>
+                            <div class="comparison-cell">put the book on the desk 📚</div>
+                            
+                            <div class="comparison-cell">put on(连用)</div>
+                            <div class="comparison-cell">穿上，戴上</div>
+                            <div class="comparison-cell">put on your coat 🧥</div>
+                            
+                            <div class="comparison-cell">put away</div>
+                            <div class="comparison-cell">收起来</div>
+                            <div class="comparison-cell">put your toys away 🧸</div>
+                        </div>
+                    </div>
+
+                    <div class="table-container">
+                        <div class="table-title">
+                            <span class="chart-icon">📊</span>
+                            put短语动词详细用法表
+                        </div>
+                        <div class="verb-grid">
+                            <!-- 表头 -->
+                            <div class="verb-header">短语</div>
+                            <div class="verb-header">含义</div>
+                            <div class="verb-header">用法特点</div>
+                            <div class="verb-header">例句</div>
+                            <div class="verb-header">注意事项</div>
+                            
+                            <!-- put on行 -->
+                            <div class="verb-cell verb-cell-word">put on</div>
+                            <div class="verb-cell verb-cell-meaning">穿上，戴上</div>
+                            <div class="verb-cell verb-cell-usage">
+                                <div>衣物类物品</div>
+                                <div>瞬间动作</div>
+                                <div>常用短语</div>
+                            </div>
+                            <div class="verb-cell verb-cell-example">
+                                <div class="example-sentence">Put on your <span class="highlight-word">coat</span>. 🧥</div>
+                                <div style="color: #666; font-size: 10px;">穿上你的外套。</div>
+                            </div>
+                            <div class="verb-cell verb-cell-note">
+                                <div><span class="highlight-key">代词放中间</span></div>
+                                <div>Put it on ✅</div>
+                            </div>
+                            
+                            <!-- put...on...行 -->
+                            <div class="verb-cell verb-cell-word">put...on...</div>
+                            <div class="verb-cell verb-cell-meaning">把...放在...上</div>
+                            <div class="verb-cell verb-cell-usage">
+                                <div>位置关系</div>
+                                <div>表面接触</div>
+                                <div>基本用法</div>
+                            </div>
+                            <div class="verb-cell verb-cell-example">
+                                <div class="example-sentence">Put the book <span class="highlight-word">on</span> the desk. 📚</div>
+                                <div style="color: #666; font-size: 10px;">把书放在桌子上。</div>
+                            </div>
+                            <div class="verb-cell verb-cell-note">
+                                <div>分开使用</div>
+                                <div>表示位置 📍</div>
+                            </div>
+                            
+                            <!-- put away行 -->
+                            <div class="verb-cell verb-cell-word">put away</div>
+                            <div class="verb-cell verb-cell-meaning">收起来</div>
+                            <div class="verb-cell verb-cell-usage">
+                                <div>整理物品</div>
+                                <div>归位动作</div>
+                                <div>生活常用</div>
+                            </div>
+                            <div class="verb-cell verb-cell-example">
+                                <div class="example-sentence">Put your <span class="highlight-word">toys</span> away. 🧸</div>
+                                <div style="color: #666; font-size: 10px;">把你的玩具收起来。</div>
+                            </div>
+                            <div class="verb-cell verb-cell-note">
+                                <div><span class="highlight-key">代词放中间</span></div>
+                                <div>Put them away 📦</div>
+                            </div>
+                            
+                            <!-- put down行 -->
+                            <div class="verb-cell verb-cell-word">put down</div>
+                            <div class="verb-cell verb-cell-meaning">放下</div>
+                            <div class="verb-cell verb-cell-usage">
+                                <div>向下动作</div>
+                                <div>释放物品</div>
+                                <div>基础动作</div>
+                            </div>
+                            <div class="verb-cell verb-cell-example">
+                                <div class="example-sentence">Put <span class="highlight-word">down</span> your pen. ✏️</div>
+                                <div style="color: #666; font-size: 10px;">放下你的笔。</div>
+                            </div>
+                            <div class="verb-cell verb-cell-note">
+                                <div><span class="highlight-key">代词放中间</span></div>
+                                <div>Put it down ⬇️</div>
+                            </div>
+                            
+                            <!-- put up行 -->
+                            <div class="verb-cell verb-cell-word">put up</div>
+                            <div class="verb-cell verb-cell-meaning">举起/张贴</div>
+                            <div class="verb-cell verb-cell-usage">
+                                <div>向上动作</div>
+                                <div>多重含义</div>
+                                <div>语境决定</div>
+                            </div>
+                            <div class="verb-cell verb-cell-example">
+                                <div class="example-sentence">Put <span class="highlight-word">up</span> your hand. ✋</div>
+                                <div style="color: #666; font-size: 10px;">举起你的手。</div>
+                            </div>
+                            <div class="verb-cell verb-cell-note">
+                                <div><span class="highlight-key">代词放中间</span></div>
+                                <div>Put it up ⬆️</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="key-points">
+                        <h4>🎯 考察重点</h4>
+                        <ul>
+                            <li><span class="highlight-put">put</span>的基本用法
+                                <div class="key-point-examples">📦 put + 物品 + 地点</div>
+                            </li>
+                            <li><span class="highlight-put">put on</span>的双重含义
+                                <div class="key-point-examples">👔 put...on... vs put on</div>
+                            </li>
+                            <li><span class="highlight-key">代词宾语</span>的特殊位置
+                                <div class="key-point-examples">✅ Put it on ❌ Put on it</div>
+                            </li>
+                            <li>短语动词的理解
+                                <div class="key-point-examples">🔧 put away/put down等</div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>📝 put动词用法示例</h4>
+                        <div class="example">
+                            <span class="example-emoji">🎄</span>
+                            <span>We <span class="highlight-put">put</span> some pretty things <span class="highlight-put">on</span> the Christmas tree. 我们把一些漂亮的东西放在圣诞树上。</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">🧥</span>
+                            <span>He <span class="highlight-put">puts on</span> his coat and goes out. 他穿上外套出去了。</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">📚</span>
+                            <span>Please <span class="highlight-put">put</span> the book <span class="highlight-put">in</span> your bag. 请把书放进你的包里。</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">🧸</span>
+                            <span><span class="highlight-put">Put</span> your toys <span class="highlight-put">away</span>. 把你的玩具收起来。</span>
+                        </div>
+                    </div>
+
+                    <div class="connection-box">
+                        <h4>🔗 温故知新</h4>
+                        <div class="connection-text">
+                            put作为基础动词，其与介词的搭配形成了丰富的短语动词，体现了英语中动词+介词组合的重要性，是日常交流中的高频用法。这与之前学习的其他动词短语有相似的规律。
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="point5" class="grammar-point">
+                <div class="point-header">
+                    <div class="point-number">5</div>
+                    <div class="point-title">What's wrong with...?句型</div>
+                    <div class="emoji">❓</div>
+                </div>
+                <div class="point-content">
+                    <p class="core-concept"><strong>核心概念：</strong>这是询问别人情况的常用句型，后接<span class="highlight-key">名词或人称代词的宾格形式</span>，表达关心和担忧</p>
+
+                    <div class="equivalent-box">
+                        <h5>⚡ 等意句型强调</h5>
+                        <div class="equivalent-item">
+                            <strong>同义转化：</strong><span class="highlight-wrong">What's wrong with...?</span> = <span class="highlight-wrong">What's the matter with...?</span>
+                            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                                这两个句型意思相同，可以互换使用！😊⚡
+                            </div>
+                        </div>
+                        <div class="equivalent-item">
+                            <strong>底层逻辑解析：</strong>在"What's the matter with...?"中，<span class="highlight-key">matter</span>是<span class="highlight-grammar">名词</span>，意为"问题、事情"
+                            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                                前面的<span class="highlight-key">the</span>表示<span class="highlight-grammar">特指</span>，指代"那个具体的问题"，所以<span class="highlight-key">the不能丢</span>！💡🔍
+                            </div>
+                        </div>
+                        <div class="equivalent-item">
+                            <strong>记忆要点：</strong>matter前必须有the，因为我们要特指"那个让人担心的问题"
+                            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                                ✅ What's <span class="highlight-key">the</span> matter with him? ❌ What's matter with him? 📝
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="wrong-box">
+                        <h5>❓ What's wrong with...?句型详解</h5>
+                        <div class="wrong-item">
+                            <strong>基本结构：</strong><span class="highlight-wrong">What's wrong with</span> + 名词/代词宾格？
+                            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                                例：<span class="highlight-wrong">What's wrong with</span> <span class="highlight-key">him</span>? 他怎么了？😟👤
+                            </div>
+                        </div>
+                        <div class="wrong-item">
+                            <strong>功能作用：</strong>询问某人或某物出了什么问题，表示关心或担心
+                            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                                同义句：<span class="highlight-wrong">What's the matter with</span> <span class="highlight-key">him</span>? 他怎么了？🤔💭
+                            </div>
+                        </div>
+                        <div class="wrong-item">
+                            <strong>常见回答：</strong>说明具体问题或状况
+                            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                                例：He is ill. 🤒 / Nothing. 😊 / His leg hurts. 🦵😣 / It's broken. 🔧💔等
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="structure-box">
+                        <h4>🔄 核心句型对比</h4>
+                        <div class="structure-item">
+                            <strong><span class="highlight-wrong">What's wrong with</span>...?</strong> 😟 最常用的表达
+                            <div class="structure-examples">What's wrong with your computer? 你的电脑怎么了？💻❓</div>
+                        </div>
+                        <div class="structure-item">
+                            <strong><span class="highlight-wrong">What's the matter with</span>...?</strong> 🤔 同义句型
+                            <div class="structure-examples">What's the matter with your computer? 你的电脑怎么了？💻🔧</div>
+                        </div>
+                        <div class="structure-item">
+                            <strong><span class="highlight-wrong">What's the problem with</span>...?</strong> 🔧 强调问题本身
+                            <div class="structure-examples">What's the problem with this machine? 这台机器有什么问题？🔧⚙️</div>
+                        </div>
+                    </div>
+
+                    <div class="extension-note">
+                        <h6>📖 拓展补充（了解即可）</h6>
+                        <p>在平时阅读中你们还会遇到"What happened to...?"(强调发生的事情)和"What's up with...?"(非正式口语表达)等句型，这些都是询问问题的不同方式，做个有心人观察它们在文章中的用法。</p>
+                    </div>
+
+                    <div class="detail-box">
+                        <h5>🎯 使用要点</h5>
+                        <div class="detail-item">
+                            <strong>代词形式：</strong>后接人称代词时要用<span class="highlight-key">宾格形式</span>(him/her/them)
+                            <div style="margin-top: 3px; font-size: 11px; color: #666;">
+                                ✅ What's wrong with <span class="highlight-key">him</span>? ❌ What's wrong with <span class="highlight-key">he</span>? 👤✋
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <strong>语气特点：</strong>表示关心、担心或疑惑
+                            <div style="margin-top: 3px; font-size: 11px; color: #666;">
+                                通常带有同情和关怀的语调 💕❤️
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <strong>回答方式：</strong>通常说明具体的问题或情况
+                            <div style="margin-top: 3px; font-size: 11px; color: #666;">
+                                可以是身体、情感或物品的问题 🏥😭💻
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <strong>适用场合：</strong>日常关心他人的常用表达
+                            <div style="margin-top: 3px; font-size: 11px; color: #666;">
+                                朋友、家人之间的关怀用语 👨‍👩‍👧‍👦🤗
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="usage-note">
+                        <h6>⚠️ 特别注意</h6>
+                        <p>• 这是询问别人情况的句型，后接<span class="highlight-key">名词或人称代词的宾格形式</span><br>
+                        • <span class="highlight-key">What's wrong with</span>...? = <span class="highlight-key">What's the matter with</span>...? (同义转化)<br>
+                        • matter是名词，前面的<span class="highlight-key">the</span>表示特指，不能省略<br>
+                        • 注意代词要用宾格：him/her/them等，不能用主格 📝</p>
+                    </div>
+
+                    <div class="table-container">
+                        <div class="table-title">
+                            <span class="chart-icon">📊</span>
+                            询问问题的句型对比表
+                        </div>
+                        <div class="verb-grid">
+                            <!-- 表头 -->
+                            <div class="verb-header">句型</div>
+                            <div class="verb-header">含义</div>
+                            <div class="verb-header">用法特点</div>
+                            <div class="verb-header">例句</div>
+                            <div class="verb-header">注意事项</div>
+                            
+                            <!-- What's wrong with行 -->
+                            <div class="verb-cell verb-cell-word">What's wrong with...?</div>
+                            <div class="verb-cell verb-cell-meaning">...怎么了？</div>
+                            <div class="verb-cell verb-cell-usage">
+                                <div>询问某人或某物的问题</div>
+                                <div>表示关心</div>
+                                <div>最常用表达</div>
+                            </div>
+                            <div class="verb-cell verb-cell-example">
+                                <div class="example-sentence">What's wrong with <span class="highlight-word">him</span>? 😟</div>
+                                <div style="color: #666; font-size: 10px;">他怎么了？</div>
+                            </div>
+                            <div class="verb-cell verb-cell-note">
+                                <div><span class="highlight-key">代词用宾格</span></div>
+                                <div>日常口语 💬</div>
+                            </div>
+                            
+                            <!-- What's the matter with行 -->
+                            <div class="verb-cell verb-cell-word">What's the matter with...?</div>
+                            <div class="verb-cell verb-cell-meaning">...怎么了？</div>
+                            <div class="verb-cell verb-cell-usage">
+                                <div>询问问题或困难</div>
+                                <div>同义表达</div>
+                                <div>可互换使用</div>
+                            </div>
+                            <div class="verb-cell verb-cell-example">
+                                <div class="example-sentence">What's the matter with <span class="highlight-word">her</span>? 🤔</div>
+                                <div style="color: #666; font-size: 10px;">她怎么了？</div>
+                            </div>
+                            <div class="verb-cell verb-cell-note">
+                                <div><span class="highlight-key">the不能省</span></div>
+                                <div>matter是名词 📝</div>
+                            </div>
+                            
+                            <!-- What's the problem with行 -->
+                            <div class="verb-cell verb-cell-word">What's the problem with...?</div>
+                            <div class="verb-cell verb-cell-meaning">...有什么问题？</div>
+                            <div class="verb-cell verb-cell-usage">
+                                <div>询问具体问题</div>
+                                <div>强调问题本身</div>
+                                <div>正式表达</div>
+                            </div>
+                            <div class="verb-cell verb-cell-example">
+                                <div class="example-sentence">What's the problem with <span class="highlight-word">this</span>? 🔧</div>
+                                <div style="color: #666; font-size: 10px;">这有什么问题？</div>
+                            </div>
+                            <div class="verb-cell verb-cell-note">
+                                <div><span class="highlight-key">强调问题</span></div>
+                                <div>较正式 🔧</div>
+                            </div>
+                            
+                            <!-- What happened to行 -->
+                            <div class="verb-cell verb-cell-word">What happened to...?</div>
+                            <div class="verb-cell verb-cell-meaning">...发生了什么？</div>
+                            <div class="verb-cell verb-cell-usage">
+                                <div>询问发生的事情</div>
+                                <div>强调事件过程</div>
+                                <div>拓展了解</div>
+                            </div>
+                            <div class="verb-cell verb-cell-example">
+                                <div class="example-sentence">What happened to <span class="highlight-word">them</span>? 😯</div>
+                                <div style="color: #666; font-size: 10px;">他们发生了什么？</div>
+                            </div>
+                            <div class="verb-cell verb-cell-note">
+                                <div><span class="highlight-key">强调过程</span></div>
+                                <div>拓展补充 ⚡</div>
+                            </div>
+                            
+                            <!-- What's up with行 -->
+                            <div class="verb-cell verb-cell-word">What's up with...?</div>
+                            <div class="verb-cell verb-cell-meaning">...怎么回事？</div>
+                            <div class="verb-cell verb-cell-usage">
+                                <div>非正式询问</div>
+                                <div>口语化表达</div>
+                                <div>拓展了解</div>
+                            </div>
+                            <div class="verb-cell verb-cell-example">
+                                <div class="example-sentence">What's up with <span class="highlight-word">you</span>? 😊</div>
+                                <div style="color: #666; font-size: 10px;">你怎么回事？</div>
+                            </div>
+                            <div class="verb-cell verb-cell-note">
+                                <div><span class="highlight-key">很口语化</span></div>
+                                <div>拓展补充 🗣️</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="key-points">
+                        <h4>🎯 考察重点</h4>
+                        <ul>
+                            <li><span class="highlight-key">代词宾格</span>的正确使用
+                                <div class="key-point-examples">👤 What's wrong with <span class="highlight-wrong">him/her/them</span>?</div>
+                            </li>
+                            <li>核心同义句型的掌握
+                                <div class="key-point-examples">⚡ What's wrong with = What's the matter with (同义转化)</div>
+                            </li>
+                            <li>matter前the的重要性
+                                <div class="key-point-examples">📝 What's <span class="highlight-key">the</span> matter with...? (the不能省略)</div>
+                            </li>
+                            <li>语境的适当运用
+                                <div class="key-point-examples">💬 表达关心和担心</div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>📝 询问问题句型示例</h4>
+                        <div class="example">
+                            <span class="example-emoji">😟</span>
+                            <span><span class="highlight-wrong">What's wrong with</span> him? 他怎么了？</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">🤔</span>
+                            <span><span class="highlight-wrong">What's the matter with</span> her? 她怎么了？</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">🔧</span>
+                            <span><span class="highlight-wrong">What's the problem with</span> this machine? 这台机器有什么问题？</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">💻</span>
+                            <span><span class="highlight-wrong">What's wrong with</span> your computer? 你的电脑怎么了？</span>
+                        </div>
+                    </div>
+
+                    <div class="connection-box">
+                        <h4>🔗 温故知新</h4>
+                        <div class="connection-text">
+                            这种询问句型体现了英语中关心他人的表达方式，与之前学习的疑问句结构相联系，是日常交流中表达关怀的重要句型。掌握这些表达能让我们的英语交流更加温暖和贴心。
+                        </div>
+                    </div>
+
+                    <div class="eva-tip">
+                        <h5>🔍 Eva老师👩‍🏫小贴士</h5>
+                        <p>亲爱的同学们，Unit8的语法内容涵盖了顺序副词、系动词、双宾语动词等重要语法点。从<span class="highlight-key">first/next/then/finally</span>的顺序表达（记住推荐按此顺序使用最自然哦！），到<span class="highlight-key">look系动词</span>的感官描述（记住：有小尾巴at/for是实义动词，没有就是系动词），从<span class="highlight-key">buy的双宾语</span>用法（"买做煮"用for，"给展告"用to），到<span class="highlight-key">put的位置</span>表达（代词夹中间，名词两边都可以），最后学习关心他人的询问句型（<span class="highlight-key">What's wrong with</span>和<span class="highlight-key">What's the matter with</span>是同义转化！记住matter前的the不能丢哦）。这些语法点不仅帮助我们描述活动过程，还提升了我们的语言表达能力。记住：语法学习要结合实际情境，在平时阅读中做个有心人，观察这些词汇的不同用法！把语法运用到实际交流中才是学习的目标！🎯✨📚</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            Eva老师👩‍🏫伴步英语
+        </div>
+    </div>
+
+    <script>
+        // 平滑滚动到指定位置
+        document.querySelectorAll('.toc-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+
+
+</div></body></html>

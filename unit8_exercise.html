@@ -1,0 +1,2179 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="x-poe-datastore-behavior" content="local_only"><meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' data: blob: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://code.jquery.com https://unpkg.com https://d3js.org https://threejs.org https://cdn.plot.ly https://stackpath.bootstrapcdn.com https://maps.googleapis.com https://cdn.tailwindcss.com https://ajax.googleapis.com https://kit.fontawesome.com https://cdn.datatables.net https://maxcdn.bootstrapcdn.com https://code.highcharts.com https://tako-static-assets-production.s3.amazonaws.com https://www.youtube.com https://fonts.googleapis.com https://fonts.gstatic.com https://pfst.cf2.poecdn.net https://puc.poecdn.net https://i.imgur.com https://wikimedia.org https://*.icons8.com https://*.giphy.com https://picsum.photos https://images.unsplash.com; frame-src 'self' https://www.youtube.com https://trytako.com; child-src 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests; block-all-mixed-content;">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eva老师👩‍🏫伴步英语-江苏校内-译林英语-五上-Unit8在线练习</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            background: linear-gradient(135deg, #6d8bc3 0%, #c0db82 100%);
+            padding: 10px;
+            min-height: 100vh;
+        }
+
+        .card-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #ECECEC;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            overflow: hidden;
+            min-height: calc(100vh - 20px);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #6d8bc3, #5a7ab8);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            flex-shrink: 0;
+        }
+
+        .header h1 {
+            font-size: clamp(20px, 4vw, 26px);
+            font-weight: bold;
+            margin-bottom: 8px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .header .subtitle {
+            font-size: clamp(14px, 3vw, 18px);
+            opacity: 0.9;
+            margin-bottom: 5px;
+        }
+
+        .highlight-unit {
+            background: #FFE266;
+            color: #333;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        .header .teacher-info {
+            font-size: clamp(12px, 2.5vw, 14px);
+            opacity: 0.8;
+        }
+
+        .decorative-star {
+            position: absolute;
+            font-size: clamp(18px, 3vw, 24px);
+            animation: twinkle 2s infinite;
+        }
+
+        .star1 { top: 15px; left: 30px; }
+        .star2 { top: 20px; right: 40px; animation-delay: 0.5s; }
+        .star3 { bottom: 15px; left: 50px; animation-delay: 1s; }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.5; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.2); }
+        }
+
+        .content {
+            padding: 20px;
+            flex: 1;
+            overflow-y: auto;
+        }
+
+        .timer-box {
+            background: white;
+            border: 2px solid #ff9800;
+            border-radius: 8px;
+            padding: 10px 15px;
+            margin: 15px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .timer-text {
+            font-size: clamp(16px, 3vw, 18px);
+            font-weight: bold;
+            color: #f57c00;
+        }
+
+        .exercise-section {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 6px solid #FFE266;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .exercise-section:hover {
+            transform: translateY(-3px);
+        }
+
+        .exercise-section:nth-child(2n) {
+            border-left-color: #c0db82;
+        }
+
+        .exercise-section:nth-child(3n) {
+            border-left-color: #6d8bc3;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .section-number {
+            background: #FFE266;
+            color: #333;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        .section-title {
+            font-size: clamp(18px, 3.5vw, 22px);
+            font-weight: bold;
+            color: #333;
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .emoji {
+            font-size: clamp(20px, 4vw, 26px);
+        }
+
+        .question-box {
+            background: #f8f9ff;
+            border: 2px solid #6d8bc3;
+            border-radius: 12px;
+            padding: 15px;
+            margin: 15px 0;
+            position: relative;
+        }
+
+        .question-number {
+            background: #6d8bc3;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 14px;
+            margin-right: 10px;
+        }
+
+        .question-text {
+            font-size: clamp(14px, 2.5vw, 16px);
+            color: #333;
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+
+        .options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            margin: 12px 0;
+        }
+
+        .option {
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 10px 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: clamp(13px, 2.2vw, 15px);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .option:hover {
+            border-color: #6d8bc3;
+            background: #f0f8ff;
+            transform: translateY(-1px);
+        }
+
+        .option.selected {
+            border-color: #6d8bc3;
+            background: #e8f4f8;
+            font-weight: bold;
+        }
+
+        .option.correct {
+            border-color: #4caf50;
+            background: #e8f5e8;
+            color: #2e7d32;
+            animation: correctPulse 0.5s ease;
+        }
+
+        .option.incorrect {
+            border-color: #f44336;
+            background: #ffebee;
+            color: #c62828;
+            animation: wrongShake 0.5s ease;
+        }
+
+        .option.missed {
+            border-color: #ff9800;
+            background: #fff3e0;
+            color: #e65100;
+            animation: missedPulse 0.5s ease;
+        }
+
+        @keyframes correctPulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes wrongShake {
+            0%, 100% { transform: translateX(0); }
+            10%, 30%, 50%, 70%, 90% { transform: translateX(-3px); }
+            20%, 40%, 60%, 80% { transform: translateX(3px); }
+        }
+
+        @keyframes missedPulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+            100% { transform: scale(1); }
+        }
+
+        .option-letter {
+            background: #6d8bc3;
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 12px;
+            flex-shrink: 0;
+        }
+
+        .check-button {
+            background: linear-gradient(135deg, #4caf50, #45a049);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 12px 24px;
+            font-size: clamp(14px, 2.5vw, 16px);
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 10px 5px;
+        }
+
+        .check-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(76, 175, 80, 0.3);
+        }
+
+        .check-button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        .result-box {
+            background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+            border: 2px solid #2196f3;
+            border-radius: 12px;
+            padding: 15px;
+            margin: 15px 0;
+            display: none;
+        }
+
+        .result-box.show {
+            display: block;
+            animation: slideDown 0.5s ease;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .result-title {
+            color: #1976d2;
+            font-size: clamp(16px, 3vw, 18px);
+            font-weight: bold;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .result-content {
+            color: #1976d2;
+            font-size: clamp(14px, 2.5vw, 16px);
+            line-height: 1.6;
+        }
+
+        .score-display {
+            background: white;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 10px 0;
+            text-align: center;
+            border: 2px solid #4caf50;
+        }
+
+        .score-number {
+            font-size: clamp(24px, 5vw, 32px);
+            font-weight: bold;
+            color: #4caf50;
+            margin: 5px 0;
+        }
+
+        .score-text {
+            font-size: clamp(14px, 2.5vw, 16px);
+            color: #666;
+        }
+
+        .progress-bar {
+            background: #e0e0e0;
+            border-radius: 10px;
+            height: 20px;
+            margin: 15px 0;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            background: linear-gradient(135deg, #4caf50, #45a049);
+            height: 100%;
+            border-radius: 10px;
+            transition: width 0.8s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 12px;
+        }
+
+        .final-score {
+            background: linear-gradient(135deg, #4caf50, #45a049);
+            color: white;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .final-score h3 {
+            font-size: clamp(20px, 4vw, 24px);
+            margin-bottom: 10px;
+        }
+
+        .final-score .score {
+            font-size: clamp(28px, 6vw, 36px);
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .explanation {
+            background: #fff0f5;
+            border: 2px solid #ff69b4;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 12px 0;
+            font-size: clamp(12px, 2vw, 14px);
+            color: #d63384;
+            line-height: 1.5;
+        }
+
+        /* 错题解析样式 */
+        .wrong-analysis {
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 10px 0;
+            display: none;
+        }
+
+        .wrong-analysis.show {
+            display: block;
+            animation: slideDown 0.5s ease;
+        }
+
+        .wrong-analysis h5 {
+            color: #856404;
+            font-size: clamp(14px, 2.5vw, 16px);
+            margin-bottom: 10px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .wrong-analysis-content {
+            color: #856404;
+            font-size: clamp(12px, 2vw, 14px);
+            line-height: 1.6;
+        }
+
+        .wrong-item {
+            background: white;
+            border-radius: 8px;
+            padding: 12px;
+            margin: 8px 0;
+            border-left: 4px solid #ffc107;
+        }
+
+        .wrong-question {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .wrong-answers {
+            margin: 8px 0;
+            font-size: clamp(13px, 2.2vw, 15px);
+        }
+
+        .user-answer {
+            color: #dc3545;
+            font-weight: bold;
+        }
+
+        .correct-answer {
+            color: #28a745;
+            font-weight: bold;
+        }
+
+        .answer-explanation {
+            background: #f8f9fa;
+            border-radius: 6px;
+            padding: 10px;
+            margin-top: 8px;
+            color: #495057;
+            font-style: italic;
+        }
+
+        .footer {
+            background: linear-gradient(135deg, #6d8bc3, #5a7ab8);
+            color: white;
+            text-align: center;
+            padding: 15px 20px;
+            font-size: clamp(12px, 2vw, 14px);
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        /* 移动端优化 */
+        @media (max-width: 768px) {
+            body {
+                padding: 5px;
+            }
+
+            .header {
+                padding: 15px 10px;
+            }
+
+            .content {
+                padding: 15px;
+            }
+
+            .exercise-section {
+                padding: 15px;
+                margin-bottom: 15px;
+            }
+
+            .section-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            .section-title {
+                min-width: auto;
+                width: 100%;
+            }
+
+            .options {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+<script src="https://puc.poecdn.net/authenticated_preview_page/syncedState.bd4eeeb8e8e02052ee92.js"></script></head>
+<body>
+    <div class="card-container">
+        <div class="header">
+            <div class="decorative-star star1">⭐</div>
+            <div class="decorative-star star2">✨</div>
+            <div class="decorative-star star3">🌟</div>
+            <h1>江苏校内-译林英语</h1>
+            <div class="subtitle"><span class="highlight-unit">五上</span>-<span class="highlight-unit">Unit8</span>-<span class="highlight-unit">在线练习</span></div>
+            <div class="teacher-info">Eva老师👩‍🏫伴步英语</div>
+        </div>
+        
+        <div class="content">
+            <!-- 计时器 -->
+            <div class="timer-box">
+                <span>⏰</span>
+                <span class="timer-text">用时: <span id="timer">00:00</span></span>
+            </div>
+
+            <!-- 第一部分：表示时间顺序的副词 (10题) -->
+            <div class="exercise-section">
+                <div class="section-header">
+                    <div class="section-number">1</div>
+                    <div class="section-title">时间顺序副词</div>
+                    <div class="emoji">⏰</div>
+                </div>
+
+                <div class="question-box">
+                    <div class="question-text">
+                        <span class="question-number">1</span>
+                        _______, we buy a Christmas tree.
+                    </div>
+                    <div class="options" data-question="1" data-answer="A">
+                        <div class="option" data-value="A">
+                            <span class="option-letter">A</span>
+                            First
+                        </div>
+                        <div class="option" data-value="B">
+                            <span class="option-letter">B</span>
+                            Next
+                        </div>
+                        <div class="option" data-value="C">
+                            <span class="option-letter">C</span>
+                            Then
+                        </div>
+                        <div class="option" data-value="D">
+                            <span class="option-letter">D</span>
+                            Finally
+                        </div>
+                    </div>
+                </div>
+
+                <div class="question-box">
+                    <div class="question-text">
+                        <span class="question-number">2</span>
+                        _______, we put some pretty things on the tree.
+                    </div>
+                    <div class="options" data-question="2" data-answer="B">
+                        <div class="option" data-value="A">
+                            <span class="option-letter">A</span>
+                            First
+                        </div>
+                        <div class="option" data-value="B">
+                            <span class="option-letter">B</span>
+                            Next
+                        </div>
+                        <div class="option" data-value="C">
+                            <span class="option-letter">C</span>
+                            Finally
+                        </div>
+                        <div class="option" data-value="D">
+                            <span class="option-letter">D</span>
+                            Last
+                        </div>
+                    </div>
+                </div>
+
+                <div class="question-box">
+                    <div class="question-text">
+                        <span class="question-number">3</span>
+                        _______, we put a stocking on our bed.
+                    </div>
+                    <div class="options" data-question="3" data-answer="C">
+                        <div class="option" data-value="A">
+                            <span class="option-letter">A</span>
+                            First
+                        </div>
+                        <div class="option" data-value="B">
+                            <span class="option-letter">B</span>
+                            Next
+                        </div>
+                        <div class="option" data-value="C">
+                            <span class="option-letter">C</span>
+                            Then
+                        </div>
+                        <div class="option" data-value="D">
+                            <span class="option-letter">D</span>
+                            At last
+                        </div>
+                    </div>
+                </div>
+
+                <div class="question-box">
+                    <div class="question-text">
+                        <span class="question-number">4</span>
+                        _______, Christmas comes!
+                    </div>
+                    <div class="options" data-question="4" data-answer="D">
+                        <div class="option" data-value="A">
+                            <span class="option-letter">A</span>
+                            First
+                        </div>
+                        <div class="option" data-value="B">
+                            <span class="option-letter">B</span>
+                            Next
+                        </div>
+                        <div class="option" data-value="C">
+                            <span class="option-letter">C</span>
+                            Then
+                        </div>
+                        <div class="option" data-value="D">
+                            <span class="option-letter">D</span>
+                            Finally
+                        </div>
+                    </div>
+                </div>
+
+                <div class="question-box">
+                    <div class="question-text">
+                        <span class="question-number">5</span>
+                        根据知识分享，推荐使用的顺序是：
+                    </div>
+                    <div class="options" data-question="5" data-answer="B">
+                        <div class="option" data-value="A">
+                            <span class="option-letter">A</span>
+                            finally → first → then → next
+                        </div>
+                        <div class="option" data-value="B">
+                            <span class="option-letter">B</span>
+                            first → next → then → finally
+                        </div>
+                        <div class="option" data-value="C">
+                            <span class="option-letter">C</span>
+                            next → first → finally → then
+                        </div>
+                        <div class="option" data-value="D">
+                            <span class="option-letter">D</span>
+                            then → next → first → finally
+                        </div>
+                    </div>
+                </div>
+
+                <div class="question-box">
+                    <div class="question-text">
+                        <span class="question-number">6</span>
+                        _______, we have breakfast. _______, we go to school. (注：first后也可以用then，但如有next时，next一般用在then之前)
+                    </div>
+                    <div class="options" data-question="6" data-answer="A">
+                        <div class="option" data-value="A">
+                            <span class="option-letter">A</span>
+                            First; Then
+                        </div>
+                        <div class="option" data-value="B">
+                            <span class="option-letter">B</span>
+                            Finally; First
+                        </div>
+                        <div class="option" data-value="C">
+                            <span class="option-letter">C</span>
+                            Then; First
+                        </div>
+                        <div class="option" data-value="D">
+                            <span class="option-letter">D</span>
+                            Next; Finally
+                        </div>
+                    </div>
+                </div>
+
+                <div class="question-box">
+                    <div class="question-text">
+                        <span class="question-number">7</span>
+                        哪个句子的标点符号是正确的？
+                    </div>
+                    <div class="options" data-question="7" data-answer="B">
+                        <div class="option" data-value="A">
+                            <span class="option-letter">A</span>
+                            First we buy a tree.
+                        </div>
+                        <div class="option" data-value="B">
+                            <span class="option-letter">B</span>
+                            First, we buy a tree.
+                        </div>
+                        <div class="option" data-value="C">
+                            <span class="option-letter">C</span>
+                            First: we buy a tree.
+                        </div>
+                        <div class="option" data-value="D">
+                            <span class="option-letter">D</span>
+                            First; we buy a tree.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="question-box">
+                    <div class="question-text">
+                        <span class="question-number">8</span>
+                        Let me tell you how to make a cake. _______, we need some flour.
+                    </div>
+                    <div class="options" data-question="8" data-answer="A">
+                        <div class="option" data-value="A">
+                            <span class="option-letter">A</span>
+                            First
+                        </div>
+                        <div class="option" data-value="B">
+                            <span class="option-letter">B</span>
+                            Finally
+                        </div>
+                        <div class="option" data-value="C">
+                            <span class="option-letter">C</span>
+                            At last
+                        </div>
+                        <div class="option" data-value="D">
+                            <span class="option-letter">D</span>
+                            In the end
+                        </div>
+                    </div>
+                </div>
+
+                <div class="question-box">
+                    <div class="question-text">
+                        <span class="question-number">9</span>
+                        根据知识分享，这四个顺序副词的基本位置规律是：
+                    </div>
+                    <div class="options" data-question="9" data-answer="C">
+                        <div class="option" data-value="A">
+                            <span class="option-letter">A</span>
+                            通常放在句末
+                        </div>
+                        <div class="option" data-value="B">
+                            <span class="option-letter">B</span>
+                            通常放在句中
+                        </div>
+                        <div class="option" data-value="C">
+                            <span class="option-letter">C</span>
+                            通常放在句首，一般要加逗号
+                        </div>
+                        <div class="option" data-value="D">
+                            <span class="option-letter">D</span>
+                            可以随意放置
+                        </div>
+                    </div>
+                </div>
+
+                <div class="question-box">
+                    <div class="question-text">
+                        <span class="question-number">10</span>
+                        -- How do you prepare for Christmas? -- _______ we buy decorations. Then we decorate the tree.
+                    </div>
+                    <div class="options" data-question="10" data-answer="A">
+                        <div class="option" data-value="A">
+                            <span class="option-letter">A</span>
+                            First,
+                        </div>
+                        <div class="option" data-value="B">
+                            <span class="option-letter">B</span>
+                            Finally,
+                        </div>
+                        <div class="option" data-value="C">
+                            <span class="option-letter">C</span>
+                            At last,
+                        </div>
+                        <div class="option" data-value="D">
+                            <span class="option-letter">D</span>
+                            In the end,
+                        </div>
+                    </div>
+                </div>
+
+                <button class="check-button" onclick="checkSection(1)" id="checkBtn1">检查答案</button>
+                <div class="result-box" id="result1">
+                    <div class="result-title">📊 第一部分结果</div>
+                    <div class="result-content" id="result1-content"></div>
+                </div>
+                <div class="wrong-analysis" id="wrong1">
+                    <h5>🔍 错题解析</h5>
+                    <div class="wrong-analysis-content" id="wrong1-content"></div>
+                </div>
+            </div>
+
+            <!-- 第二部分：系动词look的用法 (10题) -->
+            <div class="exercise-section">
+                <div class="section-header">
+                    <div class="section-number">2</div>
+                    <div class="section-title">系动词look的用法</div>
+                    <div class="emoji">👀</div>
+                </div>
+
+                <div class="question-box">
+                    <div class="question-text">
+                        <span class="question-number">11</span>
+                        Mr Turkey _______ sad.
+                    </div>
+                    <div class="options" data-question="11" data-answer="A">
+                        <div class="option" data-value="A">
+                            <span class="option-letter">A</span>
+                            looks
+                        </div>
+                        <div class="option" data-value="B">
+                            <span class="option-letter">B</span>
+                            look
+                        </div>
+                        <div class="option" data-value="C">
+                            <span class="option-letter">C</span>
+                            looking
+                        </div>
+                        <div class="option" data-value="D">
+                            <span class="option-letter">D</span>
+                            looked
+                        </div>
+                    </div>
+                </div>
+
+                <div class="question-box">
+                    <div class="question-text">
+                        <span class="question-number">12</span>
+                        The children _______ happy.
+                    </div>
+                    <div class="options" data-question="12" data-answer="B">
+                        <div class="option" data-value="A">
+                            <span class="option-letter">A</span>
+                            looks
+                        </div>
+                        <div class="option" data-value="B">
+                            <span class="option-letter">B</span>
+                            look
+                        </div>
+                        <div class="option" data-value="C">
+                            <span class="option-letter">C</span>
+                            are
+                        </div>
+                        <div class="option" data-value="D">
+                            <span class="option-letter">D</span>
+                            looking
+                        </div>
+                    </div>
+                </div>
+
+                <div class="question-box">
+                    <div class="question-text">
+                        <span class="question-number">13</span>
+                        选择正确的句子：(系动词后接形容词)
+                    </div>
+                    <div class="options" data-question="13" data-answer="C">
+                        <div class="option" data-value="A">
+                            <span class="option-letter">A</span>
+                            She looks sadly.
+                        </div>
+                        <div class="option" data-value="B">
+                            <span class="option-letter">B</span>
+                            She looks beautifully.
+                        </div>
+                        <div class="option" data-value="C">
+                            <span class="option-letter">C</span>
+                            She looks beautiful.
+                        </div>
+                        <div class="option" data-value="D">
+                            <span class="option-letter">D</span>
+                            She looks carefully.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="question-box">
+                    <div class="question-text">
+                        <span class="question-number">14</span>
+                        根据知识分享的"小窍门"，下面哪个是系动词？
+                    </div>
+                    <div class="options" data-question="14" data-answer="A">
+                        <div class="option" data-value="A">
+                            <span class="option-letter">A</span>
+                            look happy (没有小尾巴)
+                        </div>
+                        <div class="option" data-value="B">
+                            <span class="option-letter">B</span>
+                            look at the book (有小尾巴at)
+                        </div>
+                        <div class="option" data-value="C">
+                            <span class="option-letter">C</span>
+                            look for keys (有小尾巴for)
+                        </div>
+                        <div class="option" data-value="D">
+                            <span class="option-letter">D</span>
+                            look after baby (有小尾巴after)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="question-box">
+                    <div class="question-text">
+                        <span class="question-number">15</span>
+                        He _______ at the blackboard now. (实义动词，强调正在进行)
+                    </div>
+                    <div class="options" data-question="15" data-answer="D">
+                        <div class="option" data-value="A">
+                            <span class="option-letter">A</span>
+                            looks
+                        </div>
+                        <div class="option" data-value="B">
+                            <span class="option-letter">B</span>
+                            look
+                        </div>
+                        <div class="option" data-value="C">
+                            <span class="option-letter">C</span>
+                            looking
+                        </div>
+                        <div class="option" data-value="D">
+                            <span class="option-letter">D</span>
+                            is looking
+                        </div>
+                    </div>
+                </div>
+
+                <div class="question-box">
+                    <div class="question-text">
+                        <span class="question-number">16</span>
+                        The music _______ nice. (听觉感官)
+                    </div>
+                    <div class="options" data-question="16" data-answer="B">
+                        <div class="option" data-value="A">
+                            <span class="option-letter">A</span>
+                            looks
+                        </div>
+                        <div class="option" data-value="B">
+                            <span class="option-letter">B</span>
+                            sounds
+                        </div>
+                        <div class="option" data-value="C">
+                            <span class="option-letter">C</span>
+                            tastes
+                        </div>
+                        <div class="option" data-value="D">
+                            <span class="option-letter">D</span>
+                            smells
+                        </div>
+                    </div>
+                </div>
+
+                <div class="question-box">
+                    <div class="question-text">
+                        <span class="question-number">17</span>
+                        These flowers _______ beautiful.
+                    </div>
+                    <div class="options" data-question="17" data-answer="A">
+                        <div class="option" data-value="A">
+                            <span class="option-letter">A</span>
+                            look
+                        </div>
+                        <div class="option" data-value="B">
+                            <span class="option-letter">B</span>
+                            looks
+                        </div>
+                        <div class="option" data-value="C">
+                            <span class="option-letter">C</span>
+                            looking
+                        </div>
+                        <div class="option" data-value="D">
+                            <span class="option-letter">D</span>
+                            are looking
+                        </div>
+                    </div>
+                </div>
+
+                <div class="question-box">
+                    <div class="question-text">
+                        <span class="question-number">18</span>
+                        My grandmother _______ her glasses everywhere. (寻找)
+                    </div>
+                    <div class="options" data-question="18" data-answer="C">
+                        <div class="option" data-value="A">
+                            <span class="option-letter">A</span>
+                            look
+                        </div>
+                        <div class="option" data-value="B">
+                            <span class="option-letter">B</span>
+                            looks happy
+                        </div>
+                        <div class="option" data-value="C">
+                            <span class="option-letter">C</span>
+                            is looking for
+                        </div>
+                        <div class="option" data-value="D">
+                            <span class="option-letter">D</span>
+                            looks
+                        </div>
+                    </div>
+                </div>
+
+                <div class="question-box">
+                    <div class="question-text">
+                        <span class="question-number">19</span>
+                        The medicine _______ bitter. (味觉感官)
+                    </div>
+                    <div class="options" data-question="19" data-answer="B">
+                        <div class="option" data-value="A">
+                            <span class="option-letter">A</span>
+                            looks
+                        </div>
+                        <div class="option" data-value="B">
+                            <span class="option-letter">B</span>
+                            tastes
+                        </div>
+                        <div class="option" data-value="C">
+                            <span class="option-letter">C</span>
+                            sounds
+                        </div>
+                        <div class="option" data-value="D">
+                            <span class="option-letter">D</span>
+                            feels
+                        </div>
+                    </div>
+                </div>
+
+                <div class="question-box">
+                    <div class="question-text">
+                        <span class="question-number">20</span>
+                        You _______ worried. What's wrong?
+                    </div>
+                    <div class="options" data-question="20" data-answer="A">
+                        <div class="option" data-value="A">
+                            <span class="option-letter">A</span>
+                            look
+                        </div>
+                        <div class="option" data-value="B">
+                            <span class="option-letter">B</span>
+                            looks
+                        </div>
+                        <div class="option" data-value="C">
+                            <span class="option-letter">C</span>
+                            are looking
+                        </div>
+                        <div class="option" data-value="D">
+                            <span class="option-letter">D</span>
+                            looking
+                        </div>
+                    </div>
+                </div>
+
+                <button class="check-button" onclick="checkSection(2)" id="checkBtn2">检查答案</button>
+                <div class="result-box" id="result2">
+                    <div class="result-title">📊 第二部分结果</div>
+                    <div class="result-content" id="result2-content"></div>
+                </div>
+                <div class="wrong-analysis" id="wrong2">
+                    <h5>🔍 错题解析</h5>
+                    <div class="wrong-analysis-content" id="wrong2-content"></div>
+                </div>
+            </div>
+
+            <!-- 第三部分：动词buy的双宾语用法 (10题) -->
+            <div class="exercise-section">
+                <div class="section-header">
+                    <div class="section-number">3</div>
+                    <div class="section-title">动词buy的双宾语用法</div>
+                    <div class="emoji">🛒</div>
+                </div>
+
+                <div class="question-box">
+                    <div class="question-text">
+                        <span class="question-number">21</span>
+                        We buy presents _______ our family.
+                    </div>
+                    <div class="options" data-question="21" data-answer="A">
+                        <div class="option" data-value="A">
+                            <span class="option-letter">A</span>
+                            for
+                        </div>
+                        <div class="option" data-value="B">
+                            <span class="option-letter">B</span>
+                            to
+                        </div>
+                        <div class="option" data-value="C">
+                            <span class="option-letter">C</span>
+                            with
+                        </div>
+                        <div class="option" data-value="D">
+                            <span class="option-letter">D</span>
+                            at
+                        </div>
+                    </div>
+                </div>
+
+                <div class="question-box">
+                    <div class="question-text">
+                        <span class="question-number">22</span>
+                        同义句转换：Buy a cap for me. = Buy _______ a cap.
+                    </div>
+                    <div class="options" data-question="22" data-answer="B">
+                        <div class="option" data-value="A">
+                            <span class="option-letter">A</span>
+                            I
+                        </div>
+                        <div class="option" data-value="B">
+                            <span class="option-letter">B</span>
+                            me
+                        </div>
+                        <div class="option" data-value="C">
+                            <span class="option-letter">C</span>
+                            my
+                        </div>
+                        <div class="option" data-value="D">
+                            <span class="option-letter">D</span>
+                            mine
+                        </div>
+                    </div>
+                </div>
+
+                <div class="question-box">
+                    <div class="question-text">
+                        <span class="question-number">23</span>
+                        I'll _______ my mother a birthday cake. (双宾语结构，强调购买行为)
+                    </div>
+                    <div class="options" data-question="23" data-answer="C">
+                        <div class="option" data-value="A">
+                            <span class="option-letter">A</span>
+                            send
+                        </div>
+                        <div class="option" data-value="B">
+                            <span class="option-letter">B</span>
+                            show
+                        </div>
+                        <div class="option" data-value="C">
+                            <span class="option-letter">C</span>
+                            buy
+                        </div>
+                        <div class="option" data-value="D">
+                            <span class="option-letter">D</span>
+                            tell
+                        </div>
+                    </div>
+                </div>
+
+                <div class="question-box">
+                    <div class="question-text">
+                        <span class="question-number">24</span>
+                        Please give this book _______ Tom.
+                    </div>
+                    <div class="options" data-question="24" data-answer="B">
+                        <div class="option" data-value="A">
+                            <span class="option-letter">A</span>
+                            for
+                        </div>
+                        <div class="option" data-value="B">
+                            <span class="option-letter">B</span>
+                            to
+                        </div>
+                        <div class="option" data-value="C">
+                            <span class="option-letter">C</span>
+                            with
+                        </div>
+                        <div class="option" data-value="D">
+                            <span class="option-letter">D</span>
+                            at
+                        </div>
+                    </div>
+                </div>
+
+                <div class="question-box">
+                    <div class="question-text">
+                        <span class="question-number">25</span>
+                        She _______ a new dress _______ her daughter.
+                    </div>
+                    <div class="options" data-question="25" data-answer="A">
+                        <div class="option" data-value="A">
+                            <span class="option-letter">A</span>
+                            bought; for
+                        </div>
+                        <div class="option" data-value="B">
+                            <span class="option-letter">B</span>
+                            bought; to
+                        </div>
+                        <div class="option" data-value="C">
+                            <span class="option-letter">C</span>
+                            gave; for
+                        </div>
+                        <div class="option" data-value="D">
+                            <span class="option-letter">D</span>
+                            made; to
+                        </div>
+                    </div>
+                </div>
+
+                <div class="question-box">
+                    <div class="question-text">
+                        <span class="question-number">26</span>
+                        根据记忆口诀，"买做煮"用for，"给展告"用to。选择正确的句子：
+                    </div>
+                    <div class="options" data-question="26" data-answer="C">
+                        <div class="option" data-value="A">
+                            <span class="option-letter">A</span>
+                            I'll make a cake to you.
+                        </div>
+                        <div class="option" data-value="B">
+                            <span class="option-letter">B</span>
+                            I'll buy a gift to my friend.
+                        </div>
+                        <div class="option" data-value="C">
+                            <span class="option-letter">C</span>
+                            I'll cook dinner for my family.
+                        </div>
+                        <div class="option" data-value="D">
+                            <span class="option-letter">D</span>
+                            I'll show my homework for teacher.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="question-box">
+                    <div class="question-text">
+                        <span class="question-number">27</span>
+                        My father _______ me a computer yesterday.
+                    </div>
+                    <div class="options" data-question="27" data-answer="D">
+                        <div class="option" data-value="A">
+                            <span class="option-letter">A</span>
+                            buy
+                        </div>
+                        <div class="option" data-value="B">
+                            <span class="option-letter">B</span>
+                            buys
+                        </div>
+                        <div class="option" data-value="C">
+                            <span class="option-letter">C</span>
+                            buying
+                        </div>
+                        <div class="option" data-value="D">
+                            <span class="option-letter">D</span>
+                            bought
+                        </div>
+                    </div>
+                </div>
+
+                <div class="question-box">
+                    <div class="question-text">
+                        <span class="question-number">28</span>
+                        根据知识分享，哪组动词都用for连接双宾语？
+                    </div>
+                    <div class="options" data-question="28" data-answer="A">
+                        <div class="option" data-value="A">
+                            <span class="option-letter">A</span>
+                            buy, make, cook
+                        </div>
+                        <div class="option" data-value="B">
+                            <span class="option-letter">B</span>
+                            give, show, tell
+                        </div>
+                        <div class="option" data-value="C">
+                            <span class="option-letter">C</span>
+                            buy, give, show
+                        </div>
+                        <div class="option" data-value="D">
+                            <span class="option-letter">D</span>
+                            make, give, tell
+                        </div>
+                    </div>
+                </div>
+
+                <div class="question-box">
+                    <div class="question-text">
+                        <span class="question-number">29</span>
+                        转换句子：I gave him a book. = I gave a book _______ him.
+                    </div>
+                    <div class="options" data-question="29" data-answer="B">
+                        <div class="option" data-value="A">
+                            <span class="option-letter">A</span>
+                            for
+                        </div>
+                        <div class="option" data-value="B">
+                            <span class="option-letter">B</span>
+                            to
+                        </div>
+                        <div class="option" data-value="C">
+                            <span class="option-letter">C</span>
+                            with
+                        </div>
+                        <div class="option" data-value="D">
+                            <span class="option-letter">D</span>
+                            at
+                        </div>
+                    </div>
+                </div>
+
+                <div class="question-box">
+                    <div class="question-text">
+                        <span class="question-number">30</span>
+                        选择错误的表达：
+                    </div>
+                    <div class="options" data-question="30" data-answer="D">
+                        <div class="option" data-value="A">
+                            <span class="option-letter">A</span>
+                            buy him a gift
+                        </div>
+                        <div class="option" data-value="B">
+                            <span class="option-letter">B</span>
+                            give her a book
+                        </div>
+                        <div class="option" data-value="C">
+                            <span class="option-letter">C</span>
+                            make them a cake
+                        </div>
+                        <div class="option" data-value="D">
+                            <span class="option-letter">D</span>
+                            cook a dinner to mother
+                        </div>
+                    </div>
+                </div>
+
+                <button class="check-button" onclick="checkSection(3)" id="checkBtn3">检查答案</button>
+                <div class="result-box" id="result3">
+                    <div class="result-title">📊 第三部分结果</div>
+                    <div class="result-content" id="result3-content"></div>
+                </div>
+                <div class="wrong-analysis" id="wrong3">
+                    <h5>🔍 错题解析</h5>
+                    <div class="wrong-analysis-content" id="wrong3-content"></div>
+                </div>
+            </div>
+
+            <!-- 第四部分：动词put的用法 (10题) -->
+            <div class="exercise-section">
+                <div class="section-header">
+                    <div class="section-number">4</div>
+                    <div class="section-title">动词put的用法</div>
+                    <div class="emoji">📦</div>
+                </div>
+
+                <div class="question-box">
+                    <div class="question-text">
+                        <span class="question-number">31</span>
+                        We put some pretty things _______ the Christmas tree. (装饰品挂在圣诞树上)
+                    </div>
+                    <div class="options" data-question="31" data-answer="A">
+                        <div class="option" data-value="A">
+                            <span class="option-letter">A</span>
+                            on
+                        </div>
+                        <div class="option" data-value="B">
+                            <span class="option-letter">B</span>
+                            in
+                        </div>
+                        <div class="option" data-value="C">
+                            <span class="option-letter">C</span>
+                            at
+                        </div>
+                        <div class="option" data-value="D">
+                            <span class="option-letter">D</span>
+                            under
+                        </div>
+                    </div>
+                </div>
+
+                <div class="question-box">
+                    <div class="question-text">
+                        <span class="question-number">32</span>
+                        It's cold. Please _______ your coat.
+                    </div>
+                    <div class="options" data-question="32" data-answer="B">
+                        <div class="option" data-value="A">
+                            <span class="option-letter">A</span>
+                            put off
+                        </div>
+                        <div class="option" data-value="B">
+                            <span class="option-letter">B</span>
+                            put on
+                        </div>
+                        <div class="option" data-value="C">
+                            <span class="option-letter">C</span>
+                            put away
+                        </div>
+                        <div class="option" data-value="D">
+                            <span class="option-letter">D</span>
+                            put down
+                        </div>
+                    </div>
+                </div>
+
+                <div class="question-box">
+                    <div class="question-text">
+                        <span class="question-number">33</span>
+                        Please put your toys _______. (收起来，整理好)
+                    </div>
+                    <div class="options" data-question="33" data-answer="C">
+                        <div class="option" data-value="A">
+                            <span class="option-letter">A</span>
+                            on
+                        </div>
+                        <div class="option" data-value="B">
+                            <span class="option-letter">B</span>
+                            down
+                        </div>
+                        <div class="option" data-value="C">
+                            <span class="option-letter">C</span>
+                            away
+                        </div>
+                        <div class="option" data-value="D">
+                            <span class="option-letter">D</span>
+                            up
+                        </div>
+                    </div>
+                </div>
+
+                <div class="question-box">
+                    <div class="question-text">
+                        <span class="question-number">34</span>
+                        Put the book _______ your bag.
+                    </div>
+                    <div class="options" data-question="34" data-answer="B">
+                        <div class="option" data-value="A">
+                            <span class="option-letter">A</span>
+                            on
+                        </div>
+                        <div class="option" data-value="B">
+                            <span class="option-letter">B</span>
+                            in
+                        </div>
+                        <div class="option" data-value="C">
+                            <span class="option-letter">C</span>
+                            at
+                        </div>
+                        <div class="option" data-value="D">
+                            <span class="option-letter">D</span>
+                            for
+                        </div>
+                    </div>
+                </div>
+
+                <div class="question-box">
+                    <div class="question-text">
+                        <span class="question-number">35</span>
+                        _______ your hand if you know the answer.
+                    </div>
+                    <div class="options" data-question="35" data-answer="D">
+                        <div class="option" data-value="A">
+                            <span class="option-letter">A</span>
+                            Put down
+                        </div>
+                        <div class="option" data-value="B">
+                            <span class="option-letter">B</span>
+                            Put on
+                        </div>
+                        <div class="option" data-value="C">
+                            <span class="option-letter">C</span>
+                            Put away
+                        </div>
+                        <div class="option" data-value="D">
+                            <span class="option-letter">D</span>
+                            Put up
+                        </div>
+                    </div>
+                </div>
+
+                <div class="question-box">
+                    <div class="question-text">
+                        <span class="question-number">36</span>
+                        The teacher asked us to put the boxes _______ the classroom. (搬进教室)
+                    </div>
+                    <div class="options" data-question="36" data-answer="C">
+                        <div class="option" data-value="A">
+                            <span class="option-letter">A</span>
+                            on
+                        </div>
+                        <div class="option" data-value="B">
+                            <span class="option-letter">B</span>
+                            at
+                        </div>
+                        <div class="option" data-value="C">
+                            <span class="option-letter">C</span>
+                            into
+                        </div>
+                        <div class="option" data-value="D">
+                            <span class="option-letter">D</span>
+                            under
+                        </div>
+                    </div>
+                </div>
+
+                <div class="question-box">
+                    <div class="question-text">
+                        <span class="question-number">37</span>
+                        根据知识分享"代词夹中间，名词两边都可以"规律，选择正确的表达：
+                    </div>
+                    <div class="options" data-question="37" data-answer="D">
+                        <div class="option" data-value="A">
+                            <span class="option-letter">A</span>
+                            Put it on.
+                        </div>
+                        <div class="option" data-value="B">
+                            <span class="option-letter">B</span>
+                            Put on it.
+                        </div>
+                        <div class="option" data-value="C">
+                            <span class="option-letter">C</span>
+                            Put them down.
+                        </div>
+                        <div class="option" data-value="D">
+                            <span class="option-letter">D</span>
+                            Both A and C
+                        </div>
+                    </div>
+                </div>
+
+                <div class="question-box">
+                    <div class="question-text">
+                        <span class="question-number">38</span>
+                        Please _______ your pen. Class is over.
+                    </div>
+                    <div class="options" data-question="38" data-answer="B">
+                        <div class="option" data-value="A">
+                            <span class="option-letter">A</span>
+                            put up
+                        </div>
+                        <div class="option" data-value="B">
+                            <span class="option-letter">B</span>
+                            put down
+                        </div>
+                        <div class="option" data-value="C">
+                            <span class="option-letter">C</span>
+                            put on
+                        </div>
+                        <div class="option" data-value="D">
+                            <span class="option-letter">D</span>
+                            put off
+                        </div>
+                    </div>
+                </div>
+
+                <div class="question-box">
+                    <div class="question-text">
+                        <span class="question-number">39</span>
+                        Where did you _______ your keys?
+                    </div>
+                    <div class="options" data-question="39" data-answer="A">
+                        <div class="option" data-value="A">
+                            <span class="option-letter">A</span>
+                            put
+                        </div>
+                        <div class="option" data-value="B">
+                            <span class="option-letter">B</span>
+                            put on
+                        </div>
+                        <div class="option" data-value="C">
+                            <span class="option-letter">C</span>
+                            put up
+                        </div>
+                        <div class="option" data-value="D">
+                            <span class="option-letter">D</span>
+                            put off
+                        </div>
+                    </div>
+                </div>
+
+                <div class="question-box">
+                    <div class="question-text">
+                        <span class="question-number">40</span>
+                        选择正确的代词位置：Put _______ away. (them)
+                    </div>
+                    <div class="options" data-question="40" data-answer="A">
+                        <div class="option" data-value="A">
+                            <span class="option-letter">A</span>
+                            them
+                        </div>
+                        <div class="option" data-value="B">
+                            <span class="option-letter">B</span>
+                            away them
+                        </div>
+                        <div class="option" data-value="C">
+                            <span class="option-letter">C</span>
+                            them away
+                        </div>
+                        <div class="option" data-value="D">
+                            <span class="option-letter">D</span>
+                            away them away
+                        </div>
+                    </div>
+                </div>
+
+                <button class="check-button" onclick="checkSection(4)" id="checkBtn4">检查答案</button>
+                <div class="result-box" id="result4">
+                    <div class="result-title">📊 第四部分结果</div>
+                    <div class="result-content" id="result4-content"></div>
+                </div>
+                <div class="wrong-analysis" id="wrong4">
+                    <h5>🔍 错题解析</h5>
+                    <div class="wrong-analysis-content" id="wrong4-content"></div>
+                </div>
+            </div>
+
+            <!-- 第五部分：What's wrong with...?句型 (10题) -->
+            <div class="exercise-section">
+                <div class="section-header">
+                    <div class="section-number">5</div>
+                    <div class="section-title">What's wrong with...?句型</div>
+                    <div class="emoji">❓</div>
+                </div>
+
+                <div class="question-box">
+                    <div class="question-text">
+                        <span class="question-number">41</span>
+                        What's wrong _______ him?
+                    </div>
+                    <div class="options" data-question="41" data-answer="A">
+                        <div class="option" data-value="A">
+                            <span class="option-letter">A</span>
+                            with
+                        </div>
+                        <div class="option" data-value="B">
+                            <span class="option-letter">B</span>
+                            about
+                        </div>
+                        <div class="option" data-value="C">
+                            <span class="option-letter">C</span>
+                            of
+                        </div>
+                        <div class="option" data-value="D">
+                            <span class="option-letter">D</span>
+                            for
+                        </div>
+                    </div>
+                </div>
+
+                <div class="question-box">
+                    <div class="question-text">
+                        <span class="question-number">42</span>
+                        选择正确的代词形式：What's wrong with _______?
+                    </div>
+                    <div class="options" data-question="42" data-answer="B">
+                        <div class="option" data-value="A">
+                            <span class="option-letter">A</span>
+                            she
+                        </div>
+                        <div class="option" data-value="B">
+                            <span class="option-letter">B</span>
+                            her
+                        </div>
+                        <div class="option" data-value="C">
+                            <span class="option-letter">C</span>
+                            hers
+                        </div>
+                        <div class="option" data-value="D">
+                            <span class="option-letter">D</span>
+                            herself
+                        </div>
+                    </div>
+                </div>
+
+                <div class="question-box">
+                    <div class="question-text">
+                        <span class="question-number">43</span>
+                        下面哪个是最标准的同义句？(标准教学用法)
+                    </div>
+                    <div class="options" data-question="43" data-answer="C">
+                        <div class="option" data-value="A">
+                            <span class="option-letter">A</span>
+                            What's wrong with = What's up with (口语化)
+                        </div>
+                        <div class="option" data-value="B">
+                            <span class="option-letter">B</span>
+                            What's wrong with = What happened to (强调事件)
+                        </div>
+                        <div class="option" data-value="C">
+                            <span class="option-letter">C</span>
+                            What's wrong with = What's the matter with (标准同义)
+                        </div>
+                        <div class="option" data-value="D">
+                            <span class="option-letter">D</span>
+                            What's wrong with = How are you feeling (感受询问)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="question-box">
+                    <div class="question-text">
+                        <span class="question-number">44</span>
+                        -- What's wrong with Tom? -- _______
+                    </div>
+                    <div class="options" data-question="44" data-answer="A">
+                        <div class="option" data-value="A">
+                            <span class="option-letter">A</span>
+                            He is ill.
+                        </div>
+                        <div class="option" data-value="B">
+                            <span class="option-letter">B</span>
+                            He is ten.
+                        </div>
+                        <div class="option" data-value="C">
+                            <span class="option-letter">C</span>
+                            He likes apples.
+                        </div>
+                        <div class="option" data-value="D">
+                            <span class="option-letter">D</span>
+                            He is a student.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="question-box">
+                    <div class="question-text">
+                        <span class="question-number">45</span>
+                        What's wrong with _______? (他们)
+                    </div>
+                    <div class="options" data-question="45" data-answer="D">
+                        <div class="option" data-value="A">
+                            <span class="option-letter">A</span>
+                            they
+                        </div>
+                        <div class="option" data-value="B">
+                            <span class="option-letter">B</span>
+                            their
+                        </div>
+                        <div class="option" data-value="C">
+                            <span class="option-letter">C</span>
+                            theirs
+                        </div>
+                        <div class="option" data-value="D">
+                            <span class="option-letter">D</span>
+                            them
+                        </div>
+                    </div>
+                </div>
+
+                <div class="question-box">
+                    <div class="question-text">
+                        <span class="question-number">46</span>
+                        完成句子：What's _______ with this machine? (根据语法结构，只有一个词能正确填入)
+                    </div>
+                    <div class="options" data-question="46" data-answer="A">
+                        <div class="option" data-value="A">
+                            <span class="option-letter">A</span>
+                            wrong
+                        </div>
+                        <div class="option" data-value="B">
+                            <span class="option-letter">B</span>
+                            happened
+                        </div>
+                        <div class="option" data-value="C">
+                            <span class="option-letter">C</span>
+                            going
+                        </div>
+                        <div class="option" data-value="D">
+                            <span class="option-letter">D</span>
+                            matter
+                        </div>
+                    </div>
+                </div>
+
+                <div class="question-box">
+                    <div class="question-text">
+                        <span class="question-number">47</span>
+                        选择正确的问句：
+                    </div>
+                    <div class="options" data-question="47" data-answer="B">
+                        <div class="option" data-value="A">
+                            <span class="option-letter">A</span>
+                            What wrong with you?
+                        </div>
+                        <div class="option" data-value="B">
+                            <span class="option-letter">B</span>
+                            What's wrong with you?
+                        </div>
+                        <div class="option" data-value="C">
+                            <span class="option-letter">C</span>
+                            What's wrong you?
+                        </div>
+                        <div class="option" data-value="D">
+                            <span class="option-letter">D</span>
+                            What wrong you?
+                        </div>
+                    </div>
+                </div>
+
+                <div class="question-box">
+                    <div class="question-text">
+                        <span class="question-number">48</span>
+                        选择语法错误的句子：
+                    </div>
+                    <div class="options" data-question="48" data-answer="D">
+                        <div class="option" data-value="A">
+                            <span class="option-letter">A</span>
+                            What's wrong with him?
+                        </div>
+                        <div class="option" data-value="B">
+                            <span class="option-letter">B</span>
+                            What's the matter with her?
+                        </div>
+                        <div class="option" data-value="C">
+                            <span class="option-letter">C</span>
+                            What's the problem with it?
+                        </div>
+                        <div class="option" data-value="D">
+                            <span class="option-letter">D</span>
+                            What's wrong with they?
+                        </div>
+                    </div>
+                </div>
+
+                <div class="question-box">
+                    <div class="question-text">
+                        <span class="question-number">49</span>
+                        You look sad. What's wrong _______ you?
+                    </div>
+                    <div class="options" data-question="49" data-answer="A">
+                        <div class="option" data-value="A">
+                            <span class="option-letter">A</span>
+                            with
+                        </div>
+                        <div class="option" data-value="B">
+                            <span class="option-letter">B</span>
+                            about
+                        </div>
+                        <div class="option" data-value="C">
+                            <span class="option-letter">C</span>
+                            of
+                        </div>
+                        <div class="option" data-value="D">
+                            <span class="option-letter">D</span>
+                            for
+                        </div>
+                    </div>
+                </div>
+
+                <div class="question-box">
+                    <div class="question-text">
+                        <span class="question-number">50</span>
+                        选择代词宾格使用错误的句子：
+                    </div>
+                    <div class="options" data-question="50" data-answer="C">
+                        <div class="option" data-value="A">
+                            <span class="option-letter">A</span>
+                            What's wrong with him?
+                        </div>
+                        <div class="option" data-value="B">
+                            <span class="option-letter">B</span>
+                            What's the matter with us?
+                        </div>
+                        <div class="option" data-value="C">
+                            <span class="option-letter">C</span>
+                            What's the problem with he?
+                        </div>
+                        <div class="option" data-value="D">
+                            <span class="option-letter">D</span>
+                            What's wrong with them?
+                        </div>
+                    </div>
+                </div>
+
+                <button class="check-button" onclick="checkSection(5)" id="checkBtn5">检查答案</button>
+                <div class="result-box" id="result5">
+                    <div class="result-title">📊 第五部分结果</div>
+                    <div class="result-content" id="result5-content"></div>
+                </div>
+                <div class="wrong-analysis" id="wrong5">
+                    <h5>🔍 错题解析</h5>
+                    <div class="wrong-analysis-content" id="wrong5-content"></div>
+                </div>
+            </div>
+
+            <!-- 综合测试按钮 -->
+            <div style="text-align: center; margin: 30px 0;">
+                <button class="check-button" onclick="showFinalScore()" style="font-size: 18px; padding: 15px 30px;">
+                    📊 查看总成绩
+                </button>
+            </div>
+
+            <!-- 总成绩显示 -->
+            <div class="final-score" id="finalScore" style="display: none;">
+                <h3>🎉 练习完成！</h3>
+                <div class="score" id="totalScore">0/50</div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill" style="width: 0%">0%</div>
+                </div>
+                <p id="scoreComment">继续努力，你一定可以做得更好！</p>
+            </div>
+
+            <!-- 知识点总结 -->
+            <div class="explanation">
+                <strong>💡 Unit8知识点总结：</strong><br>
+                1. <strong>时间顺序副词：</strong>推荐按first → next → then → finally顺序使用最自然，通常放在句首加逗号<br>
+                2. <strong>系动词look：</strong>表示"看上去"，后接形容词作表语。小窍门：有小尾巴(at/for)是实义动词，没有就是系动词<br>
+                3. <strong>buy双宾语：</strong>记忆口诀："买做煮"用for，"给展告"用to<br>
+                4. <strong>put的用法：</strong>表示"放，摆放"。代词夹中间，名词两边都可以。注意：圣诞装饰品是人工挂在树上用on<br>
+                5. <strong>What's wrong with...?：</strong>询问问题的句型，后接代词宾格。最标准同义句：What's the matter with...?
+            </div>
+        </div>
+
+        <div class="footer">
+            Eva老师👩‍🏫伴步英语
+        </div>
+    </div>
+
+    <script>
+        // 全局变量
+        let startTime = new Date();
+        let totalQuestions = 50;
+        let sectionScores = [0, 0, 0, 0, 0];
+        let checkedSections = new Set();
+        let wrongQuestions = [];
+
+        // 错题解析数据
+        const explanations = {
+            1: "表示第一步用First，First, we buy a Christmas tree. 首先，我们买一棵圣诞树。",
+            2: "表示第二步用Next，Next, we put some pretty things on the tree. 接下来，我们在树上放一些漂亮的东西。",
+            3: "表示接着的步骤用Then，Then, we put a stocking on our bed. 然后，我们在床上放一只长筒袜。",
+            4: "表示最后一步用Finally，Finally, Christmas comes! 最后，圣诞节到了！",
+            5: "根据知识分享，推荐的顺序是first → next → then → finally，这样最自然流畅",
+            6: "First表示首先，Then表示然后。注释中说明了first后也可以用then，但如有next时，next一般用在then之前。",
+            7: "First放在句首时，后面必须加逗号：First, we buy a tree.",
+            8: "描述步骤的第一步用First，First, we need some flour. 首先，我们需要一些面粉。",
+            9: "根据知识分享，这四个顺序副词通常放在句首，一般要加逗号",
+            10: "在回答'How do you prepare for Christmas?'时，应该用First来开始描述步骤",
+            11: "Mr Turkey是第三人称单数，用looks，Mr Turkey looks sad. 火鸡先生看上去很难过。",
+            12: "The children是复数，用look，The children look happy. 孩子们看上去很开心。",
+            13: "系动词look后接形容词，不能接副词，She looks beautiful. 她看起来很漂亮。",
+            14: "根据知识分享的小窍门：没有小尾巴(介词)的是系动词，有小尾巴的是实义动词",
+            15: "now提示现在进行时，look at是实义动词，He is looking at the blackboard now.",
+            16: "音乐用听觉，sound + 形容词，The music sounds nice. 音乐听起来很好听。",
+            17: "These flowers是复数，用look，These flowers look beautiful.",
+            18: "look for是实义动词短语，表示寻找，现在进行时用is looking for",
+            19: "药用味觉，taste + 形容词，The medicine tastes bitter. 药尝起来很苦。",
+            20: "You是第二人称，用look，You look worried. 你看起来很担心。",
+            21: "buy用介词for，表示'为了某人'，We buy presents for our family.",
+            22: "Buy a cap for me = Buy me a cap，代词宾格me",
+            23: "题目强调双宾语结构和购买行为，buy是唯一符合要求的动词",
+            24: "give用介词to，Please give this book to Tom. 请把这本书给汤姆。",
+            25: "buy用for，She bought a new dress for her daughter.",
+            26: "根据记忆口诀：'买做煮'用for，'给展告'用to。cook用for是正确的",
+            27: "yesterday表示过去时，用bought，My father bought me a computer yesterday.",
+            28: "根据知识分享，buy/make/cook都用for连接双宾语，表示'为了某人'",
+            29: "give的双宾语转换：give sb. sth. = give sth. to sb.",
+            30: "cook应该用for，不用to：cook dinner for mother",
+            31: "装饰品挂在圣诞树上用on，这是人工挂上去的，不同于in the tree(外来物在树上)",
+            32: "put on表示'穿上'，It's cold. Please put on your coat.",
+            33: "put away表示'收起来，整理好'，Please put your toys away.",
+            34: "put...in...表示'把...放进...里面'，put the book in your bag",
+            35: "put up表示'举起'，Put up your hand. 举起你的手。",
+            36: "题目明确'搬进教室'，用into表示方向，把箱子搬进教室里",
+            37: "根据'代词夹中间，名词两边都可以'规律，Put it on和Put them down都正确",
+            38: "put down表示'放下'，Please put down your pen. 请放下你的笔。",
+            39: "询问位置用put，Where did you put your keys? 你把钥匙放哪里了？",
+            40: "代词必须放在中间：Put them away",
+            41: "固定搭配：What's wrong with...? 用介词with",
+            42: "介词with后接代词宾格her，What's wrong with her?",
+            43: "题目要求最标准的同义句，What's wrong with = What's the matter with是最标准的教学用法",
+            44: "回答What's wrong时说明问题：He is ill. 他生病了。",
+            45: "代词宾格them，What's wrong with them? 他们怎么了？",
+            46: "根据语法结构，只有wrong能与What's...with构成正确的固定搭配",
+            47: "正确形式：What's wrong with you? 带缩写和介词with",
+            48: "they是主格，应该用宾格them：What's wrong with them?",
+            49: "What's wrong with you? 用介词with，你怎么了？",
+            50: "he是主格，应该用宾格him：What's the problem with him?"
+        };
+
+        // 计时器
+        function updateTimer() {
+            const now = new Date();
+            const elapsed = Math.floor((now - startTime) / 1000);
+            const minutes = Math.floor(elapsed / 60);
+            const seconds = elapsed % 60;
+            document.getElementById('timer').textContent = 
+                `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        }
+
+        setInterval(updateTimer, 1000);
+
+        // 选择题点击事件
+        document.querySelectorAll('.option').forEach(option => {
+            option.addEventListener('click', function() {
+                const parent = this.closest('.options');
+                const sectionNum = parseInt(parent.closest('.exercise-section').querySelector('.section-number').textContent);
+                
+                // 如果该部分已经检查过答案，不允许修改
+                if (checkedSections.has(sectionNum)) {
+                    return;
+                }
+                
+                parent.querySelectorAll('.option').forEach(opt => opt.classList.remove('selected'));
+                this.classList.add('selected');
+            });
+        });
+
+        // 检查单个部分答案
+        function checkSection(sectionNum) {
+            if (checkedSections.has(sectionNum)) {
+                return; // 已经检查过，不重复检查
+            }
+            
+            let sectionCorrect = 0;
+            let sectionTotal = 10;
+            let startQuestion = (sectionNum - 1) * 10 + 1;
+            let endQuestion = sectionNum * 10;
+            let sectionWrong = [];
+            
+            // 检查该部分的所有题目
+            for (let i = startQuestion; i <= endQuestion; i++) {
+                const options = document.querySelector(`[data-question="${i}"]`);
+                if (!options) continue;
+                
+                const correctAnswer = options.dataset.answer;
+                const selected = options.querySelector('.option.selected');
+                
+                if (selected) {
+                    const userAnswer = selected.dataset.value;
+                    if (userAnswer === correctAnswer) {
+                        selected.classList.add('correct');
+                        sectionCorrect++;
+                    } else {
+                        selected.classList.add('incorrect');
+                        // 显示正确答案
+                        const correctOption = options.querySelector(`[data-value="${correctAnswer}"]`);
+                        if (correctOption) {
+                            correctOption.classList.add('correct');
+                        }
+                        // 记录错题
+                        sectionWrong.push({
+                            questionNum: i,
+                            userAnswer: userAnswer,
+                            correctAnswer: correctAnswer,
+                            questionText: options.closest('.question-box').querySelector('.question-text').textContent.trim()
+                        });
+                    }
+                } else {
+                    // 未选择，显示正确答案并标记为遗漏
+                    const correctOption = options.querySelector(`[data-value="${correctAnswer}"]`);
+                    if (correctOption) {
+                        correctOption.classList.add('missed');
+                    }
+                    // 记录错题（未作答）
+                    sectionWrong.push({
+                        questionNum: i,
+                        userAnswer: '未作答',
+                        correctAnswer: correctAnswer,
+                        questionText: options.closest('.question-box').querySelector('.question-text').textContent.trim()
+                    });
+                }
+            }
+            
+            // 禁用该部分的所有选项和按钮
+            const sectionElement = document.querySelector(`.exercise-section:nth-child(${sectionNum + 1})`);
+            sectionElement.querySelectorAll('.option').forEach(option => {
+                option.style.pointerEvents = 'none';
+            });
+            document.getElementById(`checkBtn${sectionNum}`).disabled = true;
+            
+            sectionScores[sectionNum - 1] = sectionCorrect;
+            checkedSections.add(sectionNum);
+            wrongQuestions = wrongQuestions.concat(sectionWrong);
+            
+            showSectionResult(sectionNum, sectionCorrect, sectionTotal);
+            if (sectionWrong.length > 0) {
+                showWrongAnalysis(sectionNum, sectionWrong);
+            }
+        }
+
+        // 显示单元结果
+        function showSectionResult(sectionNum, correct, total) {
+            const resultBox = document.getElementById(`result${sectionNum}`);
+            const resultContent = document.getElementById(`result${sectionNum}-content`);
+            
+            const percentage = Math.round((correct / total) * 100);
+            let comment = '';
+            
+            if (percentage === 100) comment = '🎉 完美！全部正确！';
+            else if (percentage >= 90) comment = '🌟 优秀！只有少数错误！';
+            else if (percentage >= 80) comment = '👍 很好！大部分都对了！';
+            else if (percentage >= 70) comment = '👌 不错！继续努力！';
+            else if (percentage >= 60) comment = '💪 及格了！加油！';
+            else comment = '📚 需要更多练习！不要放弃！';
+            
+            resultContent.innerHTML = `
+                <div class="score-display">
+                    <div class="score-number">${correct}/${total}</div>
+                    <div class="score-text">${comment} 正确率：${percentage}%</div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: ${percentage}%">${percentage}%</div>
+                </div>
+            `;
+            
+            resultBox.classList.add('show');
+        }
+
+        // 显示错题解析
+        function showWrongAnalysis(sectionNum, wrongList) {
+            const wrongBox = document.getElementById(`wrong${sectionNum}`);
+            const wrongContent = document.getElementById(`wrong${sectionNum}-content`);
+            
+            if (wrongList.length === 0) {
+                wrongBox.style.display = 'none';
+                return;
+            }
+            
+            let wrongHtml = '';
+            wrongList.forEach(wrong => {
+                const getOptionText = (questionNum, optionValue) => {
+                    const options = document.querySelector(`[data-question="${questionNum}"]`);
+                    if (!options) return optionValue;
+                    const option = options.querySelector(`[data-value="${optionValue}"]`);
+                    return option ? option.textContent.replace(/^[A-D]\s*/, '') : optionValue;
+                };
+                
+                wrongHtml += `
+                    <div class="wrong-item">
+                        <div class="wrong-question">第${wrong.questionNum}题: ${wrong.questionText.replace(/^\d+\s*/, '')}</div>
+                        <div class="wrong-answers">
+                            你的答案: <span class="user-answer">${wrong.userAnswer === '未作答' ? '未作答' : wrong.userAnswer + '. ' + getOptionText(wrong.questionNum, wrong.userAnswer)}</span><br>
+                            正确答案: <span class="correct-answer">${wrong.correctAnswer}. ${getOptionText(wrong.questionNum, wrong.correctAnswer)}</span>
+                        </div>
+                        <div class="answer-explanation">
+                            💡 <strong>解析：</strong>${explanations[wrong.questionNum] || '请复习相关语法知识点。'}
+                        </div>
+                    </div>
+                `;
+            });
+            
+            wrongContent.innerHTML = wrongHtml;
+            wrongBox.classList.add('show');
+        }
+
+        // 显示最终成绩
+        function showFinalScore() {
+            const totalCorrect = sectionScores.reduce((sum, score) => sum + score, 0);
+            const percentage = Math.round((totalCorrect / totalQuestions) * 100);
+            
+            let comment = '';
+            if (percentage === 100) comment = '🎉 完美！你已经完全掌握了Unit8的所有知识点！';
+            else if (percentage >= 90) comment = '🌟 优秀！你的英语基础很扎实！';
+            else if (percentage >= 80) comment = '👍 很好！大部分知识点都掌握了！';
+            else if (percentage >= 70) comment = '👌 不错！还有进步空间，继续加油！';
+            else if (percentage >= 60) comment = '💪 及格了！要多练习巩固知识点！';
+            else comment = '📚 需要认真复习，不要气馁，慢慢来！';
+            
+            document.getElementById('totalScore').textContent = `${totalCorrect}/${totalQuestions}`;
+            document.getElementById('progressFill').style.width = `${percentage}%`;
+            document.getElementById('progressFill').textContent = `${percentage}%`;
+            document.getElementById('scoreComment').textContent = comment;
+            document.getElementById('finalScore').style.display = 'block';
+            
+            // 滚动到成绩显示区域
+            document.getElementById('finalScore').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+
+
+</body></html>

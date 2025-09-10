@@ -1,0 +1,2293 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="x-poe-datastore-behavior" content="local_only"><meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' data: blob: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://code.jquery.com https://unpkg.com https://d3js.org https://threejs.org https://cdn.plot.ly https://stackpath.bootstrapcdn.com https://maps.googleapis.com https://cdn.tailwindcss.com https://ajax.googleapis.com https://kit.fontawesome.com https://cdn.datatables.net https://maxcdn.bootstrapcdn.com https://code.highcharts.com https://tako-static-assets-production.s3.amazonaws.com https://www.youtube.com https://fonts.googleapis.com https://fonts.gstatic.com https://pfst.cf2.poecdn.net https://puc.poecdn.net https://i.imgur.com https://wikimedia.org https://*.icons8.com https://*.giphy.com https://picsum.photos https://images.unsplash.com; frame-src 'self' https://www.youtube.com https://trytako.com; child-src 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests; block-all-mixed-content;">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eva老师👩‍🏫伴步英语-江苏校内-译林英语-五上-Unit7必学语法点</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            background: linear-gradient(135deg, #6d8bc3 0%, #c0db82 100%);
+            padding: 15px;
+            min-height: 100vh;
+            line-height: 1.6;
+            position: relative;
+        }
+
+        /* 水印样式 */
+        .watermark {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            user-select: none;
+            z-index: 999;
+            overflow: hidden;
+        }
+
+        .watermark::before {
+            content: "Eva老师👩‍🏫伴步英语";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-45deg);
+            font-size: 32px;
+            color: rgba(109, 139, 195, 0.12);
+            font-weight: bold;
+            white-space: nowrap;
+            letter-spacing: 6px;
+            text-shadow: 0 0 1px rgba(109, 139, 195, 0.08);
+        }
+
+        .watermark::after {
+            content: "Eva老师👩‍🏫伴步英语";
+            position: absolute;
+            top: 25%;
+            left: 25%;
+            transform: translate(-50%, -50%) rotate(-45deg);
+            font-size: 24px;
+            color: rgba(192, 219, 130, 0.08);
+            font-weight: bold;
+            white-space: nowrap;
+            letter-spacing: 4px;
+        }
+
+        .card-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(236, 236, 236, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            overflow: hidden;
+            min-height: 95vh;
+            position: relative;
+            z-index: 10;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #6d8bc3, #5a7ab8);
+            color: white;
+            text-align: center;
+            padding: 25px 20px;
+            position: relative;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .header .subtitle {
+            font-size: 16px;
+            opacity: 0.9;
+            margin-bottom: 5px;
+        }
+
+        .highlight-unit {
+            background: #FFE266;
+            color: #333;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        .header .teacher-info {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        .decorative-star {
+            position: absolute;
+            font-size: 20px;
+            animation: twinkle 2s infinite;
+        }
+
+        .star1 { top: 10px; left: 20px; }
+        .star2 { top: 15px; right: 30px; animation-delay: 0.5s; }
+        .star3 { bottom: 10px; left: 40px; animation-delay: 1s; }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.5; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.2); }
+        }
+
+        /* 目录导航样式 */
+        .table-of-contents {
+            background: rgba(255, 255, 255, 0.98);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 20px 0 20px;
+            border-left: 5px solid #6d8bc3;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .toc-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .toc-icon {
+            background: #6d8bc3;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            margin-right: 12px;
+        }
+
+        .toc-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .toc-item {
+            margin: 8px 0;
+            padding: 12px 15px;
+            background: #f8f9ff;
+            border-radius: 8px;
+            border-left: 3px solid #FFE266;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .toc-item:hover {
+            background: #e8f2ff;
+            border-left-color: #6d8bc3;
+            transform: translateX(5px);
+        }
+
+        .toc-item:nth-child(2n) {
+            border-left-color: #c0db82;
+        }
+
+        .toc-item:nth-child(3n) {
+            border-left-color: #6d8bc3;
+        }
+
+        .toc-link {
+            text-decoration: none;
+            color: #333;
+            font-size: 14px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .toc-number {
+            background: #FFE266;
+            color: #333;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .toc-title {
+            flex: 1;
+        }
+
+        .toc-emoji {
+            font-size: 16px;
+        }
+
+        .content {
+            padding: 20px;
+            max-height: calc(100vh - 200px);
+            overflow-y: auto;
+        }
+
+        .grammar-point {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 5px solid #FFE266;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+            position: relative;
+            scroll-margin-top: 20px;
+        }
+
+        .grammar-point:hover {
+            transform: translateY(-2px);
+        }
+
+        .grammar-point:nth-child(2n) {
+            border-left-color: #c0db82;
+        }
+
+        .grammar-point:nth-child(3n) {
+            border-left-color: #6d8bc3;
+        }
+
+        .point-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .point-number {
+            background: #FFE266;
+            color: #333;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 12px;
+            font-size: 14px;
+        }
+
+        .point-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            flex: 1;
+        }
+
+        .emoji {
+            font-size: 20px;
+            margin-left: 8px;
+        }
+
+        .point-content {
+            color: #555;
+            line-height: 1.6;
+            font-size: 14px;
+        }
+
+        .core-concept {
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+
+        .key-points {
+            background: #f8f9ff;
+            border-radius: 10px;
+            padding: 12px;
+            margin: 12px 0;
+            border: 2px dashed #6d8bc3;
+        }
+
+        .key-points h4 {
+            color: #6d8bc3;
+            font-size: 14px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .key-points ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .key-points li {
+            padding: 8px 0;
+            position: relative;
+            padding-left: 18px;
+            border-bottom: 1px dotted #e0e0e0;
+        }
+
+        .key-points li:last-child {
+            border-bottom: none;
+        }
+
+        .key-points li:before {
+            content: "✨";
+            position: absolute;
+            left: 0;
+            font-size: 12px;
+        }
+
+        .key-point-examples {
+            font-size: 12px;
+            color: #777;
+            margin-top: 4px;
+            font-style: italic;
+            padding-left: 10px;
+            border-left: 2px solid #FFE266;
+        }
+
+        .structure-box {
+            background: linear-gradient(135deg, #c0db82, #d4e89a);
+            border-radius: 10px;
+            padding: 12px;
+            margin: 12px 0;
+            border: 1px solid #a8c26a;
+        }
+
+        .structure-box h4 {
+            color: #5a7a2d;
+            font-size: 14px;
+            margin-bottom: 8px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .structure-item {
+            background: white;
+            border-radius: 6px;
+            padding: 8px;
+            margin: 6px 0;
+            border-left: 3px solid #6d8bc3;
+            font-size: 13px;
+            color: #333;
+        }
+
+        .structure-examples {
+            font-size: 12px;
+            color: #666;
+            margin-top: 4px;
+            font-style: italic;
+        }
+
+        .detail-box {
+            background: #f0f8ff;
+            border: 2px solid #6d8bc3;
+            border-radius: 8px;
+            padding: 12px;
+            margin: 10px 0;
+        }
+
+        .detail-box h5 {
+            color: #6d8bc3;
+            font-size: 13px;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        .detail-item {
+            margin: 6px 0;
+            padding: 6px;
+            background: white;
+            border-radius: 4px;
+            border-left: 2px solid #6d8bc3;
+            font-size: 12px;
+        }
+
+        .detail-item strong {
+            color: #6d8bc3;
+        }
+
+        .example-box {
+            background: linear-gradient(135deg, #FFE266, #fff5a0);
+            border-radius: 10px;
+            padding: 12px;
+            margin: 12px 0;
+            border: 1px solid #e6d000;
+        }
+
+        .example-box h4 {
+            color: #b8860b;
+            font-size: 13px;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .example {
+            font-style: italic;
+            color: #666;
+            margin: 5px 0;
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .example-emoji {
+            font-size: 16px;
+        }
+
+        .highlight {
+            background: #e8f4f8;
+            padding: 1px 6px;
+            border-radius: 3px;
+            color: #2c6b8a;
+            font-weight: bold;
+            border: 1px solid #a8d5e5;
+        }
+
+        .highlight-question {
+            background: #f4e8c1;
+            padding: 1px 4px;
+            border-radius: 3px;
+            color: #8b5a3c;
+            font-weight: bold;
+            border: 1px solid #d4c19c;
+        }
+
+        .connection-box {
+            background: linear-gradient(135deg, #c0db82, #d4e89a);
+            border-radius: 8px;
+            padding: 10px;
+            margin-top: 12px;
+            border: 1px solid #a8c26a;
+        }
+
+        .connection-box h4 {
+            color: #5a7a2d;
+            font-size: 12px;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        .connection-text {
+            font-size: 12px;
+            color: #4a6024;
+            line-height: 1.4;
+        }
+
+        .comparison-table {
+            background: white;
+            border-radius: 10px;
+            padding: 12px;
+            margin: 12px 0;
+            border: 2px solid #6d8bc3;
+        }
+
+        .comparison-table h5 {
+            color: #6d8bc3;
+            font-size: 14px;
+            margin-bottom: 10px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 6px;
+            margin-bottom: 10px;
+        }
+
+        .comparison-header {
+            background: #6d8bc3;
+            color: white;
+            padding: 6px;
+            border-radius: 4px;
+            text-align: center;
+            font-size: 11px;
+            font-weight: bold;
+        }
+
+        .comparison-cell {
+            background: #f5f5f5;
+            padding: 6px;
+            border-radius: 4px;
+            text-align: center;
+            font-size: 10px;
+            border: 1px solid #e0e0e0;
+            line-height: 1.3;
+        }
+
+        .eva-tip {
+            background: linear-gradient(135deg, #d8b3e0, #e4c7e7);
+            border-radius: 10px;
+            padding: 12px;
+            margin: 12px 0;
+            border: 2px solid #c8a2c8;
+        }
+
+        .eva-tip h5 {
+            color: #8e44ad;
+            font-size: 13px;
+            margin-bottom: 6px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .eva-tip p {
+            color: #6a4c7a;
+            font-size: 12px;
+            line-height: 1.5;
+            font-style: italic;
+        }
+
+        .footer {
+            background: linear-gradient(135deg, #6d8bc3, #5a7ab8);
+            color: white;
+            text-align: center;
+            padding: 12px 20px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .usage-note {
+            background: #fff3cd;
+            border: 2px solid #FFE266;
+            border-radius: 6px;
+            padding: 8px;
+            margin: 8px 0;
+        }
+
+        .usage-note h6 {
+            color: #856404;
+            font-size: 11px;
+            margin-bottom: 3px;
+            font-weight: bold;
+        }
+
+        .usage-note p {
+            font-size: 10px;
+            color: #856404;
+            line-height: 1.3;
+        }
+
+        .weekend-box {
+            background: #e6f7ff;
+            border: 2px solid #1890ff;
+            border-radius: 8px;
+            padding: 12px;
+            margin: 10px 0;
+        }
+
+        .weekend-box h5 {
+            color: #0050b3;
+            font-size: 13px;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        .weekend-item {
+            margin: 6px 0;
+            padding: 6px;
+            background: white;
+            border-radius: 4px;
+            border-left: 2px solid #1890ff;
+            font-size: 12px;
+        }
+
+        .weekend-item strong {
+            color: #0050b3;
+        }
+
+        .highlight-weekend {
+            background: #e6f7ff;
+            color: #0050b3;
+            padding: 1px 3px;
+            border-radius: 2px;
+            font-weight: bold;
+        }
+
+        .frequency-box {
+            background: #f6ffed;
+            border: 2px solid #52c41a;
+            border-radius: 8px;
+            padding: 12px;
+            margin: 10px 0;
+        }
+
+        .frequency-box h5 {
+            color: #237804;
+            font-size: 13px;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        .frequency-item {
+            margin: 6px 0;
+            padding: 6px;
+            background: white;
+            border-radius: 4px;
+            border-left: 2px solid #52c41a;
+            font-size: 12px;
+        }
+
+        .frequency-item strong {
+            color: #237804;
+        }
+
+        .highlight-frequency {
+            background: #f6ffed;
+            color: #237804;
+            padding: 1px 3px;
+            border-radius: 2px;
+            font-weight: bold;
+        }
+
+        .alot-box {
+            background: #fff7e6;
+            border: 2px solid #ffa940;
+            border-radius: 8px;
+            padding: 12px;
+            margin: 10px 0;
+        }
+
+        .alot-box h5 {
+            color: #d46b08;
+            font-size: 13px;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        .alot-item {
+            margin: 6px 0;
+            padding: 6px;
+            background: white;
+            border-radius: 4px;
+            border-left: 2px solid #ffa940;
+            font-size: 12px;
+        }
+
+        .alot-item strong {
+            color: #d46b08;
+        }
+
+        .highlight-alot {
+            background: #fff7e6;
+            color: #d46b08;
+            padding: 1px 3px;
+            border-radius: 2px;
+            font-weight: bold;
+        }
+
+        .and-with-box {
+            background: #fff0f6;
+            border: 2px solid #eb2f96;
+            border-radius: 8px;
+            padding: 12px;
+            margin: 10px 0;
+        }
+
+        .and-with-box h5 {
+            color: #c41d7f;
+            font-size: 13px;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        .and-with-item {
+            margin: 6px 0;
+            padding: 6px;
+            background: white;
+            border-radius: 4px;
+            border-left: 2px solid #eb2f96;
+            font-size: 12px;
+        }
+
+        .and-with-item strong {
+            color: #c41d7f;
+        }
+
+        .highlight-and-with {
+            background: #fff0f6;
+            color: #c41d7f;
+            padding: 1px 3px;
+            border-radius: 2px;
+            font-weight: bold;
+        }
+
+        .preposition-box {
+            background: #f0f2f5;
+            border: 2px solid #8c8c8c;
+            border-radius: 8px;
+            padding: 12px;
+            margin: 10px 0;
+        }
+
+        .preposition-box h5 {
+            color: #434343;
+            font-size: 13px;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        .preposition-item {
+            margin: 6px 0;
+            padding: 6px;
+            background: white;
+            border-radius: 4px;
+            border-left: 2px solid #8c8c8c;
+            font-size: 12px;
+        }
+
+        .preposition-item strong {
+            color: #434343;
+        }
+
+        .highlight-preposition {
+            background: #f0f2f5;
+            color: #434343;
+            padding: 1px 3px;
+            border-radius: 2px;
+            font-weight: bold;
+        }
+
+        .time-analysis-box {
+            background: #e6fffb;
+            border: 2px solid #13c2c2;
+            border-radius: 8px;
+            padding: 12px;
+            margin: 10px 0;
+        }
+
+        .time-analysis-box h5 {
+            color: #006d75;
+            font-size: 13px;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        .time-analysis-item {
+            margin: 6px 0;
+            padding: 6px;
+            background: white;
+            border-radius: 4px;
+            border-left: 2px solid #13c2c2;
+            font-size: 12px;
+        }
+
+        .time-analysis-item strong {
+            color: #006d75;
+        }
+
+        .highlight-time-analysis {
+            background: #e6fffb;
+            color: #006d75;
+            padding: 1px 3px;
+            border-radius: 2px;
+            font-weight: bold;
+        }
+
+        /* 专业表格样式 */
+        .table-container {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+            overflow: hidden;
+            border: 2px solid #6d8bc3;
+            margin: 15px 0;
+        }
+
+        .table-title {
+            background: linear-gradient(135deg, #6d8bc3, #5a7ab8);
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 15px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .chart-icon {
+            font-size: 18px;
+        }
+
+        /* 频度副词表格样式 */
+        .frequency-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 0;
+        }
+
+        .frequency-header {
+            background: #6d8bc3;
+            color: white;
+            padding: 10px 8px;
+            text-align: center;
+            font-size: 11px;
+            font-weight: bold;
+            border-right: 1px solid #5a7ab8;
+        }
+
+        .frequency-header:last-child {
+            border-right: none;
+        }
+
+        .frequency-cell {
+            padding: 10px 8px;
+            text-align: center;
+            border-right: 1px solid #e0e6ed;
+            border-bottom: 1px solid #e0e6ed;
+            min-height: 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 11px;
+            line-height: 1.3;
+        }
+
+        .frequency-cell:last-child {
+            border-right: none;
+        }
+
+        .frequency-cell-adv {
+            background: #e8f5e8;
+            font-weight: bold;
+            font-size: 13px;
+        }
+
+        .frequency-cell-percent {
+            background: #fff3cd;
+            font-weight: bold;
+            color: #d46b08;
+            font-size: 12px;
+        }
+
+        .frequency-cell-meaning {
+            background: #f8e8e8;
+            color: #8a2c2c;
+            font-weight: 600;
+        }
+
+        .frequency-cell-example {
+            background: #f0f8ff;
+            text-align: left;
+            padding: 8px;
+            line-height: 1.4;
+        }
+
+        .frequency-cell-feature {
+            background: #f5f5f5;
+            color: #666;
+            font-size: 10px;
+        }
+
+        .frequency-cell-unit {
+            background: #e6f7ff;
+            color: #0050b3;
+            font-weight: 600;
+            font-size: 10px;
+        }
+
+        .extension-tag {
+            background: #722ed1;
+            color: white;
+            padding: 1px 4px;
+            border-radius: 2px;
+            font-size: 8px;
+            margin-left: 3px;
+        }
+
+        .highlight-word {
+            color: #d46b08;
+            font-weight: bold;
+        }
+
+        .example-sentence {
+            margin: 2px 0;
+            font-style: italic;
+        }
+
+        /* 时间介词表格样式 - 优化后 */
+        .preposition-grid {
+            display: grid;
+            grid-template-columns: auto 1fr 1fr;
+            gap: 0;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .preposition-header {
+            background: #6d8bc3;
+            color: white;
+            padding: 12px 15px;
+            text-align: center;
+            font-size: 12px;
+            font-weight: bold;
+            border-right: 1px solid #5a7ab8;
+            border-bottom: 1px solid #5a7ab8;
+        }
+
+        .preposition-header:last-child {
+            border-right: none;
+        }
+
+        .preposition-cell {
+            padding: 15px;
+            border-right: 1px solid #e0e6ed;
+            border-bottom: 1px solid #e0e6ed;
+            min-height: 120px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            font-size: 12px;
+            line-height: 1.5;
+        }
+
+        .preposition-cell:nth-child(3n) {
+            border-right: none;
+        }
+
+        .preposition-cell-prep {
+            background: #e8f5e8;
+            font-weight: bold;
+            font-size: 20px;
+            color: #237804;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .preposition-cell-usage {
+            background: #f8f9ff;
+            color: #333;
+            text-align: left;
+        }
+
+        .preposition-cell-examples {
+            background: #f0f8ff;
+            text-align: left;
+        }
+
+        .usage-item {
+            margin-bottom: 8px;
+            padding: 6px 0;
+            border-bottom: 1px dotted #ddd;
+        }
+
+        .usage-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        .example-item {
+            margin-bottom: 8px;
+            padding: 6px 10px;
+            background: rgba(255,255,255,0.8);
+            border-radius: 4px;
+            border-left: 3px solid #6d8bc3;
+        }
+
+        .example-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .prep-highlight {
+            color: #0050b3;
+            font-weight: bold;
+            background: #e6f7ff;
+            padding: 1px 3px;
+            border-radius: 2px;
+        }
+
+        .time-highlight {
+            color: #d46b08;
+            font-weight: bold;
+        }
+
+        .highlight-key {
+            background: #52c41a;
+            color: white;
+            padding: 1px 3px;
+            border-radius: 2px;
+            font-weight: bold;
+        }
+
+        .vs-highlight {
+            background: #722ed1;
+            color: white;
+            padding: 1px 4px;
+            border-radius: 2px;
+            font-weight: bold;
+        }
+
+        .adverbial-explanation {
+            background: #e6f7ff;
+            border: 2px solid #1890ff;
+            border-radius: 8px;
+            padding: 12px;
+            margin: 10px 0;
+        }
+
+        .adverbial-explanation h6 {
+            color: #0050b3;
+            font-size: 12px;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        .adverbial-explanation p {
+            color: #0050b3;
+            font-size: 11px;
+            line-height: 1.4;
+        }
+
+        /* 节日时间介词特殊用法样式 */
+        .holiday-preposition-box {
+            background: #fef9e7;
+            border: 2px solid #faad14;
+            border-radius: 8px;
+            padding: 12px;
+            margin: 10px 0;
+        }
+
+        .holiday-preposition-box h5 {
+            color: #ad6800;
+            font-size: 13px;
+            margin-bottom: 6px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .holiday-item {
+            margin: 6px 0;
+            padding: 8px;
+            background: white;
+            border-radius: 4px;
+            border-left: 3px solid #faad14;
+            font-size: 12px;
+        }
+
+        .holiday-item strong {
+            color: #ad6800;
+        }
+
+        .highlight-holiday {
+            background: #fef9e7;
+            color: #ad6800;
+            padding: 1px 3px;
+            border-radius: 2px;
+            font-weight: bold;
+        }
+
+        /* 节日对比表格 */
+        .holiday-comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 0;
+            margin: 10px 0;
+        }
+
+        .holiday-comparison-header {
+            background: #faad14;
+            color: white;
+            padding: 8px;
+            text-align: center;
+            font-size: 11px;
+            font-weight: bold;
+            border-right: 1px solid #d48806;
+        }
+
+        .holiday-comparison-header:last-child {
+            border-right: none;
+        }
+
+        .holiday-comparison-cell {
+            background: #fef9e7;
+            padding: 10px;
+            border-right: 1px solid #ffe7ba;
+            border-bottom: 1px solid #ffe7ba;
+            text-align: center;
+            font-size: 11px;
+            line-height: 1.4;
+        }
+
+        .holiday-comparison-cell:nth-child(3n) {
+            border-right: none;
+        }
+
+        .holiday-explanation {
+            font-size: 10px;
+            color: #8c4a00;
+            margin-top: 4px;
+            font-style: italic;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            .card-container {
+                border-radius: 15px;
+                min-height: 100vh;
+            }
+
+            .header {
+                padding: 20px 15px;
+            }
+
+            .header h1 {
+                font-size: 20px;
+            }
+
+            .header .subtitle {
+                font-size: 14px;
+            }
+
+            .table-of-contents {
+                margin: 15px;
+                padding: 15px;
+            }
+
+            .content {
+                padding: 15px;
+                max-height: none;
+            }
+
+            .grammar-point {
+                padding: 15px;
+                margin-bottom: 15px;
+            }
+
+            .point-title {
+                font-size: 16px;
+            }
+
+            .point-content {
+                font-size: 13px;
+            }
+
+            .frequency-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .preposition-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .frequency-cell, .preposition-cell {
+                padding: 8px 6px;
+                font-size: 10px;
+                min-height: 50px;
+            }
+            
+            .table-title {
+                font-size: 13px;
+                padding: 12px;
+            }
+
+            .comparison-grid {
+                grid-template-columns: 1fr;
+                gap: 4px;
+            }
+
+            .holiday-comparison-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .decorative-star {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 18px;
+            }
+
+            .header .subtitle {
+                font-size: 12px;
+            }
+
+            .point-title {
+                font-size: 14px;
+            }
+
+            .point-content {
+                font-size: 12px;
+            }
+
+            .frequency-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .preposition-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .frequency-cell, .preposition-cell {
+                padding: 6px 4px;
+                font-size: 9px;
+                min-height: 40px;
+            }
+
+            .table-title {
+                font-size: 12px;
+                padding: 10px;
+            }
+        }
+    </style>
+<script src="https://puc.poecdn.net/authenticated_preview_page/syncedState.bd4eeeb8e8e02052ee92.js"></script></head>
+<body>
+    <!-- 水印元素 -->
+    <div class="watermark"></div>
+    
+    <div class="card-container">
+        <div class="header">
+            <div class="decorative-star star1">⭐</div>
+            <div class="decorative-star star2">✨</div>
+            <div class="decorative-star star3">🌟</div>
+            <h1>江苏校内-译林英语</h1>
+            <div class="subtitle"><span class="highlight-unit">五上</span>-<span class="highlight-unit">Unit7</span>-<span class="highlight-unit">必学语法点</span></div>
+            <div class="teacher-info">Eva老师👩‍🏫伴步英语</div>
+        </div>
+
+        <!-- 目录导航 -->
+        <div class="table-of-contents">
+            <div class="toc-header">
+                <div class="toc-icon">📚</div>
+                <span>知识点目录导航</span>
+            </div>
+            <ul class="toc-list">
+                <li class="toc-item">
+                    <a href="#point1" class="toc-link">
+                        <div class="toc-number">1</div>
+                        <div class="toc-title">询问某人在周末常常做什么事</div>
+                        <div class="toc-emoji">🏖️</div>
+                    </a>
+                </li>
+                <li class="toc-item">
+                    <a href="#point2" class="toc-link">
+                        <div class="toc-number">2</div>
+                        <div class="toc-title">频度副词的用法</div>
+                        <div class="toc-emoji">⏰</div>
+                    </a>
+                </li>
+                <li class="toc-item">
+                    <a href="#point3" class="toc-link">
+                        <div class="toc-number">3</div>
+                        <div class="toc-title">a lot与a lot of的区别</div>
+                        <div class="toc-emoji">📊</div>
+                    </a>
+                </li>
+                <li class="toc-item">
+                    <a href="#point4" class="toc-link">
+                        <div class="toc-number">4</div>
+                        <div class="toc-title">and和with的区别</div>
+                        <div class="toc-emoji">🔗</div>
+                    </a>
+                </li>
+                <li class="toc-item">
+                    <a href="#point5" class="toc-link">
+                        <div class="toc-number">5</div>
+                        <div class="toc-title">in, on, at表示时间的用法</div>
+                        <div class="toc-emoji">⏰</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="content">
+            <div id="point1" class="grammar-point">
+                <div class="point-header">
+                    <div class="point-number">1</div>
+                    <div class="point-title">询问某人在周末常常做什么事</div>
+                    <div class="emoji">🏖️</div>
+                </div>
+                <div class="point-content">
+                    <p class="core-concept"><strong>核心概念：</strong>询问某人在周末的活动安排，使用"What do/does + 主语 + do + at weekends?"句型</p>
+
+                    <div class="weekend-box">
+                        <h5>🔍 基本句型结构</h5>
+                        <div class="weekend-item">
+                            <strong>疑问句：</strong>What do/does + 主语 + do + at weekends?
+                            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                                例：<span class="highlight-weekend">What <span class="highlight-key">do</span> you <span class="highlight-key">do</span> at weekends?</span> 你在周末做什么？🎯
+                            </div>
+                        </div>
+                        <div class="weekend-item">
+                            <strong>第三人称单数：</strong>当主语是第三人称单数时，what之后的助动词用does
+                            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                                例：<span class="highlight-weekend">What <span class="highlight-key">does</span> he <span class="highlight-key">do</span> at weekends?</span> 他在周末做什么？👤
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="structure-box">
+                        <h4>📋 回答句型</h4>
+                        <div class="structure-item">
+                            答句为"主语 + 频度副词 + 动词 + 其他"，当主语是第三人称单数时，动词使用第三人称单数形式
+                            <div class="structure-examples">I <span class="highlight-key">usually</span> play football at weekends. 我通常在周末踢足球。⚽<br>He <span class="highlight-key">always</span> goes to the park. 他总是去公园。🏞️</div>
+                        </div>
+                    </div>
+
+                    <div class="detail-box">
+                        <h5>🎯 使用要点</h5>
+                        <div class="detail-item">
+                            <strong>助动词选择：</strong>第三人称单数用does，其他用do
+                            <div style="margin-top: 3px; font-size: 11px; color: #666;">
+                                例：He/She/It → does ; I/You/We/They → do
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <strong>动词形式：</strong>疑问句中动词用原形，回答时注意主谓一致
+                            <div style="margin-top: 3px; font-size: 11px; color: #666;">
+                                例：What does he do? → He goes swimming.
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <strong>时间表达：</strong>at weekends 表示"在周末"
+                            <div style="margin-top: 3px; font-size: 11px; color: #666;">
+                                注意：英式英语用at weekends，美式英语用on weekends
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <strong>复数主语：</strong>当主语有多个对象时，人称顺序是：第二人称、第三人称、第一人称，即"你、他/她、我"
+                            <div style="margin-top: 3px; font-size: 11px; color: #666;">
+                                例：You, Helen and I (礼貌原则)
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="usage-note">
+                        <h6>⚠️ 特别注意</h6>
+                        <p>• 复数主语的人称顺序：<span class="highlight-key">You, Helen and I</span> all go to the park. (你、海伦和我都去公园) 👥<br>
+                        • 当主语是第三人称单数时，问句用<span class="highlight-key">does</span>，答句动词用第三人称单数形式<br>
+                        • 频度副词通常放在be动词和助动词之后，实义动词之前<br>
+                        • 英式英语用at weekends，美式英语用on weekends</p>
+                    </div>
+
+                    <div class="comparison-table">
+                        <h5>📊 问答句型对照表</h5>
+                        <div class="comparison-grid">
+                            <div class="comparison-header">疑问句</div>
+                            <div class="comparison-header">助动词</div>
+                            <div class="comparison-header">回答例句</div>
+                            
+                            <div class="comparison-cell">What do you do at weekends?</div>
+                            <div class="comparison-cell">do</div>
+                            <div class="comparison-cell">I usually visit my grandparents. 👵👴</div>
+                            
+                            <div class="comparison-cell">What does Helen do at weekends?</div>
+                            <div class="comparison-cell">does</div>
+                            <div class="comparison-cell">She often goes shopping. 🛍️</div>
+                            
+                            <div class="comparison-cell">What do they do at weekends?</div>
+                            <div class="comparison-cell">do</div>
+                            <div class="comparison-cell">They sometimes play games. 🎮</div>
+                        </div>
+                    </div>
+
+                    <div class="key-points">
+                        <h4>🎯 考察重点</h4>
+                        <ul>
+                            <li>助动词的正确选择
+                                <div class="key-point-examples">❓ What <span class="highlight-weekend">do</span> you... / What <span class="highlight-weekend">does</span> she...</div>
+                            </li>
+                            <li>主谓一致的运用
+                                <div class="key-point-examples">👤 He <span class="highlight-weekend">goes</span> / They <span class="highlight-weekend">go</span></div>
+                            </li>
+                            <li>复数主语的人称顺序
+                                <div class="key-point-examples">👥 You, Helen and I</div>
+                            </li>
+                            <li>频度副词的正确位置
+                                <div class="key-point-examples">🔄 usually/often/sometimes的位置</div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>📝 对话示例</h4>
+                        <div class="example">
+                            <span class="example-emoji">🏖️</span>
+                            <span><span class="highlight-question">What do you do at weekends?</span><br>--I <span class="highlight-frequency">usually</span> visit my grandparents. 我通常去看望祖父母。</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">🛍️</span>
+                            <span><span class="highlight-question">What does Helen do at weekends?</span><br>--She <span class="highlight-frequency">often</span> goes shopping. 她经常去购物。</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">🐱</span>
+                            <span>Su Yang and I like cats. 苏洋和我都喜欢猫。</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">🏞️</span>
+                            <span>You, Helen and I all go to the park. 你、海伦和我都去公园。</span>
+                        </div>
+                    </div>
+
+                    <div class="connection-box">
+                        <h4>🔗 温故知新</h4>
+                        <div class="connection-text">
+                            这个句型是对Unit6疑问句知识的延续和深化，结合了频度副词的使用，是描述日常活动的重要表达方式。
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="point2" class="grammar-point">
+                <div class="point-header">
+                    <div class="point-number">2</div>
+                    <div class="point-title">频度副词的用法</div>
+                    <div class="emoji">⏰</div>
+                </div>
+                <div class="point-content">
+                    <p class="core-concept"><strong>核心概念：</strong>常见的频度副词always、usually、often和sometimes，用来表示动作出现的频率，即一定时间内动作重复发生或状态重复出现的次数</p>
+
+                    <div class="table-container">
+                        <div class="table-title">
+                            <span class="chart-icon">📊</span>
+                            频度副词详细对比表(含拓展)
+                        </div>
+                        <div class="frequency-grid">
+                            <!-- 表头 -->
+                            <div class="frequency-header">副词</div>
+                            <div class="frequency-header">频率</div>
+                            <div class="frequency-header">含义</div>
+                            <div class="frequency-header">例句</div>
+                            <div class="frequency-header">特点</div>
+                            <div class="frequency-header">单元内容</div>
+                            
+                            <!-- always行 -->
+                            <div class="frequency-cell frequency-cell-adv">always</div>
+                            <div class="frequency-cell frequency-cell-percent">100%</div>
+                            <div class="frequency-cell frequency-cell-meaning">总是，一直</div>
+                            <div class="frequency-cell frequency-cell-example">
+                                <div class="example-sentence">I <span class="highlight-word">always</span> do my homework. 📚</div>
+                                <div style="color: #666; font-size: 10px;">我总是做作业。</div>
+                            </div>
+                            <div class="frequency-cell frequency-cell-feature">从不中断</div>
+                            <div class="frequency-cell frequency-cell-unit">本单元重点</div>
+                            
+                            <!-- usually行 -->
+                            <div class="frequency-cell frequency-cell-adv">usually</div>
+                            <div class="frequency-cell frequency-cell-percent">80-90%</div>
+                            <div class="frequency-cell frequency-cell-meaning">通常</div>
+                            <div class="frequency-cell frequency-cell-example">
+                                <div class="example-sentence">She <span class="highlight-word">usually</span> gets up at 7. ⏰</div>
+                                <div style="color: #666; font-size: 10px;">她通常7点起床。</div>
+                            </div>
+                            <div class="frequency-cell frequency-cell-feature">很少例外</div>
+                            <div class="frequency-cell frequency-cell-unit">本单元重点</div>
+                            
+                            <!-- often行 -->
+                            <div class="frequency-cell frequency-cell-adv">often</div>
+                            <div class="frequency-cell frequency-cell-percent">60-70%</div>
+                            <div class="frequency-cell frequency-cell-meaning">经常，常常</div>
+                            <div class="frequency-cell frequency-cell-example">
+                                <div class="example-sentence">We <span class="highlight-word">often</span> play football. ⚽</div>
+                                <div style="color: #666; font-size: 10px;">我们经常踢足球。</div>
+                            </div>
+                            <div class="frequency-cell frequency-cell-feature">中间有间断</div>
+                            <div class="frequency-cell frequency-cell-unit">本单元重点</div>
+                            
+                            <!-- sometimes行 -->
+                            <div class="frequency-cell frequency-cell-adv">sometimes</div>
+                            <div class="frequency-cell frequency-cell-percent">30-40%</div>
+                            <div class="frequency-cell frequency-cell-meaning">有时</div>
+                            <div class="frequency-cell frequency-cell-example">
+                                <div class="example-sentence"><span class="highlight-word">Sometimes</span> I watch TV. 📺</div>
+                                <div style="color: #666; font-size: 10px;">有时我看电视。</div>
+                            </div>
+                            <div class="frequency-cell frequency-cell-feature">位置灵活</div>
+                            <div class="frequency-cell frequency-cell-unit">本单元重点</div>
+                            
+                            <!-- seldom行 -->
+                            <div class="frequency-cell frequency-cell-adv">seldom<span class="extension-tag">拓展</span></div>
+                            <div class="frequency-cell frequency-cell-percent">10-20%</div>
+                            <div class="frequency-cell frequency-cell-meaning">很少</div>
+                            <div class="frequency-cell frequency-cell-example">
+                                <div class="example-sentence">He <span class="highlight-word">seldom</span> plays games. 🎮</div>
+                                <div style="color: #666; font-size: 10px;">他很少玩游戏。</div>
+                            </div>
+                            <div class="frequency-cell frequency-cell-feature">偶尔发生</div>
+                            <div class="frequency-cell frequency-cell-unit">拓展内容</div>
+                            
+                            <!-- never行 -->
+                            <div class="frequency-cell frequency-cell-adv">never<span class="extension-tag">拓展</span></div>
+                            <div class="frequency-cell frequency-cell-percent">0%</div>
+                            <div class="frequency-cell frequency-cell-meaning">从不</div>
+                            <div class="frequency-cell frequency-cell-example">
+                                <div class="example-sentence">I <span class="highlight-word">never</span> smoke. 🚭</div>
+                                <div style="color: #666; font-size: 10px;">我从不吸烟。</div>
+                            </div>
+                            <div class="frequency-cell frequency-cell-feature">完全不做</div>
+                            <div class="frequency-cell frequency-cell-unit">拓展内容</div>
+                        </div>
+                    </div>
+
+                    <div class="frequency-box">
+                        <h5>📍 位置规律</h5>
+                        <div class="frequency-item">
+                            <strong>一般规律：</strong>放在<span class="highlight-key">be动词、助动词之后，实义动词之前</span>
+                            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                                例：He is <span class="highlight-frequency">always</span> happy. 😊 / He <span class="highlight-frequency">always</span> talks a lot. 💬
+                            </div>
+                        </div>
+                        <div class="frequency-item">
+                            <strong>特殊位置：</strong><span class="highlight-key">sometimes可以放在句首、中间或句末</span>
+                            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                                例：<span class="highlight-frequency">Sometimes</span> I watch TV. / I <span class="highlight-frequency">sometimes</span> watch TV. / I watch TV <span class="highlight-frequency">sometimes</span>. 📺
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="detail-box">
+                        <h5>🎯 使用要点</h5>
+                        <div class="detail-item">
+                            <strong>位置规律：</strong>放在be动词、助动词之后，实义动词之前
+                            <div style="margin-top: 3px; font-size: 11px; color: #666;">
+                                例：She is always happy. / She always sings.
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <strong>频率排序：</strong>always &gt; usually &gt; often &gt; sometimes &gt; seldom &gt; never
+                            <div style="margin-top: 3px; font-size: 11px; color: #666;">
+                                从100%到0%的频率递减排列
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <strong>特殊位置：</strong>sometimes可以放在句首、中间或句末
+                            <div style="margin-top: 3px; font-size: 11px; color: #666;">
+                                三个位置都正确，含义相同
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <strong>时态要求：</strong>常用于一般现在时中
+                            <div style="margin-top: 3px; font-size: 11px; color: #666;">
+                                表示习惯性或经常性的动作状态
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="usage-note">
+                        <h6>⚠️ 特别注意</h6>
+                        <p>• 频度副词所表示的频率由高到低排序：<span class="highlight-key">always &gt; usually &gt; often &gt; sometimes &gt; seldom &gt; never</span><br>
+                        • <span class="highlight-key">sometimes</span>位置最灵活，可以放在句首、句中或句末 🔄<br>
+                        • 频度副词常用于一般现在时，表示习惯性或经常性的动作<br>
+                        • 本单元重点掌握前四个，后两个作为拓展了解</p>
+                    </div>
+
+                    <div class="key-points">
+                        <h4>🎯 考察重点</h4>
+                        <ul>
+                            <li>频度副词的正确位置
+                                <div class="key-point-examples">📍 He <span class="highlight-frequency">always</span> works hard.</div>
+                            </li>
+                            <li>频率高低的排序
+                                <div class="key-point-examples">📊 always &gt; usually &gt; often &gt; sometimes</div>
+                            </li>
+                            <li>sometimes的灵活位置
+                                <div class="key-point-examples">🔄 句首/句中/句末都可以</div>
+                            </li>
+                            <li>与第三人称单数的结合
+                                <div class="key-point-examples">👤 She <span class="highlight-frequency">usually</span> goes to school.</div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>📝 频度副词使用示例</h4>
+                        <div class="example">
+                            <span class="example-emoji">📚</span>
+                            <span>I <span class="highlight-frequency">always</span> do my homework. 我总是做作业。</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">⏰</span>
+                            <span>She <span class="highlight-frequency">usually</span> gets up at 7. 她通常7点起床。</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">⚽</span>
+                            <span>We <span class="highlight-frequency">often</span> play football. 我们经常踢足球。</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">📺</span>
+                            <span><span class="highlight-frequency">Sometimes</span> I watch TV. 有时我看电视。</span>
+                        </div>
+                    </div>
+
+                    <div class="connection-box">
+                        <h4>🔗 温故知新</h4>
+                        <div class="connection-text">
+                            频度副词与一般现在时密切相关，帮助我们准确描述日常生活中动作发生的频率，是表达习惯和规律的重要工具。
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="point3" class="grammar-point">
+                <div class="point-header">
+                    <div class="point-number">3</div>
+                    <div class="point-title">a lot与a lot of的区别</div>
+                    <div class="emoji">📊</div>
+                </div>
+                <div class="point-content">
+                    <p class="core-concept"><strong>核心概念：</strong>a lot和a lot of都与"很多"有关，但用法不同。a lot用作副词短语或名词短语，a lot of用来修饰名词</p>
+
+                    <div class="comparison-table">
+                        <h5>📊 a lot <span class="vs-highlight">vs</span> a lot of 对比表</h5>
+                        <div class="comparison-grid">
+                            <div class="comparison-header">短语</div>
+                            <div class="comparison-header">词性功能</div>
+                            <div class="comparison-header">例句</div>
+                            
+                            <div class="comparison-cell">a lot</div>
+                            <div class="comparison-cell">副词短语/名词短语</div>
+                            <div class="comparison-cell">He talks a lot. 💬 / He gives her a lot. 🎁</div>
+                            
+                            <div class="comparison-cell">a lot of</div>
+                            <div class="comparison-cell">修饰名词</div>
+                            <div class="comparison-cell">a lot of books 📚 / a lot of water 💧</div>
+                        </div>
+                    </div>
+
+                    <div class="alot-box">
+                        <h5>📝 a lot的用法</h5>
+                        <div class="alot-item">
+                            <strong>(1) 课文中的用法：</strong>用作副词短语，在句中是程度状语，意为"很，非常"，常修饰动词
+                            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                                例：He always <span class="highlight-key">talks</span> <span class="highlight-alot">a lot</span>. 他总是说很多。💬
+                            </div>
+                        </div>
+                        <div class="alot-item">
+                            <strong>(2) 用作名词短语：</strong>意为"很多（东西）"
+                            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                                例：He <span class="highlight-key">gives</span> her <span class="highlight-alot">a lot</span> to eat. 他给了她很多吃的东西。🍎<br>
+                                理解：He gives her a lot (of things) to eat. 
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="adverbial-explanation">
+                        <h6>💡 什么是状语？</h6>
+                        <p>状语是用来修饰动词、形容词或整个句子的成分，说明动作的时间、地点、方式、程度等。简单说，状语回答"什么时候？在哪里？怎么样？多程度？"等问题。例如："a lot"告诉我们说话的程度是"很多"。🗣️</p>
+                    </div>
+
+                    <div class="alot-box">
+                        <h5>📊 a lot of的用法</h5>
+                        <div class="alot-item">
+                            <strong>基本功能：</strong>意为"许多，大量"，修饰可数或者不可数名词
+                            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                                例：<span class="highlight-alot">a lot of</span> <span class="highlight-key">books</span> 许多书 📚 / <span class="highlight-alot">a lot of</span> <span class="highlight-key">water</span> 许多水 💧
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="detail-box">
+                        <h5>🎯 使用要点</h5>
+                        <div class="detail-item">
+                            <strong>a lot位置：</strong>通常放在句末，修饰动词
+                            <div style="margin-top: 3px; font-size: 11px; color: #666;">
+                                例：He talks a lot. (修饰动词talks)
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <strong>a lot of位置：</strong>放在名词前面，起修饰作用
+                            <div style="margin-top: 3px; font-size: 11px; color: #666;">
+                                例：a lot of books (修饰名词books)
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <strong>可数性：</strong>a lot of既可修饰可数名词也可修饰不可数名词
+                            <div style="margin-top: 3px; font-size: 11px; color: #666;">
+                                例：a lot of students / a lot of milk
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <strong>同义词：</strong>a lot of = lots of = many(可数) / much(不可数)
+                            <div style="margin-top: 3px; font-size: 11px; color: #666;">
+                                但lots of更口语化
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="usage-note">
+                        <h6>⚠️ 特别注意</h6>
+                        <p>• <span class="highlight-key">a lot</span>在句中作副词时，表示程度，主要修饰动词，不修饰形容词<br>
+                        • <span class="highlight-key">a lot of</span>在句中修饰名词，表示数量 📊<br>
+                        • a lot of = lots of，但lots of更口语化<br>
+                        • 区分：He talks a lot. (副词) vs He has a lot of books. (修饰名词)</p>
+                    </div>
+
+                    <div class="key-points">
+                        <h4>🎯 考察重点</h4>
+                        <ul>
+                            <li>a lot的副词用法
+                                <div class="key-point-examples">💬 He talks <span class="highlight-alot">a lot</span>.</div>
+                            </li>
+                            <li>a lot of的修饰功能
+                                <div class="key-point-examples">📚 <span class="highlight-alot">a lot of</span> books</div>
+                            </li>
+                            <li>位置的正确运用
+                                <div class="key-point-examples">📍 动词后 vs 名词前</div>
+                            </li>
+                            <li>与lots of的等同性
+                                <div class="key-point-examples">🔄 a lot of = lots of</div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>📝 用法对比示例</h4>
+                        <div class="example">
+                            <span class="example-emoji">💬</span>
+                            <span>He always <span class="highlight-key">talks</span> <span class="highlight-alot">a lot</span>. 他总是说很多。(副词用法)</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">🍎</span>
+                            <span>He <span class="highlight-key">gives</span> her <span class="highlight-alot">a lot</span> to eat. 他给了她很多吃的。(名词用法)</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">📚</span>
+                            <span>I have <span class="highlight-alot">a lot of</span> <span class="highlight-key">books</span>. 我有很多书。(修饰可数名词)</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">💧</span>
+                            <span>There is <span class="highlight-alot">a lot of</span> <span class="highlight-key">water</span>. 有很多水。(修饰不可数名词)</span>
+                        </div>
+                    </div>
+
+                    <div class="connection-box">
+                        <h4>🔗 温故知新</h4>
+                        <div class="connection-text">
+                            a lot和a lot of的区别体现了英语中词性和功能的重要性，与之前学习的many、much、lots of等表示数量的词汇形成对比。
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="point4" class="grammar-point">
+                <div class="point-header">
+                    <div class="point-number">4</div>
+                    <div class="point-title">and和with的区别</div>
+                    <div class="emoji">🔗</div>
+                </div>
+                <div class="point-content">
+                    <p class="core-concept"><strong>核心概念：</strong>and和with都有"和"的含义，但用法不同。and是连词，with是介词，它们在句中的作用和位置有所区别</p>
+
+                    <div class="and-with-box">
+                        <h5>🔗 and的用法</h5>
+                        <div class="and-with-item">
+                            <strong>词性：</strong>and是连词，用于连接两个并列的成分
+                            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                                连接作用：使两个成分地位平等 ⚖️
+                            </div>
+                        </div>
+                        <div class="and-with-item">
+                            <strong>连接主语：</strong>当它连接两个主语时，谓语动词用复数形式
+                            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                                例：<span class="highlight-key">Jim</span> <span class="highlight-and-with">and</span> <span class="highlight-key">I</span> often <span class="highlight-key">play</span> football. 吉姆和我经常踢足球。⚽
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="and-with-box">
+                        <h5>🔗 with的用法</h5>
+                        <div class="and-with-item">
+                            <strong>词性：</strong>with是介词，后面接名词(短语)或代词宾格形式，所接成分在句中不能作主语
+                            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                                伴随作用：表示"和...一起"，但主次分明 👤
+                            </div>
+                        </div>
+                        <div class="and-with-item">
+                            <strong>表示伴随：</strong>主语是前面的名词，动词形式由前面的主语决定，with引导的是伴随状语
+                            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                                例：<span class="highlight-key">He</span> often <span class="highlight-key">plays</span> football <span class="highlight-and-with">with</span> <span class="highlight-key">Jim</span>. 他经常和吉姆一起踢足球。⚽
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="adverbial-explanation">
+                        <h6>💡 什么是状语？</h6>
+                        <p>状语是用来修饰动词、形容词或整个句子的成分，说明动作的时间、地点、方式、程度等。简单说，状语回答"什么时候？在哪里？怎么样？和谁一起？"等问题。例如："with Jim"告诉我们"和谁一起"踢足球，这就是伴随状语。🏃‍♂️</p>
+                    </div>
+
+                    <div class="detail-box">
+                        <h5>🎯 使用要点</h5>
+                        <div class="detail-item">
+                            <strong>and连接主语：</strong>谓语动词用复数形式
+                            <div style="margin-top: 3px; font-size: 11px; color: #666;">
+                                例：Tom and Jerry are friends. (两个主语，复数谓语)
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <strong>with表伴随：</strong>不改变主语，谓语动词由主语决定
+                            <div style="margin-top: 3px; font-size: 11px; color: #666;">
+                                例：Tom with Jerry is here. (Tom是主语，单数谓语)
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <strong>位置差异：</strong>and连接两个平等成分，with引导介词短语
+                            <div style="margin-top: 3px; font-size: 11px; color: #666;">
+                                and使成分并列，with使成分从属
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <strong>语法作用：</strong>and改变句子结构，with只是补充信息
+                            <div style="margin-top: 3px; font-size: 11px; color: #666;">
+                                and增加主语，with增加状语(说明伴随情况)
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="comparison-table">
+                        <h5>📊 and <span class="vs-highlight">vs</span> with 详细对比表</h5>
+                        <div class="comparison-grid">
+                            <div class="comparison-header">词汇</div>
+                            <div class="comparison-header">词性功能</div>
+                            <div class="comparison-header">例句</div>
+                            
+                            <div class="comparison-cell">and</div>
+                            <div class="comparison-cell">连词，连接并列成分，谓语复数</div>
+                            <div class="comparison-cell">Jim and I often play football. ⚽</div>
+                            
+                            <div class="comparison-cell">with</div>
+                            <div class="comparison-cell">介词，表示伴随，不影响主语</div>
+                            <div class="comparison-cell">He often plays football with Jim. ⚽</div>
+                        </div>
+                    </div>
+
+                    <div class="usage-note">
+                        <h6>⚠️ 特别注意</h6>
+                        <p>• <span class="highlight-key">and</span>连接主语时，谓语动词要用复数形式 👥<br>
+                        • <span class="highlight-key">with</span>后面的成分不能作主语，只表示伴随 👤<br>
+                        • Jim and I (两个人) vs I with Jim (我为主，吉姆伴随)<br>
+                        • 注意动词形式的变化：play vs plays</p>
+                    </div>
+
+                    <div class="key-points">
+                        <h4>🎯 考察重点</h4>
+                        <ul>
+                            <li>and连接主语的复数谓语
+                                <div class="key-point-examples">👥 Jim and I <span class="highlight-and-with">play</span> (复数)</div>
+                            </li>
+                            <li>with的伴随作用
+                                <div class="key-point-examples">👤 He <span class="highlight-and-with">plays</span> with Jim (单数)</div>
+                            </li>
+                            <li>词性的正确理解
+                                <div class="key-point-examples">🔗 and(连词) vs with(介词)</div>
+                            </li>
+                            <li>谓语动词形式的选择
+                                <div class="key-point-examples">⚖️ 根据真正的主语确定动词形式</div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>📝 对比示例</h4>
+                        <div class="example">
+                            <span class="example-emoji">⚽</span>
+                            <span><span class="highlight-key">Jim</span> <span class="highlight-and-with">and</span> <span class="highlight-key">I</span> often <span class="highlight-key">play</span> football. 吉姆和我经常踢足球。</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">⚽</span>
+                            <span><span class="highlight-key">He</span> often <span class="highlight-key">plays</span> football <span class="highlight-and-with">with</span> <span class="highlight-key">Jim</span>. 他经常和吉姆踢足球。</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">📚</span>
+                            <span><span class="highlight-key">Tom</span> <span class="highlight-and-with">and</span> <span class="highlight-key">Mary</span> <span class="highlight-key">like</span> reading. 汤姆和玛丽喜欢阅读。</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">📚</span>
+                            <span><span class="highlight-key">Tom</span> <span class="highlight-key">likes</span> reading <span class="highlight-and-with">with</span> <span class="highlight-key">Mary</span>. 汤姆喜欢和玛丽一起阅读。</span>
+                        </div>
+                    </div>
+
+                    <div class="connection-box">
+                        <h4>🔗 温故知新</h4>
+                        <div class="connection-text">
+                            and和with的区别体现了英语中连词和介词的不同功能，理解这一点有助于正确使用动词形式和理解句子结构。
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="point5" class="grammar-point">
+                <div class="point-header">
+                    <div class="point-number">5</div>
+                    <div class="point-title">in, on, at表示时间的用法</div>
+                    <div class="emoji">⏰</div>
+                </div>
+                <div class="point-content">
+                    <p class="core-concept"><strong>核心概念：</strong>in, on, at是表示时间的常用介词，它们的使用有明确的规律和区别</p>
+
+                    <div class="table-container">
+                        <div class="table-title">
+                            <span class="chart-icon">⏰</span>
+                            时间介词详细用法表
+                        </div>
+                        <div class="preposition-grid">
+                            <!-- 表头 -->
+                            <div class="preposition-header">介词</div>
+                            <div class="preposition-header">具体用法与例句</div>
+                            <div class="preposition-header">使用规律</div>
+                            
+                            <!-- in行 -->
+                            <div class="preposition-cell preposition-cell-prep">in</div>
+                            <div class="preposition-cell preposition-cell-examples">
+                                <div class="example-item">
+                                    <span class="prep-highlight">in</span> <span class="time-highlight">winter</span> ❄️ 在冬天
+                                </div>
+                                <div class="example-item">
+                                    <span class="prep-highlight">in</span> <span class="time-highlight">the morning</span> 🌅 在上午(泛指)
+                                </div>
+                                <div class="example-item">
+                                    <span class="prep-highlight">in</span> <span class="time-highlight">2023</span> 📅 在2023年
+                                </div>
+                                <div class="example-item">
+                                    <span class="prep-highlight">in</span> <span class="time-highlight">March</span> 🌸 在三月
+                                </div>
+                            </div>
+                            <div class="preposition-cell preposition-cell-usage">
+                                <div class="usage-item">• 年/月/季节</div>
+                                <div class="usage-item">• 泛指时段</div>
+                                <div class="usage-item">• 上午/下午/晚上(泛指)</div>
+                                <div class="usage-item">• 较长时间范围</div>
+                            </div>
+                            
+                            <!-- on行 -->
+                            <div class="preposition-cell preposition-cell-prep">on</div>
+                            <div class="preposition-cell preposition-cell-examples">
+                                <div class="example-item">
+                                    <span class="prep-highlight">on</span> <span class="time-highlight">Tuesday</span> 📅 在周二
+                                </div>
+                                <div class="example-item">
+                                    <span class="prep-highlight">on</span> <span class="time-highlight">Monday morning</span> 🌅 在周一上午
+                                </div>
+                                <div class="example-item">
+                                    <span class="prep-highlight">on</span> <span class="time-highlight">a cold night</span> 🌃 在一个寒冷的夜晚
+                                </div>
+                                <div class="example-item">
+                                    <span class="prep-highlight">on</span> <span class="time-highlight">Christmas Day</span> 🎄 在圣诞节
+                                </div>
+                            </div>
+                            <div class="preposition-cell preposition-cell-usage">
+                                <div class="usage-item">• 星期几</div>
+                                <div class="usage-item">• 具体日期</div>
+                                <div class="usage-item">• 特定某天的时段</div>
+                                <div class="usage-item">• 节日(具体日期)</div>
+                            </div>
+                            
+                            <!-- at行 -->
+                            <div class="preposition-cell preposition-cell-prep">at</div>
+                            <div class="preposition-cell preposition-cell-examples">
+                                <div class="example-item">
+                                    <span class="prep-highlight">at</span> <span class="time-highlight">eight</span> 🕰️ 在八点
+                                </div>
+                                <div class="example-item">
+                                    <span class="prep-highlight">at</span> <span class="time-highlight">night</span> 🌙 在夜里
+                                </div>
+                                <div class="example-item">
+                                    <span class="prep-highlight">at</span> <span class="time-highlight">3 o'clock</span> ⏰ 在3点钟
+                                </div>
+                                <div class="example-item">
+                                    <span class="prep-highlight">at</span> <span class="time-highlight">Christmas</span> 🎄 在圣诞时节
+                                </div>
+                            </div>
+                            <div class="preposition-cell preposition-cell-usage">
+                                <div class="usage-item">• 钟点时间</div>
+                                <div class="usage-item">• 特定时段(night/noon)</div>
+                                <div class="usage-item">• 节日时点</div>
+                                <div class="usage-item">• 具体时间点</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="preposition-box">
+                        <h5>📅 in的时间用法</h5>
+                        <div class="preposition-item">
+                            <strong>(1) 年、月、季节前要用介词in</strong>
+                            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                                例：We always wear warm clothes <span class="highlight-preposition">in</span> <span class="highlight-key">winter</span>. 我们总是在冬天穿暖和的衣服。❄️
+                            </div>
+                        </div>
+                        <div class="preposition-item">
+                            <strong>(2) 表示泛指的上午、下午或傍晚用in</strong>
+                            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                                例：I often watch TV <span class="highlight-preposition">in</span> <span class="highlight-key">the evening</span>. 我经常在晚上看电视。📺
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="preposition-box">
+                        <h5>📆 on的时间用法</h5>
+                        <div class="preposition-item">
+                            <strong>(1) 在具体某一天要用介词on</strong>
+                            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                                例：I have a PE lesson <span class="highlight-preposition">on</span> <span class="highlight-key">Tuesday</span>. 我周二有体育课。🏃‍♂️
+                            </div>
+                        </div>
+                        <div class="preposition-item">
+                            <strong>(2) 表示某日上午、下午或傍晚用on</strong>
+                            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                                例：I have a dancing lesson <span class="highlight-preposition">on</span> <span class="highlight-key">Saturday morning</span>. 我周六早上有舞蹈课。💃
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="preposition-box">
+                        <h5>🕰️ at的时间用法</h5>
+                        <div class="preposition-item">
+                            <strong>(1) 具体时间点或较短时间前用at</strong>
+                            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                                例：I do my homework <span class="highlight-preposition">at</span> <span class="highlight-key">eight</span>. 我八点做作业。📝
+                            </div>
+                        </div>
+                        <div class="preposition-item">
+                            <strong>(2) 特定时段用at</strong>
+                            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                                例：I usually sleep <span class="highlight-preposition">at</span> <span class="highlight-key">night</span>. 我通常在夜里睡觉。😴
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="holiday-preposition-box">
+                        <h5>🎄 节日时间介词特殊用法辨析</h5>
+                        <div class="holiday-item">
+                            <strong>At Christmas：</strong>表示圣诞时节（整个圣诞期间）
+                            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                                例：We always have a big dinner <span class="highlight-holiday">at Christmas</span>. 🎅<br>
+                                <span style="color: #8c4a00;">指整个圣诞节期间，时间范围较模糊</span>
+                            </div>
+                        </div>
+                        <div class="holiday-item">
+                            <strong>On Christmas Day：</strong>特指圣诞节当天（12月25日）
+                            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                                例：We open presents <span class="highlight-holiday">on Christmas Day</span>. 🎁<br>
+                                <span style="color: #8c4a00;">特指12月25日这一具体日期</span>
+                            </div>
+                        </div>
+                        <div class="holiday-item">
+                            <strong>At Chinese New Year：</strong>表示中国新年时节（春节期间）
+                            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                                例：Families get together <span class="highlight-holiday">at Chinese New Year</span>. 🧧<br>
+                                <span style="color: #8c4a00;">指整个春节期间，包含除夕到正月十五</span>
+                            </div>
+                        </div>
+                        <div class="holiday-item">
+                            <strong>On Chinese New Year's Eve：</strong>特指中国新年前夜（农历除夕）
+                            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                                例：We stay up late <span class="highlight-holiday">on Chinese New Year's Eve</span>. 🎆<br>
+                                <span style="color: #8c4a00;">特指农历除夕这一具体日期</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="comparison-table">
+                        <h5>🎊 节日时间介词对比表</h5>
+                        <div class="holiday-comparison-grid">
+                            <div class="holiday-comparison-header">介词用法</div>
+                            <div class="holiday-comparison-header">时间概念</div>
+                            <div class="holiday-comparison-header">例句对比</div>
+                            
+                            <div class="holiday-comparison-cell">
+                                <strong>At Christmas</strong> 🎄
+                                <div class="holiday-explanation">时节/期间</div>
+                            </div>
+                            <div class="holiday-comparison-cell">
+                                <strong>On Christmas Day</strong> 🎁
+                                <div class="holiday-explanation">具体日期</div>
+                            </div>
+                            <div class="holiday-comparison-cell">
+                                <strong>At</strong>: 整个圣诞时节<br>
+                                <strong>On</strong>: 圣诞节当天
+                            </div>
+                            
+                            <div class="holiday-comparison-cell">
+                                <strong>At Chinese New Year</strong> 🧧
+                                <div class="holiday-explanation">春节期间</div>
+                            </div>
+                            <div class="holiday-comparison-cell">
+                                <strong>On Chinese New Year's Eve</strong> 🎆
+                                <div class="holiday-explanation">农历除夕</div>
+                            </div>
+                            <div class="holiday-comparison-cell">
+                                <strong>At</strong>: 整个新年时节<br>
+                                <strong>On</strong>: 除夕当天
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="time-analysis-box">
+                        <h5>🔍 时间介词选择判断法</h5>
+                        <div class="time-analysis-item">
+                            <strong>泛指 vs 特指原则：</strong>
+                            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                                • 泛指：<span class="highlight-time-analysis">in the morning</span> (泛指上午) 🌅<br>
+                                • 特指：<span class="highlight-time-analysis">on Monday morning</span> (特指周一上午) 📅
+                            </div>
+                        </div>
+                        <div class="time-analysis-item">
+                            <strong>夜晚的特殊情况：</strong>
+                            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                                • 一般情况：<span class="highlight-time-analysis">at night</span> (在夜里) 🌙<br>
+                                • 特指某夜：<span class="highlight-time-analysis">on a cold night</span> (在一个寒冷的夜晚) 🌃
+                            </div>
+                        </div>
+                        <div class="time-analysis-item">
+                            <strong>节日用法规律：</strong>
+                            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                                • 节日时节用at：<span class="highlight-time-analysis">at Christmas</span> / <span class="highlight-time-analysis">at Chinese New Year</span><br>
+                                • 节日具体日期用on：<span class="highlight-time-analysis">on Christmas Day</span> / <span class="highlight-time-analysis">on Chinese New Year's Eve</span>
+                            </div>
+                        </div>
+                        <div class="time-analysis-item">
+                            <strong>多个时间词出现时的判断：</strong>
+                            <div style="margin-top: 5px; font-size: 11px; color: #666;">
+                                • 看最具体的时间词决定介词<br>
+                                • <span class="highlight-time-analysis">on Monday morning</span> (Monday是具体日期，用on)<br>
+                                • <span class="highlight-time-analysis">at eight in the morning</span> (eight是具体时点，用at)
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="detail-box">
+                        <h5>🎯 使用要点</h5>
+                        <div class="detail-item">
+                            <strong>in：</strong>用于较长的时间段，如年、月、季节、泛指的时段
+                            <div style="margin-top: 3px; font-size: 11px; color: #666;">
+                                例：in 2023, in winter, in the morning
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <strong>on：</strong>用于具体的日期，如星期、日期、特定某天的时段
+                            <div style="margin-top: 3px; font-size: 11px; color: #666;">
+                                例：on Tuesday, on Monday morning, on Christmas Day
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <strong>at：</strong>用于具体的时间点，如钟点时间、特定短时段、节日时节
+                            <div style="margin-top: 3px; font-size: 11px; color: #666;">
+                                例：at eight, at night, at Christmas
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <strong>记忆规律：</strong>时间范围从大到小 in → on → at
+                            <div style="margin-top: 3px; font-size: 11px; color: #666;">
+                                范围越大用in，越小用at，具体日期用on
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="usage-note">
+                        <h6>⚠️ 特别注意</h6>
+                        <p>• 时间范围大小决定介词选择：<span class="highlight-key">in</span>(大) &gt; <span class="highlight-key">on</span>(中) &gt; <span class="highlight-key">at</span>(小)<br>
+                        • 泛指时段用in，具体日期用on，具体时点用at ⏰<br>
+                        • <span class="highlight-key">on Monday morning</span> (具体某天的上午用on)<br>
+                        • <span class="highlight-key">in the morning</span> (泛指上午用in)<br>
+                        • <span class="highlight-key">at night</span> vs <span class="highlight-key">on a cold night</span> (泛指vs特指)<br>
+                        • 节日辨析：<span class="highlight-key">at Christmas</span>(时节) vs <span class="highlight-key">on Christmas Day</span>(具体日期) 🎄<br>
+                        • 中国节日：<span class="highlight-key">at Chinese New Year</span>(春节期间) vs <span class="highlight-key">on Chinese New Year's Eve</span>(除夕当天) 🧧</p>
+                    </div>
+
+                    <div class="key-points">
+                        <h4>🎯 考察重点</h4>
+                        <ul>
+                            <li>in用于年月季节
+                                <div class="key-point-examples">📅 <span class="highlight-preposition">in</span> winter / <span class="highlight-preposition">in</span> 2023</div>
+                            </li>
+                            <li>on用于具体日期
+                                <div class="key-point-examples">📆 <span class="highlight-preposition">on</span> Tuesday / <span class="highlight-preposition">on</span> Monday morning</div>
+                            </li>
+                            <li>at用于具体时点
+                                <div class="key-point-examples">🕰️ <span class="highlight-preposition">at</span> eight / <span class="highlight-preposition">at</span> night</div>
+                            </li>
+                            <li>节日时间的特殊用法
+                                <div class="key-point-examples">🎄 <span class="highlight-holiday">at Christmas</span> vs <span class="highlight-holiday">on Christmas Day</span></div>
+                            </li>
+                            <li>中国节日的表达
+                                <div class="key-point-examples">🧧 <span class="highlight-holiday">at Chinese New Year</span> vs <span class="highlight-holiday">on Chinese New Year's Eve</span></div>
+                            </li>
+                            <li>泛指vs特指的判断
+                                <div class="key-point-examples">🔍 in the morning vs on Monday morning</div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>📝 时间介词使用示例</h4>
+                        <div class="example">
+                            <span class="example-emoji">❄️</span>
+                            <span>We always wear warm clothes <span class="highlight-preposition">in</span> <span class="highlight-key">winter</span>. 我们总是在冬天穿暖和的衣服。</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">🏃‍♂️</span>
+                            <span>I have a PE lesson <span class="highlight-preposition">on</span> <span class="highlight-key">Tuesday</span>. 我周二有体育课。</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">💃</span>
+                            <span>I have a dancing lesson <span class="highlight-preposition">on</span> <span class="highlight-key">Saturday morning</span>. 我周六早上有舞蹈课。</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">📝</span>
+                            <span>I do my homework <span class="highlight-preposition">at</span> <span class="highlight-key">eight</span>. 我八点做作业。</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">🌙</span>
+                            <span>I usually sleep <span class="highlight-preposition">at</span> <span class="highlight-key">night</span>. 我通常在夜里睡觉。</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">🎄</span>
+                            <span>We always have a big dinner <span class="highlight-holiday">at Christmas</span>. 我们总是在圣诞节期间吃大餐。</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">🎁</span>
+                            <span>We open presents <span class="highlight-holiday">on Christmas Day</span>. 我们在圣诞节当天拆礼物。</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">🧧</span>
+                            <span>Families get together <span class="highlight-holiday">at Chinese New Year</span>. 家人在春节期间团聚。</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">🎆</span>
+                            <span>We stay up late <span class="highlight-holiday">on Chinese New Year's Eve</span>. 我们在除夕夜熬夜。</span>
+                        </div>
+                    </div>
+
+                    <div class="connection-box">
+                        <h4>🔗 温故知新</h4>
+                        <div class="connection-text">
+                            时间介词的掌握是英语学习的基础，与日常生活密切相关，有助于准确表达时间概念和安排日程。特别是节日时间的表达，体现了英语中时间概念的精确性。
+                        </div>
+                    </div>
+
+                    <div class="eva-tip">
+                        <h5>🔍 Eva老师👩‍🏫小贴士</h5>
+                        <p>亲爱的同学们，Unit7的语法内容主要围绕日常活动和时间表达展开。从询问周末活动的句型，到频度副词的使用，从a lot和a lot of的区别，到and和with的用法差异，最后学习时间介词in, on, at的规律。这些知识点都与我们的日常生活息息相关，掌握好这些语法点，你就能更流利地用英语描述自己的生活安排啦！特别要注意时间介词的选择，记住"泛指用in，特指用on，时点用at"的规律，以及节日时间的特殊用法：at Christmas（时节）vs on Christmas Day（具体日期），at Chinese New Year（春节期间）vs on Chinese New Year's Eve（除夕当天）。记住：语法是工具，生活是内容，把语法运用到实际交流中才是学习的目标！愿你在英语学习的路上越来越自信！🏖️⏰🎄🧧</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            Eva老师👩‍🏫伴步英语
+        </div>
+    </div>
+
+    <script>
+        // 平滑滚动到指定位置
+        document.querySelectorAll('.toc-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+
+
+</body></html>
