@@ -1,0 +1,1655 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="x-poe-datastore-behavior" content="local_only"><meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' data: blob: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://code.jquery.com https://unpkg.com https://d3js.org https://threejs.org https://cdn.plot.ly https://stackpath.bootstrapcdn.com https://maps.googleapis.com https://cdn.tailwindcss.com https://ajax.googleapis.com https://kit.fontawesome.com https://cdn.datatables.net https://maxcdn.bootstrapcdn.com https://code.highcharts.com https://tako-static-assets-production.s3.amazonaws.com https://www.youtube.com https://fonts.googleapis.com https://fonts.gstatic.com https://pfst.cf2.poecdn.net https://puc.poecdn.net https://i.imgur.com https://wikimedia.org https://*.icons8.com https://*.giphy.com https://picsum.photos https://images.unsplash.com; frame-src 'self' https://www.youtube.com https://trytako.com; child-src 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests; block-all-mixed-content;">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eva老师👩‍🏫伴步英语-江苏校内-译林英语-五上-Unit2必学语法点</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            background: linear-gradient(135deg, #6d8bc3 0%, #c0db82 100%);
+            padding: 15px;
+            min-height: 100vh;
+            line-height: 1.6;
+            position: relative;
+        }
+
+        /* 水印样式 */
+        .watermark {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            user-select: none;
+            z-index: 999;
+            overflow: hidden;
+        }
+
+        .watermark::before {
+            content: "Eva老师👩‍🏫伴步英语";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-45deg);
+            font-size: 32px;
+            color: rgba(109, 139, 195, 0.12);
+            font-weight: bold;
+            white-space: nowrap;
+            letter-spacing: 6px;
+            text-shadow: 0 0 1px rgba(109, 139, 195, 0.08);
+        }
+
+        .watermark::after {
+            content: "Eva老师👩‍🏫伴步英语";
+            position: absolute;
+            top: 25%;
+            left: 25%;
+            transform: translate(-50%, -50%) rotate(-45deg);
+            font-size: 24px;
+            color: rgba(192, 219, 130, 0.08);
+            font-weight: bold;
+            white-space: nowrap;
+            letter-spacing: 4px;
+        }
+
+        .card-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(236, 236, 236, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            overflow: hidden;
+            min-height: 95vh;
+            position: relative;
+            z-index: 10;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #6d8bc3, #5a7ab8);
+            color: white;
+            text-align: center;
+            padding: 25px 20px;
+            position: relative;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .header .subtitle {
+            font-size: 16px;
+            opacity: 0.9;
+            margin-bottom: 5px;
+        }
+
+        .highlight-unit {
+            background: #FFE266;
+            color: #333;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        .header .teacher-info {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        .decorative-star {
+            position: absolute;
+            font-size: 20px;
+            animation: twinkle 2s infinite;
+        }
+
+        .star1 { top: 10px; left: 20px; }
+        .star2 { top: 15px; right: 30px; animation-delay: 0.5s; }
+        .star3 { bottom: 10px; left: 40px; animation-delay: 1s; }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.5; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.2); }
+        }
+
+        /* 目录导航样式 */
+        .table-of-contents {
+            background: rgba(255, 255, 255, 0.98);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 20px 0 20px;
+            border-left: 5px solid #6d8bc3;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .toc-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .toc-icon {
+            background: #6d8bc3;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            margin-right: 12px;
+        }
+
+        .toc-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .toc-item {
+            margin: 8px 0;
+            padding: 12px 15px;
+            background: #f8f9ff;
+            border-radius: 8px;
+            border-left: 3px solid #FFE266;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .toc-item:hover {
+            background: #e8f2ff;
+            border-left-color: #6d8bc3;
+            transform: translateX(5px);
+        }
+
+        .toc-item:nth-child(2n) {
+            border-left-color: #c0db82;
+        }
+
+        .toc-item:nth-child(3n) {
+            border-left-color: #6d8bc3;
+        }
+
+        .toc-link {
+            text-decoration: none;
+            color: #333;
+            font-size: 14px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .toc-number {
+            background: #FFE266;
+            color: #333;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .toc-title {
+            flex: 1;
+        }
+
+        .toc-emoji {
+            font-size: 16px;
+        }
+
+        .content {
+            padding: 20px;
+            max-height: calc(100vh - 200px);
+            overflow-y: auto;
+        }
+
+        .grammar-point {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 5px solid #FFE266;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+            position: relative;
+            scroll-margin-top: 20px;
+        }
+
+        .grammar-point:hover {
+            transform: translateY(-2px);
+        }
+
+        .grammar-point:nth-child(2n) {
+            border-left-color: #c0db82;
+        }
+
+        .grammar-point:nth-child(3n) {
+            border-left-color: #6d8bc3;
+        }
+
+        .point-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .point-number {
+            background: #FFE266;
+            color: #333;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 12px;
+            font-size: 14px;
+        }
+
+        .point-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            flex: 1;
+        }
+
+        .emoji {
+            font-size: 20px;
+            margin-left: 8px;
+        }
+
+        .point-content {
+            color: #555;
+            line-height: 1.6;
+            font-size: 14px;
+        }
+
+        .core-concept {
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+
+        .key-points {
+            background: #f8f9ff;
+            border-radius: 10px;
+            padding: 12px;
+            margin: 12px 0;
+            border: 2px dashed #6d8bc3;
+        }
+
+        .key-points h4 {
+            color: #6d8bc3;
+            font-size: 14px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .key-points ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .key-points li {
+            padding: 8px 0;
+            position: relative;
+            padding-left: 18px;
+            border-bottom: 1px dotted #e0e0e0;
+        }
+
+        .key-points li:last-child {
+            border-bottom: none;
+        }
+
+        .key-points li:before {
+            content: "✨";
+            position: absolute;
+            left: 0;
+            font-size: 12px;
+        }
+
+        .key-point-examples {
+            font-size: 12px;
+            color: #777;
+            margin-top: 4px;
+            font-style: italic;
+            padding-left: 10px;
+            border-left: 2px solid #FFE266;
+        }
+
+        .structure-box {
+            background: linear-gradient(135deg, #c0db82, #d4e89a);
+            border-radius: 10px;
+            padding: 12px;
+            margin: 12px 0;
+            border: 1px solid #a8c26a;
+        }
+
+        .structure-box h4 {
+            color: #5a7a2d;
+            font-size: 14px;
+            margin-bottom: 8px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .structure-item {
+            background: white;
+            border-radius: 6px;
+            padding: 8px;
+            margin: 6px 0;
+            border-left: 3px solid #6d8bc3;
+            font-size: 13px;
+            color: #333;
+        }
+
+        .structure-examples {
+            font-size: 12px;
+            color: #666;
+            margin-top: 4px;
+            font-style: italic;
+        }
+
+        .detail-box {
+            background: #f0f8ff;
+            border: 2px solid #6d8bc3;
+            border-radius: 8px;
+            padding: 12px;
+            margin: 10px 0;
+        }
+
+        .detail-box h5 {
+            color: #6d8bc3;
+            font-size: 13px;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        .detail-item {
+            margin: 6px 0;
+            padding: 6px;
+            background: white;
+            border-radius: 4px;
+            border-left: 2px solid #6d8bc3;
+            font-size: 12px;
+        }
+
+        .detail-item strong {
+            color: #6d8bc3;
+        }
+
+        .example-box {
+            background: linear-gradient(135deg, #FFE266, #fff5a0);
+            border-radius: 10px;
+            padding: 12px;
+            margin: 12px 0;
+            border: 1px solid #e6d000;
+        }
+
+        .example-box h4 {
+            color: #b8860b;
+            font-size: 13px;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .example {
+            font-style: italic;
+            color: #666;
+            margin: 5px 0;
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .example-emoji {
+            font-size: 16px;
+        }
+
+        .highlight {
+            background: #c0db82;
+            padding: 2px 6px;
+            border-radius: 3px;
+            color: #2d4a0d;
+            font-weight: bold;
+        }
+
+        .highlight-noun {
+            background: #f4e8c1;
+            padding: 2px 5px;
+            border-radius: 2px;
+            color: #8b5a3c;
+            font-weight: bold;
+            border: 1px solid #d4c19c;
+        }
+
+        .highlight-verb {
+            background: #e8f4e8;
+            padding: 2px 5px;
+            border-radius: 2px;
+            color: #2d5a2d;
+            font-weight: bold;
+            border: 1px solid #b8d4b8;
+        }
+
+        .highlight-suffix {
+            background: #ffcccb;
+            padding: 1px 2px;
+            border-radius: 2px;
+            color: #8b0000;
+            font-weight: bold;
+            border: 1px solid #ff6b6b;
+            font-size: 11px;
+        }
+
+        .connection-box {
+            background: linear-gradient(135deg, #c0db82, #d4e89a);
+            border-radius: 8px;
+            padding: 10px;
+            margin-top: 12px;
+            border: 1px solid #a8c26a;
+        }
+
+        .connection-box h4 {
+            color: #5a7a2d;
+            font-size: 12px;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        .connection-text {
+            font-size: 12px;
+            color: #4a6024;
+            line-height: 1.4;
+        }
+
+        .omission-note {
+            background: #fff0f5;
+            border: 2px dashed #ff69b4;
+            border-radius: 8px;
+            padding: 10px;
+            margin: 8px 0;
+        }
+
+        .omission-note h5 {
+            color: #d63384;
+            font-size: 12px;
+            margin-bottom: 4px;
+            font-weight: bold;
+        }
+
+        .omission-note p {
+            font-size: 11px;
+            color: #666;
+            line-height: 1.4;
+        }
+
+        .ordinal-table {
+            background: white;
+            border-radius: 10px;
+            padding: 12px;
+            margin: 12px 0;
+            border: 2px solid #6d8bc3;
+        }
+
+        .ordinal-table h5 {
+            color: #6d8bc3;
+            font-size: 14px;
+            margin-bottom: 10px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .number-grid {
+            display: grid;
+            grid-template-columns: repeat(10, 1fr);
+            gap: 4px;
+            margin-bottom: 10px;
+        }
+
+        .number-cell {
+            background: #f5f5f5;
+            padding: 5px 3px;
+            border-radius: 4px;
+            text-align: center;
+            font-size: 10px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .special-st {
+            background: #FFE266;
+            font-weight: bold;
+            color: #b8860b;
+        }
+
+        .special-nd {
+            background: #c0db82;
+            font-weight: bold;
+            color: #2d5a0d;
+        }
+
+        .special-rd {
+            background: #6d8bc3;
+            font-weight: bold;
+            color: white;
+        }
+
+        .exception-teen {
+            background: #f8d7da;
+            font-weight: bold;
+            color: #721c24;
+            border-color: #dc3545;
+        }
+
+        .exception-note {
+            background: #fff3cd;
+            border: 2px solid #FFE266;
+            border-radius: 6px;
+            padding: 8px;
+            margin-top: 6px;
+        }
+
+        .exception-note h6 {
+            color: #856404;
+            font-size: 11px;
+            margin-bottom: 3px;
+            font-weight: bold;
+        }
+
+        .exception-note p {
+            font-size: 10px;
+            color: #856404;
+            line-height: 1.3;
+        }
+
+        .eva-tip {
+            background: linear-gradient(135deg, #d8b3e0, #e4c7e7);
+            border-radius: 10px;
+            padding: 12px;
+            margin: 12px 0;
+            border: 2px solid #c8a2c8;
+        }
+
+        .eva-tip h5 {
+            color: #8e44ad;
+            font-size: 13px;
+            margin-bottom: 6px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .eva-tip p {
+            color: #6a4c7a;
+            font-size: 12px;
+            line-height: 1.5;
+            font-style: italic;
+        }
+
+        .footer {
+            background: linear-gradient(135deg, #6d8bc3, #5a7ab8);
+            color: white;
+            text-align: center;
+            padding: 12px 20px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .conversion-box {
+            background: #f0f8ff;
+            border: 2px solid #6d8bc3;
+            border-radius: 8px;
+            padding: 12px;
+            margin: 10px 0;
+        }
+
+        .conversion-box h5 {
+            color: #6d8bc3;
+            font-size: 13px;
+            margin-bottom: 8px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .conversion-item {
+            margin: 6px 0;
+            padding: 8px;
+            background: white;
+            border-radius: 4px;
+            border-left: 2px solid #6d8bc3;
+            font-size: 12px;
+        }
+
+        .color-legend {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 8px 0;
+            font-size: 9px;
+            flex-wrap: wrap;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 3px;
+        }
+
+        .legend-color {
+            width: 10px;
+            height: 10px;
+            border-radius: 2px;
+        }
+
+        .special-change-box {
+            background: #fef7e0;
+            border: 2px solid #f59e0b;
+            border-radius: 8px;
+            padding: 12px;
+            margin: 10px 0;
+        }
+
+        .special-change-box h5 {
+            color: #f59e0b;
+            font-size: 13px;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .change-category {
+            margin: 6px 0;
+            padding: 6px;
+            background: white;
+            border-radius: 4px;
+            border-left: 2px solid #f59e0b;
+        }
+
+        .change-category strong {
+            color: #f59e0b;
+        }
+
+        .change-examples {
+            font-size: 11px;
+            color: #666;
+            margin-top: 3px;
+            font-style: italic;
+        }
+
+        .response-box {
+            background: #e6f7ff;
+            border: 2px solid #40a9ff;
+            border-radius: 8px;
+            padding: 12px;
+            margin: 10px 0;
+        }
+
+        .response-box h5 {
+            color: #1890ff;
+            font-size: 13px;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .response-category {
+            margin: 6px 0;
+            padding: 6px;
+            background: white;
+            border-radius: 4px;
+            border-left: 2px solid #40a9ff;
+        }
+
+        .response-category strong {
+            color: #1890ff;
+        }
+
+        .response-examples {
+            font-size: 11px;
+            color: #666;
+            margin-top: 3px;
+            font-style: italic;
+        }
+
+        .correct-usage {
+            background: #f6ffed;
+            border: 2px solid #52c41a;
+            border-radius: 6px;
+            padding: 8px;
+            margin: 6px 0;
+        }
+
+        .correct-usage h6 {
+            color: #52c41a;
+            font-size: 11px;
+            margin-bottom: 3px;
+            font-weight: bold;
+        }
+
+        .correct-usage .usage-item {
+            font-size: 10px;
+            color: #135200;
+            margin: 3px 0;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .checkmark {
+            color: #52c41a;
+            font-weight: bold;
+        }
+
+        .crossmark {
+            color: #ff4d4f;
+            font-weight: bold;
+        }
+
+        .tip-box {
+            background: #fff8dc;
+            border: 2px solid #ffa500;
+            border-radius: 8px;
+            padding: 10px;
+            margin: 8px 0;
+        }
+
+        .tip-box h5 {
+            color: #ff6b35;
+            font-size: 12px;
+            margin-bottom: 4px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .tip-box p {
+            font-size: 11px;
+            color: #666;
+            line-height: 1.4;
+        }
+
+        .usage-preference {
+            background: #e8f5e8;
+            border: 2px solid #90c695;
+            border-radius: 8px;
+            padding: 10px;
+            margin: 8px 0;
+        }
+
+        .usage-preference h6 {
+            color: #2d5016;
+            font-size: 12px;
+            margin-bottom: 4px;
+            font-weight: bold;
+        }
+
+        .usage-preference p {
+            font-size: 11px;
+            color: #4a5d2a;
+            line-height: 1.4;
+        }
+
+        .quantifier-box {
+            background: #fff5f5;
+            border: 2px solid #ff7875;
+            border-radius: 8px;
+            padding: 12px;
+            margin: 10px 0;
+        }
+
+        .quantifier-box h5 {
+            color: #cf1322;
+            font-size: 13px;
+            margin-bottom: 8px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .quantifier-category {
+            margin: 6px 0;
+            padding: 6px;
+            background: white;
+            border-radius: 4px;
+            border-left: 2px solid #ff7875;
+        }
+
+        .quantifier-category strong {
+            color: #cf1322;
+        }
+
+        .quantifier-examples {
+            font-size: 11px;
+            color: #666;
+            margin-top: 3px;
+            font-style: italic;
+        }
+
+        .measure-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 6px;
+            margin: 8px 0;
+        }
+
+        .measure-item {
+            background: #f8f8f8;
+            padding: 6px;
+            border-radius: 4px;
+            text-align: center;
+            font-size: 10px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .measure-liquid {
+            border-left: 2px solid #1890ff;
+        }
+
+        .measure-food {
+            border-left: 2px solid #52c41a;
+        }
+
+        .measure-paper {
+            border-left: 2px solid #fa8c16;
+        }
+
+        .measure-general {
+            border-left: 2px solid #722ed1;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            .watermark::before {
+                font-size: 24px;
+                letter-spacing: 3px;
+            }
+
+            .watermark::after {
+                font-size: 18px;
+                letter-spacing: 2px;
+            }
+
+            .card-container {
+                border-radius: 15px;
+                min-height: 100vh;
+            }
+
+            .header {
+                padding: 20px 15px;
+            }
+
+            .header h1 {
+                font-size: 20px;
+            }
+
+            .header .subtitle {
+                font-size: 14px;
+            }
+
+            .table-of-contents {
+                margin: 15px;
+                padding: 15px;
+            }
+
+            .content {
+                padding: 15px;
+                max-height: none;
+            }
+
+            .grammar-point {
+                padding: 15px;
+                margin-bottom: 15px;
+            }
+
+            .point-title {
+                font-size: 16px;
+            }
+
+            .point-content {
+                font-size: 13px;
+            }
+
+            .number-grid {
+                grid-template-columns: repeat(5, 1fr);
+                gap: 3px;
+            }
+
+            .measure-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 4px;
+            }
+
+            .color-legend {
+                gap: 6px;
+                font-size: 8px;
+            }
+
+            .decorative-star {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .watermark::before {
+                font-size: 18px;
+                letter-spacing: 2px;
+            }
+
+            .watermark::after {
+                font-size: 14px;
+                letter-spacing: 1px;
+            }
+
+            .header h1 {
+                font-size: 18px;
+            }
+
+            .header .subtitle {
+                font-size: 12px;
+            }
+
+            .point-title {
+                font-size: 14px;
+            }
+
+            .point-content {
+                font-size: 12px;
+            }
+
+            .number-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .measure-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .color-legend {
+                flex-direction: column;
+                gap: 4px;
+                font-size: 7px;
+            }
+        }
+    </style>
+<script src="https://puc.poecdn.net/authenticated_preview_page/syncedState.bd4eeeb8e8e02052ee92.js"></script></head>
+<body>
+    <!-- 水印元素 -->
+    <div class="watermark"></div>
+    
+    <div class="card-container">
+        <div class="header">
+            <div class="decorative-star star1">⭐</div>
+            <div class="decorative-star star2">✨</div>
+            <div class="decorative-star star3">🌟</div>
+            <h1>江苏校内-译林英语</h1>
+            <div class="subtitle"><span class="highlight-unit">五上</span>-<span class="highlight-unit">Unit2</span>-<span class="highlight-unit">必学语法点</span></div>
+            <div class="teacher-info">Eva老师👩‍🏫伴步英语</div>
+        </div>
+
+        <!-- 目录导航 -->
+        <div class="table-of-contents">
+            <div class="toc-header">
+                <div class="toc-icon">📚</div>
+                <span>知识点目录导航</span>
+            </div>
+            <ul class="toc-list">
+                <li class="toc-item">
+                    <a href="#point1" class="toc-link">
+                        <div class="toc-number">1</div>
+                        <div class="toc-title">There be句型的一般疑问句</div>
+                        <div class="toc-emoji">❓</div>
+                    </a>
+                </li>
+                <li class="toc-item">
+                    <a href="#point2" class="toc-link">
+                        <div class="toc-number">2</div>
+                        <div class="toc-title">There be句型的特殊疑问句</div>
+                        <div class="toc-emoji">🤔</div>
+                    </a>
+                </li>
+                <li class="toc-item">
+                    <a href="#point3" class="toc-link">
+                        <div class="toc-number">3</div>
+                        <div class="toc-title">序数词</div>
+                        <div class="toc-emoji">🥇</div>
+                    </a>
+                </li>
+                <li class="toc-item">
+                    <a href="#point4" class="toc-link">
+                        <div class="toc-number">4</div>
+                        <div class="toc-title">"It's time for/to..."句型</div>
+                        <div class="toc-emoji">⏰</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="content">
+            <div id="point1" class="grammar-point">
+                <div class="point-header">
+                    <div class="point-number">1</div>
+                    <div class="point-title">There be句型的一般疑问句</div>
+                    <div class="emoji">❓</div>
+                </div>
+                <div class="point-content">
+                    <p class="core-concept"><strong>核心概念：</strong>询问某地是否有某人/物</p>
+                    
+                    <div class="structure-box">
+                        <h4>🔄 变一般疑问句的方法</h4>
+                        <div class="structure-item">
+                            将be动词提到句首，some变any，句号变问号
+                            <div class="structure-examples">📚 There are <span class="highlight">some books</span>. → Are there <span class="highlight">any books</span>?</div>
+                        </div>
+                    </div>
+
+                    <div class="detail-box">
+                        <h5>💬 简略回答的形式</h5>
+                        <div class="detail-item">
+                            <strong>单数形式肯定回答：</strong><span class="checkmark">✅</span> <span class="highlight">Yes, there is.</span>
+                            <div class="structure-examples">🏠 Is there a house? -- Yes, there is.</div>
+                        </div>
+                        <div class="detail-item">
+                            <strong>单数形式否定回答：</strong><span class="crossmark">❌</span> <span class="highlight">No, there isn't.</span>
+                            <div class="structure-examples">🍎 Is there an apple? -- No, there isn't.</div>
+                        </div>
+                        <div class="detail-item">
+                            <strong>复数形式肯定回答：</strong><span class="checkmark">✅</span> <span class="highlight">Yes, there are.</span>
+                            <div class="structure-examples">📚 Are there any books? -- Yes, there are.</div>
+                        </div>
+                        <div class="detail-item">
+                            <strong>复数形式否定回答：</strong><span class="crossmark">❌</span> <span class="highlight">No, there aren't.</span>
+                            <div class="structure-examples">🎈 Are there any balloons? -- No, there aren't.</div>
+                        </div>
+                    </div>
+
+                    <div class="detail-box">
+                        <h5>🔄 some与any的转换规律</h5>
+                        <div class="detail-item">
+                            <strong>基本规律：</strong>肯定句用<span class="highlight">some</span>，疑问句和否定句用<span class="highlight">any</span>
+                        </div>
+                        <div class="detail-item">
+                            <strong>特殊情况：</strong>表示建议、请求的疑问句仍用<span class="highlight">some</span>
+                        </div>
+                        <div class="detail-item">
+                            <strong>建议例句：</strong>🍵 Would you like <span class="highlight">some tea</span>? 你想要些茶吗？
+                        </div>
+                        <div class="detail-item">
+                            <strong>请求例句：</strong>💧 May I have <span class="highlight">some water</span>? 我可以要些水吗？
+                        </div>
+                        <div class="detail-item">
+                            <strong>更多例句：</strong>🍪 Can I have <span class="highlight">some cookies</span>? / Could you give me <span class="highlight">some help</span>? / Shall we buy <span class="highlight">some fruits</span>?
+                        </div>
+                    </div>
+
+                    <div class="detail-box">
+                        <h5>📋 三种句型结构详解</h5>
+                        <div class="detail-item">
+                            <strong>单数：</strong>Is there <span class="highlight">a/an</span> + 可数名词单数 + 地点状语？
+                            <div class="structure-examples">📖 Is there <span class="highlight">a book</span> on the desk? / 🍎 Is there <span class="highlight">an apple</span> in the bag?</div>
+                        </div>
+                        <div class="detail-item">
+                            <strong>复数：</strong>Are there <span class="highlight">any</span> + 可数名词复数 + 地点状语？
+                            <div class="structure-examples">🧑‍🎓 Are there <span class="highlight">any students</span> in the classroom? / 🧸 Are there <span class="highlight">any toys</span> in the box?</div>
+                        </div>
+                        <div class="detail-item">
+                            <strong>不可数：</strong>Is there <span class="highlight">any</span> + 不可数名词 + 地点状语？
+                            <div class="structure-examples">🥛 Is there <span class="highlight">any milk</span> in the glass? / 💧 Is there <span class="highlight">any water</span> in the bottle?</div>
+                        </div>
+                    </div>
+
+                    <div class="key-points">
+                        <h4>🎯 考察重点</h4>
+                        <ul>
+                            <li>some与any的转换规律
+                                <div class="key-point-examples">📚 some books → any books (疑问句中用any)</div>
+                            </li>
+                            <li>be动词的提前
+                                <div class="key-point-examples">🔄 There is → Is there / There are → Are there</div>
+                            </li>
+                            <li>简略回答的形式
+                                <div class="key-point-examples">✅ Yes, there is/are. ❌ No, there isn't/aren't.</div>
+                            </li>
+                            <li>可数与不可数名词的区分
+                                <div class="key-point-examples">🥛 Is there any milk? 🍎 Are there any apples?</div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>📝 经典例句</h4>
+                        <div class="example">
+                            <span class="example-emoji">📖</span>
+                            <span><span class="highlight">Are there any</span> books on the desk?</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">🥛</span>
+                            <span><span class="highlight">Is there any</span> milk in the glass?</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">🏠</span>
+                            <span><span class="highlight">Is there a</span> garden behind the house?</span>
+                        </div>
+                    </div>
+
+                    <div class="connection-box">
+                        <h4>🔗 温故知新</h4>
+                        <div class="connection-text">
+                            回顾Unit 1学过的There be陈述句，现在学会如何询问"是否存在"。注意some/any的变化规律。
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="point2" class="grammar-point">
+                <div class="point-header">
+                    <div class="point-number">2</div>
+                    <div class="point-title">There be句型的特殊疑问句</div>
+                    <div class="emoji">🤔</div>
+                </div>
+                <div class="point-content">
+                    <p class="core-concept"><strong>核心概念：</strong>询问某地有多少人/物或有什么东西</p>
+
+                    <div class="structure-box">
+                        <h4>🔢 How many引导的疑问句</h4>
+                        <div class="structure-item">
+                            How many + 可数名词复数 + are there (+ 地点状语)?
+                            <div class="structure-examples">🧑‍🎓 How many <span class="highlight">students</span> are there in the classroom?</div>
+                        </div>
+                    </div>
+
+                    <div class="tip-box">
+                        <h5>💡 小贴士</h5>
+                        <p>不管回答是单数还是复数，How many问句都是复数形式！因为我询问时不知道数量是多少，默认用复数形式更安全（more safer）！</p>
+                    </div>
+
+                    <div class="structure-box">
+                        <h4>💧 How much引导的疑问句</h4>
+                        <div class="structure-item">
+                            How much + 不可数名词 + is there (+ 地点状语)?
+                            <div class="structure-examples">🥤 How much <span class="highlight">juice</span> is there in the glass?</div>
+                        </div>
+                    </div>
+
+                    <div class="quantifier-box">
+                        <h5>⚖️ How much问句的量化回答方式</h5>
+                        <div class="quantifier-category">
+                            <strong>用量词短语将不可数名词量化：</strong>可以通过"量词+of+不可数名词"的方式进行具体量化回答
+                            <div class="quantifier-examples">💧 How much water is there? -- <span class="highlight">There are three cups of water</span>. 有三杯水。</div>
+                        </div>
+                        <div class="quantifier-category">
+                            <strong>常用量化不可数名词的短语：</strong>
+                            <div class="measure-grid">
+                                <div class="measure-item measure-liquid">🥛 a cup of milk<br>一杯牛奶</div>
+                                <div class="measure-item measure-liquid">🍶 a bottle of juice<br>一瓶果汁</div>
+                                <div class="measure-item measure-liquid">🥤 a glass of water<br>一杯水</div>
+                                <div class="measure-item measure-food">🍞 a piece of bread<br>一片面包</div>
+                                <div class="measure-item measure-food">🍰 a slice of cake<br>一片蛋糕</div>
+                                <div class="measure-item measure-food">🥄 a spoon of sugar<br>一勺糖</div>
+                                <div class="measure-item measure-paper">📃 a piece of paper<br>一张纸</div>
+                                <div class="measure-item measure-paper">📰 a piece of news<br>一条新闻</div>
+                                <div class="measure-item measure-general">💼 a bag of rice<br>一袋米</div>
+                                <div class="measure-item measure-general">📦 a box of chocolate<br>一盒巧克力</div>
+                                <div class="measure-item measure-general">🍯 a jar of honey<br>一罐蜂蜜</div>
+                                <div class="measure-item measure-general">🧈 a bar of soap<br>一块肥皂</div>
+                            </div>
+                        </div>
+                        <div class="quantifier-category">
+                            <strong>量化回答例句：</strong>
+                            <div class="quantifier-examples">
+                                🥛 How much milk is there? -- <span class="highlight">There are two cups of milk</span>.<br>
+                                🍞 How much bread is there? -- <span class="highlight">There are five pieces of bread</span>.<br>
+                                📃 How much paper is there? -- <span class="highlight">There is only one piece of paper</span>.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="structure-box">
+                        <h4>❓ What's引导的疑问句</h4>
+                        <div class="structure-item">
+                            What's + 地点状语? (询问某地有什么)
+                            <div class="structure-examples">🏠 What's in the <span class="highlight">room</span>? -- There are three <span class="highlight">beds</span>.</div>
+                        </div>
+                    </div>
+
+                    <div class="tip-box">
+                        <h5>💡 小贴士</h5>
+                        <p>不管回答是单数还是复数，What's问句都用"What's"！因为问的时候不知道里面有什么，用单数形式What's更简洁常用！</p>
+                    </div>
+
+                    <div class="detail-box">
+                        <h5>🎯 回答要点</h5>
+                        <div class="detail-item">
+                            <strong>How many问句：</strong>用数量词回答 There is/are + <span class="highlight">数字</span>...
+                        </div>
+                        <div class="detail-item">
+                            <strong>How much问句：</strong>用程度词回答 There is only <span class="highlight">a little</span>/<span class="highlight">much</span>... 或用量词短语量化回答
+                        </div>
+                        <div class="detail-item">
+                            <strong>What's问句：</strong>用There be句型回答具体<span class="highlight">物品</span>
+                        </div>
+                    </div>
+
+                    <div class="response-box">
+                        <h5>💬 How much问句的完整回答方式</h5>
+                        <div class="response-category">
+                            <strong>肯定回答：</strong>There is a little/much/a lot of/some...
+                            <div class="response-examples">🧃 There is <span class="highlight">a lot of</span> juice. 有很多果汁。</div>
+                        </div>
+                        <div class="response-category">
+                            <strong>否定回答：</strong>There is no.../There isn't any...
+                            <div class="response-examples">🥛 There is <span class="highlight">no</span> milk. 没有牛奶。</div>
+                        </div>
+                        <div class="response-category">
+                            <strong>程度回答：</strong>There is only a little/There is plenty of...
+                            <div class="response-examples">💧 There is <span class="highlight">only a little</span> water. 只有一点水。</div>
+                        </div>
+                        <div class="response-category">
+                            <strong>量化回答：</strong>用量词短语进行具体量化
+                            <div class="response-examples">🥛 There are <span class="highlight">three cups of</span> milk. 有三杯牛奶。</div>
+                        </div>
+                        <div class="response-category">
+                            <strong>具体例句：</strong>There is <span class="highlight">a lot of</span> juice. / There is <span class="highlight">no</span> milk. / There <span class="highlight">isn't any</span>. / There are <span class="highlight">five bottles of</span> water.
+                        </div>
+                    </div>
+
+                    <div class="key-points">
+                        <h4>🎯 考察重点</h4>
+                        <ul>
+                            <li>How many与How much的选择
+                                <div class="key-point-examples">🧑‍🎓 How many students? (可数) 🥛 How much milk? (不可数)</div>
+                            </li>
+                            <li>疑问词的固定搭配
+                                <div class="key-point-examples">📊 How many + 复数名词 💧 How much + 不可数名词</div>
+                            </li>
+                            <li>What's疑问句的回答形式
+                                <div class="key-point-examples">❓ What's in the box? 📦 There are some toys.</div>
+                            </li>
+                            <li>数量回答的准确性
+                                <div class="key-point-examples">🔢 There is only one. / There are five books. / There are three cups of water.</div>
+                            </li>
+                            <li>量化不可数名词的方法
+                                <div class="key-point-examples">⚖️ 用"量词+of+不可数名词"进行量化表达</div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>📝 经典例句</h4>
+                        <div class="example">
+                            <span class="example-emoji">🧑‍🎓</span>
+                            <span><span class="highlight">How many students</span> are there in the classroom?</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">🧃</span>
+                            <span><span class="highlight">How much juice</span> is there in the glass?</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">🥛</span>
+                            <span>How much milk is there? -- <span class="highlight">There are three cups of milk</span>.</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">🏠</span>
+                            <span><span class="highlight">What's</span> in the room? -- There are three <span class="highlight">beds</span>.</span>
+                        </div>
+                    </div>
+
+                    <div class="connection-box">
+                        <h4>🔗 温故知新</h4>
+                        <div class="connection-text">
+                            复习之前学过的How many和How much疑问词，现在结合There be句型进行更复杂的询问。同时回顾之前学过的量词短语，如a cup of, a piece of, a bottle of等，这些都是将不可数名词进行量化的重要方式。
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="point3" class="grammar-point">
+                <div class="point-header">
+                    <div class="point-number">3</div>
+                    <div class="point-title">序数词</div>
+                    <div class="emoji">🥇</div>
+                </div>
+                <div class="point-content">
+                    <p class="core-concept"><strong>核心概念：</strong>基数词表示数目、数量，如one, two, three...；序数词表示"第......的"顺序，如first, second, third...</p>
+
+                    <div class="detail-box">
+                        <h5>📊 基数词vs序数词对比</h5>
+                        <div class="detail-item">
+                            <strong>基数词：</strong><span class="highlight">one, two, three, four, five, six, seven, eight, nine, ten</span>...
+                        </div>
+                        <div class="detail-item">
+                            <strong>序数词：</strong><span class="highlight">first 1<span class="highlight-suffix">st</span>, second 2<span class="highlight-suffix">nd</span>, third 3<span class="highlight-suffix">rd</span>, fourth 4<span class="highlight-suffix">th</span>, fifth 5<span class="highlight-suffix">th</span>, sixth 6<span class="highlight-suffix">th</span>, seventh 7<span class="highlight-suffix">th</span>, eighth 8<span class="highlight-suffix">th</span>, ninth 9<span class="highlight-suffix">th</span>, tenth 10<span class="highlight-suffix">th</span></span>...
+                        </div>
+                    </div>
+
+                    <div class="special-change-box">
+                        <h5>🔤 序数词完整变化规律</h5>
+                        <div class="change-category">
+                            <strong>完全不规则变化（特别记忆）：</strong>
+                            <div class="change-examples">one → <span class="highlight">first</span> (1<span class="highlight-suffix">st</span>), two → <span class="highlight">second</span> (2<span class="highlight-suffix">nd</span>), three → <span class="highlight">third</span> (3<span class="highlight-suffix">rd</span>)</div>
+                        </div>
+                        <div class="change-category">
+                            <strong>直接加h：</strong>
+                            <div class="change-examples">eight → <span class="highlight">eighth</span> (8<span class="highlight-suffix">th</span>) - 注意拼写，不是eightth</div>
+                        </div>
+                        <div class="change-category">
+                            <strong>去e加th：</strong>
+                            <div class="change-examples">five → <span class="highlight">fifth</span> (5<span class="highlight-suffix">th</span>), nine → <span class="highlight">ninth</span> (9<span class="highlight-suffix">th</span>)</div>
+                        </div>
+                        <div class="change-category">
+                            <strong>将ve变f+th：</strong>
+                            <div class="change-examples">twelve → <span class="highlight">twelfth</span> (12<span class="highlight-suffix">th</span>)</div>
+                        </div>
+                        <div class="change-category">
+                            <strong>变y为ie加th：</strong>
+                            <div class="change-examples">twenty → <span class="highlight">twentieth</span> (20<span class="highlight-suffix">th</span>), thirty → <span class="highlight">thirtieth</span> (30<span class="highlight-suffix">th</span>), forty → <span class="highlight">fortieth</span> (40<span class="highlight-suffix">th</span>)</div>
+                        </div>
+                        <div class="change-category">
+                            <strong>特殊例外（英文单词末尾是th结尾）：</strong>
+                            <div class="change-examples">eleven → <span class="highlight">eleventh</span> (11<span class="highlight-suffix">th</span>), thirteen → <span class="highlight">thirteenth</span> (13<span class="highlight-suffix">th</span>)</div>
+                        </div>
+                    </div>
+
+                    <div class="ordinal-table">
+                        <h5>🔢 1-30序数词对照表</h5>
+                        
+                        <div class="color-legend">
+                            <div class="legend-item">
+                                <div class="legend-color" style="background: #FFE266;"></div>
+                                <span>个位是1用st</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color" style="background: #c0db82;"></div>
+                                <span>个位是2用nd</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color" style="background: #6d8bc3;"></div>
+                                <span>个位是3用rd</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color" style="background: #f8d7da;"></div>
+                                <span>特殊例外</span>
+                            </div>
+                        </div>
+                        
+                        <div class="number-grid">
+                            <div class="number-cell special-st">1st</div>
+                            <div class="number-cell special-nd">2nd</div>
+                            <div class="number-cell special-rd">3rd</div>
+                            <div class="number-cell">4th</div>
+                            <div class="number-cell">5th</div>
+                            <div class="number-cell">6th</div>
+                            <div class="number-cell">7th</div>
+                            <div class="number-cell">8th</div>
+                            <div class="number-cell">9th</div>
+                            <div class="number-cell">10th</div>
+                            
+                            <div class="number-cell exception-teen">11th</div>
+                            <div class="number-cell exception-teen">12th</div>
+                            <div class="number-cell exception-teen">13th</div>
+                            <div class="number-cell">14th</div>
+                            <div class="number-cell">15th</div>
+                            <div class="number-cell">16th</div>
+                            <div class="number-cell">17th</div>
+                            <div class="number-cell">18th</div>
+                            <div class="number-cell">19th</div>
+                            <div class="number-cell">20th</div>
+                            
+                            <div class="number-cell special-st">21st</div>
+                            <div class="number-cell special-nd">22nd</div>
+                            <div class="number-cell special-rd">23rd</div>
+                            <div class="number-cell">24th</div>
+                            <div class="number-cell">25th</div>
+                            <div class="number-cell">26th</div>
+                            <div class="number-cell">27th</div>
+                            <div class="number-cell">28th</div>
+                            <div class="number-cell">29th</div>
+                            <div class="number-cell">30th</div>
+                        </div>
+                        
+                        <div class="exception-note">
+                            <h6>⚠️ 特殊例外详解</h6>
+                            <p><strong>11th, 12th, 13th</strong> 是特殊例外，因为：<br>
+                            • eleven → <span class="highlight">eleventh</span> (以-th结尾) → 11<span class="highlight-suffix">th</span><br>
+                            • twelve → <span class="highlight">twelfth</span> (以-th结尾) → 12<span class="highlight-suffix">th</span><br>
+                            • thirteen → <span class="highlight">thirteenth</span> (以-th结尾) → 13<span class="highlight-suffix">th</span><br>
+                            第十一、第十二和第十三因为英文单词末尾是<strong>th</strong>结尾，所以写成11<span class="highlight-suffix">th</span>, 12<span class="highlight-suffix">th</span>, 13<span class="highlight-suffix">th</span>，不遵循个位数规律！</p>
+                        </div>
+                    </div>
+
+                    <div class="omission-note">
+                        <h5>⚠️ 序数词使用注意事项</h5>
+                        <p>序数词前面一般要加定冠词<span class="highlight">the</span>，表示特定的顺序！</p>
+                        <div class="structure-examples">
+                            🏢 It's on <span class="highlight">the second</span> floor. 它在二楼。<br>
+                            👧 <span class="highlight">The third one</span> from the left is my sister. 左起第三个是我妹妹。
+                        </div>
+                    </div>
+
+                    <div class="key-points">
+                        <h4>🎯 考察重点</h4>
+                        <ul>
+                            <li>基数词与序数词的转换
+                                <div class="key-point-examples">🔄 one → first, two → second, three → third</div>
+                            </li>
+                            <li>序数词前的the使用
+                                <div class="key-point-examples">🏢 on the second floor, the first student</div>
+                            </li>
+                            <li>特殊序数词的拼写
+                                <div class="key-point-examples">✏️ eighth (不是eightth), ninth (不是nineth), twelfth (不是twelveth)</div>
+                            </li>
+                            <li>序数词的实际运用
+                                <div class="key-point-examples">🏃‍♂️ I'm the first. 🥈 She's the second.</div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>📝 经典例句</h4>
+                        <div class="example">
+                            <span class="example-emoji">🏢</span>
+                            <span>It's on <span class="highlight">the second</span> floor. 它在二楼。</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">👧</span>
+                            <span><span class="highlight">The third one</span> from the left is my little sister.</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">🥇</span>
+                            <span>I'm <span class="highlight">the first</span> in the race. 我赛跑第一名。</span>
+                        </div>
+                    </div>
+
+                    <div class="connection-box">
+                        <h4>🔗 温故知新</h4>
+                        <div class="connection-text">
+                            回顾之前学过的基数词1-10，现在学习对应的序数词，用来表示顺序和位置。
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="point4" class="grammar-point">
+                <div class="point-header">
+                    <div class="point-number">4</div>
+                    <div class="point-title">"It's time for/to..."句型</div>
+                    <div class="emoji">⏰</div>
+                </div>
+                <div class="point-content">
+                    <p class="core-concept"><strong>核心概念：</strong>表示"是......的时候了"，用来提醒或催促某事</p>
+
+                    <div class="structure-box">
+                        <h4>📚 It's time for + 名词</h4>
+                        <div class="structure-item">
+                            It's time for + 名词/名词短语
+                            <div class="structure-examples">🏫 It's time for <span class="highlight-noun">school</span>. 该上学了。</div>
+                        </div>
+                    </div>
+
+                    <div class="structure-box">
+                        <h4>🏃‍♂️ It's time to + 动词</h4>
+                        <div class="structure-item">
+                            It's time to + 动词原形
+                            <div class="structure-examples">🏃‍♂️ It's time to <span class="highlight-verb">go</span> to school. 该去上学了。</div>
+                        </div>
+                    </div>
+
+                    <div class="conversion-box">
+                        <h5>🔄 两种句型的转换</h5>
+                        <div class="conversion-item">
+                            <strong>名词→动词：</strong>🏫 It's time for <span class="highlight-noun">school</span>. = It's time to <span class="highlight-verb">go</span> to school.
+                        </div>
+                        <div class="conversion-item">
+                            <strong>名词→动词：</strong>🍽️ It's time for <span class="highlight-noun">lunch</span>. = It's time to <span class="highlight-verb">have</span> lunch.
+                        </div>
+                        <div class="conversion-item">
+                            <strong>名词→动词：</strong>🛏️ It's time for <span class="highlight-noun">bed</span>. = It's time to <span class="highlight-verb">go</span> to bed.
+                        </div>
+                        <div class="conversion-item">
+                            <strong>名词→动词：</strong>😴 It's time for <span class="highlight-noun">sleep</span>. = It's time to <span class="highlight-verb">sleep</span>. (sleep既可作名词也可作动词)
+                        </div>
+                    </div>
+
+                    <div class="detail-box">
+                        <h5>⏰ 常用时间表达搭配</h5>
+                        <div class="detail-item">
+                            <strong>学习类：</strong><span class="highlight-noun">🏫 school, 📚 class, 📝 homework, 🇬🇧 English lesson</span>
+                        </div>
+                        <div class="detail-item">
+                            <strong>生活类：</strong><span class="highlight-noun">🍳 breakfast, 🍽️ lunch, 🍽️ dinner, 🛏️ bed, 😴 sleep</span>
+                        </div>
+                        <div class="detail-item">
+                            <strong>活动类：</strong><span class="highlight-noun">⚽ sports, 🎮 games, 📺 TV, 😴 rest</span>
+                        </div>
+                    </div>
+
+                    <div class="correct-usage">
+                        <h6>✅ 关于sleep的正确用法</h6>
+                        <div class="usage-item">
+                            <span class="checkmark">✅</span> It's time <strong>for sleep</strong>. (sleep作名词)
+                        </div>
+                        <div class="usage-item">
+                            <span class="checkmark">✅</span> It's time <strong>to sleep</strong>. (sleep作动词)
+                        </div>
+                        <div class="usage-item">
+                            <span class="checkmark">✅</span> It's time <strong>for bed</strong>. = It's time <strong>to go to bed</strong>.
+                        </div>
+                        <div class="usage-item">
+                            <span class="checkmark">✅</span> It's time <strong>for rest</strong>. = It's time <strong>to have a rest</strong>.
+                        </div>
+                    </div>
+
+                    <div class="usage-preference">
+                        <h6>💡 用法小常识</h6>
+                        <p>虽然"It's time for sleep"和"It's time to sleep"在语法上都正确，但在实际使用中：<br>
+                        • <strong>"It's time for bed"</strong> 更常用（表示该睡觉了）<br>
+                        • <strong>"It's time to sleep"</strong> 更直接（表示开始睡觉的动作）<br>
+                        • <strong>"It's time for sleep"</strong> 较少使用，但在某些语境下也是正确的，比如在一些英语儿歌童谣中会出现</p>
+                    </div>
+
+                    <div class="key-points">
+                        <h4>🎯 考察重点</h4>
+                        <ul>
+                            <li>for后跟名词，to后跟动词原形
+                                <div class="key-point-examples">📖 for school vs 🏃 to go to school</div>
+                            </li>
+                            <li>两种句型的灵活转换
+                                <div class="key-point-examples">🔄 It's time for dinner. = It's time to have dinner.</div>
+                            </li>
+                            <li>常用搭配的记忆
+                                <div class="key-point-examples">⏰ time for bed, time to sleep, time for class</div>
+                            </li>
+                            <li>语境中的恰当使用
+                                <div class="key-point-examples">🕐 根据时间选择合适的活动表达</div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>📝 经典例句</h4>
+                        <div class="example">
+                            <span class="example-emoji">🏫</span>
+                            <span>It's <span class="highlight">time for</span> <span class="highlight-noun">school</span>. 该上学了。</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">🏃‍♂️</span>
+                            <span>It's <span class="highlight">time to</span> <span class="highlight-verb">go</span> to school. 该去上学了。</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">🍽️</span>
+                            <span>It's <span class="highlight">time for</span> <span class="highlight-noun">lunch</span>. 该吃午饭了。</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">😴</span>
+                            <span>It's <span class="highlight">time to</span> <span class="highlight-verb">sleep</span>. 该睡觉了。</span>
+                        </div>
+                        <div class="example">
+                            <span class="example-emoji">🛏️</span>
+                            <span>It's <span class="highlight">time for</span> <span class="highlight-noun">bed</span>. 该睡觉了。</span>
+                        </div>
+                    </div>
+
+                    <div class="connection-box">
+                        <h4>🔗 温故知新</h4>
+                        <div class="connection-text">
+                            联系之前学过的时间表达和日常活动词汇，现在可以用It's time句型来表达时间安排。
+                        </div>
+                    </div>
+
+                    <div class="eva-tip">
+                        <h5>🔍 Eva老师👩‍🏫小贴士</h5>
+                        <p>同学们，学习就像当小侦探一样！看看这些语法点，你能发现什么规律吗？当我们像侦探一样仔细观察、思考和发现规律时，知识会变得更有趣、更好记忆。学会思考比死记硬背更重要哦！试着自己总结规律，你会有很大的成就感！</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            Eva老师👩‍🏫伴步英语
+        </div>
+    </div>
+
+    <script>
+        // 平滑滚动到指定位置
+        document.querySelectorAll('.toc-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+
+
+</body></html>
